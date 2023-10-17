@@ -1,0 +1,9 @@
+{
+  "package_name": "my_robot_interfaces",
+  "non_idl_tuples": [
+    "/home/andrea/tesi/ros2_mapf_cbs/simple_example/src/my_robot_interfaces:msg/HardwareStatus.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/simple_example/src/my_robot_interfaces:msg/LedStatus.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/simple_example/src/my_robot_interfaces:srv/ComputeRectangleArea.srv",
+    "/home/andrea/tesi/ros2_mapf_cbs/simple_example/src/my_robot_interfaces:srv/SetLedStatus.srv"
+  ]
+}

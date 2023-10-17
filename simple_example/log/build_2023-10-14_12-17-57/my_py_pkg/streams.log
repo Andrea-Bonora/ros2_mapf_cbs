@@ -1,0 +1,34 @@
+[0.584s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg/build --no-deps install_data
+[0.774s] running develop
+[0.879s] running egg_info
+[0.879s] creating my_py_pkg.egg-info
+[0.879s] writing my_py_pkg.egg-info/PKG-INFO
+[0.879s] writing dependency_links to my_py_pkg.egg-info/dependency_links.txt
+[0.879s] writing entry points to my_py_pkg.egg-info/entry_points.txt
+[0.879s] writing requirements to my_py_pkg.egg-info/requires.txt
+[0.879s] writing top-level names to my_py_pkg.egg-info/top_level.txt
+[0.880s] writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.881s] reading manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.882s] writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+[0.883s] running build_ext
+[0.883s] Creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages/my-py-pkg.egg-link (link to .)
+[0.884s] Installing add_two_ints_client script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing add_two_ints_server script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing battery script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing hw_status_publisher script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing led_panel script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing number_counter script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing number_publisher script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing py_node script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing robot_news_station script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing smartphone script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.884s] Installing turtle_spawner script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+[0.885s] 
+[0.885s] Installed /home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg
+[0.885s] running install_data
+[0.885s] creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index
+[0.885s] creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index/resource_index
+[0.885s] creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index/resource_index/packages
+[0.885s] copying resource/my_py_pkg -> /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index/resource_index/packages
+[0.885s] copying package.xml -> /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/my_py_pkg
+[0.915s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg' returned '0': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg/build --no-deps install_data

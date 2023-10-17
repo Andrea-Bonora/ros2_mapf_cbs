@@ -1,0 +1,2 @@
+int64 led_number
+string status

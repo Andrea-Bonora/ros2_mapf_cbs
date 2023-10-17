@@ -1,0 +1,23 @@
+[0.670s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build --no-deps install_data
+[0.893s] running develop
+[1.014s] running egg_info
+[1.015s] creating my_intermediate.egg-info
+[1.015s] writing my_intermediate.egg-info/PKG-INFO
+[1.015s] writing dependency_links to my_intermediate.egg-info/dependency_links.txt
+[1.015s] writing entry points to my_intermediate.egg-info/entry_points.txt
+[1.015s] writing requirements to my_intermediate.egg-info/requires.txt
+[1.015s] writing top-level names to my_intermediate.egg-info/top_level.txt
+[1.015s] writing manifest file 'my_intermediate.egg-info/SOURCES.txt'
+[1.016s] reading manifest file 'my_intermediate.egg-info/SOURCES.txt'
+[1.017s] writing manifest file 'my_intermediate.egg-info/SOURCES.txt'
+[1.018s] running build_ext
+[1.018s] Creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my-intermediate.egg-link (link to .)
+[1.018s] 
+[1.018s] Installed /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate
+[1.019s] running install_data
+[1.020s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/share/ament_index
+[1.020s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/share/ament_index/resource_index
+[1.020s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/share/ament_index/resource_index/packages
+[1.020s] copying resource/my_intermediate -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/share/ament_index/resource_index/packages
+[1.020s] copying package.xml -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/share/my_intermediate
+[1.047s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build --no-deps install_data

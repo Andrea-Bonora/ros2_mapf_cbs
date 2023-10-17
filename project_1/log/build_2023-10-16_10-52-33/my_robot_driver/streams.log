@@ -1,0 +1,11 @@
+[0.919s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_package': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_robot_driver/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_robot_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_robot_driver build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_robot_driver/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_robot_driver/install.log --single-version-externally-managed
+[1.087s] running egg_info
+[1.087s] creating ../../build/my_robot_driver/my_package.egg-info
+[1.087s] writing ../../build/my_robot_driver/my_package.egg-info/PKG-INFO
+[1.087s] writing dependency_links to ../../build/my_robot_driver/my_package.egg-info/dependency_links.txt
+[1.087s] writing entry points to ../../build/my_robot_driver/my_package.egg-info/entry_points.txt
+[1.087s] writing requirements to ../../build/my_robot_driver/my_package.egg-info/requires.txt
+[1.087s] writing top-level names to ../../build/my_robot_driver/my_package.egg-info/top_level.txt
+[1.087s] writing manifest file '../../build/my_robot_driver/my_package.egg-info/SOURCES.txt'
+[1.088s] error: package directory 'my_package' does not exist
+[1.103s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_package' returned '1': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_robot_driver/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_robot_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_robot_driver build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_robot_driver/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_robot_driver/install.log --single-version-externally-managed

@@ -1,0 +1,12 @@
+msg/HardwareStatus.idl
+msg/HardwareStatus.msg
+msg/LedStatus.idl
+msg/LedStatus.msg
+srv/ComputeRectangleArea.idl
+srv/ComputeRectangleArea.srv
+srv/ComputeRectangleArea_Request.msg
+srv/ComputeRectangleArea_Response.msg
+srv/SetLedStatus.idl
+srv/SetLedStatus.srv
+srv/SetLedStatus_Request.msg
+srv/SetLedStatus_Response.msg

@@ -1,0 +1,41 @@
+[0.840s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_robot_driver': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/install.log --single-version-externally-managed
+[1.021s] running egg_info
+[1.021s] creating ../../build/my_package/my_robot_driver.egg-info
+[1.021s] writing ../../build/my_package/my_robot_driver.egg-info/PKG-INFO
+[1.021s] writing dependency_links to ../../build/my_package/my_robot_driver.egg-info/dependency_links.txt
+[1.021s] writing entry points to ../../build/my_package/my_robot_driver.egg-info/entry_points.txt
+[1.021s] writing requirements to ../../build/my_package/my_robot_driver.egg-info/requires.txt
+[1.021s] writing top-level names to ../../build/my_package/my_robot_driver.egg-info/top_level.txt
+[1.021s] writing manifest file '../../build/my_package/my_robot_driver.egg-info/SOURCES.txt'
+[1.023s] reading manifest file '../../build/my_package/my_robot_driver.egg-info/SOURCES.txt'
+[1.023s] writing manifest file '../../build/my_package/my_robot_driver.egg-info/SOURCES.txt'
+[1.023s] running build
+[1.023s] running build_py
+[1.024s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build
+[1.024s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build/lib
+[1.024s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build/lib/my_robot_driver
+[1.024s] copying my_robot_driver/my_robot_driver.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build/lib/my_robot_driver
+[1.024s] copying my_robot_driver/__init__.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build/lib/my_robot_driver
+[1.024s] running install
+[1.024s] running install_lib
+[1.024s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_robot_driver
+[1.024s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build/lib/my_robot_driver/my_robot_driver.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_robot_driver
+[1.024s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build/lib/my_robot_driver/__init__.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_robot_driver
+[1.024s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_robot_driver/my_robot_driver.py to my_robot_driver.cpython-310.pyc
+[1.025s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_robot_driver/__init__.py to __init__.cpython-310.pyc
+[1.025s] running install_data
+[1.025s] copying resource/my_robot_driver -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/ament_index/resource_index/packages
+[1.025s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver
+[1.026s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver/launch
+[1.026s] copying launch/robot_launch.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver/launch
+[1.026s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver/worlds
+[1.026s] copying worlds/my_world.wbt -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver/worlds
+[1.026s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver/resource
+[1.026s] copying resource/my_robot.urdf -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver/resource
+[1.031s] copying package.xml -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_robot_driver
+[1.031s] running install_egg_info
+[1.032s] Copying ../../build/my_package/my_robot_driver.egg-info to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_robot_driver-0.0.0-py3.10.egg-info
+[1.032s] running install_scripts
+[1.047s] Installing my_robot_driver script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/my_robot_driver
+[1.047s] writing list of installed files to '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/install.log'
+[1.067s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_robot_driver' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/install.log --single-version-externally-managed

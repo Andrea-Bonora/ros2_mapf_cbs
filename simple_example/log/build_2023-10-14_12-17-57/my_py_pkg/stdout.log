@@ -1,0 +1,32 @@
+running develop
+running egg_info
+creating my_py_pkg.egg-info
+writing my_py_pkg.egg-info/PKG-INFO
+writing dependency_links to my_py_pkg.egg-info/dependency_links.txt
+writing entry points to my_py_pkg.egg-info/entry_points.txt
+writing requirements to my_py_pkg.egg-info/requires.txt
+writing top-level names to my_py_pkg.egg-info/top_level.txt
+writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+reading manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+writing manifest file 'my_py_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages/my-py-pkg.egg-link (link to .)
+Installing add_two_ints_client script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing add_two_ints_server script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing battery script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing hw_status_publisher script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing led_panel script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing number_counter script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing number_publisher script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing py_node script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing robot_news_station script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing smartphone script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+Installing turtle_spawner script to /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/my_py_pkg
+
+Installed /home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg
+running install_data
+creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index
+creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index/resource_index
+creating /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index/resource_index/packages
+copying resource/my_py_pkg -> /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/share/my_py_pkg
