@@ -1,4 +1,5 @@
 [console_scripts]
 entity_creator = my_intermediate.entity_creator:main
+multi_agent_plan_asker = my_intermediate.multi_agent_plan_asker:main
 plan_asker = my_intermediate.plan_asker:main
 

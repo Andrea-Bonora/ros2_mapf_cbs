@@ -5,7 +5,7 @@ set(turtlebot3_multi_robot_BUILD_DEPENDS "nav2_common" "navigation2" "launch_ros
 set(turtlebot3_multi_robot_BUILDTOOL_DEPENDS "ament_cmake")
 set(turtlebot3_multi_robot_BUILD_EXPORT_DEPENDS "gazebo_ros_pkgs" "geometry_msgs" "nav_msgs" "rclcpp" "sensor_msgs" "tf2" "turtlebot3_navigation2")
 set(turtlebot3_multi_robot_BUILDTOOL_EXPORT_DEPENDS )
-set(turtlebot3_multi_robot_EXEC_DEPENDS "launch_ros" "navigation2" "nav2_common" "slam_toolbox" "gazebo_ros_pkgs" "geometry_msgs" "nav_msgs" "rclcpp" "sensor_msgs" "tf2" "turtlebot3_navigation2")
+set(turtlebot3_multi_robot_EXEC_DEPENDS "my_intermediate" "launch_ros" "navigation2" "nav2_common" "slam_toolbox" "gazebo_ros_pkgs" "geometry_msgs" "nav_msgs" "rclcpp" "sensor_msgs" "tf2" "turtlebot3_navigation2")
 set(turtlebot3_multi_robot_TEST_DEPENDS )
 set(turtlebot3_multi_robot_GROUP_DEPENDS )
 set(turtlebot3_multi_robot_MEMBER_OF_GROUPS )

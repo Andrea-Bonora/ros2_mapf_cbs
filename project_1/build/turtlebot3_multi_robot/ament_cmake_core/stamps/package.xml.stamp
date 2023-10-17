@@ -19,6 +19,7 @@
   <build_depend>nav2_common</build_depend>
   <build_depend>navigation2</build_depend>
   <build_depend>launch_ros</build_depend>
+  <exec_depend>my_intermediate</exec_depend>
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>navigation2</exec_depend>
   <exec_depend>nav2_common</exec_depend>

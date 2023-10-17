@@ -1,4 +1,3 @@
-LICENSE
 package.xml
 setup.cfg
 setup.py
@@ -13,9 +12,13 @@ launch/robot_launch.py
 my_package/__init__.py
 my_package/my_robot_driver.py
 my_package/robot_spawner.py
+my_package.egg-info/PKG-INFO
+my_package.egg-info/SOURCES.txt
+my_package.egg-info/dependency_links.txt
+my_package.egg-info/entry_points.txt
+my_package.egg-info/requires.txt
+my_package.egg-info/top_level.txt
+my_package.egg-info/zip-safe
 resource/my_package
 resource/my_robot.urdf
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 worlds/my_world.wbt

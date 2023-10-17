@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             "plan_asker = my_intermediate.plan_asker:main",
-            "entity_creator = my_intermediate.entity_creator:main"
+            "entity_creator = my_intermediate.entity_creator:main",
+            "multi_agent_plan_asker = my_intermediate.multi_agent_plan_asker:main"
         ],
     },
 )

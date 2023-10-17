@@ -10,8 +10,13 @@ setup.py
 ../../build/my_intermediate/my_intermediate.egg-info/zip-safe
 my_intermediate/__init__.py
 my_intermediate/entity_creator.py
+my_intermediate/multi_agent_plan_asker.py
 my_intermediate/plan_asker.py
+my_intermediate.egg-info/PKG-INFO
+my_intermediate.egg-info/SOURCES.txt
+my_intermediate.egg-info/dependency_links.txt
+my_intermediate.egg-info/entry_points.txt
+my_intermediate.egg-info/requires.txt
+my_intermediate.egg-info/top_level.txt
+my_intermediate.egg-info/zip-safe
 resource/my_intermediate
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
