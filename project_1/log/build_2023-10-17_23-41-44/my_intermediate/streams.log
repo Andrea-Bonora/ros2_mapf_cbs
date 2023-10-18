@@ -1,0 +1,39 @@
+[0.764s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build
+[0.999s] running develop
+[1.137s] Removing /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my-intermediate.egg-link (link to .)
+[1.170s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build
+[1.179s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_intermediate build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log --single-version-externally-managed
+[1.415s] running egg_info
+[1.415s] writing ../../build/my_intermediate/my_intermediate.egg-info/PKG-INFO
+[1.416s] writing dependency_links to ../../build/my_intermediate/my_intermediate.egg-info/dependency_links.txt
+[1.416s] writing entry points to ../../build/my_intermediate/my_intermediate.egg-info/entry_points.txt
+[1.416s] writing requirements to ../../build/my_intermediate/my_intermediate.egg-info/requires.txt
+[1.416s] writing top-level names to ../../build/my_intermediate/my_intermediate.egg-info/top_level.txt
+[1.417s] reading manifest file '../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt'
+[1.418s] writing manifest file '../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt'
+[1.418s] running build
+[1.418s] running build_py
+[1.418s] copying my_intermediate/collision_avoider.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate
+[1.418s] copying my_intermediate/multi_agent_plan_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate
+[1.418s] running install
+[1.419s] running install_lib
+[1.420s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.421s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/collision_avoider.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.421s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/plan_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.421s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/__init__.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.421s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/multi_agent_plan_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.421s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/entity_creator.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.421s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/collision_avoider.py to collision_avoider.cpython-310.pyc
+[1.422s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/plan_asker.py to plan_asker.cpython-310.pyc
+[1.423s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/__init__.py to __init__.cpython-310.pyc
+[1.423s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/multi_agent_plan_asker.py to multi_agent_plan_asker.cpython-310.pyc
+[1.425s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/entity_creator.py to entity_creator.cpython-310.pyc
+[1.425s] running install_data
+[1.426s] running install_egg_info
+[1.428s] Copying ../../build/my_intermediate/my_intermediate.egg-info to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate-0.0.0-py3.10.egg-info
+[1.429s] running install_scripts
+[1.447s] Installing entity_creator script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.447s] Installing multi_agent_plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.447s] Installing plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.448s] writing list of installed files to '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log'
+[1.474s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_intermediate build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log --single-version-externally-managed

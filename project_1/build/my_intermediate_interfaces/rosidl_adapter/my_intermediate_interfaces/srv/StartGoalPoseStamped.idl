@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from my_intermediate_interfaces/srv/StartGoalPoseStamped.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "nav_msgs/msg/Path.idl"
+
+module my_intermediate_interfaces {
+  module srv {
+    struct StartGoalPoseStamped_Request {
+      sequence<geometry_msgs::msg::PoseStamped> starts;
+
+      sequence<geometry_msgs::msg::PoseStamped> goals;
+    };
+    struct StartGoalPoseStamped_Response {
+      sequence<nav_msgs::msg::Path> plans;
+    };
+  };
+};

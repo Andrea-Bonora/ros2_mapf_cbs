@@ -1,0 +1,4 @@
+geometry_msgs/PoseStamped[] starts
+geometry_msgs/PoseStamped[] goals
+---
+nav_msgs/Path[] plans

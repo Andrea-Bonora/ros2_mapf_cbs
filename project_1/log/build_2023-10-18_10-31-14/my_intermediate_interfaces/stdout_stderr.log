@@ -1,0 +1,81 @@
+-- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces
+[  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  5%] Built target ament_cmake_python_symlink_my_intermediate_interfaces
+running egg_info
+writing my_intermediate_interfaces.egg-info/PKG-INFO
+writing dependency_links to my_intermediate_interfaces.egg-info/dependency_links.txt
+writing top-level names to my_intermediate_interfaces.egg-info/top_level.txt
+reading manifest file 'my_intermediate_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'my_intermediate_interfaces.egg-info/SOURCES.txt'
+[  5%] Built target ament_cmake_python_build_my_intermediate_interfaces_egg
+[  5%] Built target my_intermediate_interfaces__cpp
+[  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_generator_c[0m
+[ 15%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/computed_plans__functions.c.o[0m
+[ 17%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.c.o[0m
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.h:19[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.c:4[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.h:23:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.h: No such file or directory
+   23 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/build.make:205: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.c.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_introspection_cpp[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/computed_plans__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__type_support.cpp.o[0m
+[35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_cpp[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_posed_stamped__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/computed_plans__type_support.cpp.o[0m
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_posed_stamped__type_support.cpp:7[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.hpp: No such file or directory
+   21 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/build.make:174: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_posed_stamped__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__type_support.cpp:12[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.hpp: No such file or directory
+   21 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:182: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[ 30%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/computed_plans__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_posed_stamped__type_support.cpp.o[0m
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_posed_stamped__type_support.cpp:4[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.hpp: No such file or directory
+   21 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:182: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_posed_stamped__type_support.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

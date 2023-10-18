@@ -1,0 +1,3 @@
+nav_msgs/Path[] plans
+---
+nav_msgs/Path[] collision_free_plans

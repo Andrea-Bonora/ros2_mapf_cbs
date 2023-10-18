@@ -1,0 +1,260 @@
+[0.472s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces -- -j8 -l8
+[0.717s] -- Found std_srvs: 4.2.3 (/opt/ros/humble/share/std_srvs/cmake)
+[0.718s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.718s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.718s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.718s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.718s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.719s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.719s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.792s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.101s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.501s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.634s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.651s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.667s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.667s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.667s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.705s] -- Configuring done
+[1.731s] -- Generating done
+[1.733s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces
+[1.751s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.759s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.765s] [  4%] Built target ament_cmake_python_symlink_my_intermediate_interfaces
+[1.959s] running egg_info
+[1.960s] writing my_intermediate_interfaces.egg-info/PKG-INFO
+[1.960s] writing dependency_links to my_intermediate_interfaces.egg-info/dependency_links.txt
+[1.960s] writing top-level names to my_intermediate_interfaces.egg-info/top_level.txt
+[1.962s] reading manifest file 'my_intermediate_interfaces.egg-info/SOURCES.txt'
+[1.962s] writing manifest file 'my_intermediate_interfaces.egg-info/SOURCES.txt'
+[1.982s] [  4%] Built target ament_cmake_python_build_my_intermediate_interfaces_egg
+[2.080s] [  4%] Built target my_intermediate_interfaces__cpp
+[2.088s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.088s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.088s] [ 10%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.128s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_generator_c[0m
+[2.138s] [ 12%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c.o[0m
+[2.140s] [ 17%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/computed_plans__functions.c.o[0m
+[2.140s] [ 17%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_positions__functions.c.o[0m
+[2.205s] [ 19%] [32m[1mLinking C shared library libmy_intermediate_interfaces__rosidl_generator_c.so[0m
+[2.232s] [ 19%] Built target my_intermediate_interfaces__rosidl_generator_c
+[2.242s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.242s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.242s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.449s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_cpp[0m
+[2.458s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_introspection_cpp[0m
+[2.491s] [ 27%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp.o[0m
+[2.491s] [ 29%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__type_support.cpp.o[0m
+[2.499s] [ 31%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/computed_plans__type_support.cpp.o[0m
+[2.507s] [ 34%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_positions__type_support.cpp.o[0m
+[2.684s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_c[0m
+[2.715s] [ 36%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp.o[0m
+[2.719s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[2.741s] [ 38%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_pose_stamped__type_support.cpp.o[0m
+[2.829s] [ 40%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_intermediate_interfaces/srv/start_goal_positions__type_support.cpp.o[0m
+[2.842s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_introspection_c[0m
+[2.860s] [ 42%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__type_support.c.o[0m
+[2.862s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_fastrtps_c[0m
+[2.874s] [ 44%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_positions__type_support.cpp.o[0m
+[2.889s] [ 46%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_intermediate_interfaces/srv/computed_plans__type_support.cpp.o[0m
+[2.900s] [ 48%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__type_support_c.cpp.o[0m
+[2.928s] [ 51%] [32m[1mLinking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_c.so[0m
+[2.935s] [ 53%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/computed_plans__type_support.cpp.o[0m
+[2.940s] [ 55%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_intermediate_interfaces/srv/detail/start_goal_positions__type_support.c.o[0m
+[3.004s] [ 57%] [32m[1mLinking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_cpp.so[0m
+[3.015s] [ 57%] Built target my_intermediate_interfaces__rosidl_typesupport_c
+[3.059s] [ 59%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_intermediate_interfaces/srv/detail/computed_plans__type_support.c.o[0m
+[3.064s] [ 59%] Built target my_intermediate_interfaces__rosidl_typesupport_cpp
+[3.074s] [ 61%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_intermediate_interfaces/srv/detail/start_goal_positions__type_support_c.cpp.o[0m
+[3.097s] [ 63%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_intermediate_interfaces/srv/detail/computed_plans__type_support_c.cpp.o[0m
+[3.219s] [ 65%] [32m[1mLinking C shared library libmy_intermediate_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.233s] [ 68%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_positions__type_support.cpp.o[0m
+[3.335s] [ 68%] Built target my_intermediate_interfaces__rosidl_typesupport_introspection_c
+[3.392s] [ 70%] [32mBuilding CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/computed_plans__type_support.cpp.o[0m
+[3.597s] [ 72%] [32m[1mLinking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.633s] [ 74%] [32m[1mLinking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.715s] [ 74%] Built target my_intermediate_interfaces__rosidl_typesupport_fastrtps_c
+[3.764s] [ 74%] Built target my_intermediate_interfaces__rosidl_typesupport_introspection_cpp
+[3.894s] [ 76%] [32m[1mLinking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.987s] [ 76%] Built target my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp
+[4.009s] [ 76%] Built target my_intermediate_interfaces
+[4.026s] [ 78%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.553s] [ 78%] Built target my_intermediate_interfaces__py
+[4.561s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_generator_py[0m
+[4.571s] [ 85%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/srv/_start_goal_pose_stamped_s.c.o[0m
+[4.571s] [ 85%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/srv/_start_goal_positions_s.c.o[0m
+[4.571s] [ 85%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/srv/_computed_plans_s.c.o[0m
+[4.670s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/my_intermediate_interfaces/libmy_intermediate_interfaces__rosidl_generator_py.so[0m
+[4.699s] [ 87%] Built target my_intermediate_interfaces__rosidl_generator_py
+[4.707s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[4.707s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_c__pyext[0m
+[4.707s] [35m[1mConsolidate compiler generated dependencies of target my_intermediate_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[4.716s] [ 93%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/my_intermediate_interfaces/_my_intermediate_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.716s] [ 93%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/my_intermediate_interfaces/_my_intermediate_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.716s] [ 93%] [32mBuilding C object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/my_intermediate_interfaces/_my_intermediate_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.796s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.796s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.797s] [100%] [32m[1mLinking C shared library rosidl_generator_py/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.824s] [100%] Built target my_intermediate_interfaces__rosidl_typesupport_c__pyext
+[4.824s] [100%] Built target my_intermediate_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.824s] [100%] Built target my_intermediate_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.832s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces -- -j8 -l8
+[4.893s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces
+[4.898s] -- Install configuration: ""
+[4.898s] -- Execute custom install script
+[4.899s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/ament_index/resource_index/rosidl_interfaces/my_intermediate_interfaces
+[4.899s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.899s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/computed_plans.h
+[4.899s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__functions.h
+[4.899s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__struct.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__type_support.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__struct.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__type_support.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.h
+[4.900s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__type_support.h
+[4.900s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__functions.h
+[4.906s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__struct.h
+[4.911s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__type_support.h
+[4.917s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+[4.917s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/start_goal_posed_stamped.h
+[4.917s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/start_goal_positions.h
+[4.922s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/library_path.sh
+[4.922s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/library_path.dsv
+[4.923s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.923s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__rosidl_typesupport_fastrtps_c.h
+[4.923s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_fastrtps_c.h
+[4.923s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__rosidl_typesupport_fastrtps_c.h
+[4.923s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_fastrtps_c.h
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/computed_plans.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__builder.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__struct.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__traits.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__builder.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__struct.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__traits.hpp
+[4.929s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__builder.hpp
+[4.930s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp
+[4.930s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__traits.hpp
+[4.930s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__builder.hpp
+[4.935s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__struct.hpp
+[4.941s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__traits.hpp
+[4.946s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/start_goal_pose_stamped.hpp
+[4.946s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/start_goal_posed_stamped.hpp
+[4.946s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/start_goal_positions.hpp
+[4.951s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.952s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__rosidl_typesupport_fastrtps_cpp.hpp
+[4.952s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[4.952s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[4.952s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_fastrtps_cpp.hpp
+[4.958s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.958s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__rosidl_typesupport_introspection_c.h
+[4.958s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_introspection_c.h
+[4.958s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__rosidl_typesupport_introspection_c.h
+[4.958s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_introspection_c.h
+[4.964s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/computed_plans__rosidl_typesupport_introspection_cpp.hpp
+[4.964s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_introspection_cpp.hpp
+[4.964s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__rosidl_typesupport_introspection_cpp.hpp
+[4.964s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/include/my_intermediate_interfaces/my_intermediate_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_introspection_cpp.hpp
+[4.969s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/pythonpath.sh
+[4.969s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/pythonpath.dsv
+[4.969s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[4.969s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/__init__.py
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/_my_intermediate_interfaces_s.ep.rosidl_typesupport_c.c
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/_my_intermediate_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/_my_intermediate_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/libmy_intermediate_interfaces__rosidl_generator_py.so
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.970s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/__init__.py
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_computed_plans.py
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_computed_plans_s.c
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_pose_stamped.py
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_pose_stamped_s.c
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_posed_stamped.py
+[4.971s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_posed_stamped_s.c
+[4.971s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_positions.py
+[4.977s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_positions_s.c
+[4.983s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[4.983s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[4.983s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/my_intermediate_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[4.983s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPoseStamped.idl
+[4.983s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPositions.idl
+[4.988s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/ComputedPlans.idl
+[4.989s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPoseStamped.srv
+[4.989s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPoseStamped_Request.msg
+[4.989s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPoseStamped_Response.msg
+[4.989s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPositions.srv
+[4.994s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPositions_Request.msg
+[5.000s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/StartGoalPositions_Response.msg
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/ComputedPlans.srv
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/ComputedPlans_Request.msg
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/srv/ComputedPlans_Response.msg
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/ament_index/resource_index/package_run_dependencies/my_intermediate_interfaces
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/ament_index/resource_index/parent_prefix_path/my_intermediate_interfaces
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/ament_prefix_path.sh
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/ament_prefix_path.dsv
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/path.sh
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/environment/path.dsv
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/local_setup.bash
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/local_setup.sh
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/local_setup.zsh
+[5.006s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/local_setup.dsv
+[5.006s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/package.dsv
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/ament_index/resource_index/packages/my_intermediate_interfaces
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/rosidl_cmake-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfacesConfig.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfacesConfig-version.cmake
+[5.013s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/package.xml
+[5.014s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_generator_c.so
+[5.014s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_generator_c.so" to ""
+[5.014s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_c.so
+[5.014s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[5.014s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[5.015s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.015s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_introspection_c.so
+[5.015s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[5.015s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_c.so
+[5.015s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_c.so" to ""
+[5.015s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_introspection_cpp.so
+[5.016s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[5.016s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_cpp.so
+[5.016s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_cpp.so" to ""
+[5.044s] Listing '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces'...
+[5.044s] Compiling '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/__init__.py'...
+[5.044s] Listing '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv'...
+[5.044s] Compiling '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/__init__.py'...
+[5.044s] Compiling '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_computed_plans.py'...
+[5.044s] Compiling '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_pose_stamped.py'...
+[5.044s] Compiling '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages/my_intermediate_interfaces/srv/_start_goal_positions.py'...
+[5.048s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_generator_py.so
+[5.048s] -- Set runtime path of "/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_generator_py.so" to ""
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_generator_cExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_generator_cExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_generator_cppExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_cExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_cppExport.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/my_intermediate_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[5.048s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_generator_pyExport.cmake
+[5.049s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake/export_my_intermediate_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[5.050s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces

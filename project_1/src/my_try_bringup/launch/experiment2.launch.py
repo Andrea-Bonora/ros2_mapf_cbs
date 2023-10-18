@@ -7,8 +7,8 @@ def generate_launch_description():
 
     planner_ask_node = Node(
         package="my_intermediate",
-        executable="multi_agent_plan_asker",
-        name="multi_agent_plan_asker",
+        executable="fake_asker",
+        name="fake_asker",
         parameters=[
             {"n": 2},
             {"x_start": [0.0, 0.0]},

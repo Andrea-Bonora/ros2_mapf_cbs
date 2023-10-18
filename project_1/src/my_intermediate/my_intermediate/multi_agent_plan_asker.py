@@ -2,72 +2,45 @@
 import rclpy
 from rclpy.node import Node
 
-from std_msgs.msg import Header
 from nav2_msgs.action import ComputePathToPose, FollowPath
-from geometry_msgs.msg import Pose, PoseStamped, Point, Quaternion
-from nav_msgs.msg import Path
-from builtin_interfaces.msg import Duration, Time
 from rclpy.action import ActionClient
 from rclpy.node import Node
 from functools import partial
-
-#MESSAGE TO SEND
-# PoseStamped goal
-# PoseStamped start
-# string planner_id
-# bool use_start
-
-#Header
-#uint32 seq
-#time stamp
-#string frame_id
-
-#PoseStamped
-# Header header
-# Pose pose
+from my_intermediate_interfaces.srv import StartGoalPoseStamped
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
 
 class MultiAgentPlanAskerNode(Node):
     def __init__(self):
         super().__init__("multi_agent_plan_asker")
 
-        default_x_start = [0.0]
-        default_y_start = [0.0]
-        default_z_start = [0.0]
-
-        default_x_end = [0.0]
-        default_y_end = [0.0]
-        default_z_end = [0.0]
+        self.plans_ = []
+        self.s_e_couples = None
+        #self.futures = []
         
-        self.declare_parameter("n", 1) #Number of agents
-        self.declare_parameter("x_start", default_x_start)
-        self.declare_parameter("y_start", default_y_start)
-        self.declare_parameter("z_start", default_z_start)
-        self.declare_parameter("x_end", default_x_end)
-        self.declare_parameter("y_end", default_y_end)
-        self.declare_parameter("z_end", default_z_end)
-        self.get_logger().info("Plan Asker node has been started")
+        client_cb_group = MutuallyExclusiveCallbackGroup()
+        self.server_ = self.create_service(StartGoalPoseStamped, "get_plans", self.callback_get_plan, callback_group=client_cb_group)
+        self.get_logger().info("Multi Agent Plan Asker has been started")
 
-        x_start = self.get_parameter("x_start").value
-        y_start = self.get_parameter("y_start").value
-        z_start = self.get_parameter("z_start").value
-        x_end = self.get_parameter("x_end").value
-        y_end = self.get_parameter("y_end").value
-        z_end = self.get_parameter("z_end").value
-             
-        self.starting_positions = self.compose_objects(x_start, y_start, z_start)
-        self.ending_positions =  self.compose_objects(x_end, y_end, z_end)
+    def callback_get_plan(self, request, response):
 
-        s_e_couples = self.convert_request() #Accoppia posizioni start e end per ogni robot e le converte in PosedStamped
+        self.plans_ = []
+        s_e_couples = self.couple_request(request.starts, request.goals)
         self.get_logger().info("Asking for plans...")
         plans = self.ask_plan(s_e_couples)
+        self.get_logger().info(str(len(plans)))
+        self.get_logger().info("Sending Response")
+        response.plans = plans
+        return response
 
     def ask_plan(self, s_e_couples):
 
         i = 1
+        futures = []
+        client_cb_group_actions = MutuallyExclusiveCallbackGroup()
         for r in s_e_couples:
 
-            client = ActionClient(self, ComputePathToPose, 'tb' + str(i) + '/compute_path_to_pose')
+            client = ActionClient(self, ComputePathToPose, 'tb' + str(i) + '/compute_path_to_pose', callback_group=client_cb_group_actions)
             client.wait_for_server()
         
             request = ComputePathToPose.Goal()
@@ -77,117 +50,47 @@ class MultiAgentPlanAskerNode(Node):
             request.use_start = False
             self.get_logger().info("Searching plan #" + str(i))
             future = client.send_goal_async(request)
-            future.add_done_callback(partial(self.callback_ask_plan, i=i))
+            #future.add_done_callback(partial(self.callback_ask_plan, i=i))
+            futures.append(future)
             i += 1
 
-        #future = client.call_async(request)
-        #future.add_done_callback(self.callback_ask_plan)
-        #self.get_logger().info("I will ask for a plan")
+        for f in futures:
+            rclpy.spin_until_future_complete(self, f)
 
-    def callback_ask_plan(self, future, i):
-        try:
-            goal_handle = future.result()
-            if not goal_handle.accepted:
-                self.get_logger().warn('Goal rejected :(')
-                return
-            
-            self.get_logger().info('Goal accepted, searching for plan...')
+        results = []
+        for f in futures:
+            if not f.done():
+               self.get_logger().info("Non va DC") 
+            elif f.result().accepted:
+               goal_handle = f.result()
+               result = goal_handle.get_result_async()
+               #result.add_done_callback(partial(self.callback_get_result, i=i))
+               results.append(result)
+               self.get_logger().info("PROVA")
 
-            result = goal_handle.get_result_async()
-            result.add_done_callback(partial(self.callback_get_result, i=i))
+        for r in results:
+            rclpy.spin_until_future_complete(self, r)
 
-            #if response.accepted 
-            #time = response.planning_time
-            #self.get_logger().info("Plan computed! Total time: " + time.sec)
-        except Exception as e:
-            self.get_logger().error("Service call failed %r" % (e,))
-
-    def callback_get_result(self, future, i):
-        result = future.result().result
-        self.execute_plan(result, i)
-
-    def execute_plan(self, result, i):
-        client = ActionClient(self, FollowPath, 'tb' + str(i)+ '/follow_path')
-
-        msg = FollowPath.Goal()
-        msg.path = result.path
-        msg.controller_id = ""
-        msg.goal_checker_id = ""
-
-        client.wait_for_server()
-
-        future = client.send_goal_async(msg)
-        future.add_done_callback(self.callback_execute_plan)
-
-    def callback_execute_plan(self, future):
-        try:
-            goal_handle = future.result()
-            if not goal_handle.accepted:
-                self.get_logger().warn('Goal rejected :(')
-                return
-            
-            self.get_logger().info('Goal accepted, executing plan...')
-
-            result = goal_handle.get_result_async()
-            result.add_done_callback(self.callback_result_execute_plan)
-        except Exception as e:
-            self.get_logger().error("Service call failed %r" % (e,))
-
-    def callback_result_execute_plan(self, future):
-        self.get_logger().info("Plan executed correctly!")
-
-    def convert_request(self):
-
-        requests = []
-
-        if len(self.starting_positions) != len(self.ending_positions):
-            self.get_logger().error("Size of starting positions and ending positions does not match")
-            return
+        plans = []
+        for r in results:
+            result = r.result().result
+            plans.append(result.path)
+            self.get_logger().info("Plan found")
         
-        self.get_logger().info("ATTENZIONE: " + str(len(self.starting_positions)))
-        
-        for i in range(len(self.starting_positions)):
-            start = self.from_object_to_PoseStamped(self.starting_positions[i])
-            end = self.from_object_to_PoseStamped(self.ending_positions[i])
-            requests.append({"s":start, "e":end})
+        return plans
 
-        return requests
+    def couple_request(self, starts, goals):
+        paths = []
+        for i in range(len(starts)):
+            paths.append({"s": starts[i], "e": goals[i]})
 
+        return paths
     
-    def from_object_to_PoseStamped(self, obj):
-        pose_stamped = PoseStamped()
-        header = Header()
-        
-        header.stamp = Time()
-        header.stamp.sec = 0
-        header.stamp.nanosec = 0
-        header.frame_id = 'map'
-
-        pose = Pose()
-        pose.position = Point()
-        pose.position.x = obj['x']
-        pose.position.y = obj['y']
-        pose.position.z = obj['z']
-
-        pose_stamped.header = header
-        pose_stamped.pose = pose
-
-        return pose_stamped
-    
-    def compose_objects(self, x, y, z):
-        objs = []
-        if len(x) == len(y) and len(x) == len(z):
-            for i in range(len(x)):
-                objs.append({'x': x[i], 'y':y[i], 'z':z[i]})
-
-        return objs
-
-    
-     
 def main(args=None):
     rclpy.init(args=args)
     node = MultiAgentPlanAskerNode() 
     rclpy.spin(node)
+    #node.spin()
     rclpy.shutdown()
      
      

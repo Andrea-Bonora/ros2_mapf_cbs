@@ -1,0 +1,32 @@
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.h:19[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.c:4[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.h:23:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.h: No such file or directory
+   23 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/build.make:205: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__functions.c.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:213: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_posed_stamped__type_support.cpp:7[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.hpp: No such file or directory
+   21 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/build.make:174: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_posed_stamped__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:395: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/all] Error 2
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__rosidl_typesupport_fastrtps_cpp.hpp:11[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_posed_stamped__type_support.cpp:4[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.hpp: No such file or directory
+   21 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/build.make:182: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrtps/start_goal_posed_stamped__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:291: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/all] Error 2
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__type_support.cpp:12[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__struct.hpp:21:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/detail/posed_stamped__struct.hpp: No such file or directory
+   21 | #include [01;31m[K"geometry_msgs/msg/detail/posed_stamped__struct.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/build.make:182: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_intermediate_interfaces/srv/detail/start_goal_posed_stamped__type_support.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:369: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_introspection_cpp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

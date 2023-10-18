@@ -45,7 +45,7 @@ class PlanAskerNode(Node):
         self.ask_plan(self.start_, self.end_)
 
     def ask_plan(self, starting_point, end_point):
-        client = ActionClient(self, ComputePathToPose, 'compute_path_to_pose')
+        client = ActionClient(self, ComputePathToPose, 'tb1/compute_path_to_pose')
 
         request = ComputePathToPose.Goal()
         request.goal = end_point
@@ -85,7 +85,7 @@ class PlanAskerNode(Node):
         self.execute_plan(result)
 
     def execute_plan(self, result):
-        client = ActionClient(self, FollowPath, 'follow_path')
+        client = ActionClient(self, FollowPath, 'tb1/follow_path')
 
         msg = FollowPath.Goal()
         msg.path = result.path

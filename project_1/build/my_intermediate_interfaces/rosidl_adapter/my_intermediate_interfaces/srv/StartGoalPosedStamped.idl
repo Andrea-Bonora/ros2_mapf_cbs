@@ -1,0 +1,16 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from my_intermediate_interfaces/srv/StartGoalPosedStamped.srv
+// generated code does not contain a copyright notice
+
+#include "nav_msgs/msg/Path.idl"
+
+module my_intermediate_interfaces {
+  module srv {
+    struct StartGoalPosedStamped_Request {
+      sequence<nav_msgs::msg::Path> plans;
+    };
+    struct StartGoalPosedStamped_Response {
+      sequence<nav_msgs::msg::Path> collision_free_plans;
+    };
+  };
+};
