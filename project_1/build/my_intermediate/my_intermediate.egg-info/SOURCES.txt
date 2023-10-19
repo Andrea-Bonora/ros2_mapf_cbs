@@ -11,6 +11,7 @@ setup.py
 my_intermediate/__init__.py
 my_intermediate/collision_avoider.py
 my_intermediate/fake_asker.py
+my_intermediate/map_discretizer.py
 my_intermediate/multi_agent_plan_asker.py
 my_intermediate/plan_asker.py
 my_intermediate.egg-info/PKG-INFO

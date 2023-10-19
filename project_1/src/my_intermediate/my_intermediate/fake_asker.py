@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 
 from rclpy.action import ActionClient
 from nav2_msgs.action import FollowPath
@@ -50,8 +50,23 @@ class FakeAskerNode(Node):
         try:
             response = future.result()
             self.get_logger().info("Got Plans: " + str(len(response.plans)))
-            for i, plan in enumerate(response.plans):
-                self.execute_plan(plan, i+1)
+
+            pose = response.plans[0].poses[0]
+            self.get_logger().info(str(pose.pose.position.x))
+            self.get_logger().info(str(pose.pose.position.y))
+            self.get_logger().info(str(pose.pose.position.z))
+
+            '''
+            for plan in response.plans:
+                for pose in plan:
+                    self.get_logger().info(str(pose.pose.position.x))
+                    self.get_logger().info(str(pose.pose.position.y))
+                    self.get_logger().info(str(pose.pose.position.z))
+                    break
+            '''
+
+            #for i, plan in enumerate(response.plans):
+            #    self.execute_plan(plan, i+1)
 
         except Exception as e:
             self.get_logger().error("Service call failed %r" % (e,))   

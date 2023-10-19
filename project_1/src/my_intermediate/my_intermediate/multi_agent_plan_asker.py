@@ -2,22 +2,16 @@
 import rclpy
 from rclpy.node import Node
 
-from nav2_msgs.action import ComputePathToPose, FollowPath
+from nav2_msgs.action import ComputePathToPose
 from rclpy.action import ActionClient
 from rclpy.node import Node
-from functools import partial
 from my_intermediate_interfaces.srv import StartGoalPoseStamped
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 
 
 class MultiAgentPlanAskerNode(Node):
     def __init__(self):
         super().__init__("multi_agent_plan_asker")
-
-        self.plans_ = []
-        self.s_e_couples = None
-        #self.futures = []
-        
         client_cb_group = MutuallyExclusiveCallbackGroup()
         self.server_ = self.create_service(StartGoalPoseStamped, "get_plans", self.callback_get_plan, callback_group=client_cb_group)
         self.get_logger().info("Multi Agent Plan Asker has been started")
@@ -37,9 +31,9 @@ class MultiAgentPlanAskerNode(Node):
 
         i = 1
         futures = []
-        client_cb_group_actions = MutuallyExclusiveCallbackGroup()
+        
         for r in s_e_couples:
-
+            client_cb_group_actions = MutuallyExclusiveCallbackGroup()
             client = ActionClient(self, ComputePathToPose, 'tb' + str(i) + '/compute_path_to_pose', callback_group=client_cb_group_actions)
             client.wait_for_server()
         
@@ -90,7 +84,6 @@ def main(args=None):
     rclpy.init(args=args)
     node = MultiAgentPlanAskerNode() 
     rclpy.spin(node)
-    #node.spin()
     rclpy.shutdown()
      
      

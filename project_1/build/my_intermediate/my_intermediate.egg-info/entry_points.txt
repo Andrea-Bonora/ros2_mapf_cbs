@@ -1,6 +1,7 @@
 [console_scripts]
 collision_avoider = my_intermediate.collision_avoider:main
 fake_asker = my_intermediate.fake_asker:main
+map_discretizer = my_intermediate.map_discretizer:main
 multi_agent_plan_asker = my_intermediate.multi_agent_plan_asker:main
 plan_asker = my_intermediate.plan_asker:main
 

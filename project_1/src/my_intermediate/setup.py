@@ -23,7 +23,8 @@ setup(
             "plan_asker = my_intermediate.plan_asker:main",
             "multi_agent_plan_asker = my_intermediate.multi_agent_plan_asker:main",
             "collision_avoider = my_intermediate.collision_avoider:main",
-            "fake_asker = my_intermediate.fake_asker:main"
+            "fake_asker = my_intermediate.fake_asker:main",
+            "map_discretizer = my_intermediate.map_discretizer:main"
         ],
     },
 )
