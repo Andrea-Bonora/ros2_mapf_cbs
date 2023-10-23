@@ -16,9 +16,8 @@
 
 
 // Include directives for member types
-// Member 'starts'
-// Member 'goals'
-#include "geometry_msgs/msg/detail/pose_stamped__struct.hpp"
+// Member 'requests'
+#include "my_intermediate_interfaces/msg/detail/agent_path_request__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__srv__StartGoalPoseStamped_Request __attribute__((deprecated))
@@ -50,24 +49,15 @@ struct StartGoalPoseStamped_Request_
   }
 
   // field types and members
-  using _starts_type =
-    std::vector<geometry_msgs::msg::PoseStamped_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::PoseStamped_<ContainerAllocator>>>;
-  _starts_type starts;
-  using _goals_type =
-    std::vector<geometry_msgs::msg::PoseStamped_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::PoseStamped_<ContainerAllocator>>>;
-  _goals_type goals;
+  using _requests_type =
+    std::vector<my_intermediate_interfaces::msg::AgentPathRequest_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::AgentPathRequest_<ContainerAllocator>>>;
+  _requests_type requests;
 
   // setters for named parameter idiom
-  Type & set__starts(
-    const std::vector<geometry_msgs::msg::PoseStamped_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::PoseStamped_<ContainerAllocator>>> & _arg)
+  Type & set__requests(
+    const std::vector<my_intermediate_interfaces::msg::AgentPathRequest_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::AgentPathRequest_<ContainerAllocator>>> & _arg)
   {
-    this->starts = _arg;
-    return *this;
-  }
-  Type & set__goals(
-    const std::vector<geometry_msgs::msg::PoseStamped_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<geometry_msgs::msg::PoseStamped_<ContainerAllocator>>> & _arg)
-  {
-    this->goals = _arg;
+    this->requests = _arg;
     return *this;
   }
 
@@ -113,10 +103,7 @@ struct StartGoalPoseStamped_Request_
   // comparison operators
   bool operator==(const StartGoalPoseStamped_Request_ & other) const
   {
-    if (this->starts != other.starts) {
-      return false;
-    }
-    if (this->goals != other.goals) {
+    if (this->requests != other.requests) {
       return false;
     }
     return true;
@@ -140,7 +127,7 @@ using StartGoalPoseStamped_Request =
 
 // Include directives for member types
 // Member 'plans'
-#include "nav_msgs/msg/detail/path__struct.hpp"
+#include "my_intermediate_interfaces/msg/detail/agent_path__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__srv__StartGoalPoseStamped_Response __attribute__((deprecated))
@@ -173,12 +160,12 @@ struct StartGoalPoseStamped_Response_
 
   // field types and members
   using _plans_type =
-    std::vector<nav_msgs::msg::Path_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<nav_msgs::msg::Path_<ContainerAllocator>>>;
+    std::vector<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>>>;
   _plans_type plans;
 
   // setters for named parameter idiom
   Type & set__plans(
-    const std::vector<nav_msgs::msg::Path_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<nav_msgs::msg::Path_<ContainerAllocator>>> & _arg)
+    const std::vector<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>>> & _arg)
   {
     this->plans = _arg;
     return *this;

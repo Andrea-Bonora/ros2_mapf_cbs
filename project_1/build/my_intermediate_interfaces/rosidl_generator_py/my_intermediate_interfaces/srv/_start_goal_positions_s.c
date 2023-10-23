@@ -814,12 +814,10 @@ PyObject * my_intermediate_interfaces__srv__start_goal_positions__request__conve
 // #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 // Nested array functions includes
-#include "nav_msgs/msg/detail/path__functions.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__functions.h"
 // end nested array functions include
-ROSIDL_GENERATOR_C_IMPORT
-bool nav_msgs__msg__path__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * nav_msgs__msg__path__convert_to_py(void * raw_ros_message);
+bool my_intermediate_interfaces__msg__agent_path__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_intermediate_interfaces__msg__agent_path__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__srv__start_goal_positions__response__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -870,15 +868,15 @@ bool my_intermediate_interfaces__srv__start_goal_positions__response__convert_fr
       Py_DECREF(field);
       return false;
     }
-    if (!nav_msgs__msg__Path__Sequence__init(&(ros_message->plans), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create nav_msgs__msg__Path__Sequence ros_message");
+    if (!my_intermediate_interfaces__msg__AgentPath__Sequence__init(&(ros_message->plans), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create my_intermediate_interfaces__msg__AgentPath__Sequence ros_message");
       Py_DECREF(seq_field);
       Py_DECREF(field);
       return false;
     }
-    nav_msgs__msg__Path * dest = ros_message->plans.data;
+    my_intermediate_interfaces__msg__AgentPath * dest = ros_message->plans.data;
     for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!nav_msgs__msg__path__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+      if (!my_intermediate_interfaces__msg__agent_path__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
@@ -916,10 +914,10 @@ PyObject * my_intermediate_interfaces__srv__start_goal_positions__response__conv
     if (!field) {
       return NULL;
     }
-    nav_msgs__msg__Path * item;
+    my_intermediate_interfaces__msg__AgentPath * item;
     for (size_t i = 0; i < size; ++i) {
       item = &(ros_message->plans.data[i]);
-      PyObject * pyitem = nav_msgs__msg__path__convert_to_py(item);
+      PyObject * pyitem = my_intermediate_interfaces__msg__agent_path__convert_to_py(item);
       if (!pyitem) {
         Py_DECREF(field);
         return NULL;

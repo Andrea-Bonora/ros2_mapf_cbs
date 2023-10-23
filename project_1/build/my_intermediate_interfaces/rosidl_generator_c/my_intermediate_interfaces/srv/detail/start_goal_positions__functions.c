@@ -352,7 +352,7 @@ my_intermediate_interfaces__srv__StartGoalPositions_Request__Sequence__copy(
 
 // Include directives for member types
 // Member `plans`
-#include "nav_msgs/msg/detail/path__functions.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__functions.h"
 
 bool
 my_intermediate_interfaces__srv__StartGoalPositions_Response__init(my_intermediate_interfaces__srv__StartGoalPositions_Response * msg)
@@ -361,7 +361,7 @@ my_intermediate_interfaces__srv__StartGoalPositions_Response__init(my_intermedia
     return false;
   }
   // plans
-  if (!nav_msgs__msg__Path__Sequence__init(&msg->plans, 0)) {
+  if (!my_intermediate_interfaces__msg__AgentPath__Sequence__init(&msg->plans, 0)) {
     my_intermediate_interfaces__srv__StartGoalPositions_Response__fini(msg);
     return false;
   }
@@ -375,7 +375,7 @@ my_intermediate_interfaces__srv__StartGoalPositions_Response__fini(my_intermedia
     return;
   }
   // plans
-  nav_msgs__msg__Path__Sequence__fini(&msg->plans);
+  my_intermediate_interfaces__msg__AgentPath__Sequence__fini(&msg->plans);
 }
 
 bool
@@ -385,7 +385,7 @@ my_intermediate_interfaces__srv__StartGoalPositions_Response__are_equal(const my
     return false;
   }
   // plans
-  if (!nav_msgs__msg__Path__Sequence__are_equal(
+  if (!my_intermediate_interfaces__msg__AgentPath__Sequence__are_equal(
       &(lhs->plans), &(rhs->plans)))
   {
     return false;
@@ -402,7 +402,7 @@ my_intermediate_interfaces__srv__StartGoalPositions_Response__copy(
     return false;
   }
   // plans
-  if (!nav_msgs__msg__Path__Sequence__copy(
+  if (!my_intermediate_interfaces__msg__AgentPath__Sequence__copy(
       &(input->plans), &(output->plans)))
   {
     return false;

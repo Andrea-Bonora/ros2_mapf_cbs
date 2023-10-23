@@ -1,5 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_intermediate_interfaces__cpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/agent_path.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/agent_path_request.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path__builder.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path__struct.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path__traits.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path_request__builder.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path_request__struct.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path_request__traits.hpp"
   "rosidl_generator_cpp/my_intermediate_interfaces/srv/computed_plans.hpp"
   "rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/computed_plans__builder.hpp"
   "rosidl_generator_cpp/my_intermediate_interfaces/srv/detail/computed_plans__struct.hpp"

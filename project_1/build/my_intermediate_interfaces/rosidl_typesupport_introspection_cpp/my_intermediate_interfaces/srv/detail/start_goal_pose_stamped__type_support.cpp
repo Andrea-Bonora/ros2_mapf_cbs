@@ -37,137 +37,75 @@ void StartGoalPoseStamped_Request_fini_function(void * message_memory)
   typed_message->~StartGoalPoseStamped_Request();
 }
 
-size_t size_function__StartGoalPoseStamped_Request__starts(const void * untyped_member)
+size_t size_function__StartGoalPoseStamped_Request__requests(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<my_intermediate_interfaces::msg::AgentPathRequest> *>(untyped_member);
   return member->size();
 }
 
-const void * get_const_function__StartGoalPoseStamped_Request__starts(const void * untyped_member, size_t index)
+const void * get_const_function__StartGoalPoseStamped_Request__requests(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
+    *reinterpret_cast<const std::vector<my_intermediate_interfaces::msg::AgentPathRequest> *>(untyped_member);
   return &member[index];
 }
 
-void * get_function__StartGoalPoseStamped_Request__starts(void * untyped_member, size_t index)
+void * get_function__StartGoalPoseStamped_Request__requests(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
+    *reinterpret_cast<std::vector<my_intermediate_interfaces::msg::AgentPathRequest> *>(untyped_member);
   return &member[index];
 }
 
-void fetch_function__StartGoalPoseStamped_Request__starts(
+void fetch_function__StartGoalPoseStamped_Request__requests(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const geometry_msgs::msg::PoseStamped *>(
-    get_const_function__StartGoalPoseStamped_Request__starts(untyped_member, index));
-  auto & value = *reinterpret_cast<geometry_msgs::msg::PoseStamped *>(untyped_value);
+  const auto & item = *reinterpret_cast<const my_intermediate_interfaces::msg::AgentPathRequest *>(
+    get_const_function__StartGoalPoseStamped_Request__requests(untyped_member, index));
+  auto & value = *reinterpret_cast<my_intermediate_interfaces::msg::AgentPathRequest *>(untyped_value);
   value = item;
 }
 
-void assign_function__StartGoalPoseStamped_Request__starts(
+void assign_function__StartGoalPoseStamped_Request__requests(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<geometry_msgs::msg::PoseStamped *>(
-    get_function__StartGoalPoseStamped_Request__starts(untyped_member, index));
-  const auto & value = *reinterpret_cast<const geometry_msgs::msg::PoseStamped *>(untyped_value);
+  auto & item = *reinterpret_cast<my_intermediate_interfaces::msg::AgentPathRequest *>(
+    get_function__StartGoalPoseStamped_Request__requests(untyped_member, index));
+  const auto & value = *reinterpret_cast<const my_intermediate_interfaces::msg::AgentPathRequest *>(untyped_value);
   item = value;
 }
 
-void resize_function__StartGoalPoseStamped_Request__starts(void * untyped_member, size_t size)
+void resize_function__StartGoalPoseStamped_Request__requests(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
+    reinterpret_cast<std::vector<my_intermediate_interfaces::msg::AgentPathRequest> *>(untyped_member);
   member->resize(size);
 }
 
-size_t size_function__StartGoalPoseStamped_Request__goals(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__StartGoalPoseStamped_Request__goals(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__StartGoalPoseStamped_Request__goals(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__StartGoalPoseStamped_Request__goals(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const geometry_msgs::msg::PoseStamped *>(
-    get_const_function__StartGoalPoseStamped_Request__goals(untyped_member, index));
-  auto & value = *reinterpret_cast<geometry_msgs::msg::PoseStamped *>(untyped_value);
-  value = item;
-}
-
-void assign_function__StartGoalPoseStamped_Request__goals(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<geometry_msgs::msg::PoseStamped *>(
-    get_function__StartGoalPoseStamped_Request__goals(untyped_member, index));
-  const auto & value = *reinterpret_cast<const geometry_msgs::msg::PoseStamped *>(untyped_value);
-  item = value;
-}
-
-void resize_function__StartGoalPoseStamped_Request__goals(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<geometry_msgs::msg::PoseStamped> *>(untyped_member);
-  member->resize(size);
-}
-
-static const ::rosidl_typesupport_introspection_cpp::MessageMember StartGoalPoseStamped_Request_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember StartGoalPoseStamped_Request_message_member_array[1] = {
   {
-    "starts",  // name
+    "requests",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::PoseStamped>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<my_intermediate_interfaces::msg::AgentPathRequest>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPoseStamped_Request, starts),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces::srv::StartGoalPoseStamped_Request, requests),  // bytes offset in struct
     nullptr,  // default value
-    size_function__StartGoalPoseStamped_Request__starts,  // size() function pointer
-    get_const_function__StartGoalPoseStamped_Request__starts,  // get_const(index) function pointer
-    get_function__StartGoalPoseStamped_Request__starts,  // get(index) function pointer
-    fetch_function__StartGoalPoseStamped_Request__starts,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPoseStamped_Request__starts,  // assign(index, value) function pointer
-    resize_function__StartGoalPoseStamped_Request__starts  // resize(index) function pointer
-  },
-  {
-    "goals",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
-    0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::PoseStamped>(),  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPoseStamped_Request, goals),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__StartGoalPoseStamped_Request__goals,  // size() function pointer
-    get_const_function__StartGoalPoseStamped_Request__goals,  // get_const(index) function pointer
-    get_function__StartGoalPoseStamped_Request__goals,  // get(index) function pointer
-    fetch_function__StartGoalPoseStamped_Request__goals,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPoseStamped_Request__goals,  // assign(index, value) function pointer
-    resize_function__StartGoalPoseStamped_Request__goals  // resize(index) function pointer
+    size_function__StartGoalPoseStamped_Request__requests,  // size() function pointer
+    get_const_function__StartGoalPoseStamped_Request__requests,  // get_const(index) function pointer
+    get_function__StartGoalPoseStamped_Request__requests,  // get(index) function pointer
+    fetch_function__StartGoalPoseStamped_Request__requests,  // fetch(index, &value) function pointer
+    assign_function__StartGoalPoseStamped_Request__requests,  // assign(index, value) function pointer
+    resize_function__StartGoalPoseStamped_Request__requests  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers StartGoalPoseStamped_Request_message_members = {
   "my_intermediate_interfaces::srv",  // message namespace
   "StartGoalPoseStamped_Request",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(my_intermediate_interfaces::srv::StartGoalPoseStamped_Request),
   StartGoalPoseStamped_Request_message_member_array,  // message members
   StartGoalPoseStamped_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -265,46 +203,46 @@ void StartGoalPoseStamped_Response_fini_function(void * message_memory)
 
 size_t size_function__StartGoalPoseStamped_Response__plans(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<nav_msgs::msg::Path> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<my_intermediate_interfaces::msg::AgentPath> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__StartGoalPoseStamped_Response__plans(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<nav_msgs::msg::Path> *>(untyped_member);
+    *reinterpret_cast<const std::vector<my_intermediate_interfaces::msg::AgentPath> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__StartGoalPoseStamped_Response__plans(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<nav_msgs::msg::Path> *>(untyped_member);
+    *reinterpret_cast<std::vector<my_intermediate_interfaces::msg::AgentPath> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__StartGoalPoseStamped_Response__plans(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const nav_msgs::msg::Path *>(
+  const auto & item = *reinterpret_cast<const my_intermediate_interfaces::msg::AgentPath *>(
     get_const_function__StartGoalPoseStamped_Response__plans(untyped_member, index));
-  auto & value = *reinterpret_cast<nav_msgs::msg::Path *>(untyped_value);
+  auto & value = *reinterpret_cast<my_intermediate_interfaces::msg::AgentPath *>(untyped_value);
   value = item;
 }
 
 void assign_function__StartGoalPoseStamped_Response__plans(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<nav_msgs::msg::Path *>(
+  auto & item = *reinterpret_cast<my_intermediate_interfaces::msg::AgentPath *>(
     get_function__StartGoalPoseStamped_Response__plans(untyped_member, index));
-  const auto & value = *reinterpret_cast<const nav_msgs::msg::Path *>(untyped_value);
+  const auto & value = *reinterpret_cast<const my_intermediate_interfaces::msg::AgentPath *>(untyped_value);
   item = value;
 }
 
 void resize_function__StartGoalPoseStamped_Response__plans(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<nav_msgs::msg::Path> *>(untyped_member);
+    reinterpret_cast<std::vector<my_intermediate_interfaces::msg::AgentPath> *>(untyped_member);
   member->resize(size);
 }
 
@@ -313,7 +251,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember StartGoalPose
     "plans",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<nav_msgs::msg::Path>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<my_intermediate_interfaces::msg::AgentPath>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound

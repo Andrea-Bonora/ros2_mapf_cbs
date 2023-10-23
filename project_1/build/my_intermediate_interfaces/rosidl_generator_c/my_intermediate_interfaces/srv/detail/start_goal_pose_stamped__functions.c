@@ -11,9 +11,8 @@
 #include "rcutils/allocator.h"
 
 // Include directives for member types
-// Member `starts`
-// Member `goals`
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"
+// Member `requests`
+#include "my_intermediate_interfaces/msg/detail/agent_path_request__functions.h"
 
 bool
 my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__init(my_intermediate_interfaces__srv__StartGoalPoseStamped_Request * msg)
@@ -21,13 +20,8 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__init(my_intermedi
   if (!msg) {
     return false;
   }
-  // starts
-  if (!geometry_msgs__msg__PoseStamped__Sequence__init(&msg->starts, 0)) {
-    my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__fini(msg);
-    return false;
-  }
-  // goals
-  if (!geometry_msgs__msg__PoseStamped__Sequence__init(&msg->goals, 0)) {
+  // requests
+  if (!my_intermediate_interfaces__msg__AgentPathRequest__Sequence__init(&msg->requests, 0)) {
     my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__fini(msg);
     return false;
   }
@@ -40,10 +34,8 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__fini(my_intermedi
   if (!msg) {
     return;
   }
-  // starts
-  geometry_msgs__msg__PoseStamped__Sequence__fini(&msg->starts);
-  // goals
-  geometry_msgs__msg__PoseStamped__Sequence__fini(&msg->goals);
+  // requests
+  my_intermediate_interfaces__msg__AgentPathRequest__Sequence__fini(&msg->requests);
 }
 
 bool
@@ -52,15 +44,9 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__are_equal(const m
   if (!lhs || !rhs) {
     return false;
   }
-  // starts
-  if (!geometry_msgs__msg__PoseStamped__Sequence__are_equal(
-      &(lhs->starts), &(rhs->starts)))
-  {
-    return false;
-  }
-  // goals
-  if (!geometry_msgs__msg__PoseStamped__Sequence__are_equal(
-      &(lhs->goals), &(rhs->goals)))
+  // requests
+  if (!my_intermediate_interfaces__msg__AgentPathRequest__Sequence__are_equal(
+      &(lhs->requests), &(rhs->requests)))
   {
     return false;
   }
@@ -75,15 +61,9 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // starts
-  if (!geometry_msgs__msg__PoseStamped__Sequence__copy(
-      &(input->starts), &(output->starts)))
-  {
-    return false;
-  }
-  // goals
-  if (!geometry_msgs__msg__PoseStamped__Sequence__copy(
-      &(input->goals), &(output->goals)))
+  // requests
+  if (!my_intermediate_interfaces__msg__AgentPathRequest__Sequence__copy(
+      &(input->requests), &(output->requests)))
   {
     return false;
   }
@@ -272,7 +252,7 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__Sequence__copy(
 
 // Include directives for member types
 // Member `plans`
-#include "nav_msgs/msg/detail/path__functions.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__functions.h"
 
 bool
 my_intermediate_interfaces__srv__StartGoalPoseStamped_Response__init(my_intermediate_interfaces__srv__StartGoalPoseStamped_Response * msg)
@@ -281,7 +261,7 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Response__init(my_intermed
     return false;
   }
   // plans
-  if (!nav_msgs__msg__Path__Sequence__init(&msg->plans, 0)) {
+  if (!my_intermediate_interfaces__msg__AgentPath__Sequence__init(&msg->plans, 0)) {
     my_intermediate_interfaces__srv__StartGoalPoseStamped_Response__fini(msg);
     return false;
   }
@@ -295,7 +275,7 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Response__fini(my_intermed
     return;
   }
   // plans
-  nav_msgs__msg__Path__Sequence__fini(&msg->plans);
+  my_intermediate_interfaces__msg__AgentPath__Sequence__fini(&msg->plans);
 }
 
 bool
@@ -305,7 +285,7 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Response__are_equal(const 
     return false;
   }
   // plans
-  if (!nav_msgs__msg__Path__Sequence__are_equal(
+  if (!my_intermediate_interfaces__msg__AgentPath__Sequence__are_equal(
       &(lhs->plans), &(rhs->plans)))
   {
     return false;
@@ -322,7 +302,7 @@ my_intermediate_interfaces__srv__StartGoalPoseStamped_Response__copy(
     return false;
   }
   // plans
-  if (!nav_msgs__msg__Path__Sequence__copy(
+  if (!my_intermediate_interfaces__msg__AgentPath__Sequence__copy(
       &(input->plans), &(output->plans)))
   {
     return false;

@@ -183,7 +183,7 @@ using StartGoalPositions_Request =
 
 // Include directives for member types
 // Member 'plans'
-#include "nav_msgs/msg/detail/path__struct.hpp"
+#include "my_intermediate_interfaces/msg/detail/agent_path__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__srv__StartGoalPositions_Response __attribute__((deprecated))
@@ -216,12 +216,12 @@ struct StartGoalPositions_Response_
 
   // field types and members
   using _plans_type =
-    std::vector<nav_msgs::msg::Path_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<nav_msgs::msg::Path_<ContainerAllocator>>>;
+    std::vector<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>>>;
   _plans_type plans;
 
   // setters for named parameter idiom
   Type & set__plans(
-    const std::vector<nav_msgs::msg::Path_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<nav_msgs::msg::Path_<ContainerAllocator>>> & _arg)
+    const std::vector<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::AgentPath_<ContainerAllocator>>> & _arg)
   {
     this->plans = _arg;
     return *this;

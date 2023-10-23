@@ -21,32 +21,16 @@ namespace srv
 namespace builder
 {
 
-class Init_StartGoalPoseStamped_Request_goals
+class Init_StartGoalPoseStamped_Request_requests
 {
 public:
-  explicit Init_StartGoalPoseStamped_Request_goals(::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request & msg)
-  : msg_(msg)
-  {}
-  ::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request goals(::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request::_goals_type arg)
-  {
-    msg_.goals = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request msg_;
-};
-
-class Init_StartGoalPoseStamped_Request_starts
-{
-public:
-  Init_StartGoalPoseStamped_Request_starts()
+  Init_StartGoalPoseStamped_Request_requests()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_StartGoalPoseStamped_Request_goals starts(::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request::_starts_type arg)
+  ::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request requests(::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request::_requests_type arg)
   {
-    msg_.starts = std::move(arg);
-    return Init_StartGoalPoseStamped_Request_goals(msg_);
+    msg_.requests = std::move(arg);
+    return std::move(msg_);
   }
 
 private:
@@ -64,7 +48,7 @@ template<>
 inline
 auto build<::my_intermediate_interfaces::srv::StartGoalPoseStamped_Request>()
 {
-  return my_intermediate_interfaces::srv::builder::Init_StartGoalPoseStamped_Request_starts();
+  return my_intermediate_interfaces::srv::builder::Init_StartGoalPoseStamped_Request_requests();
 }
 
 }  // namespace my_intermediate_interfaces

@@ -319,7 +319,7 @@ struct is_message<my_intermediate_interfaces::srv::StartGoalPositions_Request>
 
 // Include directives for member types
 // Member 'plans'
-#include "nav_msgs/msg/detail/path__traits.hpp"
+#include "my_intermediate_interfaces/msg/detail/agent_path__traits.hpp"
 
 namespace my_intermediate_interfaces
 {

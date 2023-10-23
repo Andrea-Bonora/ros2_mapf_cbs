@@ -42,9 +42,9 @@ class Metaclass_StartGoalPoseStamped_Request(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__start_goal_pose_stamped__request
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__start_goal_pose_stamped__request
 
-            from geometry_msgs.msg import PoseStamped
-            if PoseStamped.__class__._TYPE_SUPPORT is None:
-                PoseStamped.__class__.__import_type_support__()
+            from my_intermediate_interfaces.msg import AgentPathRequest
+            if AgentPathRequest.__class__._TYPE_SUPPORT is None:
+                AgentPathRequest.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -59,26 +59,22 @@ class StartGoalPoseStamped_Request(metaclass=Metaclass_StartGoalPoseStamped_Requ
     """Message class 'StartGoalPoseStamped_Request'."""
 
     __slots__ = [
-        '_starts',
-        '_goals',
+        '_requests',
     ]
 
     _fields_and_field_types = {
-        'starts': 'sequence<geometry_msgs/PoseStamped>',
-        'goals': 'sequence<geometry_msgs/PoseStamped>',
+        'requests': 'sequence<my_intermediate_interfaces/AgentPathRequest>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'AgentPathRequest')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.starts = kwargs.get('starts', [])
-        self.goals = kwargs.get('goals', [])
+        self.requests = kwargs.get('requests', [])
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -109,9 +105,7 @@ class StartGoalPoseStamped_Request(metaclass=Metaclass_StartGoalPoseStamped_Requ
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.starts != other.starts:
-            return False
-        if self.goals != other.goals:
+        if self.requests != other.requests:
             return False
         return True
 
@@ -121,14 +115,14 @@ class StartGoalPoseStamped_Request(metaclass=Metaclass_StartGoalPoseStamped_Requ
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def starts(self):
-        """Message field 'starts'."""
-        return self._starts
+    def requests(self):
+        """Message field 'requests'."""
+        return self._requests
 
-    @starts.setter
-    def starts(self, value):
+    @requests.setter
+    def requests(self, value):
         if __debug__:
-            from geometry_msgs.msg import PoseStamped
+            from my_intermediate_interfaces.msg import AgentPathRequest
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -139,34 +133,10 @@ class StartGoalPoseStamped_Request(metaclass=Metaclass_StartGoalPoseStamped_Requ
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, PoseStamped) for v in value) and
+                 all(isinstance(v, AgentPathRequest) for v in value) and
                  True), \
-                "The 'starts' field must be a set or sequence and each value of type 'PoseStamped'"
-        self._starts = value
-
-    @builtins.property
-    def goals(self):
-        """Message field 'goals'."""
-        return self._goals
-
-    @goals.setter
-    def goals(self, value):
-        if __debug__:
-            from geometry_msgs.msg import PoseStamped
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, PoseStamped) for v in value) and
-                 True), \
-                "The 'goals' field must be a set or sequence and each value of type 'PoseStamped'"
-        self._goals = value
+                "The 'requests' field must be a set or sequence and each value of type 'AgentPathRequest'"
+        self._requests = value
 
 
 # Import statements for member types
@@ -210,9 +180,9 @@ class Metaclass_StartGoalPoseStamped_Response(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__start_goal_pose_stamped__response
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__start_goal_pose_stamped__response
 
-            from nav_msgs.msg import Path
-            if Path.__class__._TYPE_SUPPORT is None:
-                Path.__class__.__import_type_support__()
+            from my_intermediate_interfaces.msg import AgentPath
+            if AgentPath.__class__._TYPE_SUPPORT is None:
+                AgentPath.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -231,11 +201,11 @@ class StartGoalPoseStamped_Response(metaclass=Metaclass_StartGoalPoseStamped_Res
     ]
 
     _fields_and_field_types = {
-        'plans': 'sequence<nav_msgs/Path>',
+        'plans': 'sequence<my_intermediate_interfaces/AgentPath>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['nav_msgs', 'msg'], 'Path')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'AgentPath')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -290,7 +260,7 @@ class StartGoalPoseStamped_Response(metaclass=Metaclass_StartGoalPoseStamped_Res
     @plans.setter
     def plans(self, value):
         if __debug__:
-            from nav_msgs.msg import Path
+            from my_intermediate_interfaces.msg import AgentPath
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -301,9 +271,9 @@ class StartGoalPoseStamped_Response(metaclass=Metaclass_StartGoalPoseStamped_Res
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, Path) for v in value) and
+                 all(isinstance(v, AgentPath) for v in value) and
                  True), \
-                "The 'plans' field must be a set or sequence and each value of type 'Path'"
+                "The 'plans' field must be a set or sequence and each value of type 'AgentPath'"
         self._plans = value
 
 

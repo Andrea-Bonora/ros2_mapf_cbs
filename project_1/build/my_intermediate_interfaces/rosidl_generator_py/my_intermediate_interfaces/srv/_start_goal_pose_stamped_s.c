@@ -20,16 +20,10 @@
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 // Nested array functions includes
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path_request__functions.h"
 // end nested array functions include
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
+bool my_intermediate_interfaces__msg__agent_path_request__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_intermediate_interfaces__msg__agent_path_request__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__srv__start_goal_pose_stamped__request__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -64,12 +58,12 @@ bool my_intermediate_interfaces__srv__start_goal_pose_stamped__request__convert_
     assert(strncmp("my_intermediate_interfaces.srv._start_goal_pose_stamped.StartGoalPoseStamped_Request", full_classname_dest, 84) == 0);
   }
   my_intermediate_interfaces__srv__StartGoalPoseStamped_Request * ros_message = _ros_message;
-  {  // starts
-    PyObject * field = PyObject_GetAttrString(_pymsg, "starts");
+  {  // requests
+    PyObject * field = PyObject_GetAttrString(_pymsg, "requests");
     if (!field) {
       return false;
     }
-    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'starts'");
+    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'requests'");
     if (!seq_field) {
       Py_DECREF(field);
       return false;
@@ -80,48 +74,15 @@ bool my_intermediate_interfaces__srv__start_goal_pose_stamped__request__convert_
       Py_DECREF(field);
       return false;
     }
-    if (!geometry_msgs__msg__PoseStamped__Sequence__init(&(ros_message->starts), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create geometry_msgs__msg__PoseStamped__Sequence ros_message");
+    if (!my_intermediate_interfaces__msg__AgentPathRequest__Sequence__init(&(ros_message->requests), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create my_intermediate_interfaces__msg__AgentPathRequest__Sequence ros_message");
       Py_DECREF(seq_field);
       Py_DECREF(field);
       return false;
     }
-    geometry_msgs__msg__PoseStamped * dest = ros_message->starts.data;
+    my_intermediate_interfaces__msg__AgentPathRequest * dest = ros_message->requests.data;
     for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!geometry_msgs__msg__pose_stamped__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
-        Py_DECREF(seq_field);
-        Py_DECREF(field);
-        return false;
-      }
-    }
-    Py_DECREF(seq_field);
-    Py_DECREF(field);
-  }
-  {  // goals
-    PyObject * field = PyObject_GetAttrString(_pymsg, "goals");
-    if (!field) {
-      return false;
-    }
-    PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'goals'");
-    if (!seq_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    Py_ssize_t size = PySequence_Size(field);
-    if (-1 == size) {
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    if (!geometry_msgs__msg__PoseStamped__Sequence__init(&(ros_message->goals), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create geometry_msgs__msg__PoseStamped__Sequence ros_message");
-      Py_DECREF(seq_field);
-      Py_DECREF(field);
-      return false;
-    }
-    geometry_msgs__msg__PoseStamped * dest = ros_message->goals.data;
-    for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!geometry_msgs__msg__pose_stamped__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+      if (!my_intermediate_interfaces__msg__agent_path_request__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
@@ -152,17 +113,17 @@ PyObject * my_intermediate_interfaces__srv__start_goal_pose_stamped__request__co
     }
   }
   my_intermediate_interfaces__srv__StartGoalPoseStamped_Request * ros_message = (my_intermediate_interfaces__srv__StartGoalPoseStamped_Request *)raw_ros_message;
-  {  // starts
+  {  // requests
     PyObject * field = NULL;
-    size_t size = ros_message->starts.size;
+    size_t size = ros_message->requests.size;
     field = PyList_New(size);
     if (!field) {
       return NULL;
     }
-    geometry_msgs__msg__PoseStamped * item;
+    my_intermediate_interfaces__msg__AgentPathRequest * item;
     for (size_t i = 0; i < size; ++i) {
-      item = &(ros_message->starts.data[i]);
-      PyObject * pyitem = geometry_msgs__msg__pose_stamped__convert_to_py(item);
+      item = &(ros_message->requests.data[i]);
+      PyObject * pyitem = my_intermediate_interfaces__msg__agent_path_request__convert_to_py(item);
       if (!pyitem) {
         Py_DECREF(field);
         return NULL;
@@ -173,35 +134,7 @@ PyObject * my_intermediate_interfaces__srv__start_goal_pose_stamped__request__co
     }
     assert(PySequence_Check(field));
     {
-      int rc = PyObject_SetAttrString(_pymessage, "starts", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // goals
-    PyObject * field = NULL;
-    size_t size = ros_message->goals.size;
-    field = PyList_New(size);
-    if (!field) {
-      return NULL;
-    }
-    geometry_msgs__msg__PoseStamped * item;
-    for (size_t i = 0; i < size; ++i) {
-      item = &(ros_message->goals.data[i]);
-      PyObject * pyitem = geometry_msgs__msg__pose_stamped__convert_to_py(item);
-      if (!pyitem) {
-        Py_DECREF(field);
-        return NULL;
-      }
-      int rc = PyList_SetItem(field, i, pyitem);
-      (void)rc;
-      assert(rc == 0);
-    }
-    assert(PySequence_Check(field));
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "goals", field);
+      int rc = PyObject_SetAttrString(_pymessage, "requests", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -233,12 +166,10 @@ PyObject * my_intermediate_interfaces__srv__start_goal_pose_stamped__request__co
 // #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
 // Nested array functions includes
-#include "nav_msgs/msg/detail/path__functions.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__functions.h"
 // end nested array functions include
-ROSIDL_GENERATOR_C_IMPORT
-bool nav_msgs__msg__path__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * nav_msgs__msg__path__convert_to_py(void * raw_ros_message);
+bool my_intermediate_interfaces__msg__agent_path__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_intermediate_interfaces__msg__agent_path__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__srv__start_goal_pose_stamped__response__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -289,15 +220,15 @@ bool my_intermediate_interfaces__srv__start_goal_pose_stamped__response__convert
       Py_DECREF(field);
       return false;
     }
-    if (!nav_msgs__msg__Path__Sequence__init(&(ros_message->plans), size)) {
-      PyErr_SetString(PyExc_RuntimeError, "unable to create nav_msgs__msg__Path__Sequence ros_message");
+    if (!my_intermediate_interfaces__msg__AgentPath__Sequence__init(&(ros_message->plans), size)) {
+      PyErr_SetString(PyExc_RuntimeError, "unable to create my_intermediate_interfaces__msg__AgentPath__Sequence ros_message");
       Py_DECREF(seq_field);
       Py_DECREF(field);
       return false;
     }
-    nav_msgs__msg__Path * dest = ros_message->plans.data;
+    my_intermediate_interfaces__msg__AgentPath * dest = ros_message->plans.data;
     for (Py_ssize_t i = 0; i < size; ++i) {
-      if (!nav_msgs__msg__path__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
+      if (!my_intermediate_interfaces__msg__agent_path__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
         Py_DECREF(seq_field);
         Py_DECREF(field);
         return false;
@@ -335,10 +266,10 @@ PyObject * my_intermediate_interfaces__srv__start_goal_pose_stamped__response__c
     if (!field) {
       return NULL;
     }
-    nav_msgs__msg__Path * item;
+    my_intermediate_interfaces__msg__AgentPath * item;
     for (size_t i = 0; i < size; ++i) {
       item = &(ros_message->plans.data[i]);
-      PyObject * pyitem = nav_msgs__msg__path__convert_to_py(item);
+      PyObject * pyitem = my_intermediate_interfaces__msg__agent_path__convert_to_py(item);
       if (!pyitem) {
         Py_DECREF(field);
         return NULL;

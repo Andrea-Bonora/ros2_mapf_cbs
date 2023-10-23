@@ -1,2 +1,2 @@
 
-nav_msgs/Path[] plans
+AgentPath[] plans

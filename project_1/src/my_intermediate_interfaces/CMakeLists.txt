@@ -16,6 +16,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/StartGoalPoseStamped.srv"  
   "srv/StartGoalPositions.srv"
   "srv/ComputedPlans.srv"
+  "msg/AgentPathRequest.msg"
+  "msg/AgentPath.msg"
   DEPENDENCIES nav_msgs
   DEPENDENCIES geometry_msgs
 )

@@ -1,3 +1,7 @@
+msg/AgentPath.idl
+msg/AgentPath.msg
+msg/AgentPathRequest.idl
+msg/AgentPathRequest.msg
 srv/ComputedPlans.idl
 srv/ComputedPlans.srv
 srv/ComputedPlans_Request.msg

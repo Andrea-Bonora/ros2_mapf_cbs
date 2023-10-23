@@ -360,9 +360,9 @@ class Metaclass_StartGoalPositions_Response(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__start_goal_positions__response
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__start_goal_positions__response
 
-            from nav_msgs.msg import Path
-            if Path.__class__._TYPE_SUPPORT is None:
-                Path.__class__.__import_type_support__()
+            from my_intermediate_interfaces.msg import AgentPath
+            if AgentPath.__class__._TYPE_SUPPORT is None:
+                AgentPath.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -381,11 +381,11 @@ class StartGoalPositions_Response(metaclass=Metaclass_StartGoalPositions_Respons
     ]
 
     _fields_and_field_types = {
-        'plans': 'sequence<nav_msgs/Path>',
+        'plans': 'sequence<my_intermediate_interfaces/AgentPath>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['nav_msgs', 'msg'], 'Path')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'AgentPath')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -440,7 +440,7 @@ class StartGoalPositions_Response(metaclass=Metaclass_StartGoalPositions_Respons
     @plans.setter
     def plans(self, value):
         if __debug__:
-            from nav_msgs.msg import Path
+            from my_intermediate_interfaces.msg import AgentPath
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -451,9 +451,9 @@ class StartGoalPositions_Response(metaclass=Metaclass_StartGoalPositions_Respons
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, Path) for v in value) and
+                 all(isinstance(v, AgentPath) for v in value) and
                  True), \
-                "The 'plans' field must be a set or sequence and each value of type 'Path'"
+                "The 'plans' field must be a set or sequence and each value of type 'AgentPath'"
         self._plans = value
 
 

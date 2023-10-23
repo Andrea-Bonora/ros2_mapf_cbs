@@ -15,9 +15,8 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'starts'
-// Member 'goals'
-#include "geometry_msgs/msg/detail/pose_stamped__traits.hpp"
+// Member 'requests'
+#include "my_intermediate_interfaces/msg/detail/agent_path_request__traits.hpp"
 
 namespace my_intermediate_interfaces
 {
@@ -30,32 +29,14 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: starts
+  // member: requests
   {
-    if (msg.starts.size() == 0) {
-      out << "starts: []";
+    if (msg.requests.size() == 0) {
+      out << "requests: []";
     } else {
-      out << "starts: [";
-      size_t pending_items = msg.starts.size();
-      for (auto item : msg.starts) {
-        to_flow_style_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: goals
-  {
-    if (msg.goals.size() == 0) {
-      out << "goals: []";
-    } else {
-      out << "goals: [";
-      size_t pending_items = msg.goals.size();
-      for (auto item : msg.goals) {
+      out << "requests: [";
+      size_t pending_items = msg.requests.size();
+      for (auto item : msg.requests) {
         to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
@@ -71,35 +52,16 @@ inline void to_block_style_yaml(
   const StartGoalPoseStamped_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: starts
+  // member: requests
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.starts.size() == 0) {
-      out << "starts: []\n";
+    if (msg.requests.size() == 0) {
+      out << "requests: []\n";
     } else {
-      out << "starts:\n";
-      for (auto item : msg.starts) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "-\n";
-        to_block_style_yaml(item, out, indentation + 2);
-      }
-    }
-  }
-
-  // member: goals
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.goals.size() == 0) {
-      out << "goals: []\n";
-    } else {
-      out << "goals:\n";
-      for (auto item : msg.goals) {
+      out << "requests:\n";
+      for (auto item : msg.requests) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
@@ -170,7 +132,7 @@ struct is_message<my_intermediate_interfaces::srv::StartGoalPoseStamped_Request>
 
 // Include directives for member types
 // Member 'plans'
-#include "nav_msgs/msg/detail/path__traits.hpp"
+#include "my_intermediate_interfaces/msg/detail/agent_path__traits.hpp"
 
 namespace my_intermediate_interfaces
 {

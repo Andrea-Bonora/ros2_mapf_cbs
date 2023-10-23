@@ -1,0 +1,69 @@
+[1.128s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build
+[1.331s] running develop
+[1.452s] Removing /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my-intermediate.egg-link (link to .)
+[1.487s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build
+[1.489s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_intermediate build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log --single-version-externally-managed
+[1.674s] running egg_info
+[1.674s] writing ../../build/my_intermediate/my_intermediate.egg-info/PKG-INFO
+[1.674s] writing dependency_links to ../../build/my_intermediate/my_intermediate.egg-info/dependency_links.txt
+[1.674s] writing entry points to ../../build/my_intermediate/my_intermediate.egg-info/entry_points.txt
+[1.675s] writing requirements to ../../build/my_intermediate/my_intermediate.egg-info/requires.txt
+[1.675s] writing top-level names to ../../build/my_intermediate/my_intermediate.egg-info/top_level.txt
+[1.676s] reading manifest file '../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt'
+[1.677s] writing manifest file '../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt'
+[1.677s] running build
+[1.677s] running build_py
+[1.677s] copying my_intermediate/collision_avoider.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate
+[1.677s] copying my_intermediate/fake_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate
+[1.678s] copying my_intermediate/multi_agent_plan_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate
+[1.678s] running install
+[1.679s] running install_lib
+[1.679s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.679s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/collision_avoider.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.679s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/plan_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.679s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/__init__.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/fake_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/multi_agent_plan_asker.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/map_discretizer.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate
+[1.680s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/conflict.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/map_creator.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/constraint.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/cbs_node.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/__init__.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.680s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/state.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.681s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/environment.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.681s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/location.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.681s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/a_star.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.681s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/high_level_node.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.681s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/edge_constraint.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.681s] copying /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build/lib/my_intermediate/cbs/vertex_constraint.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs
+[1.682s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/collision_avoider.py to collision_avoider.cpython-310.pyc
+[1.683s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/plan_asker.py to plan_asker.cpython-310.pyc
+[1.684s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/__init__.py to __init__.cpython-310.pyc
+[1.684s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/fake_asker.py to fake_asker.cpython-310.pyc
+[1.684s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/multi_agent_plan_asker.py to multi_agent_plan_asker.cpython-310.pyc
+[1.685s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/map_discretizer.py to map_discretizer.cpython-310.pyc
+[1.685s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/conflict.py to conflict.cpython-310.pyc
+[1.685s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/map_creator.py to map_creator.cpython-310.pyc
+[1.686s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/constraint.py to constraint.cpython-310.pyc
+[1.686s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/cbs_node.py to cbs_node.cpython-310.pyc
+[1.686s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/__init__.py to __init__.cpython-310.pyc
+[1.686s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/state.py to state.cpython-310.pyc
+[1.687s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/environment.py to environment.cpython-310.pyc
+[1.688s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/location.py to location.cpython-310.pyc
+[1.688s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/a_star.py to a_star.cpython-310.pyc
+[1.688s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/high_level_node.py to high_level_node.cpython-310.pyc
+[1.688s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/edge_constraint.py to edge_constraint.cpython-310.pyc
+[1.688s] byte-compiling /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate/cbs/vertex_constraint.py to vertex_constraint.cpython-310.pyc
+[1.689s] running install_data
+[1.689s] running install_egg_info
+[1.690s] Copying ../../build/my_intermediate/my_intermediate.egg-info to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate-0.0.0-py3.10.egg-info
+[1.691s] running install_scripts
+[1.707s] Installing collision_avoider script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.707s] Installing fake_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.707s] Installing map_discretizer script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.707s] Installing multi_agent_plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.707s] Installing plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[1.707s] writing list of installed files to '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log'
+[1.783s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_intermediate build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log --single-version-externally-managed

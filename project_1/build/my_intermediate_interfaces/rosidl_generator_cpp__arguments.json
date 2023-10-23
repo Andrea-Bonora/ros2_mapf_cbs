@@ -5,7 +5,9 @@
   "idl_tuples": [
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:srv/StartGoalPoseStamped.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:srv/StartGoalPositions.idl",
-    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:srv/ComputedPlans.idl"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:srv/ComputedPlans.idl",
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/AgentPathRequest.idl",
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/AgentPath.idl"
   ],
   "ros_interface_dependencies": [
     "nav_msgs:/opt/ros/humble/share/nav_msgs/msg/GridCells.idl",
@@ -98,6 +100,8 @@
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/srv/StartGoalPoseStamped.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/srv/StartGoalPositions.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/srv/ComputedPlans.idl",
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/AgentPathRequest.idl",
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/AgentPath.idl",
     "/opt/ros/humble/share/nav_msgs/msg/GridCells.idl",
     "/opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl",
     "/opt/ros/humble/share/nav_msgs/msg/OccupancyGrid.idl",

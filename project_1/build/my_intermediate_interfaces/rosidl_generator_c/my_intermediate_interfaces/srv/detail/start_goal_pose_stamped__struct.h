@@ -18,15 +18,13 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'starts'
-// Member 'goals'
-#include "geometry_msgs/msg/detail/pose_stamped__struct.h"
+// Member 'requests'
+#include "my_intermediate_interfaces/msg/detail/agent_path_request__struct.h"
 
 /// Struct defined in srv/StartGoalPoseStamped in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__srv__StartGoalPoseStamped_Request
 {
-  geometry_msgs__msg__PoseStamped__Sequence starts;
-  geometry_msgs__msg__PoseStamped__Sequence goals;
+  my_intermediate_interfaces__msg__AgentPathRequest__Sequence requests;
 } my_intermediate_interfaces__srv__StartGoalPoseStamped_Request;
 
 // Struct for a sequence of my_intermediate_interfaces__srv__StartGoalPoseStamped_Request.
@@ -44,12 +42,12 @@ typedef struct my_intermediate_interfaces__srv__StartGoalPoseStamped_Request__Se
 
 // Include directives for member types
 // Member 'plans'
-#include "nav_msgs/msg/detail/path__struct.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__struct.h"
 
 /// Struct defined in srv/StartGoalPoseStamped in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__srv__StartGoalPoseStamped_Response
 {
-  nav_msgs__msg__Path__Sequence plans;
+  my_intermediate_interfaces__msg__AgentPath__Sequence plans;
 } my_intermediate_interfaces__srv__StartGoalPoseStamped_Response;
 
 // Struct for a sequence of my_intermediate_interfaces__srv__StartGoalPoseStamped_Response.

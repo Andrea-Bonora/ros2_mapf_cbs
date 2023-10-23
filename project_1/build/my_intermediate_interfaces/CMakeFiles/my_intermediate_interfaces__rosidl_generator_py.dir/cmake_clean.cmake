@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/msg/_agent_path_request_s.c.o"
+  "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/msg/_agent_path_request_s.c.o.d"
+  "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/msg/_agent_path_s.c.o"
+  "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/msg/_agent_path_s.c.o.d"
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/srv/_computed_plans_s.c.o"
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/srv/_computed_plans_s.c.o.d"
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_py/my_intermediate_interfaces/srv/_start_goal_pose_stamped_s.c.o"

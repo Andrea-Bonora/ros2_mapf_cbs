@@ -380,29 +380,29 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace nav_msgs
+namespace my_intermediate_interfaces
 {
 namespace msg
 {
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const nav_msgs::msg::Path &,
+  const my_intermediate_interfaces::msg::AgentPath &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
   eprosima::fastcdr::Cdr &,
-  nav_msgs::msg::Path &);
+  my_intermediate_interfaces::msg::AgentPath &);
 size_t get_serialized_size(
-  const nav_msgs::msg::Path &,
+  const my_intermediate_interfaces::msg::AgentPath &,
   size_t current_alignment);
 size_t
-max_serialized_size_Path(
+max_serialized_size_AgentPath(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
-}  // namespace nav_msgs
+}  // namespace my_intermediate_interfaces
 
 
 namespace my_intermediate_interfaces
@@ -425,7 +425,7 @@ cdr_serialize(
     size_t size = ros_message.plans.size();
     cdr << static_cast<uint32_t>(size);
     for (size_t i = 0; i < size; i++) {
-      nav_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
         ros_message.plans[i],
         cdr);
     }
@@ -446,7 +446,7 @@ cdr_deserialize(
     size_t size = static_cast<size_t>(cdrSize);
     ros_message.plans.resize(size);
     for (size_t i = 0; i < size; i++) {
-      nav_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
         cdr, ros_message.plans[i]);
     }
   }
@@ -476,7 +476,7 @@ get_serialized_size(
 
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment +=
-        nav_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
         ros_message.plans[index], current_alignment);
     }
   }
@@ -515,7 +515,7 @@ max_serialized_size_StartGoalPositions_Response(
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        nav_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_Path(
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_AgentPath(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

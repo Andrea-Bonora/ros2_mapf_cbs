@@ -52,12 +52,12 @@ typedef struct my_intermediate_interfaces__srv__StartGoalPositions_Request__Sequ
 
 // Include directives for member types
 // Member 'plans'
-#include "nav_msgs/msg/detail/path__struct.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__struct.h"
 
 /// Struct defined in srv/StartGoalPositions in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__srv__StartGoalPositions_Response
 {
-  nav_msgs__msg__Path__Sequence plans;
+  my_intermediate_interfaces__msg__AgentPath__Sequence plans;
 } my_intermediate_interfaces__srv__StartGoalPositions_Response;
 
 // Struct for a sequence of my_intermediate_interfaces__srv__StartGoalPositions_Response.

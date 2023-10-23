@@ -526,9 +526,9 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 // Include directives for member types
 // Member `plans`
-#include "nav_msgs/msg/path.h"
+#include "my_intermediate_interfaces/msg/agent_path.h"
 // Member `plans`
-#include "nav_msgs/msg/detail/path__rosidl_typesupport_introspection_c.h"
+#include "my_intermediate_interfaces/msg/detail/agent_path__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -552,56 +552,56 @@ void my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesu
 size_t my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Response__plans(
   const void * untyped_member)
 {
-  const nav_msgs__msg__Path__Sequence * member =
-    (const nav_msgs__msg__Path__Sequence *)(untyped_member);
+  const my_intermediate_interfaces__msg__AgentPath__Sequence * member =
+    (const my_intermediate_interfaces__msg__AgentPath__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Response__plans(
   const void * untyped_member, size_t index)
 {
-  const nav_msgs__msg__Path__Sequence * member =
-    (const nav_msgs__msg__Path__Sequence *)(untyped_member);
+  const my_intermediate_interfaces__msg__AgentPath__Sequence * member =
+    (const my_intermediate_interfaces__msg__AgentPath__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Response__plans(
   void * untyped_member, size_t index)
 {
-  nav_msgs__msg__Path__Sequence * member =
-    (nav_msgs__msg__Path__Sequence *)(untyped_member);
+  my_intermediate_interfaces__msg__AgentPath__Sequence * member =
+    (my_intermediate_interfaces__msg__AgentPath__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Response__plans(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const nav_msgs__msg__Path * item =
-    ((const nav_msgs__msg__Path *)
+  const my_intermediate_interfaces__msg__AgentPath * item =
+    ((const my_intermediate_interfaces__msg__AgentPath *)
     my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Response__plans(untyped_member, index));
-  nav_msgs__msg__Path * value =
-    (nav_msgs__msg__Path *)(untyped_value);
+  my_intermediate_interfaces__msg__AgentPath * value =
+    (my_intermediate_interfaces__msg__AgentPath *)(untyped_value);
   *value = *item;
 }
 
 void my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Response__plans(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  nav_msgs__msg__Path * item =
-    ((nav_msgs__msg__Path *)
+  my_intermediate_interfaces__msg__AgentPath * item =
+    ((my_intermediate_interfaces__msg__AgentPath *)
     my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Response__plans(untyped_member, index));
-  const nav_msgs__msg__Path * value =
-    (const nav_msgs__msg__Path *)(untyped_value);
+  const my_intermediate_interfaces__msg__AgentPath * value =
+    (const my_intermediate_interfaces__msg__AgentPath *)(untyped_value);
   *item = *value;
 }
 
 bool my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Response__plans(
   void * untyped_member, size_t size)
 {
-  nav_msgs__msg__Path__Sequence * member =
-    (nav_msgs__msg__Path__Sequence *)(untyped_member);
-  nav_msgs__msg__Path__Sequence__fini(member);
-  return nav_msgs__msg__Path__Sequence__init(member, size);
+  my_intermediate_interfaces__msg__AgentPath__Sequence * member =
+    (my_intermediate_interfaces__msg__AgentPath__Sequence *)(untyped_member);
+  my_intermediate_interfaces__msg__AgentPath__Sequence__fini(member);
+  return my_intermediate_interfaces__msg__AgentPath__Sequence__init(member, size);
 }
 
 static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__StartGoalPositions_Response_message_member_array[1] = {
@@ -646,7 +646,7 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, srv, StartGoalPositions_Response)() {
   my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__StartGoalPositions_Response_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, nav_msgs, msg, Path)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, AgentPath)();
   if (!my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__StartGoalPositions_Response_message_type_support_handle.typesupport_identifier) {
     my_intermediate_interfaces__srv__StartGoalPositions_Response__rosidl_typesupport_introspection_c__StartGoalPositions_Response_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

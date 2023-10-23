@@ -34,23 +34,20 @@ extern "C"
 {
 #endif
 
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // goals, starts
+#include "my_intermediate_interfaces/msg/detail/agent_path_request__functions.h"  // requests
 
 // forward declare type support functions
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
-size_t get_serialized_size_geometry_msgs__msg__PoseStamped(
+size_t get_serialized_size_my_intermediate_interfaces__msg__AgentPathRequest(
   const void * untyped_ros_message,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
-size_t max_serialized_size_geometry_msgs__msg__PoseStamped(
+size_t max_serialized_size_my_intermediate_interfaces__msg__AgentPathRequest(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped)();
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, AgentPathRequest)();
 
 
 using _StartGoalPoseStamped_Request__ros_msg_type = my_intermediate_interfaces__srv__StartGoalPoseStamped_Request;
@@ -64,34 +61,15 @@ static bool _StartGoalPoseStamped_Request__cdr_serialize(
     return false;
   }
   const _StartGoalPoseStamped_Request__ros_msg_type * ros_message = static_cast<const _StartGoalPoseStamped_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: starts
+  // Field name: requests
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, AgentPathRequest
       )()->data);
-    size_t size = ros_message->starts.size;
-    auto array_ptr = ros_message->starts.data;
-    cdr << static_cast<uint32_t>(size);
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_serialize(
-          &array_ptr[i], cdr))
-      {
-        return false;
-      }
-    }
-  }
-
-  // Field name: goals
-  {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
-      )()->data);
-    size_t size = ros_message->goals.size;
-    auto array_ptr = ros_message->goals.data;
+    size_t size = ros_message->requests.size;
+    auto array_ptr = ros_message->requests.data;
     cdr << static_cast<uint32_t>(size);
     for (size_t i = 0; i < size; ++i) {
       if (!callbacks->cdr_serialize(
@@ -114,51 +92,24 @@ static bool _StartGoalPoseStamped_Request__cdr_deserialize(
     return false;
   }
   _StartGoalPoseStamped_Request__ros_msg_type * ros_message = static_cast<_StartGoalPoseStamped_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: starts
+  // Field name: requests
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, AgentPathRequest
       )()->data);
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->starts.data) {
-      geometry_msgs__msg__PoseStamped__Sequence__fini(&ros_message->starts);
+    if (ros_message->requests.data) {
+      my_intermediate_interfaces__msg__AgentPathRequest__Sequence__fini(&ros_message->requests);
     }
-    if (!geometry_msgs__msg__PoseStamped__Sequence__init(&ros_message->starts, size)) {
-      fprintf(stderr, "failed to create array for field 'starts'");
+    if (!my_intermediate_interfaces__msg__AgentPathRequest__Sequence__init(&ros_message->requests, size)) {
+      fprintf(stderr, "failed to create array for field 'requests'");
       return false;
     }
-    auto array_ptr = ros_message->starts.data;
-    for (size_t i = 0; i < size; ++i) {
-      if (!callbacks->cdr_deserialize(
-          cdr, &array_ptr[i]))
-      {
-        return false;
-      }
-    }
-  }
-
-  // Field name: goals
-  {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
-      )()->data);
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->goals.data) {
-      geometry_msgs__msg__PoseStamped__Sequence__fini(&ros_message->goals);
-    }
-    if (!geometry_msgs__msg__PoseStamped__Sequence__init(&ros_message->goals, size)) {
-      fprintf(stderr, "failed to create array for field 'goals'");
-      return false;
-    }
-    auto array_ptr = ros_message->goals.data;
+    auto array_ptr = ros_message->requests.data;
     for (size_t i = 0; i < size; ++i) {
       if (!callbacks->cdr_deserialize(
           cdr, &array_ptr[i]))
@@ -185,27 +136,15 @@ size_t get_serialized_size_my_intermediate_interfaces__srv__StartGoalPoseStamped
   (void)padding;
   (void)wchar_size;
 
-  // field.name starts
+  // field.name requests
   {
-    size_t array_size = ros_message->starts.size;
-    auto array_ptr = ros_message->starts.data;
+    size_t array_size = ros_message->requests.size;
+    auto array_ptr = ros_message->requests.data;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
-        &array_ptr[index], current_alignment);
-    }
-  }
-  // field.name goals
-  {
-    size_t array_size = ros_message->goals.size;
-    auto array_ptr = ros_message->goals.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
+      current_alignment += get_serialized_size_my_intermediate_interfaces__msg__AgentPathRequest(
         &array_ptr[index], current_alignment);
     }
   }
@@ -236,7 +175,7 @@ size_t max_serialized_size_my_intermediate_interfaces__srv__StartGoalPoseStamped
   full_bounded = true;
   is_plain = true;
 
-  // member: starts
+  // member: requests
   {
     size_t array_size = 0;
     full_bounded = false;
@@ -249,26 +188,7 @@ size_t max_serialized_size_my_intermediate_interfaces__srv__StartGoalPoseStamped
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        max_serialized_size_geometry_msgs__msg__PoseStamped(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
-  }
-  // member: goals
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_geometry_msgs__msg__PoseStamped(
+        max_serialized_size_my_intermediate_interfaces__msg__AgentPathRequest(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
@@ -358,23 +278,20 @@ extern "C"
 {
 #endif
 
-#include "nav_msgs/msg/detail/path__functions.h"  // plans
+#include "my_intermediate_interfaces/msg/detail/agent_path__functions.h"  // plans
 
 // forward declare type support functions
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
-size_t get_serialized_size_nav_msgs__msg__Path(
+size_t get_serialized_size_my_intermediate_interfaces__msg__AgentPath(
   const void * untyped_ros_message,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
-size_t max_serialized_size_nav_msgs__msg__Path(
+size_t max_serialized_size_my_intermediate_interfaces__msg__AgentPath(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, nav_msgs, msg, Path)();
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, AgentPath)();
 
 
 using _StartGoalPoseStamped_Response__ros_msg_type = my_intermediate_interfaces__srv__StartGoalPoseStamped_Response;
@@ -393,7 +310,7 @@ static bool _StartGoalPoseStamped_Response__cdr_serialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, nav_msgs, msg, Path
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, AgentPath
       )()->data);
     size_t size = ros_message->plans.size;
     auto array_ptr = ros_message->plans.data;
@@ -424,15 +341,15 @@ static bool _StartGoalPoseStamped_Response__cdr_deserialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, nav_msgs, msg, Path
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, AgentPath
       )()->data);
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
     if (ros_message->plans.data) {
-      nav_msgs__msg__Path__Sequence__fini(&ros_message->plans);
+      my_intermediate_interfaces__msg__AgentPath__Sequence__fini(&ros_message->plans);
     }
-    if (!nav_msgs__msg__Path__Sequence__init(&ros_message->plans, size)) {
+    if (!my_intermediate_interfaces__msg__AgentPath__Sequence__init(&ros_message->plans, size)) {
       fprintf(stderr, "failed to create array for field 'plans'");
       return false;
     }
@@ -471,7 +388,7 @@ size_t get_serialized_size_my_intermediate_interfaces__srv__StartGoalPoseStamped
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += get_serialized_size_nav_msgs__msg__Path(
+      current_alignment += get_serialized_size_my_intermediate_interfaces__msg__AgentPath(
         &array_ptr[index], current_alignment);
     }
   }
@@ -515,7 +432,7 @@ size_t max_serialized_size_my_intermediate_interfaces__srv__StartGoalPoseStamped
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        max_serialized_size_nav_msgs__msg__Path(
+        max_serialized_size_my_intermediate_interfaces__msg__AgentPath(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

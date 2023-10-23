@@ -1,121 +1,97 @@
+#This node communicates with the planner_server of each agent using the /compute_path_to_pose
+#action server. The idea is simply to obtain a plan from a starting point to an end point.
+#NOT DONE. The planner should take into account all the constraints imposed by the collision_avoider node 
+# and compute plan based on them. To do this a modification of the planner is needed.
+
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 
-from nav2_msgs.action import ComputePathToPose, FollowPath
+from nav2_msgs.action import ComputePathToPose
 from rclpy.action import ActionClient
 from rclpy.node import Node
-from functools import partial
 from my_intermediate_interfaces.srv import StartGoalPoseStamped
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
+from my_intermediate_interfaces.msg import AgentPath
 
 
 class MultiAgentPlanAskerNode(Node):
     def __init__(self):
         super().__init__("multi_agent_plan_asker")
-
-        self.plans_ = []
-        self.create_service(StartGoalPoseStamped, "get_plans", self.callback_get_plan)
-
+        client_cb_group = MutuallyExclusiveCallbackGroup()
+        self.server_ = self.create_service(StartGoalPoseStamped, "get_plans", self.callback_get_plan, callback_group=client_cb_group)
         self.get_logger().info("Multi Agent Plan Asker has been started")
 
     def callback_get_plan(self, request, response):
 
         self.plans_ = []
-        s_e_couples = self.couple_request(request.starts, request.goals)
         self.get_logger().info("Asking for plans...")
-        futures = self.ask_plan(s_e_couples)
-        for f in futures:
-            if not f.done():
-                self.get_logger().error("PLAN ARE NOT COMPUTED YET!")
-        response.plans = self.plans_
+        plans = self.ask_plan(request)
+        self.get_logger().info(str(len(plans)))
+        self.get_logger().info("Sending Response")
+        response.plans = plans
         return response
 
-    def ask_plan(self, s_e_couples):
+    def ask_plan(self, s_request):
 
         i = 1
         futures = []
-        for r in s_e_couples:
-
-            client = ActionClient(self, ComputePathToPose, 'tb' + str(i) + '/compute_path_to_pose')
+        
+        for i in range(len(s_request.requests)):
+            r = s_request.requests[i]
+            client_cb_group_actions = MutuallyExclusiveCallbackGroup()
+            client = ActionClient(self, ComputePathToPose, r.name + '/compute_path_to_pose', callback_group=client_cb_group_actions)
             client.wait_for_server()
         
             request = ComputePathToPose.Goal()
-            request.goal = r['e']
-            request.start = r['s']
+            request.goal = r.goal
+            request.start = r.start
             request.planner_id = ""
             request.use_start = False
-            self.get_logger().info("Searching plan #" + str(i))
+            self.get_logger().info("Searching plan for " + r.name)
             future = client.send_goal_async(request)
-            future.add_done_callback(partial(self.callback_ask_plan, i=i))
+            #future.add_done_callback(partial(self.callback_ask_plan, i=i))
             futures.append(future)
             i += 1
 
-            
         for f in futures:
             rclpy.spin_until_future_complete(self, f)
 
-        return futures
+        results = []
+        for f in futures:
+            if not f.done():
+               self.get_logger().info("Non va") 
+            elif f.result().accepted:
+               goal_handle = f.result()
+               result = goal_handle.get_result_async()
+               #result.add_done_callback(partial(self.callback_get_result, i=i))
+               results.append(result)
+               self.get_logger().info("PROVA")
 
-    def callback_ask_plan(self, future, i):
-        try:
-            goal_handle = future.result()
-            if not goal_handle.accepted:
-                self.get_logger().warn('Goal rejected :(')
-                return
-            
-            self.get_logger().info('Goal accepted, searching for plan...')
-
-            result = goal_handle.get_result_async()
-            result.add_done_callback(partial(self.callback_get_result, i=i))
-
-            #if response.accepted 
-            #time = response.planning_time
-            #self.get_logger().info("Plan computed! Total time: " + time.sec)
-        except Exception as e:
-            self.get_logger().error("Service call failed %r" % (e,))
-
-    def callback_get_result(self, future, i):
-        result = future.result().result
-        self.plans_.append(result)
-        self.get_logger().info("Plan #"+str(i)+ " found")
-        #self.execute_plan(result, i)
-
-    def execute_plan(self, result, i):
-        client = ActionClient(self, FollowPath, 'tb' + str(i)+ '/follow_path')
-
-        msg = FollowPath.Goal()
-        msg.path = result.path
-        msg.controller_id = ""
-        msg.goal_checker_id = ""
-
-        client.wait_for_server()
-
-        future = client.send_goal_async(msg)
-        future.add_done_callback(self.callback_execute_plan)
-
-    def callback_execute_plan(self, future):
-        try:
-            goal_handle = future.result()
-            if not goal_handle.accepted:
-                self.get_logger().warn('Goal rejected :(')
-                return
-            
-            self.get_logger().info('Goal accepted, executing plan...')
-
-            result = goal_handle.get_result_async()
-            result.add_done_callback(self.callback_result_execute_plan)
-        except Exception as e:
-            self.get_logger().error("Service call failed %r" % (e,))
-
-    def callback_result_execute_plan(self, future):
-        self.get_logger().info("Plan executed correctly!")
+        self.get_logger().info("Collect results1")
+        for r in results:
+            rclpy.spin_until_future_complete(self, r)
+        self.get_logger().info("Collect results2")
+        plans = []
+        for i, r in enumerate(results):
+            result = r.result().result
+            ap = AgentPath()
+            ap.name = s_request.requests[i].name
+            ap.path = result.path
+            plans.append(ap)
+            self.get_logger().info("Plan found")
+        
+        return plans
 
     def couple_request(self, starts, goals):
         paths = []
-        for i in range(starts):
+        for i in range(len(starts)):
             paths.append({"s": starts[i], "e": goals[i]})
 
         return paths
+    
+    def wait_future(self, future):
+        rclpy.spin_until_future_complete(self, future)
     
 def main(args=None):
     rclpy.init(args=args)

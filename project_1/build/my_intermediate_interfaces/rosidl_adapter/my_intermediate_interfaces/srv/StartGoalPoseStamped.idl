@@ -2,18 +2,16 @@
 // with input from my_intermediate_interfaces/srv/StartGoalPoseStamped.srv
 // generated code does not contain a copyright notice
 
-#include "geometry_msgs/msg/PoseStamped.idl"
-#include "nav_msgs/msg/Path.idl"
+#include "my_intermediate_interfaces/msg/AgentPath.idl"
+#include "my_intermediate_interfaces/msg/AgentPathRequest.idl"
 
 module my_intermediate_interfaces {
   module srv {
     struct StartGoalPoseStamped_Request {
-      sequence<geometry_msgs::msg::PoseStamped> starts;
-
-      sequence<geometry_msgs::msg::PoseStamped> goals;
+      sequence<my_intermediate_interfaces::msg::AgentPathRequest> requests;
     };
     struct StartGoalPoseStamped_Response {
-      sequence<nav_msgs::msg::Path> plans;
+      sequence<my_intermediate_interfaces::msg::AgentPath> plans;
     };
   };
 };
