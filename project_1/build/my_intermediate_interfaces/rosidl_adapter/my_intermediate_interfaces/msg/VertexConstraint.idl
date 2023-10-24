@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from my_intermediate_interfaces/msg/VertexConstraint.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module my_intermediate_interfaces {
+  module msg {
+    struct VertexConstraint {
+      string agent_name;
+
+      geometry_msgs::msg::PoseStamped cell;
+
+      int64 time_step;
+    };
+  };
+};

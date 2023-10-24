@@ -1,0 +1,228 @@
+[0.059s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner -- -j8 -l8
+[0.077s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.180s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.180s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.199s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.201s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.205s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.212s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.222s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.261s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.262s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.281s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.387s] -- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.445s] -- Found my_intermediate_interfaces: 0.0.0 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake)
+[0.597s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.621s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.770s] -- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)
+[1.070s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.071s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.192s] -- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)
+[2.256s] -- Found my_nav2_core: 1.2.0 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake)
+[10.401s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[10.401s] -- Found ament_cmake_gtest: 1.3.5 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[10.452s] -- Added test 'copyright' to check source files copyright and LICENSE
+[10.453s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[10.453s] -- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include
+[10.453s] -- Configured cppcheck exclude dirs and/or files: 
+[10.454s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[10.454s] -- Configured cpplint exclude dirs and/or files: 
+[10.454s] -- Added test 'lint_cmake' to check CMake code style
+[10.454s] -- Added test 'uncrustify' to check C / C++ code style
+[10.454s] -- Configured uncrustify additional arguments: 
+[10.454s] -- Added test 'xmllint' to check XML markup files
+[10.456s] -- Configuring done
+[10.506s] -- Generating done
+[10.507s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner
+[10.530s] [35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
+[10.547s] [ 66%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o[0m
+[10.547s] [ 66%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
+[12.926s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.926s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_nav2_core[m[K’ has not been declared
+[12.926s]    42 | class NavfnPlanner : public [01;31m[Kmy_nav2_core[m[K::MultiAgentGlobalPlanner
+[12.926s]       |                             [01;31m[K^~~~~~~~~~~~[m[K
+[12.926s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:43:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[KMultiAgentGlobalPlanner[m[K’
+[12.926s]    42 | class NavfnPlanner : public my_nav2_core::[01;31m[KMultiAgentGlobalPlanner[m[K
+[12.926s]       |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[12.926s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:44:1:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kpublic[m[K’
+[12.926s]    44 | [01;31m[Kpublic[m[K:
+[12.926s]       | [01;31m[K^~~~~~[m[K
+[12.926s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:44:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[Kpublic[m[K’
+[12.926s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:43:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[12.927s]    43 | [01;36m[K{[m[K
+[12.927s]       | [01;36m[K^[m[K
+[12.927s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:53:18:[m[K [01;31m[Kerror: [m[Kexpected constructor, destructor, or type conversion before ‘[01m[K;[m[K’ token
+[12.927s]    53 |   ~NavfnPlanner()[01;31m[K;[m[K
+[12.927s]       |                  [01;31m[K^[m[K
+[12.927s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:65:65:[m[K [01;31m[Kerror: [m[Kvirt-specifiers in ‘[01m[Kconfigure[m[K’ not allowed outside a class definition
+[12.927s]    65 |     std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros) [01;31m[Koverride[m[K;
+[12.927s]       |                                                                 [01;31m[K^~~~~~~~[m[K
+[12.927s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:70:18:[m[K [01;31m[Kerror: [m[Kvirt-specifiers in ‘[01m[Kcleanup[m[K’ not allowed outside a class definition
+[12.927s]    70 |   void cleanup() [01;31m[Koverride[m[K;
+[12.927s]       |                  [01;31m[K^~~~~~~~[m[K
+[12.927s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:75:19:[m[K [01;31m[Kerror: [m[Kvirt-specifiers in ‘[01m[Kactivate[m[K’ not allowed outside a class definition
+[12.927s]    75 |   void activate() [01;31m[Koverride[m[K;
+[12.927s]       |                   [01;31m[K^~~~~~~~[m[K
+[12.927s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:80:21:[m[K [01;31m[Kerror: [m[Kvirt-specifiers in ‘[01m[Kdeactivate[m[K’ not allowed outside a class definition
+[12.927s]    80 |   void deactivate() [01;31m[Koverride[m[K;
+[12.927s]       |                     [01;31m[K^~~~~~~~[m[K
+[12.927s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:95:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprotected[m[K’
+[12.927s]    95 | [01;31m[Kprotected[m[K:
+[12.927s]       | [01;31m[K^~~~~~~~~[m[K
+[12.936s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:238:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[12.936s]   238 | [01;31m[K}[m[K  // namespace nav2_navfn_planner
+[12.936s]       | [01;31m[K^[m[K
+[12.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:27:28:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.940s]    27 | NavfnPlanner::NavfnPlanner([01;31m[K)[m[K
+[12.940s]       |                            [01;31m[K^[m[K
+[12.940s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.940s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.940s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:32:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    32 | NavfnPlanner::~NavfnPlanner([01;31m[K)[m[K
+[12.941s]       |                             [01;31m[K^[m[K
+[12.941s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.941s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:43:61:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    43 |   std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros[01;31m[K)[m[K
+[12.941s]       |                                                             [01;31m[K^[m[K
+[12.941s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.941s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:78:24:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    78 | NavfnPlanner::activate([01;31m[K)[m[K
+[12.941s]       |                        [01;31m[K^[m[K
+[12.941s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.941s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:90:26:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.941s]    90 | NavfnPlanner::deactivate([01;31m[K)[m[K
+[12.941s]       |                          [01;31m[K^[m[K
+[12.942s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.942s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.942s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:99:23:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.942s]    99 | NavfnPlanner::cleanup([01;31m[K)[m[K
+[12.942s]       |                       [01;31m[K^[m[K
+[12.942s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.942s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.942s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:111:86:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.942s]   111 |   const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints[01;31m[K)[m[K
+[12.942s]       |                                                                                      [01;31m[K^[m[K
+[12.942s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.942s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.942s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:191:34:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.942s]   191 | NavfnPlanner::isPlannerOutOfDate([01;31m[K)[m[K
+[12.942s]       |                                  [01;31m[K^[m[K
+[12.942s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.942s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.943s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:206:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]   206 |   nav_msgs::msg::Path & plan[01;31m[K)[m[K
+[12.943s]       |                             [01;31m[K^[m[K
+[12.943s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.943s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:340:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]   340 |   nav_msgs::msg::Path & plan[01;31m[K)[m[K
+[12.943s]       |                             [01;31m[K^[m[K
+[12.943s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.943s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:363:29:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]   363 |   nav_msgs::msg::Path & plan[01;31m[K)[m[K
+[12.943s]       |                             [01;31m[K^[m[K
+[12.943s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.943s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.943s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:420:78:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.943s]   420 | NavfnPlanner::getPointPotential(const geometry_msgs::msg::Point & world_point[01;31m[K)[m[K
+[12.944s]       |                                                                              [01;31m[K^[m[K
+[12.944s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.944s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:469:84:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]   469 | NavfnPlanner::worldToMap(double wx, double wy, unsigned int & mx, unsigned int & my[01;31m[K)[m[K
+[12.944s]       |                                                                                    [01;31m[K^[m[K
+[12.944s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.944s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:493:72:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]   493 | NavfnPlanner::mapToWorld(double mx, double my, double & wx, double & wy[01;31m[K)[m[K
+[12.944s]       |                                                                        [01;31m[K^[m[K
+[12.944s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.944s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:500:62:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]   500 | NavfnPlanner::clearRobotCell(unsigned int mx, unsigned int my[01;31m[K)[m[K
+[12.944s]       |                                                              [01;31m[K^[m[K
+[12.944s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.944s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.944s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.945s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.945s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:508:82:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.945s]   508 | NavfnPlanner::dynamicParametersCallback(std::vector<rclcpp::Parameter> parameters[01;31m[K)[m[K
+[12.945s]       |                                                                                  [01;31m[K^[m[K
+[12.945s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.945s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’
+[12.945s]    42 | class [01;36m[KNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+[12.945s]       |       [01;36m[K^~~~~~~~~~~~[m[K
+[12.945s] In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:56[m[K,
+[12.945s]                  from [01m[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52[m[K,
+[12.945s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38[m[K,
+[12.945s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[12.945s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21[m[K,
+[12.945s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29[m[K,
+[12.945s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.945s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_nav2_core[m[K’ does not name a type
+[12.945s]   536 | PLUGINLIB_EXPORT_CLASS(my_nav2_navfn_planner::NavfnPlanner, [01;31m[Kmy_nav2_core[m[K::MultiAgentGlobalPlanner)
+[12.945s]       |                                                             [01;31m[K^~~~~~~~~~~~[m[K
+[12.952s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In constructor ‘[01m[K{anonymous}::ProxyExec0::ProxyExec0()[m[K’:
+[12.952s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:1:[m[K [01;31m[Kerror: [m[K‘[01m[K_base[m[K’ was not declared in this scope
+[12.952s]   536 | [01;31m[KPLUGINLIB_EXPORT_CLASS[m[K(my_nav2_navfn_planner::NavfnPlanner, my_nav2_core::MultiAgentGlobalPlanner)
+[12.952s]       | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[12.953s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:1:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KregisterPlugin<{anonymous}::ProxyExec0::_derived, <expression error> >(const char [36], const char [38])[m[K’
+[12.953s]   536 | [01;31m[KPLUGINLIB_EXPORT_CLASS[m[K(my_nav2_navfn_planner::NavfnPlanner, my_nav2_core::MultiAgentGlobalPlanner)
+[12.953s]       | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[12.953s] In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:55[m[K,
+[12.953s]                  from [01m[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52[m[K,
+[12.953s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38[m[K,
+[12.953s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[12.953s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21[m[K,
+[12.953s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29[m[K,
+[12.953s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.953s] [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:210:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Derived, class Base> void class_loader::impl::registerPlugin(const string&, const string&)[m[K’
+[12.953s]   210 | void [01;36m[KregisterPlugin[m[K(const std::string & class_name, const std::string & base_class_name)
+[12.953s]       |      [01;36m[K^~~~~~~~~~~~~~[m[K
+[12.953s] [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:210:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[12.953s] In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:56[m[K,
+[12.953s]                  from [01m[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52[m[K,
+[12.953s]                  from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38[m[K,
+[12.953s]                  from [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+[12.953s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21[m[K,
+[12.953s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29[m[K,
+[12.953s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[12.953s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[12.953s]   536 | [01;31m[KPLUGINLIB_EXPORT_CLASS[m[K(my_nav2_navfn_planner::NavfnPlanner, my_nav2_core::MultiAgentGlobalPlanner)
+[12.953s]       | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.968s] gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o] Error 1
+[13.968s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+[13.969s] gmake: *** [Makefile:146: all] Error 2
+[13.972s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner' returned '2': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner -- -j8 -l8

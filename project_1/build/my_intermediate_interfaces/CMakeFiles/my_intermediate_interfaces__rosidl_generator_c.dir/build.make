@@ -87,6 +87,8 @@ rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: ros
 rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: rosidl_adapter/my_intermediate_interfaces/srv/ComputedPlans.idl
 rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: rosidl_adapter/my_intermediate_interfaces/msg/AgentPathRequest.idl
 rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: rosidl_adapter/my_intermediate_interfaces/msg/AgentPath.idl
+rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: rosidl_adapter/my_intermediate_interfaces/msg/VertexConstraint.idl
+rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: rosidl_adapter/my_intermediate_interfaces/msg/EdgeConstraint.idl
 rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: /opt/ros/humble/share/nav_msgs/msg/GridCells.idl
 rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: /opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl
 rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h: /opt/ros/humble/share/nav_msgs/msg/OccupancyGrid.idl
@@ -217,6 +219,30 @@ rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__struct.h: r
 rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__type_support.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__type_support.h
 
+rosidl_generator_c/my_intermediate_interfaces/msg/vertex_constraint.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/vertex_constraint.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__type_support.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__type_support.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/edge_constraint.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/edge_constraint.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__type_support.h: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__type_support.h
+
 rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c
 
@@ -231,6 +257,12 @@ rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__fun
 
 rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c
+
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c: rosidl_generator_c/my_intermediate_interfaces/srv/start_goal_pose_stamped.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c
 
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c.o: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c.o: rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c
@@ -302,13 +334,43 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c -o CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.s
 
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o: rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o -MF CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o.d -o CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c
+
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c > CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.i
+
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c -o CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.s
+
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o: rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o -MF CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o.d -o CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c
+
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c > CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.i
+
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c -o CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.s
+
 # Object files for target my_intermediate_interfaces__rosidl_generator_c
 my_intermediate_interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__functions.c.o" \
 "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_positions__functions.c.o" \
 "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/computed_plans__functions.c.o" \
 "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__functions.c.o" \
-"CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.o"
+"CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.o" \
+"CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o" \
+"CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o"
 
 # External object files for target my_intermediate_interfaces__rosidl_generator_c
 my_intermediate_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
@@ -318,6 +380,8 @@ libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate
 libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/computed_plans__functions.c.o
 libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__functions.c.o
 libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.o
+libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c.o
+libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c.o
 libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/build.make
 libmy_intermediate_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libnav_msgs__rosidl_generator_c.so
 libmy_intermediate_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libgeometry_msgs__rosidl_generator_c.so
@@ -326,7 +390,7 @@ libmy_intermediate_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/libbui
 libmy_intermediate_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libmy_intermediate_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libmy_intermediate_interfaces__rosidl_generator_c.so: CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libmy_intermediate_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C shared library libmy_intermediate_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -347,6 +411,16 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_gen
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__functions.h
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__struct.h
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__type_support.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.c
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__type_support.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.c
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__type_support.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/edge_constraint.h
+CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/msg/vertex_constraint.h
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/srv/computed_plans.h
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/srv/detail/computed_plans__functions.c
 CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/my_intermediate_interfaces/srv/detail/computed_plans__functions.h

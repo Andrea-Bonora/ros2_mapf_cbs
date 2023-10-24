@@ -7,6 +7,8 @@ my_intermediate_interfaces.egg-info/top_level.txt
 my_intermediate_interfaces/msg/__init__.py
 my_intermediate_interfaces/msg/_agent_path.py
 my_intermediate_interfaces/msg/_agent_path_request.py
+my_intermediate_interfaces/msg/_edge_constraint.py
+my_intermediate_interfaces/msg/_vertex_constraint.py
 my_intermediate_interfaces/srv/__init__.py
 my_intermediate_interfaces/srv/_computed_plans.py
 my_intermediate_interfaces/srv/_start_goal_pose_stamped.py

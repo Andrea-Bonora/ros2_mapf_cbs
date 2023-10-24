@@ -1,0 +1,13 @@
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:107:21:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Knav_msgs::msg::Path my_nav2_navfn_planner::NavfnPlanner::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’
+  107 | nav_msgs::msg::Path [01;31m[KNavfnPlanner[m[K::createPlan(
+      |                     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:89:23:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_navfn_planner::NavfnPlanner::createPlan(const PoseStamped&, const PoseStamped&)[m[K’
+   89 |   nav_msgs::msg::Path [01;36m[KcreatePlan[m[K(
+      |                       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass my_nav2_navfn_planner::NavfnPlanner[m[K’ defined here
+   42 | class [01;36m[KNavfnPlanner[m[K : public nav2_core::GlobalPlanner
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

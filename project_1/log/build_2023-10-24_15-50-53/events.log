@@ -1,0 +1,382 @@
+[0.000000] (-) TimerEvent: {}
+[0.000136] (-) JobUnselected: {'identifier': 'my_intermediate'}
+[0.000157] (-) JobUnselected: {'identifier': 'my_intermediate_interfaces'}
+[0.000169] (-) JobUnselected: {'identifier': 'my_nav2_core'}
+[0.000180] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000190] (-) JobUnselected: {'identifier': 'my_try_bringup'}
+[0.000199] (-) JobUnselected: {'identifier': 'nav2_straightline_planner'}
+[0.000209] (-) JobUnselected: {'identifier': 'turtlebot3_multi_robot'}
+[0.000220] (my_nav2_navfn_planner) JobQueued: {'identifier': 'my_nav2_navfn_planner', 'dependencies': OrderedDict([('my_intermediate_interfaces', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces'), ('my_nav2_core', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core')])}
+[0.000237] (my_nav2_navfn_planner) JobStarted: {'identifier': 'my_nav2_navfn_planner'}
+[0.057260] (my_nav2_navfn_planner) JobProgress: {'identifier': 'my_nav2_navfn_planner', 'progress': 'cmake'}
+[0.057542] (my_nav2_navfn_planner) JobProgress: {'identifier': 'my_nav2_navfn_planner', 'progress': 'build'}
+[0.058065] (my_nav2_navfn_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner', '--', '-j8', '-l8'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5960175a28e93afe1d8592bb65363758'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/1743,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/1743'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/4a62a706_5843_4327_9e5b_b435b24f0361'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AHDFD2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.921'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5960175a28e93afe1d8592bb65363758'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.077516] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099285] (-) TimerEvent: {}
+[0.180106] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)\n'}
+[0.180256] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199270] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.199393] (-) TimerEvent: {}
+[0.200850] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.204737] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.211987] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.222041] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.261333] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.262328] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.281216] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.299500] (-) TimerEvent: {}
+[0.387046] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.399661] (-) TimerEvent: {}
+[0.445268] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found my_intermediate_interfaces: 0.0.0 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake)\n'}
+[0.499793] (-) TimerEvent: {}
+[0.596910] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.599940] (-) TimerEvent: {}
+[0.621589] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.700092] (-) TimerEvent: {}
+[0.769895] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)\n'}
+[0.800190] (-) TimerEvent: {}
+[0.900432] (-) TimerEvent: {}
+[1.000792] (-) TimerEvent: {}
+[1.069921] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.070704] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.100944] (-) TimerEvent: {}
+[1.192075] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)\n'}
+[1.201115] (-) TimerEvent: {}
+[1.301432] (-) TimerEvent: {}
+[1.401808] (-) TimerEvent: {}
+[1.502190] (-) TimerEvent: {}
+[1.602512] (-) TimerEvent: {}
+[1.702883] (-) TimerEvent: {}
+[1.803145] (-) TimerEvent: {}
+[1.903459] (-) TimerEvent: {}
+[2.003768] (-) TimerEvent: {}
+[2.104214] (-) TimerEvent: {}
+[2.204608] (-) TimerEvent: {}
+[2.256451] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found my_nav2_core: 1.2.0 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake)\n'}
+[2.304803] (-) TimerEvent: {}
+[2.405144] (-) TimerEvent: {}
+[2.505457] (-) TimerEvent: {}
+[2.605822] (-) TimerEvent: {}
+[2.706202] (-) TimerEvent: {}
+[2.806576] (-) TimerEvent: {}
+[2.906977] (-) TimerEvent: {}
+[3.007358] (-) TimerEvent: {}
+[3.107747] (-) TimerEvent: {}
+[3.208165] (-) TimerEvent: {}
+[3.308535] (-) TimerEvent: {}
+[3.408852] (-) TimerEvent: {}
+[3.509113] (-) TimerEvent: {}
+[3.609464] (-) TimerEvent: {}
+[3.709837] (-) TimerEvent: {}
+[3.810213] (-) TimerEvent: {}
+[3.910601] (-) TimerEvent: {}
+[4.010918] (-) TimerEvent: {}
+[4.111255] (-) TimerEvent: {}
+[4.211584] (-) TimerEvent: {}
+[4.311938] (-) TimerEvent: {}
+[4.412333] (-) TimerEvent: {}
+[4.512721] (-) TimerEvent: {}
+[4.613134] (-) TimerEvent: {}
+[4.713451] (-) TimerEvent: {}
+[4.813855] (-) TimerEvent: {}
+[4.914270] (-) TimerEvent: {}
+[5.014675] (-) TimerEvent: {}
+[5.115098] (-) TimerEvent: {}
+[5.215437] (-) TimerEvent: {}
+[5.315797] (-) TimerEvent: {}
+[5.416183] (-) TimerEvent: {}
+[5.516511] (-) TimerEvent: {}
+[5.616964] (-) TimerEvent: {}
+[5.717344] (-) TimerEvent: {}
+[5.817714] (-) TimerEvent: {}
+[5.918099] (-) TimerEvent: {}
+[6.018471] (-) TimerEvent: {}
+[6.118846] (-) TimerEvent: {}
+[6.219134] (-) TimerEvent: {}
+[6.319441] (-) TimerEvent: {}
+[6.419747] (-) TimerEvent: {}
+[6.520125] (-) TimerEvent: {}
+[6.620509] (-) TimerEvent: {}
+[6.720878] (-) TimerEvent: {}
+[6.821257] (-) TimerEvent: {}
+[6.921634] (-) TimerEvent: {}
+[7.022013] (-) TimerEvent: {}
+[7.122390] (-) TimerEvent: {}
+[7.222776] (-) TimerEvent: {}
+[7.323064] (-) TimerEvent: {}
+[7.423388] (-) TimerEvent: {}
+[7.523762] (-) TimerEvent: {}
+[7.624134] (-) TimerEvent: {}
+[7.724501] (-) TimerEvent: {}
+[7.824882] (-) TimerEvent: {}
+[7.925260] (-) TimerEvent: {}
+[8.025548] (-) TimerEvent: {}
+[8.125913] (-) TimerEvent: {}
+[8.226278] (-) TimerEvent: {}
+[8.326652] (-) TimerEvent: {}
+[8.426944] (-) TimerEvent: {}
+[8.527253] (-) TimerEvent: {}
+[8.627558] (-) TimerEvent: {}
+[8.727926] (-) TimerEvent: {}
+[8.828303] (-) TimerEvent: {}
+[8.928680] (-) TimerEvent: {}
+[9.029052] (-) TimerEvent: {}
+[9.129433] (-) TimerEvent: {}
+[9.229813] (-) TimerEvent: {}
+[9.330180] (-) TimerEvent: {}
+[9.430568] (-) TimerEvent: {}
+[9.530939] (-) TimerEvent: {}
+[9.631251] (-) TimerEvent: {}
+[9.731565] (-) TimerEvent: {}
+[9.831930] (-) TimerEvent: {}
+[9.932290] (-) TimerEvent: {}
+[10.032667] (-) TimerEvent: {}
+[10.133042] (-) TimerEvent: {}
+[10.233421] (-) TimerEvent: {}
+[10.333796] (-) TimerEvent: {}
+[10.401081] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[10.401377] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.5 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[10.433883] (-) TimerEvent: {}
+[10.452344] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[10.452978] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[10.453158] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include\n'}
+[10.453212] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[10.453731] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[10.453778] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[10.453983] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[10.454544] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[10.454593] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[10.454679] (my_nav2_navfn_planner) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[10.456049] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[10.506199] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[10.507599] (my_nav2_navfn_planner) StdoutLine: {'line': b'-- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner\n'}
+[10.530183] (my_nav2_navfn_planner) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner\x1b[0m\n'}
+[10.534049] (-) TimerEvent: {}
+[10.546737] (my_nav2_navfn_planner) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o\x1b[0m\n'}
+[10.546940] (my_nav2_navfn_planner) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o\x1b[0m\n'}
+[10.634173] (-) TimerEvent: {}
+[10.734583] (-) TimerEvent: {}
+[10.834915] (-) TimerEvent: {}
+[10.935204] (-) TimerEvent: {}
+[11.035476] (-) TimerEvent: {}
+[11.135829] (-) TimerEvent: {}
+[11.236185] (-) TimerEvent: {}
+[11.336546] (-) TimerEvent: {}
+[11.436917] (-) TimerEvent: {}
+[11.537213] (-) TimerEvent: {}
+[11.637504] (-) TimerEvent: {}
+[11.737873] (-) TimerEvent: {}
+[11.838191] (-) TimerEvent: {}
+[11.938599] (-) TimerEvent: {}
+[12.038916] (-) TimerEvent: {}
+[12.139222] (-) TimerEvent: {}
+[12.239508] (-) TimerEvent: {}
+[12.339802] (-) TimerEvent: {}
+[12.440179] (-) TimerEvent: {}
+[12.540544] (-) TimerEvent: {}
+[12.640915] (-) TimerEvent: {}
+[12.741182] (-) TimerEvent: {}
+[12.841621] (-) TimerEvent: {}
+[12.925838] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.926228] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmy_nav2_core\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[12.926285] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class NavfnPlanner : public \x1b[01;31m\x1b[Kmy_nav2_core\x1b[m\x1b[K::MultiAgentGlobalPlanner\n'}
+[12.926328] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.926369] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[KMultiAgentGlobalPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.926416] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class NavfnPlanner : public my_nav2_core::\x1b[01;31m\x1b[KMultiAgentGlobalPlanner\x1b[m\x1b[K\n'}
+[12.926458] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.926497] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:44:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kpublic\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.926539] (my_nav2_navfn_planner) StderrLine: {'line': b'   44 | \x1b[01;31m\x1b[Kpublic\x1b[m\x1b[K:\n'}
+[12.926587] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[12.926627] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:44:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kpublic\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.926685] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:43:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.926727] (my_nav2_navfn_planner) StderrLine: {'line': b'   43 | \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[12.926781] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[12.926834] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:53:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected constructor, destructor, or type conversion before \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.926887] (my_nav2_navfn_planner) StderrLine: {'line': b'   53 |   ~NavfnPlanner()\x1b[01;31m\x1b[K;\x1b[m\x1b[K\n'}
+[12.926936] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.926984] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:65:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kvirt-specifiers in \xe2\x80\x98\x1b[01m\x1b[Kconfigure\x1b[m\x1b[K\xe2\x80\x99 not allowed outside a class definition\n'}
+[12.927034] (my_nav2_navfn_planner) StderrLine: {'line': b'   65 |     std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros) \x1b[01;31m\x1b[Koverride\x1b[m\x1b[K;\n'}
+[12.927085] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[12.927134] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:70:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kvirt-specifiers in \xe2\x80\x98\x1b[01m\x1b[Kcleanup\x1b[m\x1b[K\xe2\x80\x99 not allowed outside a class definition\n'}
+[12.927184] (my_nav2_navfn_planner) StderrLine: {'line': b'   70 |   void cleanup() \x1b[01;31m\x1b[Koverride\x1b[m\x1b[K;\n'}
+[12.927233] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[12.927283] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:75:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kvirt-specifiers in \xe2\x80\x98\x1b[01m\x1b[Kactivate\x1b[m\x1b[K\xe2\x80\x99 not allowed outside a class definition\n'}
+[12.927328] (my_nav2_navfn_planner) StderrLine: {'line': b'   75 |   void activate() \x1b[01;31m\x1b[Koverride\x1b[m\x1b[K;\n'}
+[12.927367] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[12.927406] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:80:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kvirt-specifiers in \xe2\x80\x98\x1b[01m\x1b[Kdeactivate\x1b[m\x1b[K\xe2\x80\x99 not allowed outside a class definition\n'}
+[12.927446] (my_nav2_navfn_planner) StderrLine: {'line': b'   80 |   void deactivate() \x1b[01;31m\x1b[Koverride\x1b[m\x1b[K;\n'}
+[12.927486] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[12.927524] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:95:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id before \xe2\x80\x98\x1b[01m\x1b[Kprotected\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.927567] (my_nav2_navfn_planner) StderrLine: {'line': b'   95 | \x1b[01;31m\x1b[Kprotected\x1b[m\x1b[K:\n'}
+[12.927605] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[12.935723] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:238:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected declaration before \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[12.935870] (my_nav2_navfn_planner) StderrLine: {'line': b'  238 | \x1b[01;31m\x1b[K}\x1b[m\x1b[K  // namespace nav2_navfn_planner\n'}
+[12.935931] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.940016] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:27:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.940250] (my_nav2_navfn_planner) StderrLine: {'line': b'   27 | NavfnPlanner::NavfnPlanner(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.940309] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.940360] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.940412] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.940464] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.940513] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.940594] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:32:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.940645] (my_nav2_navfn_planner) StderrLine: {'line': b'   32 | NavfnPlanner::~NavfnPlanner(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.940805] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.940849] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.940888] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.940926] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.940965] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.941004] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:43:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941046] (my_nav2_navfn_planner) StderrLine: {'line': b'   43 |   std::shared_ptr<nav2_costmap_2d::Costmap2DROS> costmap_ros\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.941083] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.941121] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.941159] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941197] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.941234] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.941271] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:78:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941312] (my_nav2_navfn_planner) StderrLine: {'line': b'   78 | NavfnPlanner::activate(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.941349] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.941387] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.941425] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941463] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.941500] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.941538] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:90:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941576] (my_nav2_navfn_planner) StderrLine: {'line': b'   90 | NavfnPlanner::deactivate(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.941612] (-) TimerEvent: {}
+[12.941692] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.941736] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.941776] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941819] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.941861] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.941899] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:99:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.941938] (my_nav2_navfn_planner) StderrLine: {'line': b'   99 | NavfnPlanner::cleanup(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.941975] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.942013] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.942050] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.942089] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.942127] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.942165] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:111:86:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.942207] (my_nav2_navfn_planner) StderrLine: {'line': b'  111 |   const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.942245] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.942283] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.942321] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.942359] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.942396] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.942433] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:191:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.942470] (my_nav2_navfn_planner) StderrLine: {'line': b'  191 | NavfnPlanner::isPlannerOutOfDate(\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.942507] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.942647] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.942691] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.942732] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.942783] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.942822] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:206:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.942861] (my_nav2_navfn_planner) StderrLine: {'line': b'  206 |   nav_msgs::msg::Path & plan\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.942899] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.942937] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.942975] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943014] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.943052] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.943090] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:340:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943130] (my_nav2_navfn_planner) StderrLine: {'line': b'  340 |   nav_msgs::msg::Path & plan\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.943168] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.943205] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.943248] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943289] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.943328] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.943366] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:363:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943405] (my_nav2_navfn_planner) StderrLine: {'line': b'  363 |   nav_msgs::msg::Path & plan\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.943442] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.943480] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.943520] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943562] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.943601] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.943639] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:420:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943677] (my_nav2_navfn_planner) StderrLine: {'line': b'  420 | NavfnPlanner::getPointPotential(const geometry_msgs::msg::Point & world_point\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.943716] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.943753] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.943791] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943833] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.943870] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.943907] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:469:84:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.943946] (my_nav2_navfn_planner) StderrLine: {'line': b'  469 | NavfnPlanner::worldToMap(double wx, double wy, unsigned int & mx, unsigned int & my\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.943984] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.944021] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.944058] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944096] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.944133] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.944170] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:493:72:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944214] (my_nav2_navfn_planner) StderrLine: {'line': b'  493 | NavfnPlanner::mapToWorld(double mx, double my, double & wx, double & wy\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.944253] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                        \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.944291] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.944330] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944373] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.944458] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.944498] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:500:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944536] (my_nav2_navfn_planner) StderrLine: {'line': b'  500 | NavfnPlanner::clearRobotCell(unsigned int mx, unsigned int my\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.944575] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.944613] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.944651] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944690] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.944728] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.944765] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:508:82:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kinvalid use of incomplete type \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944806] (my_nav2_navfn_planner) StderrLine: {'line': b'  508 | NavfnPlanner::dynamicParametersCallback(std::vector<rclcpp::Parameter> parameters\x1b[01;31m\x1b[K)\x1b[m\x1b[K\n'}
+[12.944845] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[12.944884] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.944922] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:42:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kforward declaration of \xe2\x80\x98\x1b[01m\x1b[Kclass my_nav2_navfn_planner::NavfnPlanner\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.944966] (my_nav2_navfn_planner) StderrLine: {'line': b'   42 | class \x1b[01;36m\x1b[KNavfnPlanner\x1b[m\x1b[K : public my_nav2_core::MultiAgentGlobalPlanner\n'}
+[12.945004] (my_nav2_navfn_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.945041] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:56\x1b[m\x1b[K,\n'}
+[12.945079] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52\x1b[m\x1b[K,\n'}
+[12.945118] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38\x1b[m\x1b[K,\n'}
+[12.945155] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54\x1b[m\x1b[K,\n'}
+[12.945191] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21\x1b[m\x1b[K,\n'}
+[12.945229] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29\x1b[m\x1b[K,\n'}
+[12.945266] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.945303] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:61:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmy_nav2_core\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[12.945341] (my_nav2_navfn_planner) StderrLine: {'line': b'  536 | PLUGINLIB_EXPORT_CLASS(my_nav2_navfn_planner::NavfnPlanner, \x1b[01;31m\x1b[Kmy_nav2_core\x1b[m\x1b[K::MultiAgentGlobalPlanner)\n'}
+[12.945379] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.952470] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[K{anonymous}::ProxyExec0::ProxyExec0()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.952600] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K_base\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[12.952644] (my_nav2_navfn_planner) StderrLine: {'line': b'  536 | \x1b[01;31m\x1b[KPLUGINLIB_EXPORT_CLASS\x1b[m\x1b[K(my_nav2_navfn_planner::NavfnPlanner, my_nav2_core::MultiAgentGlobalPlanner)\n'}
+[12.952682] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.952723] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KregisterPlugin<{anonymous}::ProxyExec0::_derived, <expression error> >(const char [36], const char [38])\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.952763] (my_nav2_navfn_planner) StderrLine: {'line': b'  536 | \x1b[01;31m\x1b[KPLUGINLIB_EXPORT_CLASS\x1b[m\x1b[K(my_nav2_navfn_planner::NavfnPlanner, my_nav2_core::MultiAgentGlobalPlanner)\n'}
+[12.952808] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.952847] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:55\x1b[m\x1b[K,\n'}
+[12.952885] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52\x1b[m\x1b[K,\n'}
+[12.952923] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38\x1b[m\x1b[K,\n'}
+[12.952961] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54\x1b[m\x1b[K,\n'}
+[12.952998] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21\x1b[m\x1b[K,\n'}
+[12.953037] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29\x1b[m\x1b[K,\n'}
+[12.953075] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.953113] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:210:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Derived, class Base> void class_loader::impl::registerPlugin(const string&, const string&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.953156] (my_nav2_navfn_planner) StderrLine: {'line': b'  210 | void \x1b[01;36m\x1b[KregisterPlugin\x1b[m\x1b[K(const std::string & class_name, const std::string & base_class_name)\n'}
+[12.953194] (my_nav2_navfn_planner) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.953231] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:210:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[12.953273] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:56\x1b[m\x1b[K,\n'}
+[12.953311] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52\x1b[m\x1b[K,\n'}
+[12.953349] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38\x1b[m\x1b[K,\n'}
+[12.953387] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54\x1b[m\x1b[K,\n'}
+[12.953424] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21\x1b[m\x1b[K,\n'}
+[12.953461] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29\x1b[m\x1b[K,\n'}
+[12.953499] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1\x1b[m\x1b[K:\n'}
+[12.953536] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:536:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[12.953574] (my_nav2_navfn_planner) StderrLine: {'line': b'  536 | \x1b[01;31m\x1b[KPLUGINLIB_EXPORT_CLASS\x1b[m\x1b[K(my_nav2_navfn_planner::NavfnPlanner, my_nav2_core::MultiAgentGlobalPlanner)\n'}
+[12.953614] (my_nav2_navfn_planner) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.041829] (-) TimerEvent: {}
+[13.142171] (-) TimerEvent: {}
+[13.242543] (-) TimerEvent: {}
+[13.342932] (-) TimerEvent: {}
+[13.443212] (-) TimerEvent: {}
+[13.543524] (-) TimerEvent: {}
+[13.643877] (-) TimerEvent: {}
+[13.744219] (-) TimerEvent: {}
+[13.844580] (-) TimerEvent: {}
+[13.944947] (-) TimerEvent: {}
+[13.968025] (my_nav2_navfn_planner) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o] Error 1\n'}
+[13.968612] (my_nav2_navfn_planner) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2\n'}
+[13.968728] (my_nav2_navfn_planner) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[13.971593] (my_nav2_navfn_planner) CommandEnded: {'returncode': 2}
+[14.045119] (-) TimerEvent: {}
+[14.057477] (my_nav2_navfn_planner) JobEnded: {'identifier': 'my_nav2_navfn_planner', 'rc': 2}
+[14.068176] (-) EventReactorShutdown: {}

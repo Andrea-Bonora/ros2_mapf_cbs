@@ -18,6 +18,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/ComputedPlans.srv"
   "msg/AgentPathRequest.msg"
   "msg/AgentPath.msg"
+  "msg/VertexConstraint.msg"
+  "msg/EdgeConstraint.msg"
   DEPENDENCIES nav_msgs
   DEPENDENCIES geometry_msgs
 )

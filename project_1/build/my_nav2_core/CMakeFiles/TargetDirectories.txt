@@ -1,0 +1,9 @@
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/uninstall.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/my_nav2_core_uninstall.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/test.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/edit_cache.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/rebuild_cache.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/list_install_components.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/install.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/install/local.dir
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core/CMakeFiles/install/strip.dir

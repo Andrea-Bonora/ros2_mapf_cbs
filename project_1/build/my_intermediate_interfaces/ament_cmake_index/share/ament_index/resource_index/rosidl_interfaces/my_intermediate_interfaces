@@ -2,6 +2,10 @@ msg/AgentPath.idl
 msg/AgentPath.msg
 msg/AgentPathRequest.idl
 msg/AgentPathRequest.msg
+msg/EdgeConstraint.idl
+msg/EdgeConstraint.msg
+msg/VertexConstraint.idl
+msg/VertexConstraint.msg
 srv/ComputedPlans.idl
 srv/ComputedPlans.srv
 srv/ComputedPlans_Request.msg

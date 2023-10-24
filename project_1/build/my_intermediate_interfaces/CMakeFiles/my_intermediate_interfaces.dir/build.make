@@ -77,6 +77,8 @@ CMakeFiles/my_intermediate_interfaces: rosidl_cmake/srv/ComputedPlans_Request.ms
 CMakeFiles/my_intermediate_interfaces: rosidl_cmake/srv/ComputedPlans_Response.msg
 CMakeFiles/my_intermediate_interfaces: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/AgentPathRequest.msg
 CMakeFiles/my_intermediate_interfaces: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/AgentPath.msg
+CMakeFiles/my_intermediate_interfaces: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/VertexConstraint.msg
+CMakeFiles/my_intermediate_interfaces: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/EdgeConstraint.msg
 CMakeFiles/my_intermediate_interfaces: /opt/ros/humble/share/nav_msgs/msg/GridCells.idl
 CMakeFiles/my_intermediate_interfaces: /opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl
 CMakeFiles/my_intermediate_interfaces: /opt/ros/humble/share/nav_msgs/msg/OccupancyGrid.idl

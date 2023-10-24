@@ -1,0 +1,86 @@
+[0.058s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_core -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core
+[0.110s] -- The C compiler identification is GNU 11.4.0
+[0.165s] -- The CXX compiler identification is GNU 11.4.0
+[0.171s] -- Detecting C compiler ABI info
+[0.232s] -- Detecting C compiler ABI info - done
+[0.237s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.237s] -- Detecting C compile features
+[0.238s] -- Detecting C compile features - done
+[0.240s] -- Detecting CXX compiler ABI info
+[0.299s] -- Detecting CXX compiler ABI info - done
+[0.307s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.307s] -- Detecting CXX compile features
+[0.307s] -- Detecting CXX compile features - done
+[0.311s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.441s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.518s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.520s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.557s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.561s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.568s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.578s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.593s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.646s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.649s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.673s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.681s] -- Looking for pthread.h
+[0.737s] -- Looking for pthread.h - found
+[0.738s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.800s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.801s] -- Found Threads: TRUE  
+[0.913s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.950s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.990s] -- Found nav2_costmap_2d: 1.1.12 (/opt/ros/humble/share/nav2_costmap_2d/cmake)
+[1.636s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.636s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.315s] -- Found nav2_behavior_tree: 1.1.12 (/opt/ros/humble/share/nav2_behavior_tree/cmake)
+[2.798s] -- Setting build type to Release as none was specified.
+[2.799s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.910s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.910s] -- Configured cppcheck include dirs: 
+[2.910s] -- Configured cppcheck exclude dirs and/or files: 
+[2.911s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.911s] -- Configured cpplint exclude dirs and/or files: 
+[2.911s] -- Added test 'lint_cmake' to check CMake code style
+[2.912s] -- Added test 'uncrustify' to check C / C++ code style
+[2.912s] -- Configured uncrustify additional arguments: 
+[2.913s] -- Added test 'xmllint' to check XML markup files
+[2.914s] -- Configuring done
+[2.918s] -- Generating done
+[2.920s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core
+[2.928s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_core -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core
+[2.929s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core -- -j8 -l8
+[2.965s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core -- -j8 -l8
+[2.991s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core
+[2.998s] -- Install configuration: "Release"
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include/
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/multi_agent_global_planner.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/controller.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/waypoint_task_executor.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/goal_checker.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/smoother.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/progress_checker.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/planner_exceptions.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/controller_exceptions.hpp
+[2.998s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/behavior_tree_navigator.hpp
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/smoother_exceptions.hpp
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include//nav2_core/behavior.hpp
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/ament_index/resource_index/package_run_dependencies/nav2_core
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/ament_index/resource_index/parent_prefix_path/nav2_core
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/environment/ament_prefix_path.sh
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/environment/ament_prefix_path.dsv
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/environment/path.sh
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/environment/path.dsv
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/local_setup.bash
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/local_setup.sh
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/local_setup.zsh
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/local_setup.dsv
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/package.dsv
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/ament_index/resource_index/packages/nav2_core
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/cmake/nav2_coreConfig.cmake
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/cmake/nav2_coreConfig-version.cmake
+[2.999s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/package.xml
+[3.001s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_core

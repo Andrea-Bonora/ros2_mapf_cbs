@@ -1,0 +1,5 @@
+<library path="my_nav2_navfn_planner">
+	<class name="my_nav2_navfn_planner/NavfnPlanner" type="my_nav2_navfn_planner::NavfnPlanner" base_class_type="my_nav2_core::MultiAgentGlobalPlanner">
+	  <description></description>
+	</class>
+</library>
