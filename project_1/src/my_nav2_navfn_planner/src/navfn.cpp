@@ -654,7 +654,10 @@ float NavFn::getLastPathCost()
 //
 
 int
-NavFn::calcPath(int n, int * st)
+NavFn::calcPath(int n, 
+              std::vector<std::map<std::string, int>> vertex_constraints,
+              std::vector<std::map<std::string, int>> edge_constraints,
+              int * st)
 {
   // test write
   // savemap("test");
@@ -681,7 +684,27 @@ NavFn::calcPath(int n, int * st)
   // go for <n> cycles at most
   for (int i = 0; i < n; i++) {
 
+    //deep copy the potarr array
+    float * potarr_copy = new float[ns];
+    for (int i = 0; i < ns; ++i) {
+        potarr_copy[i] = potarr[i];
+    } 
+
     //check if constraint allow each move otherwise set potarr[x] to high number, but save current values
+    int time_step = n - ( i + 1 );
+
+    for (const auto& obj : vertex_constraints) {
+        int cell_value = obj.at("cell");
+        int ts_value = obj.at("time_step");
+        if(ts_value == time_step) potarr_copy[cell_value] = COST_OBS;
+    }
+
+    for (const auto& obj : edge_constraints) {
+        int cell_from_value = obj.at("cell_from");
+        int cell_to_value = obj.at("cell_to");
+        int ts_value = obj.at("time_step");
+        if(ts_value == time_step && cell_from_value == stc) potarr_copy[cell_to_value] = COST_OBS;
+    }
 
     // check if near goal
     int nearest_point = std::max(
@@ -689,14 +712,17 @@ NavFn::calcPath(int n, int * st)
       std::min(
         nx * ny - 1, stc + static_cast<int>(round(dx)) +
         static_cast<int>(nx * round(dy))));
+      
     if (potarr[nearest_point] < COST_NEUTRAL) {
       pathx[npath] = static_cast<float>(goal[0]);
       pathy[npath] = static_cast<float>(goal[1]);
+      delete[] potarr_copy;
       return ++npath;  // done!
     }
 
     if (stc < nx || stc > ns - nx) {  // would be out of bounds
       RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] Out of bounds");
+      delete[] potarr_copy;
       return 0;
     }
 
@@ -764,6 +790,7 @@ NavFn::calcPath(int n, int * st)
 
       if (potarr[stc] >= POT_HIGH) {
         RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] No path found, high potential");
+        delete[] potarr_copy;
         // savemap("navfn_highpot");
         return 0;
       }
@@ -796,6 +823,7 @@ NavFn::calcPath(int n, int * st)
       // check for zero gradient, failed
       if (x == 0.0 && y == 0.0) {
         RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] Zero gradient");
+        delete[] potarr_copy;
         return 0;
       }
 
@@ -814,7 +842,8 @@ NavFn::calcPath(int n, int * st)
     //      ROS_INFO("[Path] Pot: %0.1f  grad: %0.1f,%0.1f  pos: %0.1f,%0.1f\n",
     //      potarr[stc], x, y, pathx[npath-1], pathy[npath-1]);
 
-    //set potarr values to the one prior the iteration
+    //destroy the potarr copy
+    delete[] potarr_copy;
   }
 
   //  return npath;  // out of Cycles, return failure

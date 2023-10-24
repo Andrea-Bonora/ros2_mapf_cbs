@@ -1,0 +1,89 @@
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o[0m
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn.cpp:1[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:48:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+   47 | #include "my_intermediate_interfaces/msg/edge_constraint.hpp"
+  +++ |+[32m[K#include <map>[m[K
+   48 | 
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  261 |               std::vector<std::map<std::string, [01;31m[Kint[m[K>> vertex_constraints,
+      |                                                 [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  261 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K vertex_constraints,
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  261 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K vertex_constraints,
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:15:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+  261 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> vertex_constraints,
+      |               [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  261 |               std::vector<std::map<std::string[01;31m[K,[m[K int>> vertex_constraints,
+      |                                               [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:15:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::vector[m[K’ not permitted in this context
+  261 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> vertex_constraints,
+      |               [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  262 |               std::vector<std::map<std::string, [01;31m[Kint[m[K>> edge_constraints,
+      |                                                 [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  262 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K edge_constraints,
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  262 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K edge_constraints,
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:15:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+  262 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> edge_constraints,
+      |               [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+      |                                [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  262 |               std::vector<std::map<std::string[01;31m[K,[m[K int>> edge_constraints,
+      |                                               [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:15:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::vector[m[K’ not permitted in this context
+  262 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> edge_constraints,
+      |               [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn.cpp:657:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint my_nav2_navfn_planner::NavFn::calcPath(int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, int*)[m[K’
+  657 | [01;31m[KNavFn[m[K::calcPath(int n,
+      | [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn.cpp:1[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:260:7:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kint my_nav2_navfn_planner::NavFn::calcPath(...)[m[K’
+  260 |   int [01;36m[KcalcPath[m[K(int n,
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:105:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass my_nav2_navfn_planner::NavFn[m[K’ defined here
+  105 | class [01;36m[KNavFn[m[K
+      |       [01;36m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

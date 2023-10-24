@@ -103,7 +103,10 @@ protected:
    */
   bool makePlan(
     const geometry_msgs::msg::Pose & start,
-    const geometry_msgs::msg::Pose & goal, double tolerance,
+    const geometry_msgs::msg::Pose & goal,
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
+    double tolerance,
     nav_msgs::msg::Path & plan);
 
   /**
@@ -121,6 +124,8 @@ protected:
    */
   bool getPlanFromPotential(
     const geometry_msgs::msg::Pose & goal,
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
     nav_msgs::msg::Path & plan);
 
   /**

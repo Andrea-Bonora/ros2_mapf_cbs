@@ -172,7 +172,7 @@ nav_msgs::msg::Path NavfnPlanner::createPlan(
     return path;
   }
 
-  if (!makePlan(start.pose, goal.pose, tolerance_, path)) {
+  if (!makePlan(start.pose, goal.pose, vertex_constraints, edge_constraints, tolerance_, path)) {
     throw nav2_core::NoValidPathCouldBeFound(
             "Failed to create plan with tolerance of: " + std::to_string(tolerance_) );
   }
@@ -202,7 +202,10 @@ NavfnPlanner::isPlannerOutOfDate()
 bool
 NavfnPlanner::makePlan(
   const geometry_msgs::msg::Pose & start,
-  const geometry_msgs::msg::Pose & goal, double tolerance,
+  const geometry_msgs::msg::Pose & goal, 
+  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
+  double tolerance,
   nav_msgs::msg::Path & plan)
 {
   // clear the plan, just in case
@@ -295,7 +298,7 @@ NavfnPlanner::makePlan(
 
   if (found_legal) {
     // extract the plan
-    if (getPlanFromPotential(best_pose, plan)) {
+    if (getPlanFromPotential(best_pose, vertex_constraints, edge_constraints, plan)) {
       smoothApproachToGoal(best_pose, plan);
 
       // If use_final_approach_orientation=true, interpolate the last pose orientation from the
@@ -360,6 +363,8 @@ NavfnPlanner::smoothApproachToGoal(
 bool
 NavfnPlanner::getPlanFromPotential(
   const geometry_msgs::msg::Pose & goal,
+  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
   nav_msgs::msg::Path & plan)
 {
   // clear the plan, just in case
@@ -382,7 +387,20 @@ NavfnPlanner::getPlanFromPotential(
   const int & max_cycles = (costmap_->getSizeInCellsX() >= costmap_->getSizeInCellsY()) ?
     (costmap_->getSizeInCellsX() * 4) : (costmap_->getSizeInCellsY() * 4);
 
-  int path_len = planner_->calcPath(max_cycles);
+  std::vector<std::map<std::string, int>> vert_constr;
+  std::vector<std::map<std::string, int>> edge_constr;
+
+  for (std::vector<int>::size_type j = 0; j < vertex_constraints.size(); j++){
+    std::map<std::string, int> object = {{"cell", 1}, {"time_step", vertex_constraints[j].time_step}};
+    vert_constr.push_back(object);
+  }
+
+  for (std::vector<int>::size_type j = 0; j < edge_constraints.size(); j++){
+    std::map<std::string, int> object = {{"cell_from", 1}, {"cell_to", 2}, {"time_step", edge_constraints[j].time_step}};
+    edge_constr.push_back(object);
+  }
+
+  int path_len = planner_->calcPath(max_cycles, vert_constr, edge_constr);
   if (path_len == 0) {
     return false;
   }
@@ -427,43 +445,6 @@ NavfnPlanner::getPointPotential(const geometry_msgs::msg::Point & world_point)
   unsigned int index = my * planner_->nx + mx;
   return planner_->potarr[index];
 }
-
-// bool
-// NavfnPlanner::validPointPotential(const geometry_msgs::msg::Point & world_point)
-// {
-//   return validPointPotential(world_point, tolerance_);
-// }
-
-// bool
-// NavfnPlanner::validPointPotential(
-//   const geometry_msgs::msg::Point & world_point, double tolerance)
-// {
-//   const double resolution = costmap_->getResolution();
-
-//   geometry_msgs::msg::Point p = world_point;
-//   double potential = getPointPotential(p);
-//   if (potential < POT_HIGH) {
-//     // world_point is reachable by itself
-//     return true;
-//   } else {
-//     // world_point, is not reachable. Trying to find any
-//     // reachable point within its tolerance region
-//     p.y = world_point.y - tolerance;
-//     while (p.y <= world_point.y + tolerance) {
-//       p.x = world_point.x - tolerance;
-//       while (p.x <= world_point.x + tolerance) {
-//         potential = getPointPotential(p);
-//         if (potential < POT_HIGH) {
-//           return true;
-//         }
-//         p.x += resolution;
-//       }
-//       p.y += resolution;
-//     }
-//   }
-
-//   return false;
-// }
 
 bool
 NavfnPlanner::worldToMap(double wx, double wy, unsigned int & mx, unsigned int & my)

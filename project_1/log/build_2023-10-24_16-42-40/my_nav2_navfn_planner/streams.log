@@ -1,0 +1,91 @@
+[0.064s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner -- -j8 -l8
+[0.097s] [35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
+[0.116s] [ 33%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
+[0.116s] [ 66%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o[0m
+[0.647s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn.cpp:1[m[K:
+[0.647s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.647s]   261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+[0.647s]       |                                [01;31m[K^~~[m[K
+[0.654s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:48:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.654s]    47 | #include "my_intermediate_interfaces/msg/edge_constraint.hpp"
+[0.655s]   +++ |+[32m[K#include <map>[m[K
+[0.655s]    48 | 
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.655s]   261 |               std::vector<std::map<std::string, [01;31m[Kint[m[K>> vertex_constraints,
+[0.655s]       |                                                 [01;31m[K^~~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.655s]   261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+[0.655s]       |                                [01;31m[K^~~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.655s]   261 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K vertex_constraints,
+[0.655s]       |                                                    [01;31m[K^~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.655s]   261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+[0.655s]       |                                [01;31m[K^~~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.655s]   261 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K vertex_constraints,
+[0.655s]       |                                                    [01;31m[K^~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:15:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+[0.655s]   261 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> vertex_constraints,
+[0.655s]       |               [01;31m[K^~~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.655s]   261 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> vertex_constraints,
+[0.655s]       |                                [01;31m[K^~~[m[K
+[0.655s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+[0.656s]   261 |               std::vector<std::map<std::string[01;31m[K,[m[K int>> vertex_constraints,
+[0.656s]       |                                               [01;31m[K^[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:261:15:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::vector[m[K’ not permitted in this context
+[0.656s]   261 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> vertex_constraints,
+[0.656s]       |               [01;31m[K^~~[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.656s]   262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+[0.656s]       |                                [01;31m[K^~~[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.656s]   262 |               std::vector<std::map<std::string, [01;31m[Kint[m[K>> edge_constraints,
+[0.656s]       |                                                 [01;31m[K^~~[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.656s]   262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+[0.656s]       |                                [01;31m[K^~~[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.656s]   262 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K edge_constraints,
+[0.656s]       |                                                    [01;31m[K^~[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.656s]   262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+[0.656s]       |                                [01;31m[K^~~[m[K
+[0.656s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.657s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[0.657s]   262 |               std::vector<std::map<std::string, int[01;31m[K>>[m[K edge_constraints,
+[0.657s]       |                                                    [01;31m[K^~[m[K
+[0.657s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:15:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+[0.657s]   262 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> edge_constraints,
+[0.657s]       |               [01;31m[K^~~[m[K
+[0.657s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmap[m[K’ is not a member of ‘[01m[Kstd[m[K’
+[0.657s]   262 |               std::vector<std::[01;31m[Kmap[m[K<std::string, int>> edge_constraints,
+[0.657s]       |                                [01;31m[K^~~[m[K
+[0.657s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:32:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::map[m[K’ is defined in header ‘[01m[K<map>[m[K’; did you forget to ‘[01m[K#include <map>[m[K’?
+[0.657s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:47:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+[0.657s]   262 |               std::vector<std::map<std::string[01;31m[K,[m[K int>> edge_constraints,
+[0.657s]       |                                               [01;31m[K^[m[K
+[0.657s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:262:15:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::vector[m[K’ not permitted in this context
+[0.657s]   262 |               [01;31m[Kstd[m[K::vector<std::map<std::string, int>> edge_constraints,
+[0.657s]       |               [01;31m[K^~~[m[K
+[1.879s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn.cpp:657:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kint my_nav2_navfn_planner::NavFn::calcPath(int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, int*)[m[K’
+[1.879s]   657 | [01;31m[KNavFn[m[K::calcPath(int n,
+[1.879s]       | [01;31m[K^~~~~[m[K
+[1.879s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn.cpp:1[m[K:
+[1.879s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:260:7:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kint my_nav2_navfn_planner::NavFn::calcPath(...)[m[K’
+[1.879s]   260 |   int [01;36m[KcalcPath[m[K(int n,
+[1.879s]       |       [01;36m[K^~~~~~~~[m[K
+[1.879s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn.hpp:105:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass my_nav2_navfn_planner::NavFn[m[K’ defined here
+[1.879s]   105 | class [01;36m[KNavFn[m[K
+[1.879s]       |       [01;36m[K^~~~~[m[K
+[2.193s] gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o] Error 1
+[2.194s] gmake[2]: *** Waiting for unfinished jobs....
+[4.675s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+[4.675s] gmake: *** [Makefile:146: all] Error 2
+[4.676s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner' returned '2': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner -- -j8 -l8

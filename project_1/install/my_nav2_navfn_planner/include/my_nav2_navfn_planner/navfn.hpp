@@ -43,6 +43,9 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdio.h>
+#include <map>
+#include "my_intermediate_interfaces/msg/vertex_constraint.hpp"
+#include "my_intermediate_interfaces/msg/edge_constraint.hpp"
 
 namespace my_nav2_navfn_planner
 {
@@ -255,7 +258,10 @@ public:
    * @param n The maximum number of cycles to run for
    * @return The lenght of the path found, 0 if none
    */
-  int calcPath(int n, int * st = NULL);
+  int calcPath(int n,
+              std::vector<std::map<std::string, int>> vertex_constraints,
+              std::vector<std::map<std::string, int>> edge_constraints,
+              int * st = NULL);
 
   /**
    * @brief  Calculate gradient at a cell

@@ -1,0 +1,178 @@
+[0.060s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner -- -j8 -l8
+[0.092s] [35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
+[0.111s] [ 33%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
+[2.315s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In member function ‘[01m[Kbool my_nav2_navfn_planner::NavfnPlanner::getPlanFromPotential(const Pose&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >, nav_msgs::msg::Path&)[m[K’:
+[2.315s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:399:75:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K{[m[K’ token
+[2.315s]   399 |     std::map<std::string, int> object = [32m[K{[m[K{"cell_from", 1}, {"cell_to", 2} [01;31m[K{[m[K"time_step", edge_constraints[j].time_step}};
+[2.315s]       |                                         [32m[K~[m[K                                 [01;31m[K^[m[K
+[2.316s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:399:75:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K{[m[K’ token
+[2.322s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:400:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject[m[K’ was not declared in this scope
+[2.322s]   400 |     edge_constr.push_back([01;31m[Kobject[m[K);
+[2.322s]       |                           [01;31m[K^~~~~~[m[K
+[2.322s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:387:15:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kmax_cycles[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+[2.322s]   387 |   const int & [01;31m[Kmax_cycles[m[K = (costmap_->getSizeInCellsX() >= costmap_->getSizeInCellsY()) ?
+[2.322s]       |               [01;31m[K^~~~~~~~~~[m[K
+[2.322s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:401:3:[m[K [01;31m[Kerror: [m[Kno return statement in function returning non-void [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Werror=return-type]8;;[m[K]
+[2.322s]   401 |   [01;31m[K}[m[K
+[2.322s]       |   [01;31m[K^[m[K
+[2.325s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K At global scope:
+[2.325s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:403:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+[2.325s]   403 |   int path_len = [01;31m[Kplanner_[m[K->calcPath(max_cycles, vertex_constraints, edge_constraints);
+[2.325s]       |                  [01;31m[K^~~~~~~~[m[K
+[2.329s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:403:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kmax_cycles[m[K’ was not declared in this scope
+[2.329s]   403 |   int path_len = planner_->calcPath([01;31m[Kmax_cycles[m[K, vertex_constraints, edge_constraints);
+[2.329s]       |                                     [01;31m[K^~~~~~~~~~[m[K
+[2.334s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:403:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kvertex_constraints[m[K’ was not declared in this scope
+[2.334s]   403 |   int path_len = planner_->calcPath(max_cycles, [01;31m[Kvertex_constraints[m[K, edge_constraints);
+[2.334s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.340s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:403:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kedge_constraints[m[K’ was not declared in this scope
+[2.340s]   403 |   int path_len = planner_->calcPath(max_cycles, vertex_constraints, [01;31m[Kedge_constraints[m[K);
+[2.340s]       |                                                                     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[2.340s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:404:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kif[m[K’
+[2.340s]   404 |   [01;31m[Kif[m[K (path_len == 0) {
+[2.340s]       |   [01;31m[K^~[m[K
+[2.344s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:408:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+[2.344s]   408 |   auto cost = [01;31m[Kplanner_[m[K->getLastPathCost();
+[2.344s]       |               [01;31m[K^~~~~~~~[m[K
+[2.344s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.344s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.344s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:20[m[K,
+[2.344s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29[m[K,
+[2.344s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[2.344s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:409:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+[2.345s]   409 |   [01;31m[KRCLCPP_DEBUG[m[K(
+[2.345s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.345s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:409:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+[2.345s]   409 |   [01;31m[KRCLCPP_DEBUG[m[K(
+[2.345s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.347s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:414:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+[2.347s]   414 |   float * x = [01;31m[Kplanner_[m[K->getPathX();
+[2.347s]       |               [01;31m[K^~~~~~~~[m[K
+[2.350s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:415:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+[2.350s]   415 |   float * y = [01;31m[Kplanner_[m[K->getPathY();
+[2.350s]       |               [01;31m[K^~~~~~~~[m[K
+[2.354s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:416:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+[2.354s]   416 |   int len = [01;31m[Kplanner_[m[K->getPathLen();
+[2.354s]       |             [01;31m[K^~~~~~~~[m[K
+[2.355s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:418:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kfor[m[K’
+[2.355s]   418 |   [01;31m[Kfor[m[K (int i = len - 1; i >= 0; --i) {
+[2.355s]       |   [01;31m[K^~~[m[K
+[2.355s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:418:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ does not name a type
+[2.355s]   418 |   for (int i = len - 1; [01;31m[Ki[m[K >= 0; --i) {
+[2.355s]       |                         [01;31m[K^[m[K
+[2.356s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:418:33:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K--[m[K’ token
+[2.356s]   418 |   for (int i = len - 1; i >= 0; [01;31m[K--[m[Ki) {
+[2.356s]       |                                 [01;31m[K^~[m[K
+[2.356s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:434:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kreturn[m[K’
+[2.356s]   434 |   [01;31m[Kreturn[m[K !plan.poses.empty();
+[2.356s]       |   [01;31m[K^~~~~~[m[K
+[2.356s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:438:1:[m[K [01;31m[Kerror: [m[K‘[01m[KNavfnPlanner[m[K’ has not been declared
+[2.356s]   438 | [01;31m[KNavfnPlanner[m[K::getPointPotential(const geometry_msgs::msg::Point & world_point)
+[2.356s]       | [01;31m[K^~~~~~~~~~~~[m[K
+[2.359s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In function ‘[01m[Kdouble getPointPotential(const Point&)[m[K’:
+[2.359s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:441:8:[m[K [01;31m[Kerror: [m[K‘[01m[KworldToMap[m[K’ was not declared in this scope
+[2.359s]   441 |   if (![01;31m[KworldToMap[m[K(world_point.x, world_point.y, mx, my)) {
+[2.359s]       |        [01;31m[K^~~~~~~~~~[m[K
+[2.362s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:445:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+[2.362s]   445 |   unsigned int index = my * [01;31m[Kplanner_[m[K->nx + mx;
+[2.362s]       |                             [01;31m[K^~~~~~~~[m[K
+[2.362s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K At global scope:
+[2.362s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:450:1:[m[K [01;31m[Kerror: [m[K‘[01m[KNavfnPlanner[m[K’ has not been declared
+[2.362s]   450 | [01;31m[KNavfnPlanner[m[K::worldToMap(double wx, double wy, unsigned int & mx, unsigned int & my)
+[2.362s]       | [01;31m[K^~~~~~~~~~~~[m[K
+[2.365s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In function ‘[01m[Kbool worldToMap(double, double, unsigned int&, unsigned int&)[m[K’:
+[2.365s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:452:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kcostmap_[m[K’ was not declared in this scope
+[2.365s]   452 |   if (wx < [01;31m[Kcostmap_[m[K->getOriginX() || wy < costmap_->getOriginY()) {
+[2.365s]       |            [01;31m[K^~~~~~~~[m[K
+[2.368s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:457:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kcostmap_[m[K’ was not declared in this scope
+[2.368s]   457 |     std::round((wx - [01;31m[Kcostmap_[m[K->getOriginX()) / costmap_->getResolution()));
+[2.369s]       |                      [01;31m[K^~~~~~~~[m[K
+[2.371s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.371s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.372s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.372s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:20[m[K,
+[2.372s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/navfn_planner.hpp:29[m[K,
+[2.372s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:1[m[K:
+[2.372s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:466:5:[m[K [01;31m[Kerror: [m[K‘[01m[Klogger_[m[K’ was not declared in this scope
+[2.372s]   466 |     [01;31m[Klogger_[m[K,
+[2.372s]       |     [01;31m[K^~~~~~~[m[K
+[2.372s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:465:3:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.372s]   465 |   [01;31m[KRCLCPP_ERROR[m[K(
+[2.372s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.372s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:465:3:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.372s]   465 |   [01;31m[KRCLCPP_ERROR[m[K(
+[2.372s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.372s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:465:3:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.372s]   465 |   [01;31m[KRCLCPP_ERROR[m[K(
+[2.372s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.373s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:465:3:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[2.373s]   465 |   [01;31m[KRCLCPP_ERROR[m[K(
+[2.373s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.373s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:465:3:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.373s]   465 |   [01;31m[KRCLCPP_ERROR[m[K(
+[2.373s]       |   [01;31m[K^~~~~~~~~~~~[m[K
+[2.373s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K At global scope:
+[2.373s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:474:1:[m[K [01;31m[Kerror: [m[K‘[01m[KNavfnPlanner[m[K’ has not been declared
+[2.373s]   474 | [01;31m[KNavfnPlanner[m[K::mapToWorld(double mx, double my, double & wx, double & wy)
+[2.373s]       | [01;31m[K^~~~~~~~~~~~[m[K
+[2.375s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In function ‘[01m[Kvoid mapToWorld(double, double, double&, double&)[m[K’:
+[2.375s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:476:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kcostmap_[m[K’ was not declared in this scope
+[2.375s]   476 |   wx = [01;31m[Kcostmap_[m[K->getOriginX() + mx * costmap_->getResolution();
+[2.375s]       |        [01;31m[K^~~~~~~~[m[K
+[2.375s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K At global scope:
+[2.375s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:481:1:[m[K [01;31m[Kerror: [m[K‘[01m[KNavfnPlanner[m[K’ has not been declared
+[2.375s]   481 | [01;31m[KNavfnPlanner[m[K::clearRobotCell(unsigned int mx, unsigned int my)
+[2.375s]       | [01;31m[K^~~~~~~~~~~~[m[K
+[2.378s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In function ‘[01m[Kvoid clearRobotCell(unsigned int, unsigned int)[m[K’:
+[2.378s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:485:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcostmap_[m[K’ was not declared in this scope
+[2.378s]   485 |   [01;31m[Kcostmap_[m[K->setCost(mx, my, nav2_costmap_2d::FREE_SPACE);
+[2.378s]       |   [01;31m[K^~~~~~~~[m[K
+[2.379s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K At global scope:
+[2.379s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:489:1:[m[K [01;31m[Kerror: [m[K‘[01m[KNavfnPlanner[m[K’ has not been declared
+[2.379s]   489 | [01;31m[KNavfnPlanner[m[K::dynamicParametersCallback(std::vector<rclcpp::Parameter> parameters)
+[2.379s]       | [01;31m[K^~~~~~~~~~~~[m[K
+[2.381s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K In function ‘[01m[Krcl_interfaces::msg::SetParametersResult dynamicParametersCallback(std::vector<rclcpp::Parameter>)[m[K’:
+[2.382s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:497:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kname_[m[K’ was not declared in this scope; did you mean ‘[01m[Kname[m[K’?
+[2.382s]   497 |       if (name == [01;31m[Kname_[m[K + ".tolerance") {
+[2.382s]       |                   [01;31m[K^~~~~[m[K
+[2.382s]       |                   [32m[Kname[m[K
+[2.385s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:498:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_[m[K’ was not declared in this scope
+[2.385s]   498 |         [01;31m[Ktolerance_[m[K = parameter.as_double();
+[2.385s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.387s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:501:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kname_[m[K’ was not declared in this scope; did you mean ‘[01m[Kname[m[K’?
+[2.387s]   501 |       if (name == [01;31m[Kname_[m[K + ".use_astar") {
+[2.387s]       |                   [01;31m[K^~~~~[m[K
+[2.387s]       |                   [32m[Kname[m[K
+[2.391s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:502:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kuse_astar_[m[K’ was not declared in this scope
+[2.391s]   502 |         [01;31m[Kuse_astar_[m[K = parameter.as_bool();
+[2.391s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.395s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:504:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kallow_unknown_[m[K’ was not declared in this scope
+[2.395s]   504 |         [01;31m[Kallow_unknown_[m[K = parameter.as_bool();
+[2.395s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[2.403s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:506:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kuse_final_approach_orientation_[m[K’ was not declared in this scope
+[2.403s]   506 |         [01;31m[Kuse_final_approach_orientation_[m[K = parameter.as_bool();
+[2.403s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.403s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:[m[K At global scope:
+[2.403s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:514:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[2.403s]   514 | [01;31m[K}[m[K  // namespace nav2_navfn_planner
+[2.403s]       | [01;31m[K^[m[K
+[3.420s] cc1plus: all warnings being treated as errors
+[3.436s] gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o] Error 1
+[3.436s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+[3.436s] gmake: *** [Makefile:146: all] Error 2
+[3.439s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner' returned '2': AMENT_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner -- -j8 -l8
