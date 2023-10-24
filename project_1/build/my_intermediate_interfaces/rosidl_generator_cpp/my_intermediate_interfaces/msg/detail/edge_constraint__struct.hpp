@@ -45,28 +45,22 @@ struct EdgeConstraint_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->agent_name = "";
       this->time_step = 0ll;
     }
   }
 
   explicit EdgeConstraint_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : agent_name(_alloc),
-    starting_cell(_alloc, _init),
+  : starting_cell(_alloc, _init),
     goal_cell(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->agent_name = "";
       this->time_step = 0ll;
     }
   }
 
   // field types and members
-  using _agent_name_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _agent_name_type agent_name;
   using _starting_cell_type =
     geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
   _starting_cell_type starting_cell;
@@ -78,12 +72,6 @@ struct EdgeConstraint_
   _time_step_type time_step;
 
   // setters for named parameter idiom
-  Type & set__agent_name(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
-  {
-    this->agent_name = _arg;
-    return *this;
-  }
   Type & set__starting_cell(
     const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
   {
@@ -145,9 +133,6 @@ struct EdgeConstraint_
   // comparison operators
   bool operator==(const EdgeConstraint_ & other) const
   {
-    if (this->agent_name != other.agent_name) {
-      return false;
-    }
     if (this->starting_cell != other.starting_cell) {
       return false;
     }

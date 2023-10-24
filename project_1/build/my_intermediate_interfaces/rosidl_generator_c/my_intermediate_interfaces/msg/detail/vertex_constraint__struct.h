@@ -18,15 +18,12 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'agent_name'
-#include "rosidl_runtime_c/string.h"
 // Member 'cell'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.h"
 
 /// Struct defined in msg/VertexConstraint in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__msg__VertexConstraint
 {
-  rosidl_runtime_c__String agent_name;
   geometry_msgs__msg__PoseStamped cell;
   int64_t time_step;
 } my_intermediate_interfaces__msg__VertexConstraint;

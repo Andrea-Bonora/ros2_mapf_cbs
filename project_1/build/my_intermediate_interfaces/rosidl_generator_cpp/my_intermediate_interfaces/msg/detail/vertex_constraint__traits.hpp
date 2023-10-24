@@ -29,13 +29,6 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: agent_name
-  {
-    out << "agent_name: ";
-    rosidl_generator_traits::value_to_yaml(msg.agent_name, out);
-    out << ", ";
-  }
-
   // member: cell
   {
     out << "cell: ";
@@ -55,16 +48,6 @@ inline void to_block_style_yaml(
   const VertexConstraint & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: agent_name
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "agent_name: ";
-    rosidl_generator_traits::value_to_yaml(msg.agent_name, out);
-    out << "\n";
-  }
-
   // member: cell
   {
     if (indentation > 0) {
@@ -131,11 +114,11 @@ inline const char * name<my_intermediate_interfaces::msg::VertexConstraint>()
 
 template<>
 struct has_fixed_size<my_intermediate_interfaces::msg::VertexConstraint>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::PoseStamped>::value> {};
 
 template<>
 struct has_bounded_size<my_intermediate_interfaces::msg::VertexConstraint>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::PoseStamped>::value> {};
 
 template<>
 struct is_message<my_intermediate_interfaces::msg::VertexConstraint>

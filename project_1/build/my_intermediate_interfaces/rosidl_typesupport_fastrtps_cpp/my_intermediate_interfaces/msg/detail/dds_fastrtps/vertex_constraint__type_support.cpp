@@ -56,8 +56,6 @@ cdr_serialize(
   const my_intermediate_interfaces::msg::VertexConstraint & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: agent_name
-  cdr << ros_message.agent_name;
   // Member: cell
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.cell,
@@ -73,9 +71,6 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   my_intermediate_interfaces::msg::VertexConstraint & ros_message)
 {
-  // Member: agent_name
-  cdr >> ros_message.agent_name;
-
   // Member: cell
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.cell);
@@ -99,10 +94,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: agent_name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.agent_name.size() + 1);
   // Member: cell
 
   current_alignment +=
@@ -135,19 +126,6 @@ max_serialized_size_VertexConstraint(
   full_bounded = true;
   is_plain = true;
 
-
-  // Member: agent_name
-  {
-    size_t array_size = 1;
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
 
   // Member: cell
   {

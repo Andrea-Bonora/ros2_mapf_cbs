@@ -18,8 +18,6 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'agent_name'
-#include "rosidl_runtime_c/string.h"
 // Member 'starting_cell'
 // Member 'goal_cell'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.h"
@@ -27,7 +25,6 @@ extern "C"
 /// Struct defined in msg/EdgeConstraint in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__msg__EdgeConstraint
 {
-  rosidl_runtime_c__String agent_name;
   geometry_msgs__msg__PoseStamped starting_cell;
   geometry_msgs__msg__PoseStamped goal_cell;
   int64_t time_step;

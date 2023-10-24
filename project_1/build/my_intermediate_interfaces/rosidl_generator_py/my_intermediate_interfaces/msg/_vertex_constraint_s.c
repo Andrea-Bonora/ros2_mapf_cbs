@@ -16,9 +16,6 @@
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h"
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
-
 ROSIDL_GENERATOR_C_IMPORT
 bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
@@ -57,21 +54,6 @@ bool my_intermediate_interfaces__msg__vertex_constraint__convert_from_py(PyObjec
     assert(strncmp("my_intermediate_interfaces.msg._vertex_constraint.VertexConstraint", full_classname_dest, 66) == 0);
   }
   my_intermediate_interfaces__msg__VertexConstraint * ros_message = _ros_message;
-  {  // agent_name
-    PyObject * field = PyObject_GetAttrString(_pymsg, "agent_name");
-    if (!field) {
-      return false;
-    }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    rosidl_runtime_c__String__assign(&ros_message->agent_name, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
-    Py_DECREF(field);
-  }
   {  // cell
     PyObject * field = PyObject_GetAttrString(_pymsg, "cell");
     if (!field) {
@@ -114,23 +96,6 @@ PyObject * my_intermediate_interfaces__msg__vertex_constraint__convert_to_py(voi
     }
   }
   my_intermediate_interfaces__msg__VertexConstraint * ros_message = (my_intermediate_interfaces__msg__VertexConstraint *)raw_ros_message;
-  {  // agent_name
-    PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->agent_name.data,
-      strlen(ros_message->agent_name.data),
-      "replace");
-    if (!field) {
-      return NULL;
-    }
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "agent_name", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // cell
     PyObject * field = NULL;
     field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->cell);

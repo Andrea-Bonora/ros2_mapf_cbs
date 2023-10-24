@@ -12,8 +12,6 @@
 
 
 // Include directives for member types
-// Member `agent_name`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `cell`
 #include "geometry_msgs/msg/detail/pose_stamped__functions.h"
 
@@ -21,11 +19,6 @@ bool
 my_intermediate_interfaces__msg__VertexConstraint__init(my_intermediate_interfaces__msg__VertexConstraint * msg)
 {
   if (!msg) {
-    return false;
-  }
-  // agent_name
-  if (!rosidl_runtime_c__String__init(&msg->agent_name)) {
-    my_intermediate_interfaces__msg__VertexConstraint__fini(msg);
     return false;
   }
   // cell
@@ -43,8 +36,6 @@ my_intermediate_interfaces__msg__VertexConstraint__fini(my_intermediate_interfac
   if (!msg) {
     return;
   }
-  // agent_name
-  rosidl_runtime_c__String__fini(&msg->agent_name);
   // cell
   geometry_msgs__msg__PoseStamped__fini(&msg->cell);
   // time_step
@@ -54,12 +45,6 @@ bool
 my_intermediate_interfaces__msg__VertexConstraint__are_equal(const my_intermediate_interfaces__msg__VertexConstraint * lhs, const my_intermediate_interfaces__msg__VertexConstraint * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // agent_name
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->agent_name), &(rhs->agent_name)))
-  {
     return false;
   }
   // cell
@@ -81,12 +66,6 @@ my_intermediate_interfaces__msg__VertexConstraint__copy(
   my_intermediate_interfaces__msg__VertexConstraint * output)
 {
   if (!input || !output) {
-    return false;
-  }
-  // agent_name
-  if (!rosidl_runtime_c__String__copy(
-      &(input->agent_name), &(output->agent_name)))
-  {
     return false;
   }
   // cell

@@ -13,8 +13,6 @@
 
 
 // Include directives for member types
-// Member `agent_name`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `cell`
 #include "geometry_msgs/msg/pose_stamped.h"
 // Member `cell`
@@ -39,24 +37,7 @@ void my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_intro
   my_intermediate_interfaces__msg__VertexConstraint__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_member_array[3] = {
-  {
-    "agent_name",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces__msg__VertexConstraint, agent_name),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
+static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_member_array[2] = {
   {
     "cell",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -96,7 +77,7 @@ static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfa
 static const rosidl_typesupport_introspection_c__MessageMembers my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_members = {
   "my_intermediate_interfaces__msg",  // message namespace
   "VertexConstraint",  // message name
-  3,  // number of fields
+  2,  // number of fields
   sizeof(my_intermediate_interfaces__msg__VertexConstraint),
   my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_member_array,  // message members
   my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -114,7 +95,7 @@ static rosidl_message_type_support_t my_intermediate_interfaces__msg__VertexCons
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, VertexConstraint)() {
-  my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_member_array[1].members_ =
+  my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, PoseStamped)();
   if (!my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_type_support_handle.typesupport_identifier) {
     my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_type_support_handle.typesupport_identifier =

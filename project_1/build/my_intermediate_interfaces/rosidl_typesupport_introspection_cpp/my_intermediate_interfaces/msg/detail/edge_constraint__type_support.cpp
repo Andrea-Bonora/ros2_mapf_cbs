@@ -37,24 +37,7 @@ void EdgeConstraint_fini_function(void * message_memory)
   typed_message->~EdgeConstraint();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember EdgeConstraint_message_member_array[4] = {
-  {
-    "agent_name",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::msg::EdgeConstraint, agent_name),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
+static const ::rosidl_typesupport_introspection_cpp::MessageMember EdgeConstraint_message_member_array[3] = {
   {
     "starting_cell",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -111,7 +94,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EdgeConstrain
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers EdgeConstraint_message_members = {
   "my_intermediate_interfaces::msg",  // message namespace
   "EdgeConstraint",  // message name
-  4,  // number of fields
+  3,  // number of fields
   sizeof(my_intermediate_interfaces::msg::EdgeConstraint),
   EdgeConstraint_message_member_array,  // message members
   EdgeConstraint_init_function,  // function to initialize message memory (memory has to be allocated)

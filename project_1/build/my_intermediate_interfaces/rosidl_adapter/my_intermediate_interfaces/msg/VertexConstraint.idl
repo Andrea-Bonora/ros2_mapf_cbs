@@ -7,8 +7,6 @@
 module my_intermediate_interfaces {
   module msg {
     struct VertexConstraint {
-      string agent_name;
-
       geometry_msgs::msg::PoseStamped cell;
 
       int64 time_step;

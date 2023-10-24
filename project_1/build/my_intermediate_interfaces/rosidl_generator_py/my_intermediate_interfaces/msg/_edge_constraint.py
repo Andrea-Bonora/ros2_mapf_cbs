@@ -59,21 +59,18 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     """Message class 'EdgeConstraint'."""
 
     __slots__ = [
-        '_agent_name',
         '_starting_cell',
         '_goal_cell',
         '_time_step',
     ]
 
     _fields_and_field_types = {
-        'agent_name': 'string',
         'starting_cell': 'geometry_msgs/PoseStamped',
         'goal_cell': 'geometry_msgs/PoseStamped',
         'time_step': 'int64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
@@ -83,7 +80,6 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.agent_name = kwargs.get('agent_name', str())
         from geometry_msgs.msg import PoseStamped
         self.starting_cell = kwargs.get('starting_cell', PoseStamped())
         from geometry_msgs.msg import PoseStamped
@@ -119,8 +115,6 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.agent_name != other.agent_name:
-            return False
         if self.starting_cell != other.starting_cell:
             return False
         if self.goal_cell != other.goal_cell:
@@ -133,19 +127,6 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def agent_name(self):
-        """Message field 'agent_name'."""
-        return self._agent_name
-
-    @agent_name.setter
-    def agent_name(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, str), \
-                "The 'agent_name' field must be of type 'str'"
-        self._agent_name = value
 
     @builtins.property
     def starting_cell(self):

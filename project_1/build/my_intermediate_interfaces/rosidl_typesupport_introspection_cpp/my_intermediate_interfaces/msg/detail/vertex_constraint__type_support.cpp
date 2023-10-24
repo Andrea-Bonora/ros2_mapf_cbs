@@ -37,24 +37,7 @@ void VertexConstraint_fini_function(void * message_memory)
   typed_message->~VertexConstraint();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember VertexConstraint_message_member_array[3] = {
-  {
-    "agent_name",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::msg::VertexConstraint, agent_name),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
+static const ::rosidl_typesupport_introspection_cpp::MessageMember VertexConstraint_message_member_array[2] = {
   {
     "cell",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -94,7 +77,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember VertexConstra
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers VertexConstraint_message_members = {
   "my_intermediate_interfaces::msg",  // message namespace
   "VertexConstraint",  // message name
-  3,  // number of fields
+  2,  // number of fields
   sizeof(my_intermediate_interfaces::msg::VertexConstraint),
   VertexConstraint_message_member_array,  // message members
   VertexConstraint_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -35,8 +35,6 @@ extern "C"
 #endif
 
 #include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // cell
-#include "rosidl_runtime_c/string.h"  // agent_name
-#include "rosidl_runtime_c/string_functions.h"  // agent_name
 
 // forward declare type support functions
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
@@ -66,20 +64,6 @@ static bool _VertexConstraint__cdr_serialize(
     return false;
   }
   const _VertexConstraint__ros_msg_type * ros_message = static_cast<const _VertexConstraint__ros_msg_type *>(untyped_ros_message);
-  // Field name: agent_name
-  {
-    const rosidl_runtime_c__String * str = &ros_message->agent_name;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
-  }
-
   // Field name: cell
   {
     const message_type_support_callbacks_t * callbacks =
@@ -111,22 +95,6 @@ static bool _VertexConstraint__cdr_deserialize(
     return false;
   }
   _VertexConstraint__ros_msg_type * ros_message = static_cast<_VertexConstraint__ros_msg_type *>(untyped_ros_message);
-  // Field name: agent_name
-  {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->agent_name.data) {
-      rosidl_runtime_c__String__init(&ros_message->agent_name);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->agent_name,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'agent_name'\n");
-      return false;
-    }
-  }
-
   // Field name: cell
   {
     const message_type_support_callbacks_t * callbacks =
@@ -163,10 +131,6 @@ size_t get_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
   (void)padding;
   (void)wchar_size;
 
-  // field.name agent_name
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->agent_name.size + 1);
   // field.name cell
 
   current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
@@ -204,18 +168,6 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
   full_bounded = true;
   is_plain = true;
 
-  // member: agent_name
-  {
-    size_t array_size = 1;
-
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
-  }
   // member: cell
   {
     size_t array_size = 1;

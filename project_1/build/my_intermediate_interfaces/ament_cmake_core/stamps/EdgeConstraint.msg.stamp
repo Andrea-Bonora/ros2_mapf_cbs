@@ -1,4 +1,3 @@
-string agent_name
 geometry_msgs/PoseStamped starting_cell
 geometry_msgs/PoseStamped goal_cell
 int64 time_step

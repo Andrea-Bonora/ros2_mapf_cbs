@@ -59,19 +59,16 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     """Message class 'VertexConstraint'."""
 
     __slots__ = [
-        '_agent_name',
         '_cell',
         '_time_step',
     ]
 
     _fields_and_field_types = {
-        'agent_name': 'string',
         'cell': 'geometry_msgs/PoseStamped',
         'time_step': 'int64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
@@ -80,7 +77,6 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.agent_name = kwargs.get('agent_name', str())
         from geometry_msgs.msg import PoseStamped
         self.cell = kwargs.get('cell', PoseStamped())
         self.time_step = kwargs.get('time_step', int())
@@ -114,8 +110,6 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.agent_name != other.agent_name:
-            return False
         if self.cell != other.cell:
             return False
         if self.time_step != other.time_step:
@@ -126,19 +120,6 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def agent_name(self):
-        """Message field 'agent_name'."""
-        return self._agent_name
-
-    @agent_name.setter
-    def agent_name(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, str), \
-                "The 'agent_name' field must be of type 'str'"
-        self._agent_name = value
 
     @builtins.property
     def cell(self):

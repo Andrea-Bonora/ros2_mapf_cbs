@@ -1,0 +1,25 @@
+[2.556s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_intermediate build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log --single-version-externally-managed
+[2.986s] running egg_info
+[2.987s] writing ../../build/my_intermediate/my_intermediate.egg-info/PKG-INFO
+[2.988s] writing dependency_links to ../../build/my_intermediate/my_intermediate.egg-info/dependency_links.txt
+[2.988s] writing entry points to ../../build/my_intermediate/my_intermediate.egg-info/entry_points.txt
+[2.989s] writing requirements to ../../build/my_intermediate/my_intermediate.egg-info/requires.txt
+[2.989s] writing top-level names to ../../build/my_intermediate/my_intermediate.egg-info/top_level.txt
+[2.992s] reading manifest file '../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt'
+[2.994s] writing manifest file '../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt'
+[2.994s] running build
+[2.994s] running build_py
+[2.996s] running install
+[2.999s] running install_lib
+[3.001s] running install_data
+[3.002s] running install_egg_info
+[3.005s] removing '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate-0.0.0-py3.10.egg-info' (and everything under it)
+[3.011s] Copying ../../build/my_intermediate/my_intermediate.egg-info to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages/my_intermediate-0.0.0-py3.10.egg-info
+[3.011s] running install_scripts
+[3.033s] Installing collision_avoider script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[3.033s] Installing fake_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[3.033s] Installing map_discretizer script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[3.033s] Installing multi_agent_plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[3.033s] Installing plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/my_intermediate
+[3.034s] writing list of installed files to '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log'
+[3.076s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_intermediate build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate/install.log --single-version-externally-managed

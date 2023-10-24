@@ -12,8 +12,6 @@
 
 
 // Include directives for member types
-// Member `agent_name`
-#include "rosidl_runtime_c/string_functions.h"
 // Member `starting_cell`
 // Member `goal_cell`
 #include "geometry_msgs/msg/detail/pose_stamped__functions.h"
@@ -22,11 +20,6 @@ bool
 my_intermediate_interfaces__msg__EdgeConstraint__init(my_intermediate_interfaces__msg__EdgeConstraint * msg)
 {
   if (!msg) {
-    return false;
-  }
-  // agent_name
-  if (!rosidl_runtime_c__String__init(&msg->agent_name)) {
-    my_intermediate_interfaces__msg__EdgeConstraint__fini(msg);
     return false;
   }
   // starting_cell
@@ -49,8 +42,6 @@ my_intermediate_interfaces__msg__EdgeConstraint__fini(my_intermediate_interfaces
   if (!msg) {
     return;
   }
-  // agent_name
-  rosidl_runtime_c__String__fini(&msg->agent_name);
   // starting_cell
   geometry_msgs__msg__PoseStamped__fini(&msg->starting_cell);
   // goal_cell
@@ -62,12 +53,6 @@ bool
 my_intermediate_interfaces__msg__EdgeConstraint__are_equal(const my_intermediate_interfaces__msg__EdgeConstraint * lhs, const my_intermediate_interfaces__msg__EdgeConstraint * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // agent_name
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->agent_name), &(rhs->agent_name)))
-  {
     return false;
   }
   // starting_cell
@@ -95,12 +80,6 @@ my_intermediate_interfaces__msg__EdgeConstraint__copy(
   my_intermediate_interfaces__msg__EdgeConstraint * output)
 {
   if (!input || !output) {
-    return false;
-  }
-  // agent_name
-  if (!rosidl_runtime_c__String__copy(
-      &(input->agent_name), &(output->agent_name)))
-  {
     return false;
   }
   // starting_cell
