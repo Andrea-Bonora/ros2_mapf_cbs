@@ -16,8 +16,8 @@
 
 
 // Include directives for member types
-// Member 'starting_cell'
-// Member 'goal_cell'
+// Member 'cell_from'
+// Member 'cell_to'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.hpp"
 
 #ifndef _WIN32
@@ -39,8 +39,8 @@ struct EdgeConstraint_
   using Type = EdgeConstraint_<ContainerAllocator>;
 
   explicit EdgeConstraint_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : starting_cell(_init),
-    goal_cell(_init)
+  : cell_from(_init),
+    cell_to(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -50,8 +50,8 @@ struct EdgeConstraint_
   }
 
   explicit EdgeConstraint_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : starting_cell(_alloc, _init),
-    goal_cell(_alloc, _init)
+  : cell_from(_alloc, _init),
+    cell_to(_alloc, _init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
@@ -61,27 +61,27 @@ struct EdgeConstraint_
   }
 
   // field types and members
-  using _starting_cell_type =
+  using _cell_from_type =
     geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
-  _starting_cell_type starting_cell;
-  using _goal_cell_type =
+  _cell_from_type cell_from;
+  using _cell_to_type =
     geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
-  _goal_cell_type goal_cell;
+  _cell_to_type cell_to;
   using _time_step_type =
     int64_t;
   _time_step_type time_step;
 
   // setters for named parameter idiom
-  Type & set__starting_cell(
+  Type & set__cell_from(
     const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
   {
-    this->starting_cell = _arg;
+    this->cell_from = _arg;
     return *this;
   }
-  Type & set__goal_cell(
+  Type & set__cell_to(
     const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
   {
-    this->goal_cell = _arg;
+    this->cell_to = _arg;
     return *this;
   }
   Type & set__time_step(
@@ -133,10 +133,10 @@ struct EdgeConstraint_
   // comparison operators
   bool operator==(const EdgeConstraint_ & other) const
   {
-    if (this->starting_cell != other.starting_cell) {
+    if (this->cell_from != other.cell_from) {
       return false;
     }
-    if (this->goal_cell != other.goal_cell) {
+    if (this->cell_to != other.cell_to) {
       return false;
     }
     if (this->time_step != other.time_step) {

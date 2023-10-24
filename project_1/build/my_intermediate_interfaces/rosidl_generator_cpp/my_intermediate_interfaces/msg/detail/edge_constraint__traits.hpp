@@ -15,8 +15,8 @@
 #include "rosidl_runtime_cpp/traits.hpp"
 
 // Include directives for member types
-// Member 'starting_cell'
-// Member 'goal_cell'
+// Member 'cell_from'
+// Member 'cell_to'
 #include "geometry_msgs/msg/detail/pose_stamped__traits.hpp"
 
 namespace my_intermediate_interfaces
@@ -30,17 +30,17 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: starting_cell
+  // member: cell_from
   {
-    out << "starting_cell: ";
-    to_flow_style_yaml(msg.starting_cell, out);
+    out << "cell_from: ";
+    to_flow_style_yaml(msg.cell_from, out);
     out << ", ";
   }
 
-  // member: goal_cell
+  // member: cell_to
   {
-    out << "goal_cell: ";
-    to_flow_style_yaml(msg.goal_cell, out);
+    out << "cell_to: ";
+    to_flow_style_yaml(msg.cell_to, out);
     out << ", ";
   }
 
@@ -56,22 +56,22 @@ inline void to_block_style_yaml(
   const EdgeConstraint & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: starting_cell
+  // member: cell_from
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "starting_cell:\n";
-    to_block_style_yaml(msg.starting_cell, out, indentation + 2);
+    out << "cell_from:\n";
+    to_block_style_yaml(msg.cell_from, out, indentation + 2);
   }
 
-  // member: goal_cell
+  // member: cell_to
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "goal_cell:\n";
-    to_block_style_yaml(msg.goal_cell, out, indentation + 2);
+    out << "cell_to:\n";
+    to_block_style_yaml(msg.cell_to, out, indentation + 2);
   }
 
   // member: time_step

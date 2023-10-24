@@ -58,13 +58,13 @@ cdr_serialize(
   const my_intermediate_interfaces::msg::EdgeConstraint & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: starting_cell
+  // Member: cell_from
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.starting_cell,
+    ros_message.cell_from,
     cdr);
-  // Member: goal_cell
+  // Member: cell_to
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.goal_cell,
+    ros_message.cell_to,
     cdr);
   // Member: time_step
   cdr << ros_message.time_step;
@@ -77,13 +77,13 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   my_intermediate_interfaces::msg::EdgeConstraint & ros_message)
 {
-  // Member: starting_cell
+  // Member: cell_from
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.starting_cell);
+    cdr, ros_message.cell_from);
 
-  // Member: goal_cell
+  // Member: cell_to
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.goal_cell);
+    cdr, ros_message.cell_to);
 
   // Member: time_step
   cdr >> ros_message.time_step;
@@ -104,16 +104,16 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: starting_cell
+  // Member: cell_from
 
   current_alignment +=
     geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.starting_cell, current_alignment);
-  // Member: goal_cell
+    ros_message.cell_from, current_alignment);
+  // Member: cell_to
 
   current_alignment +=
     geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.goal_cell, current_alignment);
+    ros_message.cell_to, current_alignment);
   // Member: time_step
   {
     size_t item_size = sizeof(ros_message.time_step);
@@ -142,7 +142,7 @@ max_serialized_size_EdgeConstraint(
   is_plain = true;
 
 
-  // Member: starting_cell
+  // Member: cell_from
   {
     size_t array_size = 1;
 
@@ -158,7 +158,7 @@ max_serialized_size_EdgeConstraint(
     }
   }
 
-  // Member: goal_cell
+  // Member: cell_to
   {
     size_t array_size = 1;
 

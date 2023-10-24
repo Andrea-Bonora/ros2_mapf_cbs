@@ -44,8 +44,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <map>
-#include "my_intermediate_interfaces/msg/vertex_constraint.hpp"
-#include "my_intermediate_interfaces/msg/edge_constraint.hpp"
+#include <vector>
+#include <string>
 
 namespace my_nav2_navfn_planner
 {

@@ -58,23 +58,23 @@ bool my_intermediate_interfaces__msg__edge_constraint__convert_from_py(PyObject 
     assert(strncmp("my_intermediate_interfaces.msg._edge_constraint.EdgeConstraint", full_classname_dest, 62) == 0);
   }
   my_intermediate_interfaces__msg__EdgeConstraint * ros_message = _ros_message;
-  {  // starting_cell
-    PyObject * field = PyObject_GetAttrString(_pymsg, "starting_cell");
+  {  // cell_from
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_from");
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->starting_cell)) {
+    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->cell_from)) {
       Py_DECREF(field);
       return false;
     }
     Py_DECREF(field);
   }
-  {  // goal_cell
-    PyObject * field = PyObject_GetAttrString(_pymsg, "goal_cell");
+  {  // cell_to
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_to");
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->goal_cell)) {
+    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->cell_to)) {
       Py_DECREF(field);
       return false;
     }
@@ -111,28 +111,28 @@ PyObject * my_intermediate_interfaces__msg__edge_constraint__convert_to_py(void 
     }
   }
   my_intermediate_interfaces__msg__EdgeConstraint * ros_message = (my_intermediate_interfaces__msg__EdgeConstraint *)raw_ros_message;
-  {  // starting_cell
+  {  // cell_from
     PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->starting_cell);
+    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->cell_from);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "starting_cell", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cell_from", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // goal_cell
+  {  // cell_to
     PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->goal_cell);
+    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->cell_to);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "goal_cell", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cell_to", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

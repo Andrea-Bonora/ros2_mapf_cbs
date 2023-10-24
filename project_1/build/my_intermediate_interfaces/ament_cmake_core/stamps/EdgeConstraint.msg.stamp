@@ -1,3 +1,3 @@
-geometry_msgs/PoseStamped starting_cell
-geometry_msgs/PoseStamped goal_cell
+geometry_msgs/PoseStamped cell_from
+geometry_msgs/PoseStamped cell_to
 int64 time_step

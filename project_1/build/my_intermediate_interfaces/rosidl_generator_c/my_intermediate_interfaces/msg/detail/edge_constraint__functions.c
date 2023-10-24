@@ -12,8 +12,8 @@
 
 
 // Include directives for member types
-// Member `starting_cell`
-// Member `goal_cell`
+// Member `cell_from`
+// Member `cell_to`
 #include "geometry_msgs/msg/detail/pose_stamped__functions.h"
 
 bool
@@ -22,13 +22,13 @@ my_intermediate_interfaces__msg__EdgeConstraint__init(my_intermediate_interfaces
   if (!msg) {
     return false;
   }
-  // starting_cell
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->starting_cell)) {
+  // cell_from
+  if (!geometry_msgs__msg__PoseStamped__init(&msg->cell_from)) {
     my_intermediate_interfaces__msg__EdgeConstraint__fini(msg);
     return false;
   }
-  // goal_cell
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->goal_cell)) {
+  // cell_to
+  if (!geometry_msgs__msg__PoseStamped__init(&msg->cell_to)) {
     my_intermediate_interfaces__msg__EdgeConstraint__fini(msg);
     return false;
   }
@@ -42,10 +42,10 @@ my_intermediate_interfaces__msg__EdgeConstraint__fini(my_intermediate_interfaces
   if (!msg) {
     return;
   }
-  // starting_cell
-  geometry_msgs__msg__PoseStamped__fini(&msg->starting_cell);
-  // goal_cell
-  geometry_msgs__msg__PoseStamped__fini(&msg->goal_cell);
+  // cell_from
+  geometry_msgs__msg__PoseStamped__fini(&msg->cell_from);
+  // cell_to
+  geometry_msgs__msg__PoseStamped__fini(&msg->cell_to);
   // time_step
 }
 
@@ -55,15 +55,15 @@ my_intermediate_interfaces__msg__EdgeConstraint__are_equal(const my_intermediate
   if (!lhs || !rhs) {
     return false;
   }
-  // starting_cell
+  // cell_from
   if (!geometry_msgs__msg__PoseStamped__are_equal(
-      &(lhs->starting_cell), &(rhs->starting_cell)))
+      &(lhs->cell_from), &(rhs->cell_from)))
   {
     return false;
   }
-  // goal_cell
+  // cell_to
   if (!geometry_msgs__msg__PoseStamped__are_equal(
-      &(lhs->goal_cell), &(rhs->goal_cell)))
+      &(lhs->cell_to), &(rhs->cell_to)))
   {
     return false;
   }
@@ -82,15 +82,15 @@ my_intermediate_interfaces__msg__EdgeConstraint__copy(
   if (!input || !output) {
     return false;
   }
-  // starting_cell
+  // cell_from
   if (!geometry_msgs__msg__PoseStamped__copy(
-      &(input->starting_cell), &(output->starting_cell)))
+      &(input->cell_from), &(output->cell_from)))
   {
     return false;
   }
-  // goal_cell
+  // cell_to
   if (!geometry_msgs__msg__PoseStamped__copy(
-      &(input->goal_cell), &(output->goal_cell)))
+      &(input->cell_to), &(output->cell_to)))
   {
     return false;
   }

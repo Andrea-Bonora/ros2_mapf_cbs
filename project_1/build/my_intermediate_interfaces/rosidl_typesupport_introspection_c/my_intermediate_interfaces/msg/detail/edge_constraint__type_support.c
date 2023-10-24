@@ -13,11 +13,11 @@
 
 
 // Include directives for member types
-// Member `starting_cell`
-// Member `goal_cell`
+// Member `cell_from`
+// Member `cell_to`
 #include "geometry_msgs/msg/pose_stamped.h"
-// Member `starting_cell`
-// Member `goal_cell`
+// Member `cell_from`
+// Member `cell_to`
 #include "geometry_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
@@ -41,14 +41,14 @@ void my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introsp
 
 static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introspection_c__EdgeConstraint_message_member_array[3] = {
   {
-    "starting_cell",  // name
+    "cell_from",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, starting_cell),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, cell_from),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -58,14 +58,14 @@ static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfa
     NULL  // resize(index) function pointer
   },
   {
-    "goal_cell",  // name
+    "cell_to",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, goal_cell),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, cell_to),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

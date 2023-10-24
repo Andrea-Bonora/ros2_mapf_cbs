@@ -37,15 +37,15 @@ private:
   ::my_intermediate_interfaces::msg::EdgeConstraint msg_;
 };
 
-class Init_EdgeConstraint_goal_cell
+class Init_EdgeConstraint_cell_to
 {
 public:
-  explicit Init_EdgeConstraint_goal_cell(::my_intermediate_interfaces::msg::EdgeConstraint & msg)
+  explicit Init_EdgeConstraint_cell_to(::my_intermediate_interfaces::msg::EdgeConstraint & msg)
   : msg_(msg)
   {}
-  Init_EdgeConstraint_time_step goal_cell(::my_intermediate_interfaces::msg::EdgeConstraint::_goal_cell_type arg)
+  Init_EdgeConstraint_time_step cell_to(::my_intermediate_interfaces::msg::EdgeConstraint::_cell_to_type arg)
   {
-    msg_.goal_cell = std::move(arg);
+    msg_.cell_to = std::move(arg);
     return Init_EdgeConstraint_time_step(msg_);
   }
 
@@ -53,16 +53,16 @@ private:
   ::my_intermediate_interfaces::msg::EdgeConstraint msg_;
 };
 
-class Init_EdgeConstraint_starting_cell
+class Init_EdgeConstraint_cell_from
 {
 public:
-  Init_EdgeConstraint_starting_cell()
+  Init_EdgeConstraint_cell_from()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_EdgeConstraint_goal_cell starting_cell(::my_intermediate_interfaces::msg::EdgeConstraint::_starting_cell_type arg)
+  Init_EdgeConstraint_cell_to cell_from(::my_intermediate_interfaces::msg::EdgeConstraint::_cell_from_type arg)
   {
-    msg_.starting_cell = std::move(arg);
-    return Init_EdgeConstraint_goal_cell(msg_);
+    msg_.cell_from = std::move(arg);
+    return Init_EdgeConstraint_cell_to(msg_);
   }
 
 private:
@@ -80,7 +80,7 @@ template<>
 inline
 auto build<::my_intermediate_interfaces::msg::EdgeConstraint>()
 {
-  return my_intermediate_interfaces::msg::builder::Init_EdgeConstraint_starting_cell();
+  return my_intermediate_interfaces::msg::builder::Init_EdgeConstraint_cell_from();
 }
 
 }  // namespace my_intermediate_interfaces

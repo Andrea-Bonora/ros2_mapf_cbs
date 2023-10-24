@@ -59,14 +59,14 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     """Message class 'EdgeConstraint'."""
 
     __slots__ = [
-        '_starting_cell',
-        '_goal_cell',
+        '_cell_from',
+        '_cell_to',
         '_time_step',
     ]
 
     _fields_and_field_types = {
-        'starting_cell': 'geometry_msgs/PoseStamped',
-        'goal_cell': 'geometry_msgs/PoseStamped',
+        'cell_from': 'geometry_msgs/PoseStamped',
+        'cell_to': 'geometry_msgs/PoseStamped',
         'time_step': 'int64',
     }
 
@@ -81,9 +81,9 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from geometry_msgs.msg import PoseStamped
-        self.starting_cell = kwargs.get('starting_cell', PoseStamped())
+        self.cell_from = kwargs.get('cell_from', PoseStamped())
         from geometry_msgs.msg import PoseStamped
-        self.goal_cell = kwargs.get('goal_cell', PoseStamped())
+        self.cell_to = kwargs.get('cell_to', PoseStamped())
         self.time_step = kwargs.get('time_step', int())
 
     def __repr__(self):
@@ -115,9 +115,9 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.starting_cell != other.starting_cell:
+        if self.cell_from != other.cell_from:
             return False
-        if self.goal_cell != other.goal_cell:
+        if self.cell_to != other.cell_to:
             return False
         if self.time_step != other.time_step:
             return False
@@ -129,32 +129,32 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def starting_cell(self):
-        """Message field 'starting_cell'."""
-        return self._starting_cell
+    def cell_from(self):
+        """Message field 'cell_from'."""
+        return self._cell_from
 
-    @starting_cell.setter
-    def starting_cell(self, value):
+    @cell_from.setter
+    def cell_from(self, value):
         if __debug__:
             from geometry_msgs.msg import PoseStamped
             assert \
                 isinstance(value, PoseStamped), \
-                "The 'starting_cell' field must be a sub message of type 'PoseStamped'"
-        self._starting_cell = value
+                "The 'cell_from' field must be a sub message of type 'PoseStamped'"
+        self._cell_from = value
 
     @builtins.property
-    def goal_cell(self):
-        """Message field 'goal_cell'."""
-        return self._goal_cell
+    def cell_to(self):
+        """Message field 'cell_to'."""
+        return self._cell_to
 
-    @goal_cell.setter
-    def goal_cell(self, value):
+    @cell_to.setter
+    def cell_to(self, value):
         if __debug__:
             from geometry_msgs.msg import PoseStamped
             assert \
                 isinstance(value, PoseStamped), \
-                "The 'goal_cell' field must be a sub message of type 'PoseStamped'"
-        self._goal_cell = value
+                "The 'cell_to' field must be a sub message of type 'PoseStamped'"
+        self._cell_to = value
 
     @builtins.property
     def time_step(self):

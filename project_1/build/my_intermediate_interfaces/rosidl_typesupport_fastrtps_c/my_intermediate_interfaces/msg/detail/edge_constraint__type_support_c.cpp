@@ -34,7 +34,7 @@ extern "C"
 {
 #endif
 
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // goal_cell, starting_cell
+#include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // cell_from, cell_to
 
 // forward declare type support functions
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
@@ -64,7 +64,7 @@ static bool _EdgeConstraint__cdr_serialize(
     return false;
   }
   const _EdgeConstraint__ros_msg_type * ros_message = static_cast<const _EdgeConstraint__ros_msg_type *>(untyped_ros_message);
-  // Field name: starting_cell
+  // Field name: cell_from
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
@@ -72,13 +72,13 @@ static bool _EdgeConstraint__cdr_serialize(
         rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
       )()->data);
     if (!callbacks->cdr_serialize(
-        &ros_message->starting_cell, cdr))
+        &ros_message->cell_from, cdr))
     {
       return false;
     }
   }
 
-  // Field name: goal_cell
+  // Field name: cell_to
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
@@ -86,7 +86,7 @@ static bool _EdgeConstraint__cdr_serialize(
         rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
       )()->data);
     if (!callbacks->cdr_serialize(
-        &ros_message->goal_cell, cdr))
+        &ros_message->cell_to, cdr))
     {
       return false;
     }
@@ -109,7 +109,7 @@ static bool _EdgeConstraint__cdr_deserialize(
     return false;
   }
   _EdgeConstraint__ros_msg_type * ros_message = static_cast<_EdgeConstraint__ros_msg_type *>(untyped_ros_message);
-  // Field name: starting_cell
+  // Field name: cell_from
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
@@ -117,13 +117,13 @@ static bool _EdgeConstraint__cdr_deserialize(
         rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
       )()->data);
     if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->starting_cell))
+        cdr, &ros_message->cell_from))
     {
       return false;
     }
   }
 
-  // Field name: goal_cell
+  // Field name: cell_to
   {
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
@@ -131,7 +131,7 @@ static bool _EdgeConstraint__cdr_deserialize(
         rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
       )()->data);
     if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->goal_cell))
+        cdr, &ros_message->cell_to))
     {
       return false;
     }
@@ -159,14 +159,14 @@ size_t get_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
   (void)padding;
   (void)wchar_size;
 
-  // field.name starting_cell
+  // field.name cell_from
 
   current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
-    &(ros_message->starting_cell), current_alignment);
-  // field.name goal_cell
+    &(ros_message->cell_from), current_alignment);
+  // field.name cell_to
 
   current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
-    &(ros_message->goal_cell), current_alignment);
+    &(ros_message->cell_to), current_alignment);
   // field.name time_step
   {
     size_t item_size = sizeof(ros_message->time_step);
@@ -200,7 +200,7 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
   full_bounded = true;
   is_plain = true;
 
-  // member: starting_cell
+  // member: cell_from
   {
     size_t array_size = 1;
 
@@ -215,7 +215,7 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
       is_plain &= inner_is_plain;
     }
   }
-  // member: goal_cell
+  // member: cell_to
   {
     size_t array_size = 1;
 

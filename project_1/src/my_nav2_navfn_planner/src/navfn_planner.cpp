@@ -114,9 +114,6 @@ nav_msgs::msg::Path NavfnPlanner::createPlan(
   steady_clock::time_point a = steady_clock::now();
 #endif
 
-  //Use constraint just to avoid error
-  std::vector<my_intermediate_interfaces::msg::VertexConstraint> a = vertex_constraints;
-  std::vector<my_intermediate_interfaces::msg::EdgeConstraint> b = edge_constraints;
   unsigned int mx_start, my_start, mx_goal, my_goal;
   if (!costmap_->worldToMap(start.pose.position.x, start.pose.position.y, mx_start, my_start)) {
     throw nav2_core::StartOutsideMapBounds(
@@ -390,14 +387,28 @@ NavfnPlanner::getPlanFromPotential(
   std::vector<std::map<std::string, int>> vert_constr;
   std::vector<std::map<std::string, int>> edge_constr;
 
-  for (std::vector<int>::size_type j = 0; j < vertex_constraints.size(); j++){
-    std::map<std::string, int> object = {{"cell", 1}, {"time_step", vertex_constraints[j].time_step}};
-    vert_constr.push_back(object);
+  for (const auto& obj : vertex_constraints) {
+      double constr_x = obj.cell.pose.position.x;
+      double constr_y = obj.cell.pose.position.y;
+      unsigned int cx, cy;
+      worldToMap(constr_x, constr_y, cx, cy);
+      int idx = cy * planner_->nx + cx;
+      std::map<std::string, int> object = {{"cell", idx}, {"time_step", obj.time_step}};
+      vert_constr.push_back(object);
   }
 
-  for (std::vector<int>::size_type j = 0; j < edge_constraints.size(); j++){
-    std::map<std::string, int> object = {{"cell_from", 1}, {"cell_to", 2}, {"time_step", edge_constraints[j].time_step}};
-    edge_constr.push_back(object);
+  for (const auto& obj : edge_constraints) {
+      double constr_1_x = obj.cell_from.pose.position.x;
+      double constr_1_y = obj.cell_from.pose.position.y;
+      double constr_2_x = obj.cell_to.pose.position.x;
+      double constr_2_y = obj.cell_to.pose.position.y;
+      unsigned int cx1, cx2, cy1, cy2;
+      worldToMap(constr_1_x, constr_1_y, cx1, cy1);
+      worldToMap(constr_2_x, constr_2_y, cx2, cy2);
+      int idx1 = cy1 * planner_->nx + cx1;
+      int idx2 = cy2 * planner_->nx + cx2;
+      std::map<std::string, int> object = {{"cell_from", idx1}, {"cell_to", idx2}, {"time_step", obj.time_step}};
+      edge_constr.push_back(object);
   }
 
   int path_len = planner_->calcPath(max_cycles, vert_constr, edge_constr);

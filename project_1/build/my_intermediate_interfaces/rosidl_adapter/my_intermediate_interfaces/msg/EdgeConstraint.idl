@@ -7,9 +7,9 @@
 module my_intermediate_interfaces {
   module msg {
     struct EdgeConstraint {
-      geometry_msgs::msg::PoseStamped starting_cell;
+      geometry_msgs::msg::PoseStamped cell_from;
 
-      geometry_msgs::msg::PoseStamped goal_cell;
+      geometry_msgs::msg::PoseStamped cell_to;
 
       int64 time_step;
     };
