@@ -1,0 +1,149 @@
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:[m[K In member function ‘[01m[Kvoid nav2_planner::PlannerServer::computePlanThroughPoses()[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:449:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  449 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::INVALID_PLANNER;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:449:52:[m[K [01;31m[Kerror: [m[K‘[01m[KINVALID_PLANNER[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  449 |     result->error_code = ActionThroughPosesResult::[01;31m[KINVALID_PLANNER[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:453:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  453 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::START_OCCUPIED;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:453:52:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  453 |     result->error_code = ActionThroughPosesResult::[01;31m[KSTART_OCCUPIED[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:457:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  457 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::GOAL_OCCUPIED;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:457:52:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  457 |     result->error_code = ActionThroughPosesResult::[01;31m[KGOAL_OCCUPIED[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:461:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  461 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::NO_VALID_PATH;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:461:52:[m[K [01;31m[Kerror: [m[K‘[01m[KNO_VALID_PATH[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  461 |     result->error_code = ActionThroughPosesResult::[01;31m[KNO_VALID_PATH[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:465:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  465 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::TIMEOUT;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:465:52:[m[K [01;31m[Kerror: [m[K‘[01m[KTIMEOUT[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  465 |     result->error_code = ActionThroughPosesResult::[01;31m[KTIMEOUT[m[K;
+      |                                                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:469:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  469 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::START_OUTSIDE_MAP;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:469:52:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  469 |     result->error_code = ActionThroughPosesResult::[01;31m[KSTART_OUTSIDE_MAP[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:473:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  473 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::GOAL_OUTSIDE_MAP;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:473:52:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  473 |     result->error_code = ActionThroughPosesResult::[01;31m[KGOAL_OUTSIDE_MAP[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:477:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  477 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::TF_ERROR;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:477:52:[m[K [01;31m[Kerror: [m[K‘[01m[KTF_ERROR[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  477 |     result->error_code = ActionThroughPosesResult::[01;31m[KTF_ERROR[m[K;
+      |                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:481:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  481 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::NO_VIAPOINTS_GIVEN;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:481:52:[m[K [01;31m[Kerror: [m[K‘[01m[KNO_VIAPOINTS_GIVEN[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  481 |     result->error_code = ActionThroughPosesResult::[01;31m[KNO_VIAPOINTS_GIVEN[m[K;
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:485:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  485 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::UNKNOWN;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:485:52:[m[K [01;31m[Kerror: [m[K‘[01m[KUNKNOWN[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+  485 |     result->error_code = ActionThroughPosesResult::[01;31m[KUNKNOWN[m[K;
+      |                                                    [01;31m[K^~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:[m[K In member function ‘[01m[Kvoid nav2_planner::PlannerServer::computePlan()[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:544:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  544 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::INVALID_PLANNER;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:544:46:[m[K [01;31m[Kerror: [m[K‘[01m[KINVALID_PLANNER[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  544 |     result->error_code = ActionToPoseResult::[01;31m[KINVALID_PLANNER[m[K;
+      |                                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:548:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  548 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::START_OCCUPIED;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:548:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  548 |     result->error_code = ActionToPoseResult::[01;31m[KSTART_OCCUPIED[m[K;
+      |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:552:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  552 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::GOAL_OCCUPIED;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:552:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  552 |     result->error_code = ActionToPoseResult::[01;31m[KGOAL_OCCUPIED[m[K;
+      |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:556:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  556 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::NO_VALID_PATH;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:556:46:[m[K [01;31m[Kerror: [m[K‘[01m[KNO_VALID_PATH[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  556 |     result->error_code = ActionToPoseResult::[01;31m[KNO_VALID_PATH[m[K;
+      |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:560:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  560 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::TIMEOUT;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:560:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTIMEOUT[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  560 |     result->error_code = ActionToPoseResult::[01;31m[KTIMEOUT[m[K;
+      |                                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:564:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  564 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::START_OUTSIDE_MAP;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:564:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  564 |     result->error_code = ActionToPoseResult::[01;31m[KSTART_OUTSIDE_MAP[m[K;
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:568:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  568 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::GOAL_OUTSIDE_MAP;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:568:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  568 |     result->error_code = ActionToPoseResult::[01;31m[KGOAL_OUTSIDE_MAP[m[K;
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:572:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  572 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::TF_ERROR;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:572:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTF_ERROR[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  572 |     result->error_code = ActionToPoseResult::[01;31m[KTF_ERROR[m[K;
+      |                                              [01;31m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:576:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+  576 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::UNKNOWN;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:576:46:[m[K [01;31m[Kerror: [m[K‘[01m[KUNKNOWN[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+  576 |     result->error_code = ActionToPoseResult::[01;31m[KUNKNOWN[m[K;
+      |                                              [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33[m[K,
+                 from [01m[K/usr/include/c++/11/bits/allocator.h:46[m[K,
+                 from [01m[K/usr/include/c++/11/string:41[m[K,
+                 from [01m[K/usr/include/c++/11/bits/locale_classes.h:40[m[K,
+                 from [01m[K/usr/include/c++/11/bits/ios_base.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/iomanip:40[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:18[m[K:
+/usr/include/c++/11/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = nav2_costmap_2d::Costmap2DROS; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS][m[K’:
+[01m[K/usr/include/c++/11/bits/alloc_traits.h:516:17:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = nav2_costmap_2d::Costmap2DROS; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<nav2_costmap_2d::Costmap2DROS>][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS; _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = nav2_costmap_2d::Costmap2DROS; _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:409:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:862:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = nav2_costmap_2d::Costmap2DROS; _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:878:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = nav2_costmap_2d::Costmap2DROS; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}][m[K’
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:66:65:[m[K   required from here
+[01m[K/usr/include/c++/11/ext/new_allocator.h:162:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Knav2_costmap_2d::Costmap2DROS::Costmap2DROS(const char [15], std::__cxx11::basic_string<char>, const char [15], bool)[m[K’
+  162 |         { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/include/nav2_planner/planner_server.hpp:37[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:34[m[K:
+[01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:89:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Knav2_costmap_2d::Costmap2DROS::Costmap2DROS(const string&, const string&, const string&)[m[K’
+   89 |   explicit [01;36m[KCostmap2DROS[m[K(
+      |            [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:89:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+[01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:81:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Knav2_costmap_2d::Costmap2DROS::Costmap2DROS(const string&)[m[K’
+   81 |   explicit [01;36m[KCostmap2DROS[m[K(const std::string & name);
+      |            [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:81:12:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+gmake[2]: *** [CMakeFiles/planner_server_core.dir/build.make:76: CMakeFiles/planner_server_core.dir/src/planner_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:174: CMakeFiles/planner_server_core.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

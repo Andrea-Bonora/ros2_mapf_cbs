@@ -20,6 +20,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/AgentPath.msg"
   "msg/VertexConstraint.msg"
   "msg/EdgeConstraint.msg"
+  "action/MyComputePathToPose.action"
   DEPENDENCIES nav_msgs
   DEPENDENCIES geometry_msgs
 )

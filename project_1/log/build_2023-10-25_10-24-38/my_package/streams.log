@@ -1,0 +1,23 @@
+[1.219s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_package': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/install.log --single-version-externally-managed
+[1.491s] running egg_info
+[1.491s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[1.492s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[1.492s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[1.492s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[1.492s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[1.494s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.494s] adding license file 'LICENSE'
+[1.494s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.494s] running build
+[1.494s] running build_py
+[1.494s] running install
+[1.495s] running install_lib
+[1.496s] running install_data
+[1.496s] running install_egg_info
+[1.498s] removing '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info' (and everything under it)
+[1.498s] Copying ../../build/my_package/my_package.egg-info to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+[1.498s] running install_scripts
+[1.515s] Installing my_robot_driver script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/my_package
+[1.515s] Installing robot_spawner script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/my_package
+[1.515s] writing list of installed files to '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/install.log'
+[1.625s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_package' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build install --record /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/install.log --single-version-externally-managed

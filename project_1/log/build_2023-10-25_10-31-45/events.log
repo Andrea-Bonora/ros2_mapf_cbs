@@ -1,0 +1,238 @@
+[0.000000] (-) TimerEvent: {}
+[0.000214] (-) JobUnselected: {'identifier': 'my_intermediate'}
+[0.000282] (-) JobUnselected: {'identifier': 'my_intermediate_interfaces'}
+[0.000300] (-) JobUnselected: {'identifier': 'my_nav2_core'}
+[0.000332] (-) JobUnselected: {'identifier': 'my_nav2_navfn_planner'}
+[0.000379] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000390] (-) JobUnselected: {'identifier': 'my_try_bringup'}
+[0.000402] (-) JobUnselected: {'identifier': 'nav2_straightline_planner'}
+[0.000413] (-) JobUnselected: {'identifier': 'turtlebot3_multi_robot'}
+[0.000426] (my_nav2_planner) JobQueued: {'identifier': 'my_nav2_planner', 'dependencies': OrderedDict()}
+[0.000440] (my_nav2_planner) JobStarted: {'identifier': 'my_nav2_planner'}
+[0.064984] (my_nav2_planner) JobProgress: {'identifier': 'my_nav2_planner', 'progress': 'cmake'}
+[0.065059] (my_nav2_planner) Command: {'cmd': ['/usr/bin/cmake', '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner', '-DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/src'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1743'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5960175a28e93afe1d8592bb65363758'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/1743,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/1743'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b0343687_ac05_4797_b70d_e3a455f902a5'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AHDFD2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1369'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=5960175a28e93afe1d8592bb65363758'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.099464] (-) TimerEvent: {}
+[0.131993] (my_nav2_planner) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.196199] (my_nav2_planner) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.199632] (-) TimerEvent: {}
+[0.201754] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.275524] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.280859] (my_nav2_planner) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.281107] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.281613] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.284320] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299759] (-) TimerEvent: {}
+[0.350630] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.355991] (my_nav2_planner) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.356171] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.356540] (my_nav2_planner) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.360169] (my_nav2_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.399952] (-) TimerEvent: {}
+[0.487957] (my_nav2_planner) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[0.500126] (-) TimerEvent: {}
+[0.565179] (my_nav2_planner) StdoutLine: {'line': b'-- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)\n'}
+[0.568450] (my_nav2_planner) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.600248] (-) TimerEvent: {}
+[0.612963] (my_nav2_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.617690] (my_nav2_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.625103] (my_nav2_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.637840] (my_nav2_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.655584] (my_nav2_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.700416] (-) TimerEvent: {}
+[0.714378] (my_nav2_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.717124] (my_nav2_planner) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.743623] (my_nav2_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.754739] (my_nav2_planner) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.800534] (-) TimerEvent: {}
+[0.810397] (my_nav2_planner) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.810547] (my_nav2_planner) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.874472] (my_nav2_planner) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.875139] (my_nav2_planner) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.900711] (-) TimerEvent: {}
+[0.991094] (my_nav2_planner) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[1.000795] (-) TimerEvent: {}
+[1.064899] (my_nav2_planner) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[1.095355] (my_nav2_planner) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.6 (/opt/ros/humble/share/rclcpp_components/cmake)\n'}
+[1.100882] (-) TimerEvent: {}
+[1.148241] (my_nav2_planner) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[1.201054] (-) TimerEvent: {}
+[1.301379] (-) TimerEvent: {}
+[1.331354] (my_nav2_planner) StdoutLine: {'line': b'-- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)\n'}
+[1.401567] (-) TimerEvent: {}
+[1.501941] (-) TimerEvent: {}
+[1.602308] (-) TimerEvent: {}
+[1.677671] (my_nav2_planner) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.678645] (my_nav2_planner) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.678717] (my_nav2_planner) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.702461] (-) TimerEvent: {}
+[1.802782] (-) TimerEvent: {}
+[1.811277] (my_nav2_planner) StdoutLine: {'line': b'-- Found nav2_costmap_2d: 1.1.12 (/opt/ros/humble/share/nav2_costmap_2d/cmake)\n'}
+[1.902955] (-) TimerEvent: {}
+[2.003312] (-) TimerEvent: {}
+[2.103689] (-) TimerEvent: {}
+[2.204070] (-) TimerEvent: {}
+[2.304455] (-) TimerEvent: {}
+[2.403115] (my_nav2_planner) StdoutLine: {'line': b'-- Found nav2_core: 1.2.0 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/cmake)\n'}
+[2.404593] (-) TimerEvent: {}
+[2.504910] (-) TimerEvent: {}
+[2.605286] (-) TimerEvent: {}
+[2.705644] (-) TimerEvent: {}
+[2.806016] (-) TimerEvent: {}
+[2.906389] (-) TimerEvent: {}
+[3.006761] (-) TimerEvent: {}
+[3.107132] (-) TimerEvent: {}
+[3.207405] (-) TimerEvent: {}
+[3.307768] (-) TimerEvent: {}
+[3.408140] (-) TimerEvent: {}
+[3.508514] (-) TimerEvent: {}
+[3.608912] (-) TimerEvent: {}
+[3.709169] (-) TimerEvent: {}
+[3.809423] (-) TimerEvent: {}
+[3.909765] (-) TimerEvent: {}
+[4.010068] (-) TimerEvent: {}
+[4.114747] (-) TimerEvent: {}
+[4.215150] (-) TimerEvent: {}
+[4.315450] (-) TimerEvent: {}
+[4.415806] (-) TimerEvent: {}
+[4.511227] (my_nav2_planner) StdoutLine: {'line': b'-- Setting build type to Release as none was specified.\n'}
+[4.515955] (-) TimerEvent: {}
+[4.616266] (-) TimerEvent: {}
+[4.716631] (-) TimerEvent: {}
+[4.816990] (-) TimerEvent: {}
+[4.917360] (-) TimerEvent: {}
+[5.017751] (-) TimerEvent: {}
+[5.118131] (-) TimerEvent: {}
+[5.218511] (-) TimerEvent: {}
+[5.318892] (-) TimerEvent: {}
+[5.419261] (-) TimerEvent: {}
+[5.519549] (-) TimerEvent: {}
+[5.619918] (-) TimerEvent: {}
+[5.720295] (-) TimerEvent: {}
+[5.820664] (-) TimerEvent: {}
+[5.921039] (-) TimerEvent: {}
+[6.021325] (-) TimerEvent: {}
+[6.121628] (-) TimerEvent: {}
+[6.222013] (-) TimerEvent: {}
+[6.322341] (-) TimerEvent: {}
+[6.422710] (-) TimerEvent: {}
+[6.523095] (-) TimerEvent: {}
+[6.623468] (-) TimerEvent: {}
+[6.723837] (-) TimerEvent: {}
+[6.824210] (-) TimerEvent: {}
+[6.924580] (-) TimerEvent: {}
+[7.024870] (-) TimerEvent: {}
+[7.125150] (-) TimerEvent: {}
+[7.225532] (-) TimerEvent: {}
+[7.325899] (-) TimerEvent: {}
+[7.426271] (-) TimerEvent: {}
+[7.526643] (-) TimerEvent: {}
+[7.627024] (-) TimerEvent: {}
+[7.727395] (-) TimerEvent: {}
+[7.827749] (-) TimerEvent: {}
+[7.928027] (-) TimerEvent: {}
+[8.028420] (-) TimerEvent: {}
+[8.128814] (-) TimerEvent: {}
+[8.229194] (-) TimerEvent: {}
+[8.329498] (-) TimerEvent: {}
+[8.429873] (-) TimerEvent: {}
+[8.530255] (-) TimerEvent: {}
+[8.630633] (-) TimerEvent: {}
+[8.731016] (-) TimerEvent: {}
+[8.831401] (-) TimerEvent: {}
+[8.931775] (-) TimerEvent: {}
+[9.032147] (-) TimerEvent: {}
+[9.132521] (-) TimerEvent: {}
+[9.232921] (-) TimerEvent: {}
+[9.333286] (-) TimerEvent: {}
+[9.433674] (-) TimerEvent: {}
+[9.534048] (-) TimerEvent: {}
+[9.634424] (-) TimerEvent: {}
+[9.734801] (-) TimerEvent: {}
+[9.835175] (-) TimerEvent: {}
+[9.935575] (-) TimerEvent: {}
+[10.035964] (-) TimerEvent: {}
+[10.136338] (-) TimerEvent: {}
+[10.236714] (-) TimerEvent: {}
+[10.337084] (-) TimerEvent: {}
+[10.437476] (-) TimerEvent: {}
+[10.537853] (-) TimerEvent: {}
+[10.638241] (-) TimerEvent: {}
+[10.738608] (-) TimerEvent: {}
+[10.839009] (-) TimerEvent: {}
+[10.939388] (-) TimerEvent: {}
+[11.039774] (-) TimerEvent: {}
+[11.140155] (-) TimerEvent: {}
+[11.240536] (-) TimerEvent: {}
+[11.340896] (-) TimerEvent: {}
+[11.441208] (-) TimerEvent: {}
+[11.541507] (-) TimerEvent: {}
+[11.641889] (-) TimerEvent: {}
+[11.690153] (my_nav2_planner) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[11.692362] (my_nav2_planner) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.5 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[11.742019] (-) TimerEvent: {}
+[11.758923] (my_nav2_planner) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[11.842216] (-) TimerEvent: {}
+[11.942593] (-) TimerEvent: {}
+[12.042982] (-) TimerEvent: {}
+[12.143351] (-) TimerEvent: {}
+[12.243720] (-) TimerEvent: {}
+[12.344103] (-) TimerEvent: {}
+[12.444476] (-) TimerEvent: {}
+[12.544863] (-) TimerEvent: {}
+[12.645229] (-) TimerEvent: {}
+[12.745601] (-) TimerEvent: {}
+[12.845976] (-) TimerEvent: {}
+[12.946348] (-) TimerEvent: {}
+[13.046725] (-) TimerEvent: {}
+[13.147093] (-) TimerEvent: {}
+[13.247465] (-) TimerEvent: {}
+[13.347841] (-) TimerEvent: {}
+[13.448222] (-) TimerEvent: {}
+[13.548603] (-) TimerEvent: {}
+[13.648991] (-) TimerEvent: {}
+[13.749366] (-) TimerEvent: {}
+[13.849735] (-) TimerEvent: {}
+[13.950043] (-) TimerEvent: {}
+[14.050420] (-) TimerEvent: {}
+[14.150798] (-) TimerEvent: {}
+[14.251168] (-) TimerEvent: {}
+[14.351542] (-) TimerEvent: {}
+[14.451921] (-) TimerEvent: {}
+[14.552303] (-) TimerEvent: {}
+[14.652684] (-) TimerEvent: {}
+[14.753065] (-) TimerEvent: {}
+[14.853434] (-) TimerEvent: {}
+[14.953728] (-) TimerEvent: {}
+[15.054092] (-) TimerEvent: {}
+[15.154480] (-) TimerEvent: {}
+[15.254870] (-) TimerEvent: {}
+[15.355238] (-) TimerEvent: {}
+[15.409013] (my_nav2_planner) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[15.410089] (my_nav2_planner) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[15.410670] (my_nav2_planner) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include\n'}
+[15.410761] (my_nav2_planner) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[15.411553] (my_nav2_planner) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[15.411641] (my_nav2_planner) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[15.412334] (my_nav2_planner) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[15.413812] (my_nav2_planner) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[15.413893] (my_nav2_planner) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[15.414155] (my_nav2_planner) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[15.416232] (my_nav2_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[15.419281] (my_nav2_planner) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:49 (add_library):\n'}
+[15.419417] (my_nav2_planner) StderrLine: {'line': b'  Cannot find source file:\n'}
+[15.419465] (my_nav2_planner) StderrLine: {'line': b'\n'}
+[15.419505] (my_nav2_planner) StderrLine: {'line': b'    src/planner_server.cpp\n'}
+[15.419545] (my_nav2_planner) StderrLine: {'line': b'\n'}
+[15.419584] (my_nav2_planner) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h\n'}
+[15.419629] (my_nav2_planner) StderrLine: {'line': b'  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc\n'}
+[15.419667] (my_nav2_planner) StderrLine: {'line': b'\n'}
+[15.419707] (my_nav2_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[15.424289] (my_nav2_planner) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:49 (add_library):\n'}
+[15.424382] (my_nav2_planner) StderrLine: {'line': b'  No SOURCES given to target: planner_server_core\n'}
+[15.424429] (my_nav2_planner) StderrLine: {'line': b'\n'}
+[15.424471] (my_nav2_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[15.424510] (my_nav2_planner) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[15.431835] (my_nav2_planner) CommandEnded: {'returncode': 1}
+[15.455662] (-) TimerEvent: {}
+[15.466723] (my_nav2_planner) JobEnded: {'identifier': 'my_nav2_planner', 'rc': 1}
+[15.477531] (-) EventReactorShutdown: {}

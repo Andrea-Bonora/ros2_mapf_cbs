@@ -9,7 +9,8 @@
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/AgentPathRequest.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/AgentPath.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/VertexConstraint.idl",
-    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/EdgeConstraint.idl"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/EdgeConstraint.idl",
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:action/MyComputePathToPose.idl"
   ],
   "ros_interface_dependencies": [
     "nav_msgs:/opt/ros/humble/share/nav_msgs/msg/GridCells.idl",
@@ -81,7 +82,12 @@
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt64.idl",
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl",
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt8.idl",
-    "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl"
+    "std_msgs:/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl",
+    "action_msgs:/opt/ros/humble/share/action_msgs/msg/GoalInfo.idl",
+    "action_msgs:/opt/ros/humble/share/action_msgs/msg/GoalStatus.idl",
+    "action_msgs:/opt/ros/humble/share/action_msgs/msg/GoalStatusArray.idl",
+    "action_msgs:/opt/ros/humble/share/action_msgs/srv/CancelGoal.idl",
+    "unique_identifier_msgs:/opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c",
@@ -97,6 +103,7 @@
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/AgentPath.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/VertexConstraint.idl",
     "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/EdgeConstraint.idl",
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/action/MyComputePathToPose.idl",
     "/opt/ros/humble/share/nav_msgs/msg/GridCells.idl",
     "/opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl",
     "/opt/ros/humble/share/nav_msgs/msg/OccupancyGrid.idl",
@@ -166,6 +173,11 @@
     "/opt/ros/humble/share/std_msgs/msg/UInt64.idl",
     "/opt/ros/humble/share/std_msgs/msg/UInt64MultiArray.idl",
     "/opt/ros/humble/share/std_msgs/msg/UInt8.idl",
-    "/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl"
+    "/opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl",
+    "/opt/ros/humble/share/action_msgs/msg/GoalInfo.idl",
+    "/opt/ros/humble/share/action_msgs/msg/GoalStatus.idl",
+    "/opt/ros/humble/share/action_msgs/msg/GoalStatusArray.idl",
+    "/opt/ros/humble/share/action_msgs/srv/CancelGoal.idl",
+    "/opt/ros/humble/share/unique_identifier_msgs/msg/UUID.idl"
   ]
 }

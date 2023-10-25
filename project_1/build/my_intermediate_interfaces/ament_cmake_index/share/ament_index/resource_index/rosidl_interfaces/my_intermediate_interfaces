@@ -1,3 +1,5 @@
+action/MyComputePathToPose.action
+action/MyComputePathToPose.idl
 msg/AgentPath.idl
 msg/AgentPath.msg
 msg/AgentPathRequest.idl

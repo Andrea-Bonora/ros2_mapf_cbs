@@ -1,0 +1,7 @@
+[35m[1mConsolidate compiler generated dependencies of target my_planner_server_core[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libmy_planner_server_core.so[0m
+[ 50%] Built target my_planner_server_core
+[35m[1mConsolidate compiler generated dependencies of target my_planner_server[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/my_planner_server.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable my_planner_server[0m

@@ -1,0 +1,38 @@
+[0.058s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner -- -j8 -l8
+[0.096s] [35m[1mConsolidate compiler generated dependencies of target my_planner_server_core[0m
+[0.103s] [ 20%] Built target gtest
+[0.105s] [ 40%] Built target gtest_main
+[0.116s] [ 50%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[3.652s] In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33[m[K,
+[3.652s]                  from [01m[K/usr/include/c++/11/bits/allocator.h:46[m[K,
+[3.652s]                  from [01m[K/usr/include/c++/11/string:41[m[K,
+[3.652s]                  from [01m[K/usr/include/c++/11/bits/locale_classes.h:40[m[K,
+[3.652s]                  from [01m[K/usr/include/c++/11/bits/ios_base.h:41[m[K,
+[3.652s]                  from [01m[K/usr/include/c++/11/iomanip:40[m[K,
+[3.652s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18[m[K:
+[3.652s] /usr/include/c++/11/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = nav2_costmap_2d::Costmap2DROS; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS][m[K’:
+[3.652s] [01m[K/usr/include/c++/11/bits/alloc_traits.h:516:17:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = nav2_costmap_2d::Costmap2DROS; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<nav2_costmap_2d::Costmap2DROS>][m[K’
+[3.652s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS; _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[3.653s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = nav2_costmap_2d::Costmap2DROS; _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[3.653s] [01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[3.653s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:409:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}; _Tp = nav2_costmap_2d::Costmap2DROS][m[K’
+[3.653s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:862:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = nav2_costmap_2d::Costmap2DROS; _Alloc = std::allocator<nav2_costmap_2d::Costmap2DROS>; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}][m[K’
+[3.653s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:878:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = nav2_costmap_2d::Costmap2DROS; _Args = {const char (&)[15], std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, const char (&)[15], bool}][m[K’
+[3.653s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:66:65:[m[K   required from here
+[3.653s] [01m[K/usr/include/c++/11/ext/new_allocator.h:162:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Knav2_costmap_2d::Costmap2DROS::Costmap2DROS(const char [15], std::__cxx11::basic_string<char>, const char [15], bool)[m[K’
+[3.653s]   162 |         { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+[3.653s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.653s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:37[m[K,
+[3.653s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:34[m[K:
+[3.653s] [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:89:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Knav2_costmap_2d::Costmap2DROS::Costmap2DROS(const string&, const string&, const string&)[m[K’
+[3.653s]    89 |   explicit [01;36m[KCostmap2DROS[m[K(
+[3.653s]       |            [01;36m[K^~~~~~~~~~~~[m[K
+[3.653s] [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:89:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+[3.653s] [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:81:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Knav2_costmap_2d::Costmap2DROS::Costmap2DROS(const string&)[m[K’
+[3.653s]    81 |   explicit [01;36m[KCostmap2DROS[m[K(const std::string & name);
+[3.653s]       |            [01;36m[K^~~~~~~~~~~~[m[K
+[3.653s] [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:81:12:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[4.519s] gmake[2]: *** [CMakeFiles/my_planner_server_core.dir/build.make:76: CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o] Error 1
+[4.519s] gmake[1]: *** [CMakeFiles/Makefile2:174: CMakeFiles/my_planner_server_core.dir/all] Error 2
+[4.519s] gmake: *** [Makefile:146: all] Error 2
+[4.521s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner -- -j8 -l8

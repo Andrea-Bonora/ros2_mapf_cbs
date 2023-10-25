@@ -1,0 +1,3 @@
+[ 50%] Built target gtest_main
+[ 40%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[ 50%] Built target gtest

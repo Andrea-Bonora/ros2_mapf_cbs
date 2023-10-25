@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_intermediate_interfaces__cpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__builder.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__struct.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__traits.hpp"
+  "rosidl_generator_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose.hpp"
   "rosidl_generator_cpp/my_intermediate_interfaces/msg/agent_path.hpp"
   "rosidl_generator_cpp/my_intermediate_interfaces/msg/agent_path_request.hpp"
   "rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path__builder.hpp"

@@ -4,6 +4,8 @@ my_intermediate_interfaces.egg-info/PKG-INFO
 my_intermediate_interfaces.egg-info/SOURCES.txt
 my_intermediate_interfaces.egg-info/dependency_links.txt
 my_intermediate_interfaces.egg-info/top_level.txt
+my_intermediate_interfaces/action/__init__.py
+my_intermediate_interfaces/action/_my_compute_path_to_pose.py
 my_intermediate_interfaces/msg/__init__.py
 my_intermediate_interfaces/msg/_agent_path.py
 my_intermediate_interfaces/msg/_agent_path_request.py

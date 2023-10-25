@@ -1,0 +1,186 @@
+[0.641s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_planner
+[0.703s] -- The C compiler identification is GNU 11.4.0
+[0.755s] -- The CXX compiler identification is GNU 11.4.0
+[0.763s] -- Detecting C compiler ABI info
+[0.833s] -- Detecting C compiler ABI info - done
+[0.842s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.842s] -- Detecting C compile features
+[0.843s] -- Detecting C compile features - done
+[0.847s] -- Detecting CXX compiler ABI info
+[0.917s] -- Detecting CXX compiler ABI info - done
+[0.925s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.926s] -- Detecting CXX compile features
+[0.926s] -- Detecting CXX compile features - done
+[0.935s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.089s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.184s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[1.189s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[1.256s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.265s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.277s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.299s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.325s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.425s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.430s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[1.473s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.486s] -- Looking for pthread.h
+[1.541s] -- Looking for pthread.h - found
+[1.541s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.600s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.600s] -- Found Threads: TRUE  
+[1.739s] -- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.817s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.851s] -- Found rclcpp_components: 16.0.6 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.903s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[2.087s] -- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)
+[2.440s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.442s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.442s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.578s] -- Found nav2_costmap_2d: 1.1.12 (/opt/ros/humble/share/nav2_costmap_2d/cmake)
+[3.175s] -- Found nav2_core: 1.2.0 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/share/nav2_core/cmake)
+[5.283s] -- Setting build type to Release as none was specified.
+[12.395s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[12.397s] -- Found ament_cmake_gtest: 1.3.5 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[12.464s] -- Found gtest sources under '/opt/ros/humble/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[16.022s] -- Added test 'copyright' to check source files copyright and LICENSE
+[16.023s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[16.024s] -- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/include
+[16.024s] -- Configured cppcheck exclude dirs and/or files: 
+[16.025s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[16.025s] -- Configured cpplint exclude dirs and/or files: 
+[16.026s] -- Added test 'lint_cmake' to check CMake code style
+[16.027s] -- Added test 'uncrustify' to check C / C++ code style
+[16.027s] -- Configured uncrustify additional arguments: 
+[16.027s] -- Added test 'xmllint' to check XML markup files
+[16.029s] -- Configuring done
+[16.136s] -- Generating done
+[16.137s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner
+[16.146s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_planner
+[16.147s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner -- -j8 -l8
+[16.188s] [ 20%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[16.188s] [ 20%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[16.188s] [ 30%] [32mBuilding CXX object CMakeFiles/planner_server_core.dir/src/planner_server.cpp.o[0m
+[16.880s] [ 40%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[17.044s] [ 40%] Built target gtest_main
+[18.928s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:[m[K In member function ‘[01m[Kvoid nav2_planner::PlannerServer::computePlanThroughPoses()[m[K’:
+[18.928s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:449:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.929s]   449 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::INVALID_PLANNER;
+[18.929s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.929s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:449:52:[m[K [01;31m[Kerror: [m[K‘[01m[KINVALID_PLANNER[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.929s]   449 |     result->error_code = ActionThroughPosesResult::[01;31m[KINVALID_PLANNER[m[K;
+[18.929s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~[m[K
+[18.929s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:453:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.929s]   453 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::START_OCCUPIED;
+[18.929s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.929s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:453:52:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.929s]   453 |     result->error_code = ActionThroughPosesResult::[01;31m[KSTART_OCCUPIED[m[K;
+[18.929s]       |                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[18.929s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:457:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.930s]   457 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::GOAL_OCCUPIED;
+[18.930s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.930s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:457:52:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.930s]   457 |     result->error_code = ActionThroughPosesResult::[01;31m[KGOAL_OCCUPIED[m[K;
+[18.930s]       |                                                    [01;31m[K^~~~~~~~~~~~~[m[K
+[18.930s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:461:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.930s]   461 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::NO_VALID_PATH;
+[18.930s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.930s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:461:52:[m[K [01;31m[Kerror: [m[K‘[01m[KNO_VALID_PATH[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.930s]   461 |     result->error_code = ActionThroughPosesResult::[01;31m[KNO_VALID_PATH[m[K;
+[18.930s]       |                                                    [01;31m[K^~~~~~~~~~~~~[m[K
+[18.930s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:465:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.930s]   465 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::TIMEOUT;
+[18.930s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.930s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:465:52:[m[K [01;31m[Kerror: [m[K‘[01m[KTIMEOUT[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.931s]   465 |     result->error_code = ActionThroughPosesResult::[01;31m[KTIMEOUT[m[K;
+[18.931s]       |                                                    [01;31m[K^~~~~~~[m[K
+[18.931s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:469:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.931s]   469 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::START_OUTSIDE_MAP;
+[18.931s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.931s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:469:52:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.931s]   469 |     result->error_code = ActionThroughPosesResult::[01;31m[KSTART_OUTSIDE_MAP[m[K;
+[18.931s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[18.931s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:473:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.931s]   473 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::GOAL_OUTSIDE_MAP;
+[18.931s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.931s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:473:52:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.931s]   473 |     result->error_code = ActionThroughPosesResult::[01;31m[KGOAL_OUTSIDE_MAP[m[K;
+[18.931s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[18.931s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:477:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.931s]   477 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::TF_ERROR;
+[18.931s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.932s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:477:52:[m[K [01;31m[Kerror: [m[K‘[01m[KTF_ERROR[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.932s]   477 |     result->error_code = ActionThroughPosesResult::[01;31m[KTF_ERROR[m[K;
+[18.932s]       |                                                    [01;31m[K^~~~~~~~[m[K
+[18.932s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:481:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.932s]   481 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::NO_VIAPOINTS_GIVEN;
+[18.932s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.932s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:481:52:[m[K [01;31m[Kerror: [m[K‘[01m[KNO_VIAPOINTS_GIVEN[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.932s]   481 |     result->error_code = ActionThroughPosesResult::[01;31m[KNO_VIAPOINTS_GIVEN[m[K;
+[18.932s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[18.932s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:485:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.932s]   485 |     result->[01;31m[Kerror_code[m[K = ActionThroughPosesResult::UNKNOWN;
+[18.932s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.932s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:485:52:[m[K [01;31m[Kerror: [m[K‘[01m[KUNKNOWN[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionThroughPosesResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathThroughPoses_Result_<std::allocator<void> >[m[K’}
+[18.932s]   485 |     result->error_code = ActionThroughPosesResult::[01;31m[KUNKNOWN[m[K;
+[18.932s]       |                                                    [01;31m[K^~~~~~~[m[K
+[18.937s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:[m[K In member function ‘[01m[Kvoid nav2_planner::PlannerServer::computePlan()[m[K’:
+[18.938s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:544:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.938s]   544 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::INVALID_PLANNER;
+[18.938s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.938s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:544:46:[m[K [01;31m[Kerror: [m[K‘[01m[KINVALID_PLANNER[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.938s]   544 |     result->error_code = ActionToPoseResult::[01;31m[KINVALID_PLANNER[m[K;
+[18.938s]       |                                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[18.938s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:548:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.938s]   548 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::START_OCCUPIED;
+[18.938s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.938s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:548:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.938s]   548 |     result->error_code = ActionToPoseResult::[01;31m[KSTART_OCCUPIED[m[K;
+[18.938s]       |                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[18.939s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:552:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.939s]   552 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::GOAL_OCCUPIED;
+[18.939s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.939s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:552:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OCCUPIED[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.939s]   552 |     result->error_code = ActionToPoseResult::[01;31m[KGOAL_OCCUPIED[m[K;
+[18.939s]       |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[18.939s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:556:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.939s]   556 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::NO_VALID_PATH;
+[18.939s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.939s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:556:46:[m[K [01;31m[Kerror: [m[K‘[01m[KNO_VALID_PATH[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.939s]   556 |     result->error_code = ActionToPoseResult::[01;31m[KNO_VALID_PATH[m[K;
+[18.939s]       |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[18.939s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:560:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.939s]   560 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::TIMEOUT;
+[18.939s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:560:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTIMEOUT[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.940s]   560 |     result->error_code = ActionToPoseResult::[01;31m[KTIMEOUT[m[K;
+[18.940s]       |                                              [01;31m[K^~~~~~~[m[K
+[18.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:564:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.940s]   564 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::START_OUTSIDE_MAP;
+[18.940s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:564:46:[m[K [01;31m[Kerror: [m[K‘[01m[KSTART_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.940s]   564 |     result->error_code = ActionToPoseResult::[01;31m[KSTART_OUTSIDE_MAP[m[K;
+[18.940s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[18.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:568:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.940s]   568 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::GOAL_OUTSIDE_MAP;
+[18.940s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.940s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:568:46:[m[K [01;31m[Kerror: [m[K‘[01m[KGOAL_OUTSIDE_MAP[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.940s]   568 |     result->error_code = ActionToPoseResult::[01;31m[KGOAL_OUTSIDE_MAP[m[K;
+[18.941s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[18.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:572:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.941s]   572 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::TF_ERROR;
+[18.941s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:572:46:[m[K [01;31m[Kerror: [m[K‘[01m[KTF_ERROR[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.941s]   572 |     result->error_code = ActionToPoseResult::[01;31m[KTF_ERROR[m[K;
+[18.941s]       |                                              [01;31m[K^~~~~~~~[m[K
+[18.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:576:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kerror_code[m[K’
+[18.941s]   576 |     result->[01;31m[Kerror_code[m[K = ActionToPoseResult::UNKNOWN;
+[18.941s]       |             [01;31m[K^~~~~~~~~~[m[K
+[18.941s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_planner/src/planner_server.cpp:576:46:[m[K [01;31m[Kerror: [m[K‘[01m[KUNKNOWN[m[K’ is not a member of ‘[01m[Knav2_planner::PlannerServer::ActionToPoseResult[m[K’ {aka ‘[01m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K’}
+[18.941s]   576 |     result->error_code = ActionToPoseResult::[01;31m[KUNKNOWN[m[K;
+[18.941s]       |                                              [01;31m[K^~~~~~~[m[K
+[19.602s] gmake[2]: *** [CMakeFiles/planner_server_core.dir/build.make:76: CMakeFiles/planner_server_core.dir/src/planner_server.cpp.o] Interrupt
+[19.602s] gmake[2]: *** [gtest/CMakeFiles/gtest.dir/build.make:76: gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o] Interrupt
+[19.602s] gmake[1]: *** [CMakeFiles/Makefile2:174: CMakeFiles/planner_server_core.dir/all] Interrupt
+[19.603s] gmake[1]: *** [CMakeFiles/Makefile2:254: gtest/CMakeFiles/gtest.dir/all] Interrupt
+[19.603s] gmake: *** [Makefile:146: all] Interrupt
+[19.622s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_planner -- -j8 -l8

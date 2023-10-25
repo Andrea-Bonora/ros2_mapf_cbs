@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__functions.c.o"
+  "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__functions.c.o.d"
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.o"
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c.o.d"
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__functions.c.o"
@@ -15,6 +17,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_intermediate_interfaces__rosidl_generator_c.dir/rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_positions__functions.c.o.d"
   "libmy_intermediate_interfaces__rosidl_generator_c.pdb"
   "libmy_intermediate_interfaces__rosidl_generator_c.so"
+  "rosidl_generator_c/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__functions.c"
+  "rosidl_generator_c/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__functions.h"
+  "rosidl_generator_c/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__struct.h"
+  "rosidl_generator_c/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__type_support.h"
+  "rosidl_generator_c/my_intermediate_interfaces/action/my_compute_path_to_pose.h"
   "rosidl_generator_c/my_intermediate_interfaces/msg/agent_path.h"
   "rosidl_generator_c/my_intermediate_interfaces/msg/agent_path_request.h"
   "rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__functions.c"

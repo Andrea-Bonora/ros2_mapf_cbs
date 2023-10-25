@@ -1,0 +1,82 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvoid my_nav2_planner::MyPlannerServer::computePlan()[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:498:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass nav2_util::SimpleActionServer<nav2_msgs::action::ComputePathToPose>[m[K’ has no member named ‘[01m[Kget_current_vertex_constr[m[K’
+  498 |   auto vertex_constr = action_server_pose_->[01;31m[Kget_current_vertex_constr[m[K();
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:499:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass nav2_util::SimpleActionServer<nav2_msgs::action::ComputePathToPose>[m[K’ has no member named ‘[01m[Kget_current_edge_constr[m[K’
+  499 |   auto edge_constr = action_server_pose_->[01;31m[Kget_current_edge_constr[m[K();
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K At global scope:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ was not declared in this scope
+  585 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::VertexConstraint> vertex_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  585 |   const std::vector<my_intermediate_interfaces::msg::VertexConstraint[01;31m[K>[m[K vertex_constraints,
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ was not declared in this scope
+  585 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::VertexConstraint> vertex_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  585 |   const std::vector<my_intermediate_interfaces::msg::VertexConstraint[01;31m[K>[m[K vertex_constraints,
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ was not declared in this scope
+  585 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::VertexConstraint> vertex_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  585 |   const std::vector<my_intermediate_interfaces::msg::VertexConstraint[01;31m[K>[m[K vertex_constraints,
+      |                                                                      [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:70:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:9:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+  585 |   const [01;31m[Kstd[m[K::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+      |         [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ has not been declared
+  585 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::VertexConstraint> vertex_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:585:3:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::vector[m[K’ not permitted in this context
+  585 |   [01;31m[Kconst[m[K std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+      |   [01;31m[K^~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ was not declared in this scope
+  586 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::EdgeConstraint> edge_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  586 |   const std::vector<my_intermediate_interfaces::msg::EdgeConstraint[01;31m[K>[m[K edge_constraints,
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ was not declared in this scope
+  586 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::EdgeConstraint> edge_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  586 |   const std::vector<my_intermediate_interfaces::msg::EdgeConstraint[01;31m[K>[m[K edge_constraints,
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ was not declared in this scope
+  586 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::EdgeConstraint> edge_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  586 |   const std::vector<my_intermediate_interfaces::msg::EdgeConstraint[01;31m[K>[m[K edge_constraints,
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:9:[m[K [01;31m[Kerror: [m[Kinvalid template-id
+  586 |   const [01;31m[Kstd[m[K::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
+      |         [01;31m[K^~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_intermediate_interfaces[m[K’ has not been declared
+  586 |   const std::vector<[01;31m[Kmy_intermediate_interfaces[m[K::msg::EdgeConstraint> edge_constraints,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:586:3:[m[K [01;31m[Kerror: [m[Kclass template placeholder ‘[01m[Kstd::vector[m[K’ not permitted in this context
+  586 |   [01;31m[Kconst[m[K std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
+      |   [01;31m[K^~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:582:21:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Knav_msgs::msg::Path my_nav2_planner::MyPlannerServer::getPlan(...)[m[K’
+  582 | nav_msgs::msg::Path [01;31m[KMyPlannerServer[m[K::getPlan(
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:34[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:72:23:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Knav_msgs::msg::Path my_nav2_planner::MyPlannerServer::getPlan(const PoseStamped&, const PoseStamped&, const string&)[m[K’
+   72 |   nav_msgs::msg::Path [01;36m[KgetPlan[m[K(
+      |                       [01;36m[K^~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:51:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass my_nav2_planner::MyPlannerServer[m[K’ defined here
+   51 | class [01;36m[KMyPlannerServer[m[K : public nav2_util::LifecycleNode
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_planner_server_core.dir/build.make:76: CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/my_planner_server_core.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,5 @@
+/usr/bin/ld: libmy_planner_server_core.so: undefined reference to `my_nav2_planner::MyPlannerServer::getPlan(geometry_msgs::msg::PoseStamped_<std::allocator<void> > const&, geometry_msgs::msg::PoseStamped_<std::allocator<void> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/my_planner_server.dir/build.make:457: my_planner_server] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/my_planner_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
