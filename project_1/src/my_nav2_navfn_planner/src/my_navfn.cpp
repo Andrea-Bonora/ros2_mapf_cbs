@@ -726,8 +726,8 @@ MyNavFn::calcPath(int n,
 
     //deep copy the potarr array
     float * potarr_copy = new float[ns];
-    for (int i = 0; i < ns; ++i) {
-        potarr_copy[i] = potarr[i];
+    for (int j = 0; i < ns; ++i) {
+        potarr_copy[j] = potarr[j];
     } 
 
     //check if constraint allow each move otherwise set potarr[x] to high number, but save current values
