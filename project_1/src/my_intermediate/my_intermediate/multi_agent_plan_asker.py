@@ -13,6 +13,7 @@ from rclpy.node import Node
 from my_intermediate_interfaces.srv import StartGoalPoseStamped
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 from my_intermediate_interfaces.msg import AgentPath
+from my_intermediate_interfaces.action import MyComputePathToPose
 
 
 class MultiAgentPlanAskerNode(Node):
@@ -40,14 +41,16 @@ class MultiAgentPlanAskerNode(Node):
         for i in range(len(s_request.requests)):
             r = s_request.requests[i]
             client_cb_group_actions = MutuallyExclusiveCallbackGroup()
-            client = ActionClient(self, ComputePathToPose, r.name + '/compute_path_to_pose', callback_group=client_cb_group_actions)
+            client = ActionClient(self, MyComputePathToPose, r.name + '/compute_path_to_pose', callback_group=client_cb_group_actions)
             client.wait_for_server()
         
-            request = ComputePathToPose.Goal()
+            request = MyComputePathToPose.Goal()
             request.goal = r.goal
             request.start = r.start
             request.planner_id = ""
             request.use_start = False
+            request.vertex_constraints = r.vertex_constraints
+            request.edge_constraints = r.edge_constraints
             self.get_logger().info("Searching plan for " + r.name)
             future = client.send_goal_async(request)
             #future.add_done_callback(partial(self.callback_ask_plan, i=i))

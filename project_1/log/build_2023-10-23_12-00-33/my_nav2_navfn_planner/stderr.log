@@ -1,8 +1,0 @@
-In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/navfn_planner.cpp:24[m[K:
-[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/nav2_navfn_planner/navfn_planner.hpp:30:10:[m[K [01;31m[Kfatal error: [m[Kmy_nav2_navfn_planner/navfn.hpp: No such file or directory
-   30 | #include [01;31m[K"my_nav2_navfn_planner/navfn.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

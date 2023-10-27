@@ -42,6 +42,54 @@ max_serialized_size_PoseStamped(
 
 // functions for geometry_msgs::msg::PoseStamped already declared above
 
+namespace my_intermediate_interfaces
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const my_intermediate_interfaces::msg::VertexConstraint &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  my_intermediate_interfaces::msg::VertexConstraint &);
+size_t get_serialized_size(
+  const my_intermediate_interfaces::msg::VertexConstraint &,
+  size_t current_alignment);
+size_t
+max_serialized_size_VertexConstraint(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace my_intermediate_interfaces
+
+namespace my_intermediate_interfaces
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const my_intermediate_interfaces::msg::EdgeConstraint &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  my_intermediate_interfaces::msg::EdgeConstraint &);
+size_t get_serialized_size(
+  const my_intermediate_interfaces::msg::EdgeConstraint &,
+  size_t current_alignment);
+size_t
+max_serialized_size_EdgeConstraint(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace my_intermediate_interfaces
+
 
 namespace my_intermediate_interfaces
 {
@@ -68,6 +116,26 @@ cdr_serialize(
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.goal,
     cdr);
+  // Member: vertex_constraints
+  {
+    size_t size = ros_message.vertex_constraints.size();
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; i++) {
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+        ros_message.vertex_constraints[i],
+        cdr);
+    }
+  }
+  // Member: edge_constraints
+  {
+    size_t size = ros_message.edge_constraints.size();
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; i++) {
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+        ros_message.edge_constraints[i],
+        cdr);
+    }
+  }
   return true;
 }
 
@@ -87,6 +155,30 @@ cdr_deserialize(
   // Member: goal
   geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.goal);
+
+  // Member: vertex_constraints
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    ros_message.vertex_constraints.resize(size);
+    for (size_t i = 0; i < size; i++) {
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+        cdr, ros_message.vertex_constraints[i]);
+    }
+  }
+
+  // Member: edge_constraints
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    ros_message.edge_constraints.resize(size);
+    for (size_t i = 0; i < size; i++) {
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+        cdr, ros_message.edge_constraints[i]);
+    }
+  }
 
   return true;
 }
@@ -118,6 +210,32 @@ get_serialized_size(
   current_alignment +=
     geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.goal, current_alignment);
+  // Member: vertex_constraints
+  {
+    size_t array_size = ros_message.vertex_constraints.size();
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+        ros_message.vertex_constraints[index], current_alignment);
+    }
+  }
+  // Member: edge_constraints
+  {
+    size_t array_size = ros_message.edge_constraints.size();
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+        ros_message.edge_constraints[index], current_alignment);
+    }
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -179,6 +297,46 @@ max_serialized_size_AgentPathRequest(
       bool inner_is_plain;
       current_alignment +=
         geometry_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_PoseStamped(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: vertex_constraints
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      current_alignment +=
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_VertexConstraint(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: edge_constraints
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      current_alignment +=
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_EdgeConstraint(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

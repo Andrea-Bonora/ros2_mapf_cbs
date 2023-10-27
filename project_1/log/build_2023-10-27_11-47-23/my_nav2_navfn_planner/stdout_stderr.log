@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
+[100%] Built target my_nav2_navfn_planner
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner//my_global_planner_plugin.xml
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib/libmy_nav2_navfn_planner.so
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/include//my_nav2_navfn_planner/my_navfn.hpp
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/include//my_nav2_navfn_planner/my_navfn_planner.hpp
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/my_global_planner_plugin.xml
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/environment/library_path.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/environment/library_path.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/ament_index/resource_index/package_run_dependencies/my_nav2_navfn_planner
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/ament_index/resource_index/parent_prefix_path/my_nav2_navfn_planner
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/environment/path.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/environment/path.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/local_setup.bash
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/local_setup.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/local_setup.zsh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/local_setup.dsv
+-- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/package.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/ament_index/resource_index/packages/my_nav2_navfn_planner
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/ament_index/resource_index/my_nav2_core__pluginlib__plugin/my_nav2_navfn_planner
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/cmake/my_nav2_navfn_plannerConfig.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/cmake/my_nav2_navfn_plannerConfig-version.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/share/my_nav2_navfn_planner/package.xml

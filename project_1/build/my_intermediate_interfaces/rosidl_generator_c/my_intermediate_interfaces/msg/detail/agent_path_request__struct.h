@@ -23,6 +23,10 @@ extern "C"
 // Member 'start'
 // Member 'goal'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.h"
+// Member 'vertex_constraints'
+#include "my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h"
+// Member 'edge_constraints'
+#include "my_intermediate_interfaces/msg/detail/edge_constraint__struct.h"
 
 /// Struct defined in msg/AgentPathRequest in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__msg__AgentPathRequest
@@ -30,6 +34,8 @@ typedef struct my_intermediate_interfaces__msg__AgentPathRequest
   rosidl_runtime_c__String name;
   geometry_msgs__msg__PoseStamped start;
   geometry_msgs__msg__PoseStamped goal;
+  my_intermediate_interfaces__msg__VertexConstraint__Sequence vertex_constraints;
+  my_intermediate_interfaces__msg__EdgeConstraint__Sequence edge_constraints;
 } my_intermediate_interfaces__msg__AgentPathRequest;
 
 // Struct for a sequence of my_intermediate_interfaces__msg__AgentPathRequest.

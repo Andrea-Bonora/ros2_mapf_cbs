@@ -210,53 +210,53 @@ my_nav2_navfn_planner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/build
 .PHONY : my_nav2_navfn_planner/fast
 
-src/navfn.o: src/navfn.cpp.o
-.PHONY : src/navfn.o
+src/my_navfn.o: src/my_navfn.cpp.o
+.PHONY : src/my_navfn.o
 
 # target to build an object file
-src/navfn.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.o
-.PHONY : src/navfn.cpp.o
+src/my_navfn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o
+.PHONY : src/my_navfn.cpp.o
 
-src/navfn.i: src/navfn.cpp.i
-.PHONY : src/navfn.i
+src/my_navfn.i: src/my_navfn.cpp.i
+.PHONY : src/my_navfn.i
 
 # target to preprocess a source file
-src/navfn.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.i
-.PHONY : src/navfn.cpp.i
+src/my_navfn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.i
+.PHONY : src/my_navfn.cpp.i
 
-src/navfn.s: src/navfn.cpp.s
-.PHONY : src/navfn.s
+src/my_navfn.s: src/my_navfn.cpp.s
+.PHONY : src/my_navfn.s
 
 # target to generate assembly for a file
-src/navfn.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/navfn.cpp.s
-.PHONY : src/navfn.cpp.s
+src/my_navfn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.s
+.PHONY : src/my_navfn.cpp.s
 
-src/navfn_planner.o: src/navfn_planner.cpp.o
-.PHONY : src/navfn_planner.o
+src/my_navfn_planner.o: src/my_navfn_planner.cpp.o
+.PHONY : src/my_navfn_planner.o
 
 # target to build an object file
-src/navfn_planner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o
-.PHONY : src/navfn_planner.cpp.o
+src/my_navfn_planner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o
+.PHONY : src/my_navfn_planner.cpp.o
 
-src/navfn_planner.i: src/navfn_planner.cpp.i
-.PHONY : src/navfn_planner.i
+src/my_navfn_planner.i: src/my_navfn_planner.cpp.i
+.PHONY : src/my_navfn_planner.i
 
 # target to preprocess a source file
-src/navfn_planner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.i
-.PHONY : src/navfn_planner.cpp.i
+src/my_navfn_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.i
+.PHONY : src/my_navfn_planner.cpp.i
 
-src/navfn_planner.s: src/navfn_planner.cpp.s
-.PHONY : src/navfn_planner.s
+src/my_navfn_planner.s: src/my_navfn_planner.cpp.s
+.PHONY : src/my_navfn_planner.s
 
 # target to generate assembly for a file
-src/navfn_planner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.s
-.PHONY : src/navfn_planner.cpp.s
+src/my_navfn_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_navfn_planner.dir/build.make CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.s
+.PHONY : src/my_navfn_planner.cpp.s
 
 # Help Target
 help:
@@ -274,12 +274,12 @@ help:
 	@echo "... my_nav2_navfn_planner_uninstall"
 	@echo "... uninstall"
 	@echo "... my_nav2_navfn_planner"
-	@echo "... src/navfn.o"
-	@echo "... src/navfn.i"
-	@echo "... src/navfn.s"
-	@echo "... src/navfn_planner.o"
-	@echo "... src/navfn_planner.i"
-	@echo "... src/navfn_planner.s"
+	@echo "... src/my_navfn.o"
+	@echo "... src/my_navfn.i"
+	@echo "... src/my_navfn.s"
+	@echo "... src/my_navfn_planner.o"
+	@echo "... src/my_navfn_planner.i"
+	@echo "... src/my_navfn_planner.s"
 .PHONY : help
 
 

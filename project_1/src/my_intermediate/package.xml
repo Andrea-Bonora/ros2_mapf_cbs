@@ -9,6 +9,7 @@
 
   <depend>rclpy</depend>
   <depend>geometry_msgs</depend>
+  <depend>my_intermediate_interfaces</depend>
   <exec_depend>std_msgs</exec_depend>
   <depend>webots_ros2_driver</depend>
 

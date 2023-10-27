@@ -35,6 +35,8 @@ extern "C"
 #endif
 
 #include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // goal, start
+#include "my_intermediate_interfaces/msg/detail/edge_constraint__functions.h"  // edge_constraints
+#include "my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h"  // vertex_constraints
 #include "rosidl_runtime_c/string.h"  // name
 #include "rosidl_runtime_c/string_functions.h"  // name
 
@@ -53,6 +55,28 @@ size_t max_serialized_size_geometry_msgs__msg__PoseStamped(
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
   ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped)();
+size_t get_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, EdgeConstraint)();
+size_t get_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, VertexConstraint)();
 
 
 using _AgentPathRequest__ros_msg_type = my_intermediate_interfaces__msg__AgentPathRequest;
@@ -105,6 +129,44 @@ static bool _AgentPathRequest__cdr_serialize(
         &ros_message->goal, cdr))
     {
       return false;
+    }
+  }
+
+  // Field name: vertex_constraints
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, VertexConstraint
+      )()->data);
+    size_t size = ros_message->vertex_constraints.size;
+    auto array_ptr = ros_message->vertex_constraints.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      if (!callbacks->cdr_serialize(
+          &array_ptr[i], cdr))
+      {
+        return false;
+      }
+    }
+  }
+
+  // Field name: edge_constraints
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, EdgeConstraint
+      )()->data);
+    size_t size = ros_message->edge_constraints.size;
+    auto array_ptr = ros_message->edge_constraints.data;
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; ++i) {
+      if (!callbacks->cdr_serialize(
+          &array_ptr[i], cdr))
+      {
+        return false;
+      }
     }
   }
 
@@ -164,6 +226,60 @@ static bool _AgentPathRequest__cdr_deserialize(
     }
   }
 
+  // Field name: vertex_constraints
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, VertexConstraint
+      )()->data);
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->vertex_constraints.data) {
+      my_intermediate_interfaces__msg__VertexConstraint__Sequence__fini(&ros_message->vertex_constraints);
+    }
+    if (!my_intermediate_interfaces__msg__VertexConstraint__Sequence__init(&ros_message->vertex_constraints, size)) {
+      fprintf(stderr, "failed to create array for field 'vertex_constraints'");
+      return false;
+    }
+    auto array_ptr = ros_message->vertex_constraints.data;
+    for (size_t i = 0; i < size; ++i) {
+      if (!callbacks->cdr_deserialize(
+          cdr, &array_ptr[i]))
+      {
+        return false;
+      }
+    }
+  }
+
+  // Field name: edge_constraints
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, EdgeConstraint
+      )()->data);
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->edge_constraints.data) {
+      my_intermediate_interfaces__msg__EdgeConstraint__Sequence__fini(&ros_message->edge_constraints);
+    }
+    if (!my_intermediate_interfaces__msg__EdgeConstraint__Sequence__init(&ros_message->edge_constraints, size)) {
+      fprintf(stderr, "failed to create array for field 'edge_constraints'");
+      return false;
+    }
+    auto array_ptr = ros_message->edge_constraints.data;
+    for (size_t i = 0; i < size; ++i) {
+      if (!callbacks->cdr_deserialize(
+          cdr, &array_ptr[i]))
+      {
+        return false;
+      }
+    }
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -193,6 +309,30 @@ size_t get_serialized_size_my_intermediate_interfaces__msg__AgentPathRequest(
 
   current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
     &(ros_message->goal), current_alignment);
+  // field.name vertex_constraints
+  {
+    size_t array_size = ros_message->vertex_constraints.size;
+    auto array_ptr = ros_message->vertex_constraints.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += get_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
+        &array_ptr[index], current_alignment);
+    }
+  }
+  // field.name edge_constraints
+  {
+    size_t array_size = ros_message->edge_constraints.size;
+    auto array_ptr = ros_message->edge_constraints.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += get_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
+        &array_ptr[index], current_alignment);
+    }
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -257,6 +397,44 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__AgentPathRequest(
       bool inner_is_plain;
       current_alignment +=
         max_serialized_size_geometry_msgs__msg__PoseStamped(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // member: vertex_constraints
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      current_alignment +=
+        max_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // member: edge_constraints
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      current_alignment +=
+        max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

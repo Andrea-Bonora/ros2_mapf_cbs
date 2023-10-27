@@ -5,9 +5,9 @@ find_package(ament_cmake REQUIRED)
 find_package(nav2_common REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
-find_package(my_intermediate_interfaces REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(my_intermediate_interfaces REQUIRED)
 find_package(visualization_msgs REQUIRED)
 find_package(nav2_util REQUIRED)
 find_package(nav2_core REQUIRED)
@@ -38,8 +38,8 @@ set(dependencies
   nav2_msgs
   nav_msgs
   geometry_msgs
-  my_intermediate_interfaces
   builtin_interfaces
+  my_intermediate_interfaces
   tf2_ros
   nav2_costmap_2d
   nav2_core
@@ -48,15 +48,15 @@ set(dependencies
 )
 
 add_library(${library_name} SHARED
-  src/navfn_planner.cpp
-  src/navfn.cpp
+  src/my_navfn_planner.cpp
+  src/my_navfn.cpp
 )
 
 ament_target_dependencies(${library_name}
   ${dependencies}
 )
 
-pluginlib_export_plugin_description_file(my_nav2_core global_planner_plugin.xml)
+pluginlib_export_plugin_description_file(my_nav2_core my_global_planner_plugin.xml)
 
 install(TARGETS ${library_name}
   ARCHIVE DESTINATION lib
@@ -68,7 +68,7 @@ install(DIRECTORY include/
   DESTINATION include/
 )
 
-install(FILES global_planner_plugin.xml
+install(FILES my_global_planner_plugin.xml
   DESTINATION share/${PROJECT_NAME}
 )
 
@@ -77,7 +77,6 @@ if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
   ament_lint_auto_find_test_dependencies()
 endif()
-
 
 ament_export_include_directories(include)
 ament_export_libraries(${library_name})

@@ -182,6 +182,8 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c.dir/rosidl_typesuppo
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+  rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h \
+  rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__type_support.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_typesupport_c/rosidl_typesupport_c/identifier.h \
@@ -362,6 +364,8 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c.dir/rosidl_typesuppo
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
+  rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h \
+  rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__struct.h \
   /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/srv/detail/start_goal_pose_stamped__type_support.h \

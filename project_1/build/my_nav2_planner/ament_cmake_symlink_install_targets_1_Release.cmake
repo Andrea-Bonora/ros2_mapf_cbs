@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner/my_planner_server" "TARGETS" "my_planner_server" "RUNTIME_DESTINATION" "lib/my_nav2_planner")

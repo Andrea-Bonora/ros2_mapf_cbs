@@ -1,1 +1,1 @@
-gazebo_ros_pkgs:geometry_msgs:launch_ros:my_intermediate:nav2_common:nav_msgs:navigation2:rclcpp:sensor_msgs:slam_toolbox:tf2:turtlebot3_navigation2
+gazebo_ros_pkgs:geometry_msgs:launch_ros:my_intermediate:my_nav2_planner:nav2_common:nav_msgs:navigation2:rclcpp:sensor_msgs:slam_toolbox:tf2:turtlebot3_navigation2

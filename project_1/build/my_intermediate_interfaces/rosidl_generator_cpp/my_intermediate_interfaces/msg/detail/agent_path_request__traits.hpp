@@ -18,6 +18,10 @@
 // Member 'start'
 // Member 'goal'
 #include "geometry_msgs/msg/detail/pose_stamped__traits.hpp"
+// Member 'vertex_constraints'
+#include "my_intermediate_interfaces/msg/detail/vertex_constraint__traits.hpp"
+// Member 'edge_constraints'
+#include "my_intermediate_interfaces/msg/detail/edge_constraint__traits.hpp"
 
 namespace my_intermediate_interfaces
 {
@@ -48,6 +52,42 @@ inline void to_flow_style_yaml(
   {
     out << "goal: ";
     to_flow_style_yaml(msg.goal, out);
+    out << ", ";
+  }
+
+  // member: vertex_constraints
+  {
+    if (msg.vertex_constraints.size() == 0) {
+      out << "vertex_constraints: []";
+    } else {
+      out << "vertex_constraints: [";
+      size_t pending_items = msg.vertex_constraints.size();
+      for (auto item : msg.vertex_constraints) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: edge_constraints
+  {
+    if (msg.edge_constraints.size() == 0) {
+      out << "edge_constraints: []";
+    } else {
+      out << "edge_constraints: [";
+      size_t pending_items = msg.edge_constraints.size();
+      for (auto item : msg.edge_constraints) {
+        to_flow_style_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -82,6 +122,44 @@ inline void to_block_style_yaml(
     }
     out << "goal:\n";
     to_block_style_yaml(msg.goal, out, indentation + 2);
+  }
+
+  // member: vertex_constraints
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.vertex_constraints.size() == 0) {
+      out << "vertex_constraints: []\n";
+    } else {
+      out << "vertex_constraints:\n";
+      for (auto item : msg.vertex_constraints) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
+  }
+
+  // member: edge_constraints
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.edge_constraints.size() == 0) {
+      out << "edge_constraints: []\n";
+    } else {
+      out << "edge_constraints:\n";
+      for (auto item : msg.edge_constraints) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
+      }
+    }
   }
 }  // NOLINT(readability/fn_size)
 

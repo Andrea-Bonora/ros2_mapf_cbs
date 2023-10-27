@@ -26,7 +26,7 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "nav2_util/lifecycle_node.hpp"
-#include "nav2_msgs/action/compute_path_to_pose.hpp"
+//#include "nav2_msgs/action/compute_path_to_pose.hpp"
 #include "nav2_msgs/action/compute_path_through_poses.hpp"
 #include "my_intermediate_interfaces/action/my_compute_path_to_pose.hpp"
 #include "nav2_msgs/msg/costmap.hpp"
@@ -39,13 +39,13 @@
 #include "pluginlib/class_loader.hpp"
 #include "pluginlib/class_list_macros.hpp"
 #include "my_nav2_core/multi_agent_global_planner.hpp"
+#include "nav2_core/global_planner.hpp"
 #include "nav2_msgs/srv/is_path_valid.hpp"
-#include "nav2_core/planner_exceptions.hpp"
 
 namespace my_nav2_planner
 {
 /**
- * @class my_nav2_planner::MyPlannerServer
+ * @class nav2_planner::PlannerServer
  * @brief An action server implements the behavior tree's ComputePathToPose
  * interface and hosts various plugins of different algorithms to compute plans.
  */
@@ -65,7 +65,7 @@ public:
   using PlannerMap = std::unordered_map<std::string, my_nav2_core::MultiAgentGlobalPlanner::Ptr>;
 
   /**
-   * @brief Method to get plan from the desired plugin by ComputePathToPose
+   * @brief Method to get plan from the desired plugin
    * @param start starting pose
    * @param goal goal request
    * @return Path
@@ -110,9 +110,7 @@ protected:
   nav2_util::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & state) override;
 
   using ActionToPose = my_intermediate_interfaces::action::MyComputePathToPose;
-  using ActionToPoseResult = ActionToPose::Result;
   using ActionThroughPoses = nav2_msgs::action::ComputePathThroughPoses;
-  using ActionThroughPosesResult = ActionThroughPoses::Result;
   using ActionServerToPose = nav2_util::SimpleActionServer<ActionToPose>;
   using ActionServerThroughPoses = nav2_util::SimpleActionServer<ActionThroughPoses>;
 
@@ -158,17 +156,21 @@ protected:
    */
   template<typename T>
   bool getStartPose(
+    std::unique_ptr<nav2_util::SimpleActionServer<T>> & action_server,
     typename std::shared_ptr<const typename T::Goal> goal,
     geometry_msgs::msg::PoseStamped & start);
 
   /**
    * @brief Transform start and goal poses into the costmap
    * global frame for path planning plugins to utilize
+   * @param action_server Action server to terminate if required
    * @param start The starting pose to transform
    * @param goal Goal pose to transform
    * @return bool If successful in transforming poses
    */
+  template<typename T>
   bool transformPosesToGlobalFrame(
+    std::unique_ptr<nav2_util::SimpleActionServer<T>> & action_server,
     geometry_msgs::msg::PoseStamped & curr_start,
     geometry_msgs::msg::PoseStamped & curr_goal);
 
@@ -182,9 +184,14 @@ protected:
    */
   template<typename T>
   bool validatePath(
+    std::unique_ptr<nav2_util::SimpleActionServer<T>> & action_server,
     const geometry_msgs::msg::PoseStamped & curr_goal,
     const nav_msgs::msg::Path & path,
     const std::string & planner_id);
+
+  // Our action server implements the ComputePathToPose action
+  std::unique_ptr<ActionServerToPose> action_server_pose_;
+  std::unique_ptr<ActionServerThroughPoses> action_server_poses_;
 
   /**
    * @brief The action server callback which calls planner to get the path
@@ -213,22 +220,12 @@ protected:
    */
   void publishPlan(const nav_msgs::msg::Path & path);
 
-  void exceptionWarning(
-    const geometry_msgs::msg::PoseStamped & start,
-    const geometry_msgs::msg::PoseStamped & goal,
-    const std::string & planner_id,
-    const std::exception & ex);
-
   /**
    * @brief Callback executed when a parameter change is detected
    * @param event ParameterEvent message
    */
   rcl_interfaces::msg::SetParametersResult
   dynamicParametersCallback(std::vector<rclcpp::Parameter> parameters);
-
-  // Our action server implements the ComputePathToPose action
-  std::unique_ptr<ActionServerToPose> action_server_pose_;
-  std::unique_ptr<ActionServerThroughPoses> action_server_poses_;
 
   // Dynamic parameters handler
   rclcpp::node_interfaces::OnSetParametersCallbackHandle::SharedPtr dyn_params_handler_;
@@ -258,7 +255,7 @@ protected:
   // Publishers for the path
   rclcpp_lifecycle::LifecyclePublisher<nav_msgs::msg::Path>::SharedPtr plan_publisher_;
 
-  // Service to determine if the path is valid
+  // Service to deterime if the path is valid
   rclcpp::Service<nav2_msgs::srv::IsPathValid>::SharedPtr is_path_valid_service_;
 };
 

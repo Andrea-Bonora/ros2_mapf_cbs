@@ -1,5 +1,0 @@
-[31mCMake Error at CMakeLists.txt:87 (add_subdirectory):
-  add_subdirectory given source "test" which is not an existing directory.
-
-[0m
-gmake: *** [Makefile:350: cmake_check_build_system] Error 1

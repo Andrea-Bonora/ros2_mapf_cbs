@@ -68,10 +68,13 @@ class CollisionAvoiderNode(Node):
             agent_path_request.name = "tb"+str(i+1)
             agent_path_request.start = starting_positions[i]
             agent_path_request.goal = ending_positions[i]
+            agent_path_request.vertex_constraints = []
+            agent_path_request.edge_constraints = [] 
             requests.append(agent_path_request)
 
         client_request.requests = requests
 
+        self.get_logger().info("Asking for plans...")
         future = self.client_.call_async(client_request)
         # future.add_done_callback(self.callback_call_get_plans)
 

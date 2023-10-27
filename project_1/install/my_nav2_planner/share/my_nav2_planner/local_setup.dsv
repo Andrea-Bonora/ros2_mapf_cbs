@@ -1,3 +1,1 @@
-source;share/my_nav2_planner/environment/ament_prefix_path.sh
-source;share/my_nav2_planner/environment/library_path.sh
-source;share/my_nav2_planner/environment/path.sh
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner/ament_cmake_environment_hooks/local_setup.dsv

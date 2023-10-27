@@ -17,6 +17,10 @@
 // Member `start`
 // Member `goal`
 #include "geometry_msgs/msg/detail/pose_stamped__functions.h"
+// Member `vertex_constraints`
+#include "my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h"
+// Member `edge_constraints`
+#include "my_intermediate_interfaces/msg/detail/edge_constraint__functions.h"
 
 bool
 my_intermediate_interfaces__msg__AgentPathRequest__init(my_intermediate_interfaces__msg__AgentPathRequest * msg)
@@ -39,6 +43,16 @@ my_intermediate_interfaces__msg__AgentPathRequest__init(my_intermediate_interfac
     my_intermediate_interfaces__msg__AgentPathRequest__fini(msg);
     return false;
   }
+  // vertex_constraints
+  if (!my_intermediate_interfaces__msg__VertexConstraint__Sequence__init(&msg->vertex_constraints, 0)) {
+    my_intermediate_interfaces__msg__AgentPathRequest__fini(msg);
+    return false;
+  }
+  // edge_constraints
+  if (!my_intermediate_interfaces__msg__EdgeConstraint__Sequence__init(&msg->edge_constraints, 0)) {
+    my_intermediate_interfaces__msg__AgentPathRequest__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -54,6 +68,10 @@ my_intermediate_interfaces__msg__AgentPathRequest__fini(my_intermediate_interfac
   geometry_msgs__msg__PoseStamped__fini(&msg->start);
   // goal
   geometry_msgs__msg__PoseStamped__fini(&msg->goal);
+  // vertex_constraints
+  my_intermediate_interfaces__msg__VertexConstraint__Sequence__fini(&msg->vertex_constraints);
+  // edge_constraints
+  my_intermediate_interfaces__msg__EdgeConstraint__Sequence__fini(&msg->edge_constraints);
 }
 
 bool
@@ -77,6 +95,18 @@ my_intermediate_interfaces__msg__AgentPathRequest__are_equal(const my_intermedia
   // goal
   if (!geometry_msgs__msg__PoseStamped__are_equal(
       &(lhs->goal), &(rhs->goal)))
+  {
+    return false;
+  }
+  // vertex_constraints
+  if (!my_intermediate_interfaces__msg__VertexConstraint__Sequence__are_equal(
+      &(lhs->vertex_constraints), &(rhs->vertex_constraints)))
+  {
+    return false;
+  }
+  // edge_constraints
+  if (!my_intermediate_interfaces__msg__EdgeConstraint__Sequence__are_equal(
+      &(lhs->edge_constraints), &(rhs->edge_constraints)))
   {
     return false;
   }
@@ -106,6 +136,18 @@ my_intermediate_interfaces__msg__AgentPathRequest__copy(
   // goal
   if (!geometry_msgs__msg__PoseStamped__copy(
       &(input->goal), &(output->goal)))
+  {
+    return false;
+  }
+  // vertex_constraints
+  if (!my_intermediate_interfaces__msg__VertexConstraint__Sequence__copy(
+      &(input->vertex_constraints), &(output->vertex_constraints)))
+  {
+    return false;
+  }
+  // edge_constraints
+  if (!my_intermediate_interfaces__msg__EdgeConstraint__Sequence__copy(
+      &(input->edge_constraints), &(output->edge_constraints)))
   {
     return false;
   }

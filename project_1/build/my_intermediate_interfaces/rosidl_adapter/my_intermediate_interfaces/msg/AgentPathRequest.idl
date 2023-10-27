@@ -3,6 +3,8 @@
 // generated code does not contain a copyright notice
 
 #include "geometry_msgs/msg/PoseStamped.idl"
+#include "my_intermediate_interfaces/msg/EdgeConstraint.idl"
+#include "my_intermediate_interfaces/msg/VertexConstraint.idl"
 
 module my_intermediate_interfaces {
   module msg {
@@ -12,6 +14,10 @@ module my_intermediate_interfaces {
       geometry_msgs::msg::PoseStamped start;
 
       geometry_msgs::msg::PoseStamped goal;
+
+      sequence<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints;
+
+      sequence<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints;
     };
   };
 };

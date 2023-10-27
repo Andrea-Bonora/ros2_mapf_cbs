@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/navfn_planner.cpp.o[0m
-[ 66%] [32m[1mLinking CXX shared library libmy_nav2_navfn_planner.so[0m
-[100%] Built target my_nav2_navfn_planner

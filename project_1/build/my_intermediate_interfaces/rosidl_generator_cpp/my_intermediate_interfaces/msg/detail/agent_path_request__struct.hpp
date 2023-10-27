@@ -19,6 +19,10 @@
 // Member 'start'
 // Member 'goal'
 #include "geometry_msgs/msg/detail/pose_stamped__struct.hpp"
+// Member 'vertex_constraints'
+#include "my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp"
+// Member 'edge_constraints'
+#include "my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__msg__AgentPathRequest __attribute__((deprecated))
@@ -71,6 +75,12 @@ struct AgentPathRequest_
   using _goal_type =
     geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
   _goal_type goal;
+  using _vertex_constraints_type =
+    std::vector<my_intermediate_interfaces::msg::VertexConstraint_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::VertexConstraint_<ContainerAllocator>>>;
+  _vertex_constraints_type vertex_constraints;
+  using _edge_constraints_type =
+    std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::EdgeConstraint_<ContainerAllocator>>>;
+  _edge_constraints_type edge_constraints;
 
   // setters for named parameter idiom
   Type & set__name(
@@ -89,6 +99,18 @@ struct AgentPathRequest_
     const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
   {
     this->goal = _arg;
+    return *this;
+  }
+  Type & set__vertex_constraints(
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::VertexConstraint_<ContainerAllocator>>> & _arg)
+  {
+    this->vertex_constraints = _arg;
+    return *this;
+  }
+  Type & set__edge_constraints(
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::EdgeConstraint_<ContainerAllocator>>> & _arg)
+  {
+    this->edge_constraints = _arg;
     return *this;
   }
 
@@ -141,6 +163,12 @@ struct AgentPathRequest_
       return false;
     }
     if (this->goal != other.goal) {
+      return false;
+    }
+    if (this->vertex_constraints != other.vertex_constraints) {
+      return false;
+    }
+    if (this->edge_constraints != other.edge_constraints) {
       return false;
     }
     return true;

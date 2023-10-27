@@ -840,8 +840,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
   /opt/ros/humble/include/bond/bond/msg/detail/status__traits.hpp \
   /opt/ros/humble/include/bondcpp/BondSM_sm.hpp \
   /opt/ros/humble/include/smclib/statemap.hpp \
-  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_to_pose.hpp \
-  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__struct.hpp \
+  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp \
+  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__struct.hpp \
   /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/srv/cancel_goal.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.hpp \
@@ -858,10 +858,6 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
   /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__traits.hpp \
   /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status__traits.hpp \
-  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__builder.hpp \
-  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__traits.hpp \
-  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp \
-  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__struct.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__builder.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__traits.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose.hpp \
@@ -1049,11 +1045,11 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
   /opt/ros/humble/include/tf2/tf2/impl/utils.h \
   /opt/ros/humble/include/pluginlib/pluginlib/class_list_macros.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp \
+  /opt/ros/humble/include/nav2_core/global_planner.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/is_path_valid.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__struct.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__builder.hpp \
   /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__traits.hpp \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include/nav2_core/planner_exceptions.hpp \
   /opt/ros/humble/include/rclcpp_components/rclcpp_components/register_node_macro.hpp \
   /opt/ros/humble/include/rclcpp_components/rclcpp_components/node_factory_template.hpp \
   /opt/ros/humble/include/rclcpp_components/rclcpp_components/node_factory.hpp \
@@ -1069,6 +1065,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /usr/include/c++/11/bits/regex_automaton.h:
 
 /usr/include/c++/11/bits/regex_constants.h:
+
+/usr/include/c++/11/bits/stl_stack.h:
 
 /usr/include/c++/11/stack:
 
@@ -1212,14 +1210,6 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__traits.hpp:
 
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp:
-
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__traits.hpp:
-
-/usr/include/c++/11/bits/stl_stack.h:
-
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__builder.hpp:
-
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__struct.hpp:
@@ -1240,7 +1230,7 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 
 /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.hpp:
 
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__struct.hpp:
+/opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp:
 
 /opt/ros/humble/include/smclib/statemap.hpp:
 
@@ -1455,6 +1445,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_result.hpp:
+
+/opt/ros/humble/include/nav2_core/global_planner.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
 
@@ -2046,8 +2038,6 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_to_pose.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
@@ -2571,8 +2561,6 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:
 
 /usr/include/c++/11/unordered_map:
-
-/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_core/include/nav2_core/planner_exceptions.hpp:
 
 /usr/include/c++/11/bits/hashtable.h:
 

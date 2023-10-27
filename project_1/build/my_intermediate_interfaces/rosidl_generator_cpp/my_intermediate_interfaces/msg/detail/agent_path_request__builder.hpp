@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_AgentPathRequest_edge_constraints
+{
+public:
+  explicit Init_AgentPathRequest_edge_constraints(::my_intermediate_interfaces::msg::AgentPathRequest & msg)
+  : msg_(msg)
+  {}
+  ::my_intermediate_interfaces::msg::AgentPathRequest edge_constraints(::my_intermediate_interfaces::msg::AgentPathRequest::_edge_constraints_type arg)
+  {
+    msg_.edge_constraints = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::my_intermediate_interfaces::msg::AgentPathRequest msg_;
+};
+
+class Init_AgentPathRequest_vertex_constraints
+{
+public:
+  explicit Init_AgentPathRequest_vertex_constraints(::my_intermediate_interfaces::msg::AgentPathRequest & msg)
+  : msg_(msg)
+  {}
+  Init_AgentPathRequest_edge_constraints vertex_constraints(::my_intermediate_interfaces::msg::AgentPathRequest::_vertex_constraints_type arg)
+  {
+    msg_.vertex_constraints = std::move(arg);
+    return Init_AgentPathRequest_edge_constraints(msg_);
+  }
+
+private:
+  ::my_intermediate_interfaces::msg::AgentPathRequest msg_;
+};
+
 class Init_AgentPathRequest_goal
 {
 public:
   explicit Init_AgentPathRequest_goal(::my_intermediate_interfaces::msg::AgentPathRequest & msg)
   : msg_(msg)
   {}
-  ::my_intermediate_interfaces::msg::AgentPathRequest goal(::my_intermediate_interfaces::msg::AgentPathRequest::_goal_type arg)
+  Init_AgentPathRequest_vertex_constraints goal(::my_intermediate_interfaces::msg::AgentPathRequest::_goal_type arg)
   {
     msg_.goal = std::move(arg);
-    return std::move(msg_);
+    return Init_AgentPathRequest_vertex_constraints(msg_);
   }
 
 private:

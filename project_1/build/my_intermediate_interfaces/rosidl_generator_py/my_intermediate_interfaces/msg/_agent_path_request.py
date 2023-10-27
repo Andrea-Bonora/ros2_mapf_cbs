@@ -46,6 +46,14 @@ class Metaclass_AgentPathRequest(type):
             if PoseStamped.__class__._TYPE_SUPPORT is None:
                 PoseStamped.__class__.__import_type_support__()
 
+            from my_intermediate_interfaces.msg import EdgeConstraint
+            if EdgeConstraint.__class__._TYPE_SUPPORT is None:
+                EdgeConstraint.__class__.__import_type_support__()
+
+            from my_intermediate_interfaces.msg import VertexConstraint
+            if VertexConstraint.__class__._TYPE_SUPPORT is None:
+                VertexConstraint.__class__.__import_type_support__()
+
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -62,18 +70,24 @@ class AgentPathRequest(metaclass=Metaclass_AgentPathRequest):
         '_name',
         '_start',
         '_goal',
+        '_vertex_constraints',
+        '_edge_constraints',
     ]
 
     _fields_and_field_types = {
         'name': 'string',
         'start': 'geometry_msgs/PoseStamped',
         'goal': 'geometry_msgs/PoseStamped',
+        'vertex_constraints': 'sequence<my_intermediate_interfaces/VertexConstraint>',
+        'edge_constraints': 'sequence<my_intermediate_interfaces/EdgeConstraint>',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'VertexConstraint')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'EdgeConstraint')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -85,6 +99,8 @@ class AgentPathRequest(metaclass=Metaclass_AgentPathRequest):
         self.start = kwargs.get('start', PoseStamped())
         from geometry_msgs.msg import PoseStamped
         self.goal = kwargs.get('goal', PoseStamped())
+        self.vertex_constraints = kwargs.get('vertex_constraints', [])
+        self.edge_constraints = kwargs.get('edge_constraints', [])
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -120,6 +136,10 @@ class AgentPathRequest(metaclass=Metaclass_AgentPathRequest):
         if self.start != other.start:
             return False
         if self.goal != other.goal:
+            return False
+        if self.vertex_constraints != other.vertex_constraints:
+            return False
+        if self.edge_constraints != other.edge_constraints:
             return False
         return True
 
@@ -168,3 +188,51 @@ class AgentPathRequest(metaclass=Metaclass_AgentPathRequest):
                 isinstance(value, PoseStamped), \
                 "The 'goal' field must be a sub message of type 'PoseStamped'"
         self._goal = value
+
+    @builtins.property
+    def vertex_constraints(self):
+        """Message field 'vertex_constraints'."""
+        return self._vertex_constraints
+
+    @vertex_constraints.setter
+    def vertex_constraints(self, value):
+        if __debug__:
+            from my_intermediate_interfaces.msg import VertexConstraint
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, VertexConstraint) for v in value) and
+                 True), \
+                "The 'vertex_constraints' field must be a set or sequence and each value of type 'VertexConstraint'"
+        self._vertex_constraints = value
+
+    @builtins.property
+    def edge_constraints(self):
+        """Message field 'edge_constraints'."""
+        return self._edge_constraints
+
+    @edge_constraints.setter
+    def edge_constraints(self, value):
+        if __debug__:
+            from my_intermediate_interfaces.msg import EdgeConstraint
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, EdgeConstraint) for v in value) and
+                 True), \
+                "The 'edge_constraints' field must be a set or sequence and each value of type 'EdgeConstraint'"
+        self._edge_constraints = value

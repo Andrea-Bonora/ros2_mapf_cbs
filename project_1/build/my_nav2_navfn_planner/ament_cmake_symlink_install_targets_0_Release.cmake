@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner/libmy_nav2_navfn_planner.so" "TARGETS" "my_nav2_navfn_planner" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
