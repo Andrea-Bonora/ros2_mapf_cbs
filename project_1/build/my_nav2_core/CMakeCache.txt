@@ -363,9 +363,6 @@ ament_xmllint_BIN:FILEPATH=/opt/ros/humble/bin/ament_xmllint
 //The directory containing a CMake configuration file for angles.
 angles_DIR:PATH=/opt/ros/humble/share/angles/cmake
 
-//The directory containing a CMake configuration file for behaviortree_cpp_v3.
-behaviortree_cpp_v3_DIR:PATH=/opt/ros/humble/lib/cmake/behaviortree_cpp_v3
-
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/humble/share/bond/cmake
 
@@ -443,9 +440,6 @@ my_nav2_core_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 my_nav2_core_SOURCE_DIR:STATIC=/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_core
-
-//The directory containing a CMake configuration file for nav2_behavior_tree.
-nav2_behavior_tree_DIR:PATH=/opt/ros/humble/share/nav2_behavior_tree/cmake
 
 //The directory containing a CMake configuration file for nav2_common.
 nav2_common_DIR:PATH=/opt/ros/humble/share/nav2_common/cmake
