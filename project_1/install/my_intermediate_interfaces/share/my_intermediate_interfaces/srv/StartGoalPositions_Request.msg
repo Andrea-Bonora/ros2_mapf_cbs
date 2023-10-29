@@ -1,6 +1,1 @@
-float64[] start_x
-float64[] start_y
-float64[] start_z
-float64[] end_x
-float64[] end_y
-float64[] end_z
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_cmake/srv/StartGoalPositions_Request.msg

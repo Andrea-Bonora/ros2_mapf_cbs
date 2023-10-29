@@ -26,7 +26,7 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "nav2_util/lifecycle_node.hpp"
-#include "nav2_msgs/action/compute_path_to_pose.hpp"
+//#include "nav2_msgs/action/compute_path_to_pose.hpp"
 #include "nav2_msgs/action/compute_path_through_poses.hpp"
 #include "nav2_msgs/msg/costmap.hpp"
 #include "nav2_util/robot_utils.hpp"
@@ -39,6 +39,7 @@
 #include "pluginlib/class_list_macros.hpp"
 #include "my_nav2_core/multi_agent_global_planner.hpp"
 #include "nav2_msgs/srv/is_path_valid.hpp"
+#include "my_intermediate_interfaces/action/my_compute_path_to_pose.hpp"
 
 namespace my_nav2_planner
 {
@@ -105,7 +106,7 @@ protected:
    */
   nav2_util::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & state) override;
 
-  using ActionToPose = nav2_msgs::action::ComputePathToPose;
+  using ActionToPose = my_intermediate_interfaces::action::MyComputePathToPose;
   using ActionThroughPoses = nav2_msgs::action::ComputePathThroughPoses;
   using ActionServerToPose = nav2_util::SimpleActionServer<ActionToPose>;
   using ActionServerThroughPoses = nav2_util::SimpleActionServer<ActionThroughPoses>;

@@ -1,0 +1,43 @@
+[0.591s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_try_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup
+[0.650s] -- The C compiler identification is GNU 11.4.0
+[0.732s] -- The CXX compiler identification is GNU 11.4.0
+[0.740s] -- Detecting C compiler ABI info
+[0.815s] -- Detecting C compiler ABI info - done
+[0.826s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.827s] -- Detecting C compile features
+[0.827s] -- Detecting C compile features - done
+[0.831s] -- Detecting CXX compiler ABI info
+[0.903s] -- Detecting CXX compiler ABI info - done
+[0.914s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.914s] -- Detecting CXX compile features
+[0.915s] -- Detecting CXX compile features - done
+[0.918s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.118s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[1.177s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.288s] -- Configuring done
+[1.291s] -- Generating done
+[1.291s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup
+[1.296s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_try_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup
+[1.298s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup -- -j8 -l8
+[1.338s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup -- -j8 -l8
+[1.362s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup
+[1.368s] -- Install configuration: ""
+[1.368s] -- Execute custom install script
+[1.369s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/launch/experiment1.launch.py
+[1.376s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/launch/experiment2.launch.py
+[1.383s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/ament_index/resource_index/package_run_dependencies/my_try_bringup
+[1.392s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/ament_index/resource_index/parent_prefix_path/my_try_bringup
+[1.404s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/environment/ament_prefix_path.sh
+[1.414s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/environment/ament_prefix_path.dsv
+[1.426s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/environment/path.sh
+[1.437s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/environment/path.dsv
+[1.447s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/local_setup.bash
+[1.456s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/local_setup.sh
+[1.466s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/local_setup.zsh
+[1.476s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/local_setup.dsv
+[1.486s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/package.dsv
+[1.497s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/ament_index/resource_index/packages/my_try_bringup
+[1.507s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/cmake/my_try_bringupConfig.cmake
+[1.516s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/cmake/my_try_bringupConfig-version.cmake
+[1.525s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/package.xml
+[1.539s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup

@@ -37,12 +37,14 @@ class MultiAgentPlanAskerNode(Node):
 
         i = 1
         futures = []
-        
+
         for i in range(len(s_request.requests)):
             r = s_request.requests[i]
             client_cb_group_actions = MutuallyExclusiveCallbackGroup()
             client = ActionClient(self, MyComputePathToPose, r.name + '/compute_path_to_pose', callback_group=client_cb_group_actions)
+            self.get_logger().info("before waiting server " + r.name + '/compute_path_to_pose')
             client.wait_for_server()
+            self.get_logger().info("after waiting server")
         
             request = MyComputePathToPose.Goal()
             request.goal = r.goal

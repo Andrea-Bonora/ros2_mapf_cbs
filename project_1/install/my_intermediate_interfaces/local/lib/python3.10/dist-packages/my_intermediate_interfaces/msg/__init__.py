@@ -1,4 +1,1 @@
-from my_intermediate_interfaces.msg._agent_path import AgentPath  # noqa: F401
-from my_intermediate_interfaces.msg._agent_path_request import AgentPathRequest  # noqa: F401
-from my_intermediate_interfaces.msg._edge_constraint import EdgeConstraint  # noqa: F401
-from my_intermediate_interfaces.msg._vertex_constraint import VertexConstraint  # noqa: F401
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_py/my_intermediate_interfaces/msg/__init__.py

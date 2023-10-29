@@ -1,15 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from my_intermediate_interfaces/msg/AgentPath.msg
-// generated code does not contain a copyright notice
-
-#include "nav_msgs/msg/Path.idl"
-
-module my_intermediate_interfaces {
-  module msg {
-    struct AgentPath {
-      string name;
-
-      nav_msgs::msg::Path path;
-    };
-  };
-};
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/AgentPath.idl

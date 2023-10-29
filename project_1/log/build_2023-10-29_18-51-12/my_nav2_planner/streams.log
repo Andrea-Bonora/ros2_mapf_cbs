@@ -1,0 +1,184 @@
+[0.078s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner -- -j8 -l8
+[0.127s] [ 25%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[2.736s] In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:34[m[K:
+[2.736s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:109:43:[m[K [01;31m[Kerror: [m[K‘[01m[KMyComputePathToPose[m[K’ in namespace ‘[01m[Knav2_msgs::action[m[K’ does not name a type; did you mean ‘[01m[KComputePathThroughPoses[m[K’?
+[2.736s]   109 |   using ActionToPose = nav2_msgs::action::[01;31m[KMyComputePathToPose[m[K;
+[2.736s]       |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.736s]       |                                           [32m[KComputePathThroughPoses[m[K
+[2.742s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:111:60:[m[K [01;31m[Kerror: [m[K‘[01m[KActionToPose[m[K’ was not declared in this scope
+[2.742s]   111 |   using ActionServerToPose = nav2_util::SimpleActionServer<[01;31m[KActionToPose[m[K>;
+[2.743s]       |                                                            [01;31m[K^~~~~~~~~~~~[m[K
+[2.743s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:111:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.743s]   111 |   using ActionServerToPose = nav2_util::SimpleActionServer<ActionToPose[01;31m[K>[m[K;
+[2.743s]       |                                                                        [01;31m[K^[m[K
+[2.750s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:190:19:[m[K [01;31m[Kerror: [m[K‘[01m[KActionServerToPose[m[K’ was not declared in this scope; did you mean ‘[01m[KActionServerThroughPoses[m[K’?
+[2.750s]   190 |   std::unique_ptr<[01;31m[KActionServerToPose[m[K> action_server_pose_;
+[2.750s]       |                   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.750s]       |                   [32m[KActionServerThroughPoses[m[K
+[2.750s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:190:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.750s]   190 |   std::unique_ptr<ActionServerToPose[01;31m[K>[m[K action_server_pose_;
+[2.750s]       |                                     [01;31m[K^[m[K
+[2.750s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:190:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[2.809s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvirtual nav2_util::CallbackReturn my_nav2_planner::MyPlannerServer::on_configure(const rclcpp_lifecycle::State&)[m[K’:
+[2.809s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:142:42:[m[K [01;31m[Kerror: [m[K‘[01m[KActionServerToPose[m[K’ was not declared in this scope; did you mean ‘[01m[Kaction_server_pose_[m[K’?
+[2.809s]   142 |   action_server_pose_ = std::make_unique<[01;31m[KActionServerToPose[m[K>(
+[2.809s]       |                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[2.809s]       |                                          [32m[Kaction_server_pose_[m[K
+[2.813s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:142:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<<expression error> >(std::shared_ptr<nav2_util::LifecycleNode>, const char [21], std::_Bind_helper<false, void (my_nav2_planner::MyPlannerServer::*)(), my_nav2_planner::MyPlannerServer*>::type, std::nullptr_t, std::chrono::milliseconds, bool)[m[K’
+[2.813s]   142 |   action_server_pose_ = [01;31m[Kstd::make_unique<ActionServerToPose>([m[K
+[2.813s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[2.813s]   143 | [01;31m[K    shared_from_this(),[m[K
+[2.813s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K                                      
+[2.813s]   144 | [01;31m[K    "compute_path_to_pose",[m[K
+[2.813s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                                  
+[2.813s]   145 | [01;31m[K    std::bind(&MyPlannerServer::computePlan, this),[m[K
+[2.813s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+[2.813s]   146 | [01;31m[K    nullptr,[m[K
+[2.813s]       |     [01;31m[K~~~~~~~~[m[K                                                 
+[2.813s]   147 | [01;31m[K    std::chrono::milliseconds(500),[m[K
+[2.813s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                          
+[2.813s]   148 | [01;31m[K    true)[m[K;
+[2.813s]       |     [01;31m[K~~~~~[m[K                                                    
+[2.813s] In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+[2.813s]                  from [01m[K/usr/include/c++/11/locale:43[m[K,
+[2.813s]                  from [01m[K/usr/include/c++/11/iomanip:43[m[K,
+[2.813s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18[m[K:
+[2.813s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+[2.814s]   961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+[2.814s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.814s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.814s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:142:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.814s]   142 |   action_server_pose_ = [01;31m[Kstd::make_unique<ActionServerToPose>([m[K
+[2.814s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[2.814s]   143 | [01;31m[K    shared_from_this(),[m[K
+[2.814s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K                                      
+[2.814s]   144 | [01;31m[K    "compute_path_to_pose",[m[K
+[2.814s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                                  
+[2.814s]   145 | [01;31m[K    std::bind(&MyPlannerServer::computePlan, this),[m[K
+[2.814s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+[2.814s]   146 | [01;31m[K    nullptr,[m[K
+[2.814s]       |     [01;31m[K~~~~~~~~[m[K                                                 
+[2.814s]   147 | [01;31m[K    std::chrono::milliseconds(500),[m[K
+[2.814s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                          
+[2.814s]   148 | [01;31m[K    true)[m[K;
+[2.814s]       |     [01;31m[K~~~~~[m[K                                                    
+[2.814s] In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+[2.814s]                  from [01m[K/usr/include/c++/11/locale:43[m[K,
+[2.814s]                  from [01m[K/usr/include/c++/11/iomanip:43[m[K,
+[2.814s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18[m[K:
+[2.814s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+[2.814s]   967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+[2.814s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.814s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.815s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:142:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.815s]   142 |   action_server_pose_ = [01;31m[Kstd::make_unique<ActionServerToPose>([m[K
+[2.815s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[2.815s]   143 | [01;31m[K    shared_from_this(),[m[K
+[2.815s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K                                      
+[2.815s]   144 | [01;31m[K    "compute_path_to_pose",[m[K
+[2.815s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                                  
+[2.815s]   145 | [01;31m[K    std::bind(&MyPlannerServer::computePlan, this),[m[K
+[2.815s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+[2.815s]   146 | [01;31m[K    nullptr,[m[K
+[2.815s]       |     [01;31m[K~~~~~~~~[m[K                                                 
+[2.815s]   147 | [01;31m[K    std::chrono::milliseconds(500),[m[K
+[2.815s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                          
+[2.815s]   148 | [01;31m[K    true)[m[K;
+[2.815s]       |     [01;31m[K~~~~~[m[K                                                    
+[2.815s] In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+[2.815s]                  from [01m[K/usr/include/c++/11/locale:43[m[K,
+[2.815s]                  from [01m[K/usr/include/c++/11/iomanip:43[m[K,
+[2.815s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18[m[K:
+[2.815s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+[2.815s]   973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+[2.815s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.815s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.815s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:142:61:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.815s]   142 |   action_server_pose_ = [01;31m[Kstd::make_unique<ActionServerToPose>([m[K
+[2.815s]       |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[2.816s]   143 | [01;31m[K    shared_from_this(),[m[K
+[2.816s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~[m[K                                      
+[2.816s]   144 | [01;31m[K    "compute_path_to_pose",[m[K
+[2.816s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~[m[K                                  
+[2.816s]   145 | [01;31m[K    std::bind(&MyPlannerServer::computePlan, this),[m[K
+[2.816s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K          
+[2.816s]   146 | [01;31m[K    nullptr,[m[K
+[2.816s]       |     [01;31m[K~~~~~~~~[m[K                                                 
+[2.816s]   147 | [01;31m[K    std::chrono::milliseconds(500),[m[K
+[2.816s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                          
+[2.816s]   148 | [01;31m[K    true)[m[K;
+[2.816s]       |     [01;31m[K~~~~~[m[K                                                    
+[2.816s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvirtual nav2_util::CallbackReturn my_nav2_planner::MyPlannerServer::on_activate(const rclcpp_lifecycle::State&)[m[K’:
+[2.816s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:167:22:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.816s]   167 |   action_server_pose_[01;31m[K->[m[Kactivate();
+[2.816s]       |                      [01;31m[K^~[m[K
+[2.889s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvirtual nav2_util::CallbackReturn my_nav2_planner::MyPlannerServer::on_deactivate(const rclcpp_lifecycle::State&)[m[K’:
+[2.889s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:199:22:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.889s]   199 |   action_server_pose_[01;31m[K->[m[Kdeactivate();
+[2.889s]       |                      [01;31m[K^~[m[K
+[2.890s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvirtual nav2_util::CallbackReturn my_nav2_planner::MyPlannerServer::on_cleanup(const rclcpp_lifecycle::State&)[m[K’:
+[2.890s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:234:23:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kreset[m[K’ in ‘[01m[K((my_nav2_planner::MyPlannerServer*)this)->my_nav2_planner::MyPlannerServer::action_server_pose_[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[2.890s]   234 |   action_server_pose_.[01;31m[Kreset[m[K();
+[2.890s]       |                       [01;31m[K^~~~~[m[K
+[2.900s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvoid my_nav2_planner::MyPlannerServer::computePlan()[m[K’:
+[2.900s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:468:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.900s]   468 |   auto goal = action_server_pose_[01;31m[K->[m[Kget_current_goal();
+[2.900s]       |                                  [01;31m[K^~[m[K
+[2.906s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:469:34:[m[K [01;31m[Kerror: [m[K‘[01m[KActionToPose[m[K’ was not declared in this scope
+[2.907s]   469 |   auto result = std::make_shared<[01;31m[KActionToPose[m[K::Result>();
+[2.907s]       |                                  [01;31m[K^~~~~~~~~~~~[m[K
+[2.907s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:469:22:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[2.907s]   469 |   auto result = std::[01;31m[Kmake_shared<ActionToPose::Result>[m[K();
+[2.907s]       |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.907s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:469:55:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+[2.907s]   469 |   auto result = [01;31m[Kstd::make_shared<ActionToPose::Result>()[m[K;
+[2.907s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.907s] In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+[2.907s]                  from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:22[m[K:
+[2.907s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+[2.907s]   875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+[2.907s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[2.907s] [01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:469:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[2.908s]   469 |   auto result = [01;31m[Kstd::make_shared<ActionToPose::Result>()[m[K;
+[2.908s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:472:25:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmy_nav2_planner::MyPlannerServer::isServerInactive(int&)[m[K’
+[2.908s]   472 |     if ([01;31m[KisServerInactive(action_server_pose_)[m[K || isCancelRequested(action_server_pose_)) {
+[2.908s]       |         [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:268:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> bool my_nav2_planner::MyPlannerServer::isServerInactive(std::unique_ptr<nav2_util::SimpleActionServer<T> >&)[m[K’
+[2.908s]   268 | bool [01;36m[KMyPlannerServer[m[K::isServerInactive(
+[2.908s]       |      [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:268:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:472:25:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::unique_ptr<nav2_util::SimpleActionServer<T> >[m[K’ and ‘[01m[Kint[m[K’
+[2.908s]   472 |     if ([01;36m[KisServerInactive(action_server_pose_)[m[K || isCancelRequested(action_server_pose_)) {
+[2.908s]       |         [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:472:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmy_nav2_planner::MyPlannerServer::isCancelRequested(int&)[m[K’
+[2.908s]   472 |     if (isServerInactive(action_server_pose_) || [01;31m[KisCancelRequested(action_server_pose_)[m[K) {
+[2.908s]       |                                                  [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:289:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> bool my_nav2_planner::MyPlannerServer::isCancelRequested(std::unique_ptr<nav2_util::SimpleActionServer<T> >&)[m[K’
+[2.908s]   289 | bool [01;36m[KMyPlannerServer[m[K::isCancelRequested(
+[2.908s]       |      [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:289:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:472:67:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::unique_ptr<nav2_util::SimpleActionServer<T> >[m[K’ and ‘[01m[Kint[m[K’
+[2.908s]   472 |     if (isServerInactive(action_server_pose_) || [01;36m[KisCancelRequested(action_server_pose_)[m[K) {
+[2.908s]       |                                                  [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.908s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:488:37:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmy_nav2_planner::MyPlannerServer::transformPosesToGlobalFrame(int&, geometry_msgs::msg::PoseStamped&, geometry_msgs::msg::PoseStamped&)[m[K’
+[2.908s]   488 |     if (![01;31m[KtransformPosesToGlobalFrame(action_server_pose_, start, goal_pose)[m[K) {
+[2.909s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.909s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:328:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> bool my_nav2_planner::MyPlannerServer::transformPosesToGlobalFrame(std::unique_ptr<nav2_util::SimpleActionServer<T> >&, geometry_msgs::msg::PoseStamped&, geometry_msgs::msg::PoseStamped&)[m[K’
+[2.909s]   328 | bool [01;36m[KMyPlannerServer[m[K::transformPosesToGlobalFrame(
+[2.909s]       |      [01;36m[K^~~~~~~~~~~~~~~[m[K
+[2.909s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:328:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[2.909s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:488:37:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kstd::unique_ptr<nav2_util::SimpleActionServer<T> >[m[K’ and ‘[01m[Kint[m[K’
+[2.909s]   488 |     if (![01;36m[KtransformPosesToGlobalFrame(action_server_pose_, start, goal_pose)[m[K) {
+[2.909s]       |          [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.909s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:511:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.909s]   511 |     action_server_pose_[01;31m[K->[m[Ksucceeded_current(result);
+[2.909s]       |                        [01;31m[K^~[m[K
+[2.909s] [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:517:24:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[2.909s]   517 |     action_server_pose_[01;31m[K->[m[Kterminate_current();
+[2.909s]       |                        [01;31m[K^~[m[K
+[4.885s] gmake[2]: *** [CMakeFiles/my_planner_server_core.dir/build.make:76: CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o] Error 1
+[4.885s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/my_planner_server_core.dir/all] Error 2
+[4.885s] gmake: *** [Makefile:146: all] Error 2
+[4.887s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner' returned '2': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner -- -j8 -l8

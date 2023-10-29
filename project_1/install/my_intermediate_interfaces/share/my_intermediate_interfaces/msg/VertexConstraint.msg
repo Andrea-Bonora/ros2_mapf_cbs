@@ -1,2 +1,1 @@
-geometry_msgs/PoseStamped cell
-int64 time_step
+/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/VertexConstraint.msg

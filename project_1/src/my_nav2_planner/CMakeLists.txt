@@ -19,6 +19,7 @@ find_package(nav2_costmap_2d REQUIRED)
 find_package(my_nav2_navfn_planner REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(nav2_core REQUIRED)
+find_package(my_intermediate_interfaces REQUIRED)
 
 nav2_package()
 
@@ -46,6 +47,7 @@ set(dependencies
   my_nav2_navfn_planner
   pluginlib
   my_nav2_core
+  my_intermediate_interfaces
 )
 
 add_library(${library_name} SHARED

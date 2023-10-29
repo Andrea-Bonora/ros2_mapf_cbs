@@ -1,2 +1,1 @@
-source;share/my_try_bringup/environment/ament_prefix_path.sh
-source;share/my_try_bringup/environment/path.sh
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup/ament_cmake_environment_hooks/local_setup.dsv

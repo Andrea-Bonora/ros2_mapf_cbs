@@ -1,1 +1,1 @@
-from my_intermediate_interfaces.action._my_compute_path_to_pose import MyComputePathToPose  # noqa: F401
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_py/my_intermediate_interfaces/action/__init__.py

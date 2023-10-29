@@ -1,11 +1,1 @@
-// generated from rosidl_generator_cpp/resource/idl.hpp.em
-// generated code does not contain a copyright notice
-
-#ifndef MY_INTERMEDIATE_INTERFACES__MSG__AGENT_PATH_REQUEST_HPP_
-#define MY_INTERMEDIATE_INTERFACES__MSG__AGENT_PATH_REQUEST_HPP_
-
-#include "my_intermediate_interfaces/msg/detail/agent_path_request__struct.hpp"
-#include "my_intermediate_interfaces/msg/detail/agent_path_request__builder.hpp"
-#include "my_intermediate_interfaces/msg/detail/agent_path_request__traits.hpp"
-
-#endif  // MY_INTERMEDIATE_INTERFACES__MSG__AGENT_PATH_REQUEST_HPP_
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/agent_path_request.hpp

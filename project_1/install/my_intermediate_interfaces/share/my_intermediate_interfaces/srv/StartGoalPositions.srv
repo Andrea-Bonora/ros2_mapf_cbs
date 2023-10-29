@@ -1,8 +1,1 @@
-float64[] start_x
-float64[] start_y
-float64[] start_z
-float64[] end_x
-float64[] end_y
-float64[] end_z
----
-AgentPath[] plans
+/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/srv/StartGoalPositions.srv

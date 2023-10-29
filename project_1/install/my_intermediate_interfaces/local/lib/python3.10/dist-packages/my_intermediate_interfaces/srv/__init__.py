@@ -1,3 +1,1 @@
-from my_intermediate_interfaces.srv._computed_plans import ComputedPlans  # noqa: F401
-from my_intermediate_interfaces.srv._start_goal_pose_stamped import StartGoalPoseStamped  # noqa: F401
-from my_intermediate_interfaces.srv._start_goal_positions import StartGoalPositions  # noqa: F401
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_py/my_intermediate_interfaces/srv/__init__.py

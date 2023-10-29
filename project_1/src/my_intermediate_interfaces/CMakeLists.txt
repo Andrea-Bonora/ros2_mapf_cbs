@@ -9,6 +9,7 @@ endif()
 find_package(std_srvs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(nav2_msgs REQUIRED)
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
@@ -22,6 +23,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/EdgeConstraint.msg"
   "action/MyComputePathToPose.action"
   DEPENDENCIES nav_msgs
+  DEPENDENCIES nav2_msgs
   DEPENDENCIES geometry_msgs
 )
 
