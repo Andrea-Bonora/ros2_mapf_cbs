@@ -29,8 +29,8 @@
 #include "nav2_util/costmap.hpp"
 #include "nav2_util/node_utils.hpp"
 #include "nav2_util/geometry_utils.hpp"
+#include "my_nav2_navfn_planner/my_navfn_planner.hpp"
 #include "nav2_costmap_2d/cost_values.hpp"
-
 #include "my_nav2_planner/my_planner_server.hpp"
 
 using namespace std::chrono_literals;
@@ -41,7 +41,7 @@ namespace my_nav2_planner
 {
 
 MyPlannerServer::MyPlannerServer(const rclcpp::NodeOptions & options)
-: nav2_util::LifecycleNode("my_planner_server", "", options),
+: nav2_util::LifecycleNode("planner_server", "", options),
   gp_loader_("my_nav2_core", "my_nav2_core::MultiAgentGlobalPlanner"),
   default_ids_{"GridBased"},
   default_types_{"my_nav2_navfn_planner/MyNavfnPlanner"},
@@ -147,13 +147,13 @@ MyPlannerServer::on_configure(const rclcpp_lifecycle::State & /*state*/)
     std::chrono::milliseconds(500),
     true);
 
-  /*action_server_poses_ = std::make_unique<ActionServerThroughPoses>(
+  action_server_poses_ = std::make_unique<ActionServerThroughPoses>(
     shared_from_this(),
     "compute_path_through_poses",
-    std::bind(&PlannerServer::computePlanThroughPoses, this),
+    std::bind(&MyPlannerServer::computePlanThroughPoses, this),
     nullptr,
     std::chrono::milliseconds(500),
-    true);*/
+    true);
 
   return nav2_util::CallbackReturn::SUCCESS;
 }
@@ -367,7 +367,7 @@ bool MyPlannerServer::validatePath(
   return true;
 }
 
-/*void
+void
 MyPlannerServer::computePlanThroughPoses()
 {
   std::lock_guard<std::mutex> lock(dynamic_params_lock_);
@@ -455,7 +455,7 @@ MyPlannerServer::computePlanThroughPoses()
       goal->goals.back().pose.position.y, ex.what());
     action_server_poses_->terminate_current();
   }
-}*/
+}
 
 void
 MyPlannerServer::computePlan()
@@ -466,8 +466,6 @@ MyPlannerServer::computePlan()
 
   // Initialize the ComputePathToPose goal and result
   auto goal = action_server_pose_->get_current_goal();
-  auto vertex_constr = goal->vertex_constraints;
-  auto edge_constr = goal->edge_constraints;
   auto result = std::make_shared<ActionToPose::Result>();
 
   try {
@@ -491,7 +489,7 @@ MyPlannerServer::computePlan()
       return;
     }
 
-    result->path = getPlan(start, goal_pose, vertex_constr, edge_constr, goal->planner_id);
+    result->path = getPlan(start, goal_pose, goal->planner_id);
 
     if (!validatePath(action_server_pose_, goal_pose, result->path, goal->planner_id)) {
       return;
@@ -524,8 +522,6 @@ nav_msgs::msg::Path
 MyPlannerServer::getPlan(
   const geometry_msgs::msg::PoseStamped & start,
   const geometry_msgs::msg::PoseStamped & goal,
-  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
   const std::string & planner_id)
 {
   RCLCPP_DEBUG(
@@ -533,15 +529,18 @@ MyPlannerServer::getPlan(
     "(%.2f, %.2f).", start.pose.position.x, start.pose.position.y,
     goal.pose.position.x, goal.pose.position.y);
 
+  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vc;
+  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> ec;
+
   if (planners_.find(planner_id) != planners_.end()) {
-    return planners_[planner_id]->createPlan(start, goal, vertex_constraints, edge_constraints);
+    return planners_[planner_id]->createPlan(start, goal, vc, ec);
   } else {
     if (planners_.size() == 1 && planner_id.empty()) {
       RCLCPP_WARN_ONCE(
         get_logger(), "No planners specified in action call. "
         "Server will use only plugin %s in server."
         " This warning will appear once.", planner_ids_concat_.c_str());
-      return planners_[planners_.begin()->first]->createPlan(start, goal, vertex_constraints, edge_constraints);
+      return planners_[planners_.begin()->first]->createPlan(start, goal, vc, ec);
     } else {
       RCLCPP_ERROR(
         get_logger(), "planner %s is not a valid planner. "
@@ -643,7 +642,7 @@ MyPlannerServer::dynamicParametersCallback(std::vector<rclcpp::Parameter> parame
   return result;
 }
 
-}  // namespace my_nav2_planner
+}  // namespace nav2_planner
 
 #include "rclcpp_components/register_node_macro.hpp"
 

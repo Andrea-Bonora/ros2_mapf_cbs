@@ -1,1 +1,26 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/srv/StartGoalPositions.idl
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from my_intermediate_interfaces/srv/StartGoalPositions.srv
+// generated code does not contain a copyright notice
+
+#include "my_intermediate_interfaces/msg/AgentPath.idl"
+
+module my_intermediate_interfaces {
+  module srv {
+    struct StartGoalPositions_Request {
+      sequence<double> start_x;
+
+      sequence<double> start_y;
+
+      sequence<double> start_z;
+
+      sequence<double> end_x;
+
+      sequence<double> end_y;
+
+      sequence<double> end_z;
+    };
+    struct StartGoalPositions_Response {
+      sequence<my_intermediate_interfaces::msg::AgentPath> plans;
+    };
+  };
+};

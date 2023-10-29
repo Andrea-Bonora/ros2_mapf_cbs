@@ -1,1 +1,2 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_cmake/srv/StartGoalPositions_Response.msg
+
+AgentPath[] plans

@@ -1,1 +1,37 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_fastrtps_c/my_intermediate_interfaces/msg/detail/vertex_constraint__rosidl_typesupport_fastrtps_c.h
+// generated from rosidl_typesupport_fastrtps_c/resource/idl__rosidl_typesupport_fastrtps_c.h.em
+// with input from my_intermediate_interfaces:msg/VertexConstraint.idl
+// generated code does not contain a copyright notice
+#ifndef MY_INTERMEDIATE_INTERFACES__MSG__DETAIL__VERTEX_CONSTRAINT__ROSIDL_TYPESUPPORT_FASTRTPS_C_H_
+#define MY_INTERMEDIATE_INTERFACES__MSG__DETAIL__VERTEX_CONSTRAINT__ROSIDL_TYPESUPPORT_FASTRTPS_C_H_
+
+
+#include <stddef.h>
+#include "rosidl_runtime_c/message_type_support_struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "my_intermediate_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_my_intermediate_interfaces
+size_t get_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_my_intermediate_interfaces
+size_t max_serialized_size_my_intermediate_interfaces__msg__VertexConstraint(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_PUBLIC_my_intermediate_interfaces
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, VertexConstraint)();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // MY_INTERMEDIATE_INTERFACES__MSG__DETAIL__VERTEX_CONSTRAINT__ROSIDL_TYPESUPPORT_FASTRTPS_C_H_

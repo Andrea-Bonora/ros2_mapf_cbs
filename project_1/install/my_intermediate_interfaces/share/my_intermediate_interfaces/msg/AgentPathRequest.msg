@@ -1,1 +1,5 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/AgentPathRequest.msg
+string name
+geometry_msgs/PoseStamped start
+geometry_msgs/PoseStamped goal
+VertexConstraint[] vertex_constraints
+EdgeConstraint[] edge_constraints

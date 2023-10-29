@@ -1,0 +1,25 @@
+[0.239s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core -- -j8 -l8
+[0.574s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core -- -j8 -l8
+[0.603s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core
+[0.611s] -- Install configuration: "Release"
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include//my_nav2_core
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include//my_nav2_core/multi_agent_global_planner.hpp
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/ament_index/resource_index/package_run_dependencies/my_nav2_core
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/ament_index/resource_index/parent_prefix_path/my_nav2_core
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/environment/ament_prefix_path.sh
+[0.611s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/environment/ament_prefix_path.dsv
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/environment/path.sh
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/environment/path.dsv
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/local_setup.bash
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/local_setup.sh
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/local_setup.zsh
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/local_setup.dsv
+[0.612s] -- Installing: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/package.dsv
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/ament_index/resource_index/packages/my_nav2_core
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.612s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake/my_nav2_coreConfig.cmake
+[0.613s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake/my_nav2_coreConfig-version.cmake
+[0.613s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/package.xml
+[0.614s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core

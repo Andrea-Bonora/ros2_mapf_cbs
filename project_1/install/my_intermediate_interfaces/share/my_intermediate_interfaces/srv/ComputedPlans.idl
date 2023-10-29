@@ -1,1 +1,16 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/srv/ComputedPlans.idl
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from my_intermediate_interfaces/srv/ComputedPlans.srv
+// generated code does not contain a copyright notice
+
+#include "nav_msgs/msg/Path.idl"
+
+module my_intermediate_interfaces {
+  module srv {
+    struct ComputedPlans_Request {
+      sequence<nav_msgs::msg::Path> plans;
+    };
+    struct ComputedPlans_Response {
+      sequence<nav_msgs::msg::Path> collision_free_plans;
+    };
+  };
+};

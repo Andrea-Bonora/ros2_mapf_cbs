@@ -43,7 +43,77 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/" TYPE DIRECTORY FILES
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/launch"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/models"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/rviz"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/urdf"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/worlds"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/params"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/environment" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/multi_robot.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_multi_robot")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_multi_robot")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/environment" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/environment" TYPE FILE FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/environment" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/path.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/local_setup.bash")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/local_setup.sh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/local_setup.zsh")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/local_setup.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/package.dsv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_multi_robot")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot/cmake" TYPE FILE FILES
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_core/turtlebot3_multi_robotConfig.cmake"
+    "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_core/turtlebot3_multi_robotConfig-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/turtlebot3_multi_robot" TYPE FILE FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/turtlebot3_multi_robot/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

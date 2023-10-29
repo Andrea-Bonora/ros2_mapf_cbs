@@ -1,1 +1,1 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_cmake/srv/ComputedPlans_Request.msg
+nav_msgs/Path[] plans

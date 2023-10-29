@@ -315,17 +315,17 @@ my_intermediate_interfaces__rosidl_typesupport_cpp/fast:
 .PHONY : my_intermediate_interfaces__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_symlink_my_intermediate_interfaces
+# Target rules for targets named ament_cmake_python_copy_my_intermediate_interfaces
 
 # Build rule for target.
-ament_cmake_python_symlink_my_intermediate_interfaces: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_my_intermediate_interfaces
-.PHONY : ament_cmake_python_symlink_my_intermediate_interfaces
+ament_cmake_python_copy_my_intermediate_interfaces: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_my_intermediate_interfaces
+.PHONY : ament_cmake_python_copy_my_intermediate_interfaces
 
 # fast build rule for target.
-ament_cmake_python_symlink_my_intermediate_interfaces/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_my_intermediate_interfaces.dir/build.make CMakeFiles/ament_cmake_python_symlink_my_intermediate_interfaces.dir/build
-.PHONY : ament_cmake_python_symlink_my_intermediate_interfaces/fast
+ament_cmake_python_copy_my_intermediate_interfaces/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_my_intermediate_interfaces.dir/build.make CMakeFiles/ament_cmake_python_copy_my_intermediate_interfaces.dir/build
+.PHONY : ament_cmake_python_copy_my_intermediate_interfaces/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_my_intermediate_interfaces_egg
@@ -2027,7 +2027,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_my_intermediate_interfaces_egg"
-	@echo "... ament_cmake_python_symlink_my_intermediate_interfaces"
+	@echo "... ament_cmake_python_copy_my_intermediate_interfaces"
 	@echo "... my_intermediate_interfaces"
 	@echo "... my_intermediate_interfaces__cpp"
 	@echo "... my_intermediate_interfaces__py"

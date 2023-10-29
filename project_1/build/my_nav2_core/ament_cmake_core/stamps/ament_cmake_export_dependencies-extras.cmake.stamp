@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_dependencies/cmake/ament_cmake_export_dependencies-extras.cmake.in
 
-set(_exported_dependencies "rclcpp;rclcpp_lifecycle;std_msgs;geometry_msgs;nav2_costmap_2d;pluginlib;visualization_msgs;nav_msgs;tf2_ros;nav2_util;nav2_behavior_tree")
+set(_exported_dependencies "rclcpp;rclcpp_lifecycle;std_msgs;geometry_msgs;nav2_costmap_2d;pluginlib;visualization_msgs;my_intermediate_interfaces;nav_msgs;tf2_ros")
 
 find_package(ament_cmake_libraries QUIET REQUIRED)
 

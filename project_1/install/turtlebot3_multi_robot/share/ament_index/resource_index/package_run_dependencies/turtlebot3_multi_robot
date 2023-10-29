@@ -1,1 +1,1 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_multi_robot
+gazebo_ros_pkgs;geometry_msgs;nav_msgs;rclcpp;sensor_msgs;tf2;my_nav2_planner;turtlebot3_navigation2;my_intermediate;launch_ros;navigation2;nav2_common;slam_toolbox

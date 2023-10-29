@@ -23,6 +23,8 @@
 #include "nav_msgs/msg/path.hpp"
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav2_util/lifecycle_node.hpp"
+#include "my_intermediate_interfaces/msg/vertex_constraint.hpp"
+#include "my_intermediate_interfaces/msg/edge_constraint.hpp"
 
 namespace my_nav2_core
 {
@@ -73,6 +75,10 @@ public:
    * @param goal  The goal pose of the robot
    * @return      The sequence of poses to get from start to goal, if any
    */
+  /*virtual nav_msgs::msg::Path createPlan(
+    const geometry_msgs::msg::PoseStamped & start,
+    const geometry_msgs::msg::PoseStamped & goal) = 0;*/
+
   virtual nav_msgs::msg::Path createPlan(
     const geometry_msgs::msg::PoseStamped & start,
     const geometry_msgs::msg::PoseStamped & goal,
@@ -80,6 +86,6 @@ public:
     const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints) = 0;
 };
 
-}  // namespace nav2_core
+}  // namespace my_nav2_core
 
 #endif  // MY_NAV2_CORE__MULTI_AGENT_GLOBAL_PLANNER_HPP_

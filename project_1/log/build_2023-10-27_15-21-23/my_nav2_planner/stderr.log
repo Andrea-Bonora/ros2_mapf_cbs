@@ -1,0 +1,18 @@
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o: in function `WPTest_test_dynamic_parameters_Test::TestBody()':
+test_dynamic_parameters.cpp:(.text+0xbc): undefined reference to `nav2_planner::PlannerServer::PlannerServer(rclcpp::NodeOptions const&)'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o: in function `PlannerShim::~PlannerShim()':
+test_dynamic_parameters.cpp:(.text._ZN11PlannerShimD2Ev[_ZN11PlannerShimD5Ev]+0x13): undefined reference to `nav2_planner::PlannerServer::~PlannerServer()'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o: in function `PlannerShim::~PlannerShim()':
+test_dynamic_parameters.cpp:(.text._ZN11PlannerShimD0Ev[_ZN11PlannerShimD5Ev]+0x17): undefined reference to `nav2_planner::PlannerServer::~PlannerServer()'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o: in function `PlannerShim::dynamicParamsShim(std::vector<rclcpp::Parameter, std::allocator<rclcpp::Parameter> >)':
+test_dynamic_parameters.cpp:(.text._ZN11PlannerShim17dynamicParamsShimESt6vectorIN6rclcpp9ParameterESaIS2_EE[_ZN11PlannerShim17dynamicParamsShimESt6vectorIN6rclcpp9ParameterESaIS2_EE]+0x1c8): undefined reference to `nav2_planner::PlannerServer::dynamicParametersCallback(std::vector<rclcpp::Parameter, std::allocator<rclcpp::Parameter> >)'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o:(.data.rel.ro._ZTI11PlannerShim[_ZTI11PlannerShim]+0x10): undefined reference to `typeinfo for nav2_planner::PlannerServer'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o:(.data.rel.ro._ZTV11PlannerShim[_ZTV11PlannerShim]+0x10): undefined reference to `nav2_planner::PlannerServer::on_configure(rclcpp_lifecycle::State const&)'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o:(.data.rel.ro._ZTV11PlannerShim[_ZTV11PlannerShim]+0x18): undefined reference to `nav2_planner::PlannerServer::on_cleanup(rclcpp_lifecycle::State const&)'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o:(.data.rel.ro._ZTV11PlannerShim[_ZTV11PlannerShim]+0x20): undefined reference to `nav2_planner::PlannerServer::on_shutdown(rclcpp_lifecycle::State const&)'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o:(.data.rel.ro._ZTV11PlannerShim[_ZTV11PlannerShim]+0x28): undefined reference to `nav2_planner::PlannerServer::on_activate(rclcpp_lifecycle::State const&)'
+/usr/bin/ld: CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o:(.data.rel.ro._ZTV11PlannerShim[_ZTV11PlannerShim]+0x30): undefined reference to `nav2_planner::PlannerServer::on_deactivate(rclcpp_lifecycle::State const&)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [test/CMakeFiles/test_dynamic_parameters.dir/build.make:541: test/test_dynamic_parameters] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:228: test/CMakeFiles/test_dynamic_parameters.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

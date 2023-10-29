@@ -1,1 +1,3 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/turtlebot3_multi_robot/ament_cmake_environment_hooks/local_setup.dsv
+source;share/turtlebot3_multi_robot/environment/ament_prefix_path.sh
+source;share/turtlebot3_multi_robot/environment/path.sh
+source;share/turtlebot3_multi_robot/environment/multi_robot.dsv

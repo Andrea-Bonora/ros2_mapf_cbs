@@ -1,1 +1,3 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/EdgeConstraint.msg
+geometry_msgs/PoseStamped cell_from
+geometry_msgs/PoseStamped cell_to
+int64 time_step

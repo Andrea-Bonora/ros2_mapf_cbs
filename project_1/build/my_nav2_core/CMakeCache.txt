@@ -25,7 +25,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -256,7 +256,7 @@ TINYXML2_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libtinyxml2.so
 TinyXML2_DIR:PATH=TinyXML2_DIR-NOTFOUND
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/humble/lib/libnav2_goal_updated_controller_bt_node.so
+_lib:FILEPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.so
 
 //The directory containing a CMake configuration file for action_msgs.
 action_msgs_DIR:PATH=/opt/ros/humble/share/action_msgs/cmake
@@ -431,6 +431,9 @@ map_msgs_DIR:PATH=/opt/ros/humble/share/map_msgs/cmake
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/humble/share/message_filters/cmake
+
+//The directory containing a CMake configuration file for my_intermediate_interfaces.
+my_intermediate_interfaces_DIR:PATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/share/my_intermediate_interfaces/cmake
 
 //Value Computed by CMake
 my_nav2_core_BINARY_DIR:STATIC=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_core
@@ -798,6 +801,4 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.10
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=b91b4035ecb3bb3f5760d35922531bcd
-//Index for unique symlink install targets
-__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=0
 

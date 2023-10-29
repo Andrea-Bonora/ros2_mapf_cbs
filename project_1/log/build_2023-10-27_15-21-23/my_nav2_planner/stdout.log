@@ -1,0 +1,13 @@
+[35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[35m[1mConsolidate compiler generated dependencies of target my_planner_server_core[0m
+[35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[ 20%] Built target gtest_main
+[ 40%] Built target gtest
+[ 50%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[ 60%] [32m[1mLinking CXX shared library libmy_planner_server_core.so[0m
+[ 60%] Built target my_planner_server_core
+[ 70%] [32mBuilding CXX object CMakeFiles/my_planner_server.dir/src/main.cpp.o[0m
+[ 80%] [32mBuilding CXX object test/CMakeFiles/test_dynamic_parameters.dir/test_dynamic_parameters.cpp.o[0m
+[ 90%] [32m[1mLinking CXX executable my_planner_server[0m
+[ 90%] Built target my_planner_server
+[100%] [32m[1mLinking CXX executable test_dynamic_parameters[0m

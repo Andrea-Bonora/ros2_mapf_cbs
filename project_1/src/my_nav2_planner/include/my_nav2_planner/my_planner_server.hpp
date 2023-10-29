@@ -26,9 +26,8 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "nav2_util/lifecycle_node.hpp"
-//#include "nav2_msgs/action/compute_path_to_pose.hpp"
+#include "nav2_msgs/action/compute_path_to_pose.hpp"
 #include "nav2_msgs/action/compute_path_through_poses.hpp"
-#include "my_intermediate_interfaces/action/my_compute_path_to_pose.hpp"
 #include "nav2_msgs/msg/costmap.hpp"
 #include "nav2_util/robot_utils.hpp"
 #include "nav2_util/simple_action_server.hpp"
@@ -39,13 +38,12 @@
 #include "pluginlib/class_loader.hpp"
 #include "pluginlib/class_list_macros.hpp"
 #include "my_nav2_core/multi_agent_global_planner.hpp"
-#include "nav2_core/global_planner.hpp"
 #include "nav2_msgs/srv/is_path_valid.hpp"
 
 namespace my_nav2_planner
 {
 /**
- * @class nav2_planner::PlannerServer
+ * @class my_nav2_planner::PlannerServer
  * @brief An action server implements the behavior tree's ComputePathToPose
  * interface and hosts various plugins of different algorithms to compute plans.
  */
@@ -73,8 +71,6 @@ public:
   nav_msgs::msg::Path getPlan(
     const geometry_msgs::msg::PoseStamped & start,
     const geometry_msgs::msg::PoseStamped & goal,
-    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
     const std::string & planner_id);
 
 protected:
@@ -109,7 +105,7 @@ protected:
    */
   nav2_util::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & state) override;
 
-  using ActionToPose = my_intermediate_interfaces::action::MyComputePathToPose;
+  using ActionToPose = nav2_msgs::action::ComputePathToPose;
   using ActionThroughPoses = nav2_msgs::action::ComputePathThroughPoses;
   using ActionServerToPose = nav2_util::SimpleActionServer<ActionToPose>;
   using ActionServerThroughPoses = nav2_util::SimpleActionServer<ActionThroughPoses>;
