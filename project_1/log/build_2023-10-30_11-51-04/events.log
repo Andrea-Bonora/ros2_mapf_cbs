@@ -1,0 +1,172 @@
+[0.000000] (-) TimerEvent: {}
+[0.000316] (-) JobUnselected: {'identifier': 'my_intermediate'}
+[0.000375] (-) JobUnselected: {'identifier': 'my_intermediate_interfaces'}
+[0.000388] (-) JobUnselected: {'identifier': 'my_nav2_core'}
+[0.000414] (-) JobUnselected: {'identifier': 'my_nav2_navfn_planner'}
+[0.000425] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000436] (-) JobUnselected: {'identifier': 'my_try_bringup'}
+[0.000447] (-) JobUnselected: {'identifier': 'nav2_straightline_planner'}
+[0.000457] (-) JobUnselected: {'identifier': 'turtlebot3_multi_robot'}
+[0.000470] (my_nav2_planner) JobQueued: {'identifier': 'my_nav2_planner', 'dependencies': OrderedDict([('my_intermediate_interfaces', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces'), ('my_nav2_core', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core'), ('my_nav2_navfn_planner', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner')])}
+[0.000492] (my_nav2_planner) JobStarted: {'identifier': 'my_nav2_planner'}
+[0.065891] (my_nav2_planner) JobProgress: {'identifier': 'my_nav2_planner', 'progress': 'cmake'}
+[0.066177] (my_nav2_planner) JobProgress: {'identifier': 'my_nav2_planner', 'progress': 'build'}
+[0.066708] (my_nav2_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner', '--', '-j8', '-l8'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea/tesi/ros2_mapf_cbs'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('MANAGERPID', '1776'), ('SYSTEMD_EXEC_PID', '1986'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '11625'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('JOURNAL_STREAM', '8:35996'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/1967,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/1967'), ('INVOCATION_ID', '1b246229b0d54301b2132d9b9328a43c'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.CCL7C2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:272933f7-59dd-4356-80c4-2439cc2ac641'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.099697] (-) TimerEvent: {}
+[0.114476] (my_nav2_planner) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o\x1b[0m\n'}
+[0.199805] (-) TimerEvent: {}
+[0.300098] (-) TimerEvent: {}
+[0.400391] (-) TimerEvent: {}
+[0.500783] (-) TimerEvent: {}
+[0.601113] (-) TimerEvent: {}
+[0.701499] (-) TimerEvent: {}
+[0.801880] (-) TimerEvent: {}
+[0.902254] (-) TimerEvent: {}
+[1.002623] (-) TimerEvent: {}
+[1.102989] (-) TimerEvent: {}
+[1.203354] (-) TimerEvent: {}
+[1.303719] (-) TimerEvent: {}
+[1.404085] (-) TimerEvent: {}
+[1.504484] (-) TimerEvent: {}
+[1.604770] (-) TimerEvent: {}
+[1.705112] (-) TimerEvent: {}
+[1.805475] (-) TimerEvent: {}
+[1.905835] (-) TimerEvent: {}
+[2.006220] (-) TimerEvent: {}
+[2.106623] (-) TimerEvent: {}
+[2.206953] (-) TimerEvent: {}
+[2.307327] (-) TimerEvent: {}
+[2.407673] (-) TimerEvent: {}
+[2.508070] (-) TimerEvent: {}
+[2.608538] (-) TimerEvent: {}
+[2.676685] (my_nav2_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:34\x1b[m\x1b[K:\n'}
+[2.676875] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:109:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KComputePathToPose\x1b[m\x1b[K\xe2\x80\x99 in namespace \xe2\x80\x98\x1b[01m\x1b[Knav2_msgs::action\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[KComputePathThroughPoses\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.676931] (my_nav2_planner) StderrLine: {'line': b'  109 |   using ActionServerToPoseNoConstraints = nav2_msgs::action::\x1b[01;31m\x1b[KComputePathToPose\x1b[m\x1b[K;\n'}
+[2.676973] (my_nav2_planner) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.677013] (my_nav2_planner) StderrLine: {'line': b'      |                                                              \x1b[32m\x1b[KComputePathThroughPoses\x1b[m\x1b[K\n'}
+[2.690060] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:191:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KActionServerToPoseNoConstraints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.690204] (my_nav2_planner) StderrLine: {'line': b'  191 |   std::unique_ptr<\x1b[01;31m\x1b[KActionServerToPoseNoConstraints\x1b[m\x1b[K> action_server_pose_no_constraints_;\n'}
+[2.690252] (my_nav2_planner) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.690303] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:191:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.690345] (my_nav2_planner) StderrLine: {'line': b'  191 |   std::unique_ptr<ActionServerToPoseNoConstraints\x1b[01;31m\x1b[K>\x1b[m\x1b[K action_server_pose_no_constraints_;\n'}
+[2.690386] (my_nav2_planner) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[2.690424] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:191:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 2 is invalid\n'}
+[2.708630] (-) TimerEvent: {}
+[2.762771] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual nav2_util::CallbackReturn my_nav2_planner::MyPlannerServer::on_configure(const rclcpp_lifecycle::State&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.763240] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:150:57:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KActionServerToPoseNoConstraints\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kaction_server_pose_no_constraints_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.763373] (my_nav2_planner) StderrLine: {'line': b'  150 |   action_server_pose_no_constraints_ = std::make_unique<\x1b[01;31m\x1b[KActionServerToPoseNoConstraints\x1b[m\x1b[K>(\n'}
+[2.763421] (my_nav2_planner) StderrLine: {'line': b'      |                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.763462] (my_nav2_planner) StderrLine: {'line': b'      |                                                         \x1b[32m\x1b[Kaction_server_pose_no_constraints_\x1b[m\x1b[K\n'}
+[2.763502] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:150:89:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kmake_unique<<expression error> >(std::shared_ptr<nav2_util::LifecycleNode>, const char [36], std::_Bind_helper<false, void (my_nav2_planner::MyPlannerServer::*)(), my_nav2_planner::MyPlannerServer*>::type, std::nullptr_t, std::chrono::milliseconds, bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.763544] (my_nav2_planner) StderrLine: {'line': b'  150 |   action_server_pose_no_constraints_ = \x1b[01;31m\x1b[Kstd::make_unique<ActionServerToPoseNoConstraints>(\x1b[m\x1b[K\n'}
+[2.763583] (my_nav2_planner) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.763622] (my_nav2_planner) StderrLine: {'line': b'  151 | \x1b[01;31m\x1b[K    shared_from_this(),\x1b[m\x1b[K\n'}
+[2.763661] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                                  \n'}
+[2.763700] (my_nav2_planner) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[K    "compute_path_to_pose_no_constraints",\x1b[m\x1b[K\n'}
+[2.763738] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                               \n'}
+[2.763775] (my_nav2_planner) StderrLine: {'line': b'  153 | \x1b[01;31m\x1b[K    std::bind(&MyPlannerServer::computePlan, this),\x1b[m\x1b[K\n'}
+[2.763813] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                      \n'}
+[2.763852] (my_nav2_planner) StderrLine: {'line': b'  154 | \x1b[01;31m\x1b[K    nullptr,\x1b[m\x1b[K\n'}
+[2.763893] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~\x1b[m\x1b[K                                                                             \n'}
+[2.763936] (my_nav2_planner) StderrLine: {'line': b'  155 | \x1b[01;31m\x1b[K    std::chrono::milliseconds(500),\x1b[m\x1b[K\n'}
+[2.763975] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                      \n'}
+[2.764017] (my_nav2_planner) StderrLine: {'line': b'  156 | \x1b[01;31m\x1b[K    true)\x1b[m\x1b[K;\n'}
+[2.764054] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                                                \n'}
+[2.764093] (my_nav2_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/locale_conv.h:41\x1b[m\x1b[K,\n'}
+[2.764133] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/locale:43\x1b[m\x1b[K,\n'}
+[2.764171] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/iomanip:43\x1b[m\x1b[K,\n'}
+[2.764210] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18\x1b[m\x1b[K:\n'}
+[2.764249] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:961:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.764291] (my_nav2_planner) StderrLine: {'line': b'  961 |     \x1b[01;36m\x1b[Kmake_unique\x1b[m\x1b[K(_Args&&... __args)\n'}
+[2.764330] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.764368] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:961:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.764407] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:150:89:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.764446] (my_nav2_planner) StderrLine: {'line': b'  150 |   action_server_pose_no_constraints_ = \x1b[01;31m\x1b[Kstd::make_unique<ActionServerToPoseNoConstraints>(\x1b[m\x1b[K\n'}
+[2.764484] (my_nav2_planner) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.764522] (my_nav2_planner) StderrLine: {'line': b'  151 | \x1b[01;31m\x1b[K    shared_from_this(),\x1b[m\x1b[K\n'}
+[2.764560] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                                  \n'}
+[2.764598] (my_nav2_planner) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[K    "compute_path_to_pose_no_constraints",\x1b[m\x1b[K\n'}
+[2.764636] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                               \n'}
+[2.764674] (my_nav2_planner) StderrLine: {'line': b'  153 | \x1b[01;31m\x1b[K    std::bind(&MyPlannerServer::computePlan, this),\x1b[m\x1b[K\n'}
+[2.764712] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                      \n'}
+[2.764753] (my_nav2_planner) StderrLine: {'line': b'  154 | \x1b[01;31m\x1b[K    nullptr,\x1b[m\x1b[K\n'}
+[2.764791] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~\x1b[m\x1b[K                                                                             \n'}
+[2.764832] (my_nav2_planner) StderrLine: {'line': b'  155 | \x1b[01;31m\x1b[K    std::chrono::milliseconds(500),\x1b[m\x1b[K\n'}
+[2.764870] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                      \n'}
+[2.764908] (my_nav2_planner) StderrLine: {'line': b'  156 | \x1b[01;31m\x1b[K    true)\x1b[m\x1b[K;\n'}
+[2.764947] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                                                \n'}
+[2.764985] (my_nav2_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/locale_conv.h:41\x1b[m\x1b[K,\n'}
+[2.765025] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/locale:43\x1b[m\x1b[K,\n'}
+[2.765063] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/iomanip:43\x1b[m\x1b[K,\n'}
+[2.765100] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18\x1b[m\x1b[K:\n'}
+[2.765138] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:967:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.765178] (my_nav2_planner) StderrLine: {'line': b'  967 |     \x1b[01;36m\x1b[Kmake_unique\x1b[m\x1b[K(size_t __num)\n'}
+[2.765216] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.765254] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:967:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.765292] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:150:89:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.765332] (my_nav2_planner) StderrLine: {'line': b'  150 |   action_server_pose_no_constraints_ = \x1b[01;31m\x1b[Kstd::make_unique<ActionServerToPoseNoConstraints>(\x1b[m\x1b[K\n'}
+[2.765369] (my_nav2_planner) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.765407] (my_nav2_planner) StderrLine: {'line': b'  151 | \x1b[01;31m\x1b[K    shared_from_this(),\x1b[m\x1b[K\n'}
+[2.765446] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                                  \n'}
+[2.765484] (my_nav2_planner) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[K    "compute_path_to_pose_no_constraints",\x1b[m\x1b[K\n'}
+[2.765522] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                               \n'}
+[2.765560] (my_nav2_planner) StderrLine: {'line': b'  153 | \x1b[01;31m\x1b[K    std::bind(&MyPlannerServer::computePlan, this),\x1b[m\x1b[K\n'}
+[2.765601] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                      \n'}
+[2.765642] (my_nav2_planner) StderrLine: {'line': b'  154 | \x1b[01;31m\x1b[K    nullptr,\x1b[m\x1b[K\n'}
+[2.765680] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~\x1b[m\x1b[K                                                                             \n'}
+[2.765719] (my_nav2_planner) StderrLine: {'line': b'  155 | \x1b[01;31m\x1b[K    std::chrono::milliseconds(500),\x1b[m\x1b[K\n'}
+[2.765757] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                      \n'}
+[2.765798] (my_nav2_planner) StderrLine: {'line': b'  156 | \x1b[01;31m\x1b[K    true)\x1b[m\x1b[K;\n'}
+[2.765837] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                                                \n'}
+[2.765875] (my_nav2_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/locale_conv.h:41\x1b[m\x1b[K,\n'}
+[2.765913] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/locale:43\x1b[m\x1b[K,\n'}
+[2.765951] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/iomanip:43\x1b[m\x1b[K,\n'}
+[2.765989] (my_nav2_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:18\x1b[m\x1b[K:\n'}
+[2.766028] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:973:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)\x1b[m\x1b[K\xe2\x80\x99 (deleted)\n'}
+[2.766066] (my_nav2_planner) StderrLine: {'line': b'  973 |     \x1b[01;36m\x1b[Kmake_unique\x1b[m\x1b[K(_Args&&...) = delete;\n'}
+[2.766105] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.766143] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unique_ptr.h:973:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.766182] (my_nav2_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:150:89:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.766221] (my_nav2_planner) StderrLine: {'line': b'  150 |   action_server_pose_no_constraints_ = \x1b[01;31m\x1b[Kstd::make_unique<ActionServerToPoseNoConstraints>(\x1b[m\x1b[K\n'}
+[2.766262] (my_nav2_planner) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[2.766301] (my_nav2_planner) StderrLine: {'line': b'  151 | \x1b[01;31m\x1b[K    shared_from_this(),\x1b[m\x1b[K\n'}
+[2.766338] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                                  \n'}
+[2.766377] (my_nav2_planner) StderrLine: {'line': b'  152 | \x1b[01;31m\x1b[K    "compute_path_to_pose_no_constraints",\x1b[m\x1b[K\n'}
+[2.766415] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                               \n'}
+[2.766454] (my_nav2_planner) StderrLine: {'line': b'  153 | \x1b[01;31m\x1b[K    std::bind(&MyPlannerServer::computePlan, this),\x1b[m\x1b[K\n'}
+[2.766492] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                      \n'}
+[2.766530] (my_nav2_planner) StderrLine: {'line': b'  154 | \x1b[01;31m\x1b[K    nullptr,\x1b[m\x1b[K\n'}
+[2.766569] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~\x1b[m\x1b[K                                                                             \n'}
+[2.766607] (my_nav2_planner) StderrLine: {'line': b'  155 | \x1b[01;31m\x1b[K    std::chrono::milliseconds(500),\x1b[m\x1b[K\n'}
+[2.766653] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K                                                      \n'}
+[2.766699] (my_nav2_planner) StderrLine: {'line': b'  156 | \x1b[01;31m\x1b[K    true)\x1b[m\x1b[K;\n'}
+[2.766738] (my_nav2_planner) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~\x1b[m\x1b[K                                                                                \n'}
+[2.808823] (-) TimerEvent: {}
+[2.909171] (-) TimerEvent: {}
+[3.009526] (-) TimerEvent: {}
+[3.109894] (-) TimerEvent: {}
+[3.210234] (-) TimerEvent: {}
+[3.310579] (-) TimerEvent: {}
+[3.410840] (-) TimerEvent: {}
+[3.511124] (-) TimerEvent: {}
+[3.611569] (-) TimerEvent: {}
+[3.711955] (-) TimerEvent: {}
+[3.812309] (-) TimerEvent: {}
+[3.912634] (-) TimerEvent: {}
+[4.012922] (-) TimerEvent: {}
+[4.113200] (-) TimerEvent: {}
+[4.213474] (-) TimerEvent: {}
+[4.313739] (-) TimerEvent: {}
+[4.414006] (-) TimerEvent: {}
+[4.514275] (-) TimerEvent: {}
+[4.614627] (-) TimerEvent: {}
+[4.714887] (-) TimerEvent: {}
+[4.815178] (-) TimerEvent: {}
+[4.915468] (-) TimerEvent: {}
+[4.965858] (my_nav2_planner) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_planner_server_core.dir/build.make:76: CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o] Error 1\n'}
+[4.966029] (my_nav2_planner) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/my_planner_server_core.dir/all] Error 2\n'}
+[4.966149] (my_nav2_planner) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.968001] (my_nav2_planner) CommandEnded: {'returncode': 2}
+[5.015789] (-) TimerEvent: {}
+[5.052240] (my_nav2_planner) JobEnded: {'identifier': 'my_nav2_planner', 'rc': 2}
+[5.063084] (-) EventReactorShutdown: {}

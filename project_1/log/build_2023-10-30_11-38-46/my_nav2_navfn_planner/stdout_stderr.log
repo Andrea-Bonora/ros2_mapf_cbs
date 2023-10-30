@@ -1,0 +1,82 @@
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o[0m
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:44[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:263:76:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<std::map<std::__cxx11::basic_string<char>, int> >[m[K’
+  263 |               std::vector<std::map<std::string, int>> vertex_constraints = [01;31m[Knullptr[m[K,
+      |                                                                            [01;31m[K^~~~~~~[m[K
+      |                                                                            [01;31m[K|[m[K
+      |                                                                            [01;31m[Kstd::nullptr_t[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:264:74:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<std::map<std::__cxx11::basic_string<char>, int> >[m[K’
+  264 |               std::vector<std::map<std::string, int>> edge_constraints = [01;31m[Knullptr[m[K,
+      |                                                                          [01;31m[K^~~~~~~[m[K
+      |                                                                          [01;31m[K|[m[K
+      |                                                                          [01;31m[Kstd::nullptr_t[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:31[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:24[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:263:76:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<std::map<std::__cxx11::basic_string<char>, int> >[m[K’
+  263 |               std::vector<std::map<std::string, int>> vertex_constraints = [01;31m[Knullptr[m[K,
+      |                                                                            [01;31m[K^~~~~~~[m[K
+      |                                                                            [01;31m[K|[m[K
+      |                                                                            [01;31m[Kstd::nullptr_t[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:264:74:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<std::map<std::__cxx11::basic_string<char>, int> >[m[K’
+  264 |               std::vector<std::map<std::string, int>> edge_constraints = [01;31m[Knullptr[m[K,
+      |                                                                          [01;31m[K^~~~~~~[m[K
+      |                                                                          [01;31m[K|[m[K
+      |                                                                          [01;31m[Kstd::nullptr_t[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:24[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:111:95:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >[m[K’
+  111 | st std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints = [01;31m[Knullptr[m[K,
+      |                                                                                        [01;31m[K^~~~~~~[m[K
+      |                                                                                        [01;31m[K|[m[K
+      |                                                                                        [01;31m[Kstd::nullptr_t[m[K
+
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:112:91:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >[m[K’
+  112 | const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints = [01;31m[Knullptr[m[K);
+      |                                                                                       [01;31m[K^~~~~~~[m[K
+      |                                                                                       [01;31m[K|[m[K
+      |                                                                                       [01;31m[Kstd::nullptr_t[m[K
+
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:130:95:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >[m[K’
+  130 | st std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints = [01;31m[Knullptr[m[K,
+      |                                                                                        [01;31m[K^~~~~~~[m[K
+      |                                                                                        [01;31m[K|[m[K
+      |                                                                                        [01;31m[Kstd::nullptr_t[m[K
+
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:131:91:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >[m[K’
+  131 | const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints = [01;31m[Knullptr[m[K);
+      |                                                                                       [01;31m[K^~~~~~~[m[K
+      |                                                                                       [01;31m[K|[m[K
+      |                                                                                       [01;31m[Kstd::nullptr_t[m[K
+
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_navfn_planner::MyNavfnPlanner::createPlan(const PoseStamped&, const PoseStamped&)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:234:16:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Knullptr[m[K’ from ‘[01m[Kstd::nullptr_t[m[K’ to ‘[01m[Kstd::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >[m[K’
+  234 |   if (![01;31m[KmakePlan(start.pose, goal.pose, tolerance_, path)[m[K) {
+      |        [01;31m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                [01;31m[K|[m[K
+      |                [01;31m[Kstd::nullptr_t[m[K
+In file included from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp:57[m[K,
+                 from [01m[K/opt/ros/humble/include/class_loader/class_loader/class_loader.hpp:55[m[K,
+                 from [01m[K/opt/ros/humble/include/class_loader/class_loader/multi_library_class_loader.hpp:52[m[K,
+                 from [01m[K/opt/ros/humble/include/pluginlib/pluginlib/class_loader.hpp:38[m[K,
+                 from [01m[K/opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:54[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:21[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:29[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:24[m[K:
+/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp: In instantiation of ‘[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = my_nav2_navfn_planner::MyNavfnPlanner; B = my_nav2_core::MultiAgentGlobalPlanner][m[K’:
+[01m[K/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp:216:7:[m[K   required from here
+[01m[K/opt/ros/humble/include/class_loader/class_loader/meta_object.hpp:218:12:[m[K [01;31m[Kerror: [m[Kinvalid new-expression of abstract class type ‘[01m[Kmy_nav2_navfn_planner::MyNavfnPlanner[m[K’
+  218 |     return [01;31m[Knew C[m[K;
+      |            [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:24[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:40:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[Kmy_nav2_navfn_planner::MyNavfnPlanner[m[K’:
+   40 | class [01;36m[KMyNavfnPlanner[m[K : public my_nav2_core::MultiAgentGlobalPlanner
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:191:21:[m[K [01;36m[Knote: [m[K    ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_navfn_planner::MyNavfnPlanner::createPlan(const PoseStamped&, const PoseStamped&)[m[K’
+  191 | nav_msgs::msg::Path [01;36m[KMyNavfnPlanner[m[K::createPlan(
+      |                     [01;36m[K^~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

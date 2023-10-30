@@ -1041,4 +1041,8 @@ CMakeFiles/my_planner_server.dir/src/main.cpp.o
  /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__struct.hpp
  /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__builder.hpp
  /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/is_path_valid__traits.hpp
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose.hpp
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__struct.hpp
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__builder.hpp
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to_pose__traits.hpp
 

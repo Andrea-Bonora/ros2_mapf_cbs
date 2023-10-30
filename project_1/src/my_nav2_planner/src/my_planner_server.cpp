@@ -141,6 +141,14 @@ MyPlannerServer::on_configure(const rclcpp_lifecycle::State & /*state*/)
   // Create the action servers for path planning to a pose and through poses
   action_server_pose_ = std::make_unique<ActionServerToPose>(
     shared_from_this(),
+    "compute_path_to_pose_cbs",
+    std::bind(&MyPlannerServer::computePlanCBS, this),
+    nullptr,
+    std::chrono::milliseconds(500),
+    true);
+
+  action_server_pose_no_constraints_ = std::make_unique<ActionServerToPoseNoConstraints>(
+    shared_from_this(),
     "compute_path_to_pose",
     std::bind(&MyPlannerServer::computePlan, this),
     nullptr,
@@ -518,6 +526,67 @@ MyPlannerServer::computePlan()
   }
 }
 
+void
+MyPlannerServer::computePlanCBS()
+{
+  std::lock_guard<std::mutex> lock(dynamic_params_lock_);
+
+  auto start_time = steady_clock_.now();
+
+  // Initialize the ComputePathToPose goal and result
+  auto goal = action_server_pose_->get_current_goal();
+  auto result = std::make_shared<ActionToPose::Result>();
+
+  try {
+    if (isServerInactive(action_server_pose_) || isCancelRequested(action_server_pose_)) {
+      return;
+    }
+
+    waitForCostmap();
+
+    getPreemptedGoalIfRequested(action_server_pose_, goal);
+
+    // Use start pose if provided otherwise use current robot pose
+    geometry_msgs::msg::PoseStamped start;
+    if (!getStartPose(action_server_pose_, goal, start)) {
+      return;
+    }
+
+    // Transform them into the global frame
+    geometry_msgs::msg::PoseStamped goal_pose = goal->goal;
+    if (!transformPosesToGlobalFrame(action_server_pose_, start, goal_pose)) {
+      return;
+    }
+
+    result->path = getPlan(start, goal_pose, goal->planner_id);
+
+    if (!validatePath(action_server_pose_, goal_pose, result->path, goal->planner_id)) {
+      return;
+    }
+
+    // Publish the plan for visualization purposes
+    publishPlan(result->path);
+
+    auto cycle_duration = steady_clock_.now() - start_time;
+    result->planning_time = cycle_duration;
+
+    if (max_planner_duration_ && cycle_duration.seconds() > max_planner_duration_) {
+      RCLCPP_WARN(
+        get_logger(),
+        "Planner loop missed its desired rate of %.4f Hz. Current loop rate is %.4f Hz",
+        1 / max_planner_duration_, 1 / cycle_duration.seconds());
+    }
+
+    action_server_pose_->succeeded_current(result);
+  } catch (std::exception & ex) {
+    RCLCPP_WARN(
+      get_logger(), "%s plugin failed to plan calculation to (%.2f, %.2f): \"%s\"",
+      goal->planner_id.c_str(), goal->goal.pose.position.x,
+      goal->goal.pose.position.y, ex.what());
+    action_server_pose_->terminate_current();
+  }
+}
+
 nav_msgs::msg::Path
 MyPlannerServer::getPlan(
   const geometry_msgs::msg::PoseStamped & start,
@@ -529,18 +598,18 @@ MyPlannerServer::getPlan(
     "(%.2f, %.2f).", start.pose.position.x, start.pose.position.y,
     goal.pose.position.x, goal.pose.position.y);
 
-  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vc;
-  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> ec;
+  //const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vc;
+  //const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> ec;
 
   if (planners_.find(planner_id) != planners_.end()) {
-    return planners_[planner_id]->createPlan(start, goal, vc, ec);
+    return planners_[planner_id]->createPlan(start, goal/*, vc, ec*/);
   } else {
     if (planners_.size() == 1 && planner_id.empty()) {
       RCLCPP_WARN_ONCE(
         get_logger(), "No planners specified in action call. "
         "Server will use only plugin %s in server."
         " This warning will appear once.", planner_ids_concat_.c_str());
-      return planners_[planners_.begin()->first]->createPlan(start, goal, vc, ec);
+      return planners_[planners_.begin()->first]->createPlan(start, goal/*, vc, ec*/);
     } else {
       RCLCPP_ERROR(
         get_logger(), "planner %s is not a valid planner. "

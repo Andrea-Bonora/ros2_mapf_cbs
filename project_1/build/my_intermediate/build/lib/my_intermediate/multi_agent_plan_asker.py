@@ -37,14 +37,12 @@ class MultiAgentPlanAskerNode(Node):
 
         i = 1
         futures = []
-
+        self.get_logger().info(str(len(s_request.requests)))
         for i in range(len(s_request.requests)):
             r = s_request.requests[i]
             client_cb_group_actions = MutuallyExclusiveCallbackGroup()
             client = ActionClient(self, MyComputePathToPose, r.name + '/compute_path_to_pose', callback_group=client_cb_group_actions)
-            self.get_logger().info("before waiting server " + r.name + '/compute_path_to_pose')
             client.wait_for_server()
-            self.get_logger().info("after waiting server")
         
             request = MyComputePathToPose.Goal()
             request.goal = r.goal
@@ -73,10 +71,8 @@ class MultiAgentPlanAskerNode(Node):
                results.append(result)
                self.get_logger().info("PROVA")
 
-        self.get_logger().info("Collect results1")
         for r in results:
             rclpy.spin_until_future_complete(self, r)
-        self.get_logger().info("Collect results2")
         plans = []
         for i, r in enumerate(results):
             result = r.result().result

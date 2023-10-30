@@ -26,7 +26,7 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "nav2_util/lifecycle_node.hpp"
-//#include "nav2_msgs/action/compute_path_to_pose.hpp"
+#include "nav2_msgs/action/compute_path_to_pose.hpp"
 #include "nav2_msgs/action/compute_path_through_poses.hpp"
 #include "nav2_msgs/msg/costmap.hpp"
 #include "nav2_util/robot_utils.hpp"
@@ -106,9 +106,11 @@ protected:
    */
   nav2_util::CallbackReturn on_shutdown(const rclcpp_lifecycle::State & state) override;
 
+  using ActionToPoseNoConstraints = nav2_msgs::action::ComputePathToPose;
   using ActionToPose = my_intermediate_interfaces::action::MyComputePathToPose;
   using ActionThroughPoses = nav2_msgs::action::ComputePathThroughPoses;
   using ActionServerToPose = nav2_util::SimpleActionServer<ActionToPose>;
+  using ActionServerToPoseNoConstraints = nav2_util::SimpleActionServer<ActionToPoseNoConstraints>;
   using ActionServerThroughPoses = nav2_util::SimpleActionServer<ActionThroughPoses>;
 
   /**
@@ -187,6 +189,7 @@ protected:
     const std::string & planner_id);
 
   // Our action server implements the ComputePathToPose action
+  std::unique_ptr<ActionServerToPoseNoConstraints> action_server_pose_no_constraints_;
   std::unique_ptr<ActionServerToPose> action_server_pose_;
   std::unique_ptr<ActionServerThroughPoses> action_server_poses_;
 
@@ -195,6 +198,12 @@ protected:
    * ComputePathToPose
    */
   void computePlan();
+
+  /**
+   * @brief The action server callback which calls planner to get the path for CBS
+   * ComputePathToPoseCBS
+   */
+  void computePlanCBS();
 
   /**
    * @brief The action server callback which calls planner to get the path

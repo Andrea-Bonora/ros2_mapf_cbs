@@ -145,7 +145,6 @@ nav_msgs::msg::Path MyNavfnPlanner::createPlan(
   }
 
   nav_msgs::msg::Path path;
-
   // Corner case of the start(x,y) = goal(x,y)
   if (start.pose.position.x == goal.pose.position.x &&
     start.pose.position.y == goal.pose.position.y)
@@ -173,7 +172,66 @@ nav_msgs::msg::Path MyNavfnPlanner::createPlan(
     return path;
   }
 
-  if (!makePlan(start.pose, goal.pose, vertex_constraints, edge_constraints, tolerance_, path)) {
+  if (!makePlan(start.pose, goal.pose, tolerance_, path, vertex_constraints, edge_constraints)) {
+    RCLCPP_WARN(
+      logger_, "%s: failed to create plan with "
+      "tolerance %.2f.", name_.c_str(), tolerance_);
+  }
+
+
+#ifdef BENCHMARK_TESTING
+  steady_clock::time_point b = steady_clock::now();
+  duration<double> time_span = duration_cast<duration<double>>(b - a);
+  std::cout << "It took " << time_span.count() * 1000 << std::endl;
+#endif
+
+  return path;
+}
+
+nav_msgs::msg::Path MyNavfnPlanner::createPlan(
+  const geometry_msgs::msg::PoseStamped & start,
+  const geometry_msgs::msg::PoseStamped & goal)
+{
+#ifdef BENCHMARK_TESTING
+  steady_clock::time_point a = steady_clock::now();
+#endif
+
+  // Update planner based on the new costmap size
+  if (isPlannerOutOfDate()) {
+    planner_->setNavArr(
+      costmap_->getSizeInCellsX(),
+      costmap_->getSizeInCellsY());
+  }
+  RCLCPP_WARN(logger_, "Trying to find a plan...");
+  nav_msgs::msg::Path path;
+  // Corner case of the start(x,y) = goal(x,y)
+  if (start.pose.position.x == goal.pose.position.x &&
+    start.pose.position.y == goal.pose.position.y)
+  {
+    unsigned int mx, my;
+    costmap_->worldToMap(start.pose.position.x, start.pose.position.y, mx, my);
+    if (costmap_->getCost(mx, my) == nav2_costmap_2d::LETHAL_OBSTACLE) {
+      RCLCPP_WARN(logger_, "Failed to create a unique pose path because of obstacles");
+      return path;
+    }
+    path.header.stamp = clock_->now();
+    path.header.frame_id = global_frame_;
+    geometry_msgs::msg::PoseStamped pose;
+    pose.header = path.header;
+    pose.pose.position.z = 0.0;
+
+    pose.pose = start.pose;
+    // if we have a different start and goal orientation, set the unique path pose to the goal
+    // orientation, unless use_final_approach_orientation=true where we need it to be the start
+    // orientation to avoid movement from the local planner
+    if (start.pose.orientation != goal.pose.orientation && !use_final_approach_orientation_) {
+      pose.pose.orientation = goal.pose.orientation;
+    }
+    path.poses.push_back(pose);
+    return path;
+  }
+
+  if (!makePlan(start.pose, goal.pose, tolerance_, path)) {
     RCLCPP_WARN(
       logger_, "%s: failed to create plan with "
       "tolerance %.2f.", name_.c_str(), tolerance_);
@@ -205,10 +263,10 @@ bool
 MyNavfnPlanner::makePlan(
   const geometry_msgs::msg::Pose & start,
   const geometry_msgs::msg::Pose & goal, 
-  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
   double tolerance,
-  nav_msgs::msg::Path & plan)
+  nav_msgs::msg::Path & plan,
+  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
+  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints)
 {
   // clear the plan, just in case
   plan.poses.clear();
@@ -314,7 +372,7 @@ MyNavfnPlanner::makePlan(
 
   if (found_legal) {
     // extract the plan
-    if (getPlanFromPotential(best_pose, vertex_constraints, edge_constraints, plan)) {
+    if (getPlanFromPotential(best_pose, plan, vertex_constraints, edge_constraints)) {
       smoothApproachToGoal(best_pose, plan);
 
       // If use_final_approach_orientation=true, interpolate the last pose orientation from the
@@ -379,9 +437,9 @@ MyNavfnPlanner::smoothApproachToGoal(
 bool
 MyNavfnPlanner::getPlanFromPotential(
   const geometry_msgs::msg::Pose & goal,
+  nav_msgs::msg::Path & plan,
   const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
-  nav_msgs::msg::Path & plan)
+  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints)
 {
   // clear the plan, just in case
   plan.poses.clear();
@@ -436,6 +494,7 @@ MyNavfnPlanner::getPlanFromPotential(
       edge_constr.push_back(object);
   }
 
+  RCLCPP_WARN(logger_,"max_cycles: %d", max_cycles);
   int path_len = planner_->calcPath(max_cycles, vert_constr, edge_constr);
 
   if (path_len == 0) {

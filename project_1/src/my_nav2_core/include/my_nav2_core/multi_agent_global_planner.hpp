@@ -75,9 +75,10 @@ public:
    * @param goal  The goal pose of the robot
    * @return      The sequence of poses to get from start to goal, if any
    */
-  /*virtual nav_msgs::msg::Path createPlan(
+  
+  virtual nav_msgs::msg::Path createPlan(
     const geometry_msgs::msg::PoseStamped & start,
-    const geometry_msgs::msg::PoseStamped & goal) = 0;*/
+    const geometry_msgs::msg::PoseStamped & goal) = 0;
 
   virtual nav_msgs::msg::Path createPlan(
     const geometry_msgs::msg::PoseStamped & start,

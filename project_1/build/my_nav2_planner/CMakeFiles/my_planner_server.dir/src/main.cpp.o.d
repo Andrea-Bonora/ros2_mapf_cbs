@@ -665,8 +665,8 @@ CMakeFiles/my_planner_server.dir/src/main.cpp.o: \
  /opt/ros/humble/include/bond/bond/msg/detail/status__traits.hpp \
  /opt/ros/humble/include/bondcpp/BondSM_sm.hpp \
  /opt/ros/humble/include/smclib/statemap.hpp \
- /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp \
- /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__struct.hpp \
+ /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_to_pose.hpp \
+ /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__struct.hpp \
  /opt/ros/humble/include/unique_identifier_msgs/unique_identifier_msgs/msg/detail/uuid__struct.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/srv/cancel_goal.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/srv/detail/cancel_goal__struct.hpp \
@@ -683,6 +683,10 @@ CMakeFiles/my_planner_server.dir/src/main.cpp.o: \
  /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__traits.hpp \
  /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status__traits.hpp \
+ /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__builder.hpp \
+ /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_to_pose__traits.hpp \
+ /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/compute_path_through_poses.hpp \
+ /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__struct.hpp \
  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__builder.hpp \
  /opt/ros/humble/include/nav2_msgs/nav2_msgs/action/detail/compute_path_through_poses__traits.hpp \
  /opt/ros/humble/include/nav2_msgs/nav2_msgs/msg/costmap.hpp \

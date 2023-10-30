@@ -260,8 +260,8 @@ public:
    * @return The lenght of the path found, 0 if none
    */
   int calcPath(int n, 
-              std::vector<std::map<std::string, int>> vertex_constraints,
-              std::vector<std::map<std::string, int>> edge_constraints,
+              std::vector<std::map<std::string, int>> vertex_constraints = {},
+              std::vector<std::map<std::string, int>> edge_constraints = {},
               int * st = NULL);
 
   /**

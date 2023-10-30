@@ -90,6 +90,17 @@ public:
     const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
     const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints) override;
 
+  
+  /**
+   * @brief Creating a plan from start and goal poses
+   * @param start Start pose
+   * @param goal Goal pose
+   * @return nav_msgs::Path of the generated path
+   */
+  nav_msgs::msg::Path createPlan(
+    const geometry_msgs::msg::PoseStamped & start,
+    const geometry_msgs::msg::PoseStamped & goal) override;
+
 protected:
   /**
    * @brief Compute a plan given start and goal poses, provided in global world frame.
@@ -101,11 +112,11 @@ protected:
    */
   bool makePlan(
     const geometry_msgs::msg::Pose & start,
-    const geometry_msgs::msg::Pose & goal, 
-    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
+    const geometry_msgs::msg::Pose & goal,
     double tolerance,
-    nav_msgs::msg::Path & plan);
+    nav_msgs::msg::Path & plan,
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints = {},
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints = {});
 
   /**
    * @brief Compute the navigation function given a seed point in the world to start from
@@ -122,9 +133,9 @@ protected:
    */
   bool getPlanFromPotential(
     const geometry_msgs::msg::Pose & goal,
-    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints,
-    nav_msgs::msg::Path & plan);
+    nav_msgs::msg::Path & plan,
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints = {},
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints = {});
 
   /**
    * @brief Remove artifacts at the end of the path - originated from planning on a discretized world

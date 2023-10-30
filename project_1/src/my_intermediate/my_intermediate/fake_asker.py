@@ -65,8 +65,9 @@ class FakeAskerNode(Node):
                     break
             '''
 
-            #for i, plan in enumerate(response.plans):
-            #    self.execute_plan(plan, i+1)
+            for i, plan in enumerate(response.plans):
+                self.get_logger().info(str(len(plan.path.poses)))
+                #self.execute_plan(plan, i+1)
 
         except Exception as e:
             self.get_logger().error("Service call failed %r" % (e,))   

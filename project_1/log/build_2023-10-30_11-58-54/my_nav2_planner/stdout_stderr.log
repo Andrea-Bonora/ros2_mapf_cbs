@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target my_planner_server_core[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvirtual nav2_util::CallbackReturn my_nav2_planner::MyPlannerServer::on_configure(const rclcpp_lifecycle::State&)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:145:33:[m[K [01;31m[Kerror: [m[K‘[01m[KcomputePlanCBS[m[K’ is not a member of ‘[01m[Kmy_nav2_planner::MyPlannerServer[m[K’
+  145 |     std::bind(&MyPlannerServer::[01;31m[KcomputePlanCBS[m[K, this),
+      |                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K At global scope:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:530:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid my_nav2_planner::MyPlannerServer::computePlanCBS()[m[K’
+  530 | [01;31m[KMyPlannerServer[m[K::computePlanCBS()
+      | [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:530:1:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid my_nav2_planner::MyPlannerServer::computePlanCBS()[m[K’
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:34[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:51:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass my_nav2_planner::MyPlannerServer[m[K’ defined here
+   51 | class [01;36m[KMyPlannerServer[m[K : public nav2_util::LifecycleNode
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_planner_server_core.dir/build.make:76: CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/my_planner_server_core.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
