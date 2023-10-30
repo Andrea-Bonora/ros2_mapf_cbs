@@ -87,19 +87,8 @@ public:
   nav_msgs::msg::Path createPlan(
     const geometry_msgs::msg::PoseStamped & start,
     const geometry_msgs::msg::PoseStamped & goal,
-    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
-    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints) override;
-
-  
-  /**
-   * @brief Creating a plan from start and goal poses
-   * @param start Start pose
-   * @param goal Goal pose
-   * @return nav_msgs::Path of the generated path
-   */
-  nav_msgs::msg::Path createPlan(
-    const geometry_msgs::msg::PoseStamped & start,
-    const geometry_msgs::msg::PoseStamped & goal) override;
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints = {},
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints = {}) override;
 
 protected:
   /**

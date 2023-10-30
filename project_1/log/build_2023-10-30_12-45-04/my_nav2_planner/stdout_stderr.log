@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target my_planner_server_core[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o[0m
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:[m[K In member function ‘[01m[Kvoid my_nav2_planner::MyPlannerServer::computePlan()[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:519:44:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kshared_ptr<[01;32m[Knav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >[m[K>[m[K’ to ‘[01m[Kshared_ptr<[01;32m[Kmy_intermediate_interfaces::action::MyComputePathToPose_Result_<std::allocator<void> >[m[K>[m[K’
+  519 |     action_server_pose_->succeeded_current([01;31m[Kresult[m[K);
+      |                                            [01;31m[K^~~~~~[m[K
+      |                                            [01;31m[K|[m[K
+      |                                            [01;31m[Kshared_ptr<nav2_msgs::action::ComputePathToPose_Result_<std::allocator<void> >>[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:33[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/src/my_planner_server.cpp:34[m[K:
+[01m[K/opt/ros/humble/include/nav2_util/simple_action_server.hpp:474:56:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid nav2_util::SimpleActionServer<ActionT>::succeeded_current(std::shared_ptr<typename ActionT::Result>) [with ActionT = my_intermediate_interfaces::action::MyComputePathToPose; typename ActionT::Result = my_intermediate_interfaces::action::MyComputePathToPose_Result_<std::allocator<void> >][m[K’
+  474 |     [01;36m[Ktypename std::shared_ptr<typename ActionT::Result> result =[m[K
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+  475 | [01;36m[K    std::make_shared<typename ActionT::Result>()[m[K)
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K        
+gmake[2]: *** [CMakeFiles/my_planner_server_core.dir/build.make:76: CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/my_planner_server_core.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

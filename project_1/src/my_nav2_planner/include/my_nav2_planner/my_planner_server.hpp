@@ -72,7 +72,9 @@ public:
   nav_msgs::msg::Path getPlan(
     const geometry_msgs::msg::PoseStamped & start,
     const geometry_msgs::msg::PoseStamped & goal,
-    const std::string & planner_id);
+    const std::string & planner_id,
+    const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints = {},
+    const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints = {});
 
 protected:
   /**

@@ -173,6 +173,7 @@ MyPlannerServer::on_activate(const rclcpp_lifecycle::State & /*state*/)
 
   plan_publisher_->on_activate();
   action_server_pose_->activate();
+  action_server_pose_no_constraints_->activate();
   action_server_poses_->activate();
   costmap_ros_->activate();
 
@@ -205,6 +206,7 @@ MyPlannerServer::on_deactivate(const rclcpp_lifecycle::State & /*state*/)
   RCLCPP_INFO(get_logger(), "Deactivating");
 
   action_server_pose_->deactivate();
+  action_server_pose_no_constraints_->deactivate();
   action_server_poses_->deactivate();
   plan_publisher_->on_deactivate();
 
@@ -240,6 +242,7 @@ MyPlannerServer::on_cleanup(const rclcpp_lifecycle::State & /*state*/)
   RCLCPP_INFO(get_logger(), "Cleaning up");
 
   action_server_pose_.reset();
+  action_server_pose_no_constraints_.reset();
   action_server_poses_.reset();
   plan_publisher_.reset();
   tf_.reset();
@@ -469,37 +472,38 @@ void
 MyPlannerServer::computePlan()
 {
   std::lock_guard<std::mutex> lock(dynamic_params_lock_);
-
   auto start_time = steady_clock_.now();
 
   // Initialize the ComputePathToPose goal and result
-  auto goal = action_server_pose_->get_current_goal();
-  auto result = std::make_shared<ActionToPose::Result>();
+  auto goal = action_server_pose_no_constraints_->get_current_goal();
+  auto result = std::make_shared<ActionToPoseNoConstraints::Result>();
 
   try {
-    if (isServerInactive(action_server_pose_) || isCancelRequested(action_server_pose_)) {
+    if (isServerInactive(action_server_pose_no_constraints_) || isCancelRequested(action_server_pose_no_constraints_)) {
       return;
     }
 
     waitForCostmap();
 
-    getPreemptedGoalIfRequested(action_server_pose_, goal);
+    getPreemptedGoalIfRequested(action_server_pose_no_constraints_, goal);
 
     // Use start pose if provided otherwise use current robot pose
     geometry_msgs::msg::PoseStamped start;
-    if (!getStartPose(action_server_pose_, goal, start)) {
+    if (!getStartPose(action_server_pose_no_constraints_, goal, start)) {
       return;
     }
 
     // Transform them into the global frame
     geometry_msgs::msg::PoseStamped goal_pose = goal->goal;
-    if (!transformPosesToGlobalFrame(action_server_pose_, start, goal_pose)) {
+    if (!transformPosesToGlobalFrame(action_server_pose_no_constraints_, start, goal_pose)) {
       return;
     }
-
+    RCLCPP_WARN(
+        get_logger(),
+        "HELLO!");
     result->path = getPlan(start, goal_pose, goal->planner_id);
 
-    if (!validatePath(action_server_pose_, goal_pose, result->path, goal->planner_id)) {
+    if (!validatePath(action_server_pose_no_constraints_, goal_pose, result->path, goal->planner_id)) {
       return;
     }
 
@@ -516,13 +520,13 @@ MyPlannerServer::computePlan()
         1 / max_planner_duration_, 1 / cycle_duration.seconds());
     }
 
-    action_server_pose_->succeeded_current(result);
+    action_server_pose_no_constraints_->succeeded_current(result);
   } catch (std::exception & ex) {
     RCLCPP_WARN(
       get_logger(), "%s plugin failed to plan calculation to (%.2f, %.2f): \"%s\"",
       goal->planner_id.c_str(), goal->goal.pose.position.x,
       goal->goal.pose.position.y, ex.what());
-    action_server_pose_->terminate_current();
+    action_server_pose_no_constraints_->terminate_current();
   }
 }
 
@@ -558,7 +562,7 @@ MyPlannerServer::computePlanCBS()
       return;
     }
 
-    result->path = getPlan(start, goal_pose, goal->planner_id);
+    result->path = getPlan(start, goal_pose, goal->planner_id, goal->vertex_constraints, goal->edge_constraints);
 
     if (!validatePath(action_server_pose_, goal_pose, result->path, goal->planner_id)) {
       return;
@@ -591,25 +595,25 @@ nav_msgs::msg::Path
 MyPlannerServer::getPlan(
   const geometry_msgs::msg::PoseStamped & start,
   const geometry_msgs::msg::PoseStamped & goal,
-  const std::string & planner_id)
+  const std::string & planner_id,
+  const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vc,
+  const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> ec
+  )
 {
   RCLCPP_DEBUG(
     get_logger(), "Attempting to a find path from (%.2f, %.2f) to "
     "(%.2f, %.2f).", start.pose.position.x, start.pose.position.y,
     goal.pose.position.x, goal.pose.position.y);
 
-  //const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vc;
-  //const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> ec;
-
   if (planners_.find(planner_id) != planners_.end()) {
-    return planners_[planner_id]->createPlan(start, goal/*, vc, ec*/);
+    return planners_[planner_id]->createPlan(start, goal, vc, ec);
   } else {
     if (planners_.size() == 1 && planner_id.empty()) {
       RCLCPP_WARN_ONCE(
         get_logger(), "No planners specified in action call. "
         "Server will use only plugin %s in server."
         " This warning will appear once.", planner_ids_concat_.c_str());
-      return planners_[planners_.begin()->first]->createPlan(start, goal/*, vc, ec*/);
+      return planners_[planners_.begin()->first]->createPlan(start, goal, vc, ec);
     } else {
       RCLCPP_ERROR(
         get_logger(), "planner %s is not a valid planner. "

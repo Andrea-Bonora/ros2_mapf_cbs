@@ -136,14 +136,12 @@ nav_msgs::msg::Path MyNavfnPlanner::createPlan(
 #ifdef BENCHMARK_TESTING
   steady_clock::time_point a = steady_clock::now();
 #endif
-
   // Update planner based on the new costmap size
   if (isPlannerOutOfDate()) {
     planner_->setNavArr(
       costmap_->getSizeInCellsX(),
       costmap_->getSizeInCellsY());
   }
-
   nav_msgs::msg::Path path;
   // Corner case of the start(x,y) = goal(x,y)
   if (start.pose.position.x == goal.pose.position.x &&
@@ -188,7 +186,7 @@ nav_msgs::msg::Path MyNavfnPlanner::createPlan(
   return path;
 }
 
-nav_msgs::msg::Path MyNavfnPlanner::createPlan(
+/*nav_msgs::msg::Path MyNavfnPlanner::createPlan(
   const geometry_msgs::msg::PoseStamped & start,
   const geometry_msgs::msg::PoseStamped & goal)
 {
@@ -245,7 +243,7 @@ nav_msgs::msg::Path MyNavfnPlanner::createPlan(
 #endif
 
   return path;
-}
+}*/
 
 bool
 MyNavfnPlanner::isPlannerOutOfDate()
