@@ -7,7 +7,6 @@
 import rclpy
 from rclpy.node import Node
 
-from nav2_msgs.action import ComputePathToPose
 from rclpy.action import ActionClient
 from rclpy.node import Node
 from my_intermediate_interfaces.srv import StartGoalPoseStamped
@@ -23,19 +22,18 @@ class MultiAgentPlanAskerNode(Node):
         self.server_ = self.create_service(StartGoalPoseStamped, "get_plans", self.callback_get_plan, callback_group=client_cb_group)
         self.get_logger().info("Multi Agent Plan Asker has been started")
 
-    def callback_get_plan(self, request, response):
+    async def callback_get_plan(self, request, response):
 
         self.plans_ = []
         self.get_logger().info("Asking for plans...")
-        plans = self.ask_plan(request)
+        plans = await self.ask_plan(request)
         self.get_logger().info(str(len(plans)))
         self.get_logger().info("Sending Response")
         response.plans = plans
         return response
 
-    def ask_plan(self, s_request):
+    async def ask_plan(self, s_request):
 
-        i = 1
         futures = []
         self.get_logger().info(str(len(s_request.requests)))
         for i in range(len(s_request.requests)):
@@ -55,10 +53,9 @@ class MultiAgentPlanAskerNode(Node):
             future = client.send_goal_async(request)
             #future.add_done_callback(partial(self.callback_ask_plan, i=i))
             futures.append(future)
-            i += 1
 
         for f in futures:
-            rclpy.spin_until_future_complete(self, f)
+            await f
 
         results = []
         for f in futures:
@@ -72,7 +69,8 @@ class MultiAgentPlanAskerNode(Node):
                self.get_logger().info("PROVA")
 
         for r in results:
-            rclpy.spin_until_future_complete(self, r)
+            await r
+            
         plans = []
         for i, r in enumerate(results):
             result = r.result().result
@@ -88,15 +86,11 @@ class MultiAgentPlanAskerNode(Node):
         paths = []
         for i in range(len(starts)):
             paths.append({"s": starts[i], "e": goals[i]})
-
         return paths
-    
-    def wait_future(self, future):
-        rclpy.spin_until_future_complete(self, future)
     
 def main(args=None):
     rclpy.init(args=args)
-    node = MultiAgentPlanAskerNode() 
+    node = MultiAgentPlanAskerNode()
     rclpy.spin(node)
     rclpy.shutdown()
      

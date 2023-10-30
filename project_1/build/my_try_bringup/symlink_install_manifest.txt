@@ -1,5 +1,6 @@
 /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/launch/experiment1.launch.py
 /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/launch/experiment2.launch.py
+/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/launch/experiment3.launch.py
 /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/ament_index/resource_index/package_run_dependencies/my_try_bringup
 /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/ament_index/resource_index/parent_prefix_path/my_try_bringup
 /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup/share/my_try_bringup/environment/ament_prefix_path.sh

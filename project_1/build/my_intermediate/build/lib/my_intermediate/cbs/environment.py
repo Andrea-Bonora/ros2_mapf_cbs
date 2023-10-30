@@ -15,14 +15,12 @@ class Environment(object):
         self.obstacles = obstacles
 
         self.agents = agents
-        self.agent_dict = {}
+        #self.agent_dict = {}
 
-        self.make_agent_dict()
+        #self.make_agent_dict()
 
         self.constraints = Constraints()
         self.constraint_dict = {}
-
-        self.a_star = AStar(self)
 
     def get_neighbors(self, state):
         neighbors = []
@@ -143,12 +141,7 @@ class Environment(object):
     def compute_solution(self, plans):
         solution = {}
         for i in range(len(plans)):
-            agent = "a" + str(i+1)
-            #self.constraints = self.constraint_dict.setdefault(agent, Constraints())
-            #local_solution = self.a_star.search(agent)
-            #if not local_solution:
-            #    return False
-            solution.update({agent:plans[i]})
+            solution.update({plans[i]['name']:plans[i]['path']})
         return solution
 
     def compute_solution_cost(self, solution):

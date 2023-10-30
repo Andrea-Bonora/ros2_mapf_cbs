@@ -492,7 +492,6 @@ MyNavfnPlanner::getPlanFromPotential(
       edge_constr.push_back(object);
   }
 
-  RCLCPP_WARN(logger_,"max_cycles: %d", max_cycles);
   int path_len = planner_->calcPath(max_cycles, vert_constr, edge_constr);
 
   if (path_len == 0) {

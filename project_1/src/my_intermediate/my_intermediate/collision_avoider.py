@@ -20,7 +20,6 @@ from my_intermediate.cbs.state import State
 from my_intermediate.cbs.location import Location
 from my_intermediate.cbs.high_level_node import HighLevelNode
 from my_intermediate.cbs.constraint import Constraints
-from my_intermediate.cbs.map_creator import MapCreator
 from copy import deepcopy
 from my_intermediate_interfaces.msg import AgentPathRequest
 import math
@@ -35,7 +34,6 @@ class CollisionAvoiderNode(Node):
 
         self.map_client = self.create_client(
             GetMap, "map_server/map", callback_group=client_cb_group_map)
-
         while not self.map_client.wait_for_service(1.0):
             self.get_logger().warn("Waiting for Server /map_server/map...")
 
@@ -44,15 +42,15 @@ class CollisionAvoiderNode(Node):
         self.discrete_map = self.get_map()
 
         self.server_ = self.create_service(
-            StartGoalPositions, "cbs_plans", self.callback_cbs_plan, callback_group=client_cb_group)
+            StartGoalPositions, "cbs_plans", self.callback_cbs_plan, callback_group=client_cb_group) 
 
         client_cb_group_cl = MutuallyExclusiveCallbackGroup()
         self.client_ = self.create_client(
             StartGoalPoseStamped, "get_plans", callback_group=client_cb_group_cl)
         while not self.client_.wait_for_service(1.0):
-            self.get_logger().warn("Waiting for Server /get_plans...")
+            self.get_logger().warn("Waiting for Server /get_plans...")      
 
-    def callback_cbs_plan(self, request, response):
+    async def callback_cbs_plan(self, request, response):
 
         starting_positions = self.convert_to_pose_stamped(self.compose_objects(
             request.start_x, request.start_y, request.start_z))
@@ -76,25 +74,27 @@ class CollisionAvoiderNode(Node):
 
         self.get_logger().info("Asking for plans...")
         future = self.client_.call_async(client_request)
-        # future.add_done_callback(self.callback_call_get_plans)
+        #future.add_done_callback(self.callback_call_get_plans)
 
-        rclpy.spin_until_future_complete(self, future)
+        await future
+        #rclpy.spin_until_future_complete(self, future)
 
         service_response = future.result()
         response.plans = service_response.plans  # Piani dei vari agenti
 
         #response.plans -> [AgentPath, AgentPath]
+        #AgentPath -> name, path
 
-        #plans = self.discretize_plans(response.plans) #Need to work on it
+        plans = self.discretize_plans(response.plans) #Need to work on it
         #self.get_logger().info(str(len(plans)))
         #self.get_logger().info(str(plans[0]))
         # CBS MAIN PART
 
         #self.get_logger().info(str(type(plans[0])))
 
-        '''
-        solution = self.cbs_alg(plans)        
         
+        solution = self.cbs_alg(plans)        
+        '''
         if not solution:
             self.get_logger().info(" Solution not found")
 
@@ -109,52 +109,57 @@ class CollisionAvoiderNode(Node):
     
     def cbs_alg(self, plans):
 
-        env = Environment([],[],[])#(dimension, agents, obstacles)
-        cbs = CBS(env)
-        map_creator = MapCreator("/home/andrea/tesi/ros2_mapf_cbs/maps/")
+        agents = []
+        for p in plans:
+            agents.append(p['name'])
 
-        #First solution computed, we already have it, so it is simply a conversion in the desired format
+        env = Environment([], agents, [])#(dimension, agents, obstacles)
+        cbs = CBS(env)
+
+        #First solution computation, we already have it, so it is simply a conversion in the desired format
         start = HighLevelNode()
         start.constraint_dict = {}
-        for agent in self.env.agent_dict.keys():
+        for agent in cbs.env.agents:
            start.constraint_dict[agent] = Constraints()
-        start.solution = self.env.compute_solution(plans)
+        start.solution = cbs.env.compute_solution(plans)
         if not start.solution:
             return {}
-        start.cost = self.env.compute_solution_cost(start.solution)
+        start.cost = cbs.env.compute_solution_cost(start.solution)
 
         cbs.open_set |= {start}
         #CBS
-        while cbs.open_set:
+        #while cbs.open_set:
+        if cbs.open_set:
             P, conflict_dict = cbs.update_constraints_dict()
             if not conflict_dict:
-                print("solution found")
+                self.get_logger().info("solution found, no conflicts!")
                 return cbs.generate_plan(P.solution)
 
-            constraint_dict = self.env.create_constraints_from_conflict(conflict_dict)
+            constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
+
+            self.get_logger().info("Conflicts found")
+            self.get_logger().info(str(constraint_dict))
 
             for agent in constraint_dict.keys():
                 new_node = deepcopy(P)
                 new_node.constraint_dict[agent].add_constraint(constraint_dict[agent])
-                map_creator.create_map(self.original_map)
 
                 #ELABORA SOLUZIONE CON TENENDO CONTO DEI CONSTRAINTS
                 #ASK SOLUTION
-                self.env.constraint_dict = new_node.constraint_dict
-                new_node.solution = self.env.compute_solution()
-                if not new_node.solution:
-                    continue
-                new_node.cost = self.env.compute_solution_cost(new_node.solution)
+                cbs.env.constraint_dict = new_node.constraint_dict
+                #new_node.solution = self.env.compute_solution()
+                #if not new_node.solution:
+                #    continue
+                #new_node.cost = self.env.compute_solution_cost(new_node.solution)
 
                 # TODO: ending condition
-                if new_node not in self.closed_set:
-                    self.open_set |= {new_node}
+                #if new_node not in self.closed_set:
+                #    self.open_set |= {new_node}
 
 
         self.get_logger().info("Start searching...")
-        solution = cbs.search(plans)
 
-        return solution
+        return start.solution
 
 
     def callback_call_get_plans(self, future):
@@ -204,6 +209,7 @@ class CollisionAvoiderNode(Node):
         future = self.map_client.call_async(client_request)
         # future.add_done_callback(self.callback_call_get_plans)
         self.wait_future(future)
+        #await future
 
         result = future.result().map
         self.original_map = result
@@ -258,7 +264,7 @@ class CollisionAvoiderNode(Node):
         for p in plans:
             discrete_path = []
             # p is of type nav_msg/Path
-            for i, pose in enumerate(p.poses):
+            for i, pose in enumerate(p.path.poses):
                 discrete_x = math.floor(
                     round((pose.pose.position.x - self.map_origin.x) / self.map_resolution) / self.pixel_per_cell)
                 discrete_y = math.floor(
@@ -266,7 +272,7 @@ class CollisionAvoiderNode(Node):
                 
                 discrete_path.append(State(i , Location(discrete_x, discrete_y)))
             
-            discrete_plans.append(discrete_path)
+            discrete_plans.append({'name': p.name, 'path': discrete_path})
 
         return discrete_plans
     

@@ -1,0 +1,4 @@
+[console_scripts]
+my_robot_driver = my_package.my_robot_driver:main
+robot_spawner = my_package.robot_spawner:main
+
