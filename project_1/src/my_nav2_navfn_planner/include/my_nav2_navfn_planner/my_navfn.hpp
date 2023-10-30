@@ -171,6 +171,7 @@ public:
   /** cell arrays */
   COSTTYPE * costarr;  /**< cost array in 2D configuration space */
   float * potarr;  /**< potential array, navigation function potential */
+  float * potarr_copy;
   bool * pending;  /**< pending cells during propagation */
   int nobs;  /**< number of obstacle cells */
 
