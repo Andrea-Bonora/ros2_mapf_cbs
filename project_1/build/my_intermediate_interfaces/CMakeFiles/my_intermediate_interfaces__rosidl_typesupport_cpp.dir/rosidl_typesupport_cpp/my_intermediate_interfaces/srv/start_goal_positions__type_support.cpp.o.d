@@ -160,6 +160,8 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesup
  /usr/include/c++/11/stdexcept \
  /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/start_goal__struct.hpp \
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path__struct.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \

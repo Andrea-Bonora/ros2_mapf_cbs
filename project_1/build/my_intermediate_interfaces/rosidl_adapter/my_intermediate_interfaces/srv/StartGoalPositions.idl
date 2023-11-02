@@ -3,21 +3,12 @@
 // generated code does not contain a copyright notice
 
 #include "my_intermediate_interfaces/msg/AgentPath.idl"
+#include "my_intermediate_interfaces/msg/StartGoal.idl"
 
 module my_intermediate_interfaces {
   module srv {
     struct StartGoalPositions_Request {
-      sequence<double> start_x;
-
-      sequence<double> start_y;
-
-      sequence<double> start_z;
-
-      sequence<double> end_x;
-
-      sequence<double> end_y;
-
-      sequence<double> end_z;
+      sequence<my_intermediate_interfaces::msg::StartGoal> requests;
     };
     struct StartGoalPositions_Response {
       sequence<my_intermediate_interfaces::msg::AgentPath> plans;

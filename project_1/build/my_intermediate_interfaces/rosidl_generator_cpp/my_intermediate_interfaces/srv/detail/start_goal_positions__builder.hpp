@@ -21,96 +21,16 @@ namespace srv
 namespace builder
 {
 
-class Init_StartGoalPositions_Request_end_z
+class Init_StartGoalPositions_Request_requests
 {
 public:
-  explicit Init_StartGoalPositions_Request_end_z(::my_intermediate_interfaces::srv::StartGoalPositions_Request & msg)
-  : msg_(msg)
-  {}
-  ::my_intermediate_interfaces::srv::StartGoalPositions_Request end_z(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_end_z_type arg)
-  {
-    msg_.end_z = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::my_intermediate_interfaces::srv::StartGoalPositions_Request msg_;
-};
-
-class Init_StartGoalPositions_Request_end_y
-{
-public:
-  explicit Init_StartGoalPositions_Request_end_y(::my_intermediate_interfaces::srv::StartGoalPositions_Request & msg)
-  : msg_(msg)
-  {}
-  Init_StartGoalPositions_Request_end_z end_y(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_end_y_type arg)
-  {
-    msg_.end_y = std::move(arg);
-    return Init_StartGoalPositions_Request_end_z(msg_);
-  }
-
-private:
-  ::my_intermediate_interfaces::srv::StartGoalPositions_Request msg_;
-};
-
-class Init_StartGoalPositions_Request_end_x
-{
-public:
-  explicit Init_StartGoalPositions_Request_end_x(::my_intermediate_interfaces::srv::StartGoalPositions_Request & msg)
-  : msg_(msg)
-  {}
-  Init_StartGoalPositions_Request_end_y end_x(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_end_x_type arg)
-  {
-    msg_.end_x = std::move(arg);
-    return Init_StartGoalPositions_Request_end_y(msg_);
-  }
-
-private:
-  ::my_intermediate_interfaces::srv::StartGoalPositions_Request msg_;
-};
-
-class Init_StartGoalPositions_Request_start_z
-{
-public:
-  explicit Init_StartGoalPositions_Request_start_z(::my_intermediate_interfaces::srv::StartGoalPositions_Request & msg)
-  : msg_(msg)
-  {}
-  Init_StartGoalPositions_Request_end_x start_z(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_start_z_type arg)
-  {
-    msg_.start_z = std::move(arg);
-    return Init_StartGoalPositions_Request_end_x(msg_);
-  }
-
-private:
-  ::my_intermediate_interfaces::srv::StartGoalPositions_Request msg_;
-};
-
-class Init_StartGoalPositions_Request_start_y
-{
-public:
-  explicit Init_StartGoalPositions_Request_start_y(::my_intermediate_interfaces::srv::StartGoalPositions_Request & msg)
-  : msg_(msg)
-  {}
-  Init_StartGoalPositions_Request_start_z start_y(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_start_y_type arg)
-  {
-    msg_.start_y = std::move(arg);
-    return Init_StartGoalPositions_Request_start_z(msg_);
-  }
-
-private:
-  ::my_intermediate_interfaces::srv::StartGoalPositions_Request msg_;
-};
-
-class Init_StartGoalPositions_Request_start_x
-{
-public:
-  Init_StartGoalPositions_Request_start_x()
+  Init_StartGoalPositions_Request_requests()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_StartGoalPositions_Request_start_y start_x(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_start_x_type arg)
+  ::my_intermediate_interfaces::srv::StartGoalPositions_Request requests(::my_intermediate_interfaces::srv::StartGoalPositions_Request::_requests_type arg)
   {
-    msg_.start_x = std::move(arg);
-    return Init_StartGoalPositions_Request_start_y(msg_);
+    msg_.requests = std::move(arg);
+    return std::move(msg_);
   }
 
 private:
@@ -128,7 +48,7 @@ template<>
 inline
 auto build<::my_intermediate_interfaces::srv::StartGoalPositions_Request>()
 {
-  return my_intermediate_interfaces::srv::builder::Init_StartGoalPositions_Request_start_x();
+  return my_intermediate_interfaces::srv::builder::Init_StartGoalPositions_Request_requests();
 }
 
 }  // namespace my_intermediate_interfaces

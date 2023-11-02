@@ -5,17 +5,7 @@
 
 # Import statements for member types
 
-# Member 'start_x'
-# Member 'start_y'
-# Member 'start_z'
-# Member 'end_x'
-# Member 'end_y'
-# Member 'end_z'
-import array  # noqa: E402, I100
-
 import builtins  # noqa: E402, I100
-
-import math  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
 
@@ -52,6 +42,10 @@ class Metaclass_StartGoalPositions_Request(type):
             cls._TYPE_SUPPORT = module.type_support_msg__srv__start_goal_positions__request
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__srv__start_goal_positions__request
 
+            from my_intermediate_interfaces.msg import StartGoal
+            if StartGoal.__class__._TYPE_SUPPORT is None:
+                StartGoal.__class__.__import_type_support__()
+
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -65,42 +59,22 @@ class StartGoalPositions_Request(metaclass=Metaclass_StartGoalPositions_Request)
     """Message class 'StartGoalPositions_Request'."""
 
     __slots__ = [
-        '_start_x',
-        '_start_y',
-        '_start_z',
-        '_end_x',
-        '_end_y',
-        '_end_z',
+        '_requests',
     ]
 
     _fields_and_field_types = {
-        'start_x': 'sequence<double>',
-        'start_y': 'sequence<double>',
-        'start_z': 'sequence<double>',
-        'end_x': 'sequence<double>',
-        'end_y': 'sequence<double>',
-        'end_z': 'sequence<double>',
+        'requests': 'sequence<my_intermediate_interfaces/StartGoal>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'StartGoal')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.start_x = array.array('d', kwargs.get('start_x', []))
-        self.start_y = array.array('d', kwargs.get('start_y', []))
-        self.start_z = array.array('d', kwargs.get('start_z', []))
-        self.end_x = array.array('d', kwargs.get('end_x', []))
-        self.end_y = array.array('d', kwargs.get('end_y', []))
-        self.end_z = array.array('d', kwargs.get('end_z', []))
+        self.requests = kwargs.get('requests', [])
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -131,17 +105,7 @@ class StartGoalPositions_Request(metaclass=Metaclass_StartGoalPositions_Request)
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.start_x != other.start_x:
-            return False
-        if self.start_y != other.start_y:
-            return False
-        if self.start_z != other.start_z:
-            return False
-        if self.end_x != other.end_x:
-            return False
-        if self.end_y != other.end_y:
-            return False
-        if self.end_z != other.end_z:
+        if self.requests != other.requests:
             return False
         return True
 
@@ -151,18 +115,14 @@ class StartGoalPositions_Request(metaclass=Metaclass_StartGoalPositions_Request)
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def start_x(self):
-        """Message field 'start_x'."""
-        return self._start_x
+    def requests(self):
+        """Message field 'requests'."""
+        return self._requests
 
-    @start_x.setter
-    def start_x(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'start_x' array.array() must have the type code of 'd'"
-            self._start_x = value
-            return
+    @requests.setter
+    def requests(self, value):
         if __debug__:
+            from my_intermediate_interfaces.msg import StartGoal
             from collections.abc import Sequence
             from collections.abc import Set
             from collections import UserList
@@ -173,150 +133,10 @@ class StartGoalPositions_Request(metaclass=Metaclass_StartGoalPositions_Request)
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
-                "The 'start_x' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
-        self._start_x = array.array('d', value)
-
-    @builtins.property
-    def start_y(self):
-        """Message field 'start_y'."""
-        return self._start_y
-
-    @start_y.setter
-    def start_y(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'start_y' array.array() must have the type code of 'd'"
-            self._start_y = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
-                "The 'start_y' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
-        self._start_y = array.array('d', value)
-
-    @builtins.property
-    def start_z(self):
-        """Message field 'start_z'."""
-        return self._start_z
-
-    @start_z.setter
-    def start_z(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'start_z' array.array() must have the type code of 'd'"
-            self._start_z = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
-                "The 'start_z' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
-        self._start_z = array.array('d', value)
-
-    @builtins.property
-    def end_x(self):
-        """Message field 'end_x'."""
-        return self._end_x
-
-    @end_x.setter
-    def end_x(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'end_x' array.array() must have the type code of 'd'"
-            self._end_x = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
-                "The 'end_x' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
-        self._end_x = array.array('d', value)
-
-    @builtins.property
-    def end_y(self):
-        """Message field 'end_y'."""
-        return self._end_y
-
-    @end_y.setter
-    def end_y(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'end_y' array.array() must have the type code of 'd'"
-            self._end_y = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
-                "The 'end_y' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
-        self._end_y = array.array('d', value)
-
-    @builtins.property
-    def end_z(self):
-        """Message field 'end_z'."""
-        return self._end_z
-
-    @end_z.setter
-    def end_z(self, value):
-        if isinstance(value, array.array):
-            assert value.typecode == 'd', \
-                "The 'end_z' array.array() must have the type code of 'd'"
-            self._end_z = value
-            return
-        if __debug__:
-            from collections.abc import Sequence
-            from collections.abc import Set
-            from collections import UserList
-            from collections import UserString
-            assert \
-                ((isinstance(value, Sequence) or
-                  isinstance(value, Set) or
-                  isinstance(value, UserList)) and
-                 not isinstance(value, str) and
-                 not isinstance(value, UserString) and
-                 all(isinstance(v, float) for v in value) and
-                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
-                "The 'end_z' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
-        self._end_z = array.array('d', value)
+                 all(isinstance(v, StartGoal) for v in value) and
+                 True), \
+                "The 'requests' field must be a set or sequence and each value of type 'StartGoal'"
+        self._requests = value
 
 
 # Import statements for member types

@@ -25,9 +25,11 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_c.dir/rosidl_typesuppo
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/start_goal__struct.h \
+ /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h \
  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+ /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \

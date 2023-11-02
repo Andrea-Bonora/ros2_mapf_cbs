@@ -1,6 +1,7 @@
 class HighLevelNode(object):
     def __init__(self):
         self.solution = {}
+        self.discrete_solution = {}
         self.constraint_dict = {}
         self.cost = 0
 

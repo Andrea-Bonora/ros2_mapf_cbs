@@ -82,6 +82,8 @@ rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__t
 rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: rosidl_adapter/my_intermediate_interfaces/msg/AgentPath.idl
 rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: rosidl_adapter/my_intermediate_interfaces/msg/VertexConstraint.idl
 rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: rosidl_adapter/my_intermediate_interfaces/msg/EdgeConstraint.idl
+rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: rosidl_adapter/my_intermediate_interfaces/msg/Coordinates3D.idl
+rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: rosidl_adapter/my_intermediate_interfaces/msg/StartGoal.idl
 rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: rosidl_adapter/my_intermediate_interfaces/action/MyComputePathToPose.idl
 rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: /opt/ros/humble/share/nav_msgs/msg/GridCells.idl
 rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp: /opt/ros/humble/share/nav_msgs/msg/MapMetaData.idl
@@ -209,6 +211,12 @@ rosidl_typesupport_cpp/my_intermediate_interfaces/msg/vertex_constraint__type_su
 rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp: rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp
 
+rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp: rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp
+
+rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp: rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp
+
 rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp: rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp
 
@@ -310,10 +318,38 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesup
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp -o CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp.s
 
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o -MF CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o.d -o CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp
+
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp > CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.i
+
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp -o CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.s
+
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/flags.make
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o -MF CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o.d -o CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp
+
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp > CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.i
+
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp -o CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.s
+
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/flags.make
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o: rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o -MF CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o.d -o CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp
 
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.i: cmake_force
@@ -333,6 +369,8 @@ my_intermediate_interfaces__rosidl_typesupport_cpp_OBJECTS = \
 "CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/agent_path__type_support.cpp.o" \
 "CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/vertex_constraint__type_support.cpp.o" \
 "CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp.o" \
+"CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o" \
+"CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o" \
 "CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o"
 
 # External object files for target my_intermediate_interfaces__rosidl_typesupport_cpp
@@ -345,6 +383,8 @@ libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermed
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/agent_path__type_support.cpp.o
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/vertex_constraint__type_support.cpp.o
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp.o
+libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp.o
+libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp.o
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp.o
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/build.make
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/libnav2_msgs__rosidl_typesupport_cpp.so
@@ -359,7 +399,7 @@ libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/li
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: /opt/ros/humble/lib/librcutils.so
 libmy_intermediate_interfaces__rosidl_typesupport_cpp.so: CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_cpp.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libmy_intermediate_interfaces__rosidl_typesupport_cpp.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -373,7 +413,9 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/clean:
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/action/my_compute_path_to_pose__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/agent_path__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/agent_path_request__type_support.cpp
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/coordinates3_d__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/edge_constraint__type_support.cpp
+CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/start_goal__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/msg/vertex_constraint__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/srv/computed_plans__type_support.cpp
 CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_cpp.dir/depend: rosidl_typesupport_cpp/my_intermediate_interfaces/srv/start_goal_pose_stamped__type_support.cpp

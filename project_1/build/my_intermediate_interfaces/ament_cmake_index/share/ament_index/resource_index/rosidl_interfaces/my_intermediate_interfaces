@@ -4,8 +4,12 @@ msg/AgentPath.idl
 msg/AgentPath.msg
 msg/AgentPathRequest.idl
 msg/AgentPathRequest.msg
+msg/Coordinates3D.idl
+msg/Coordinates3D.msg
 msg/EdgeConstraint.idl
 msg/EdgeConstraint.msg
+msg/StartGoal.idl
+msg/StartGoal.msg
 msg/VertexConstraint.idl
 msg/VertexConstraint.msg
 srv/ComputedPlans.idl

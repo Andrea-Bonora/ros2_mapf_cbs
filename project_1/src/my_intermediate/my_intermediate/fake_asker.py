@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 
 from rclpy.action import ActionClient
 from nav2_msgs.action import FollowPath
 from my_intermediate_interfaces.srv import StartGoalPositions
+from my_intermediate_interfaces.msg import StartGoal
 
 
 class FakeAskerNode(Node):
@@ -35,13 +36,28 @@ class FakeAskerNode(Node):
         while not client.wait_for_service(1.0):
             self.get_logger().warn("Waiting for Server /cbs_plans...")
 
+        x_start = self.get_parameter("x_start").value
+        y_start = self.get_parameter("y_start").value
+        z_start = self.get_parameter("z_start").value
+
+        x_end = self.get_parameter("x_end").value
+        y_end = self.get_parameter("y_end").value
+        z_end = self.get_parameter("z_end").value
+        
+        objs = []
+        if len(x_end) == len(y_end) and len(x_end) == len(z_end):
+            for i in range(len(x_end)):
+                obj = StartGoal()
+                obj.start.x = x_start[i]
+                obj.start.y = y_start[i]
+                obj.start.z = z_start[i]
+                obj.goal.x = x_end[i]
+                obj.goal.y = y_end[i]
+                obj.goal.z = z_end[i]
+                objs.append(obj)
+        
         client_request = StartGoalPositions.Request()
-        client_request.start_x = self.get_parameter("x_start").value
-        client_request.start_y = self.get_parameter("y_start").value
-        client_request.start_z = self.get_parameter("z_start").value
-        client_request.end_x = self.get_parameter("x_end").value
-        client_request.end_y = self.get_parameter("y_end").value
-        client_request.end_z = self.get_parameter("z_end").value
+        client_request.requests = objs
 
         future = client.call_async(client_request)
         future.add_done_callback(self.callback_call_cbs_plans)
@@ -51,32 +67,18 @@ class FakeAskerNode(Node):
             response = future.result()
             self.get_logger().info("Got Plans: " + str(len(response.plans)))
 
-            pose = response.plans[0].path.poses[0]
-            self.get_logger().info(str(pose.pose.position.x))
-            self.get_logger().info(str(pose.pose.position.y))
-            self.get_logger().info(str(pose.pose.position.z))
-
-            '''
-            for plan in response.plans:
-                for pose in plan:
-                    self.get_logger().info(str(pose.pose.position.x))
-                    self.get_logger().info(str(pose.pose.position.y))
-                    self.get_logger().info(str(pose.pose.position.z))
-                    break
-            '''
-
             for i, plan in enumerate(response.plans):
                 self.get_logger().info(str(len(plan.path.poses)))
-                #self.execute_plan(plan, i+1)
+                self.execute_plan(plan)
 
         except Exception as e:
             self.get_logger().error("Service call failed %r" % (e,))   
 
-    def execute_plan(self, result, i):
-        client = ActionClient(self, FollowPath, 'tb' + str(i)+ '/follow_path')
+    def execute_plan(self, result):
+        client = ActionClient(self, FollowPath, result.name+ '/follow_path')
 
         msg = FollowPath.Goal()
-        msg.path = result
+        msg.path = result.path
         msg.controller_id = ""
         msg.goal_checker_id = ""
 

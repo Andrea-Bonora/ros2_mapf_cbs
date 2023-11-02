@@ -1,52 +1,23 @@
 from my_intermediate.cbs.constraint import Constraints
 from my_intermediate.cbs.state import State
 from my_intermediate.cbs.location import Location
+from my_intermediate.cbs.discrete_location import DiscreteLocation
 from my_intermediate.cbs.conflict import Conflict
 from itertools import combinations
 from my_intermediate.cbs.vertex_constraint import VertexConstraint
 from my_intermediate.cbs.edge_constraint import EdgeConstraint
 from math import fabs
-from my_intermediate.cbs.a_star import AStar
 
 class Environment(object):
-    def __init__(self, dimension, agents, obstacles):
+    def __init__(self, agents):
         
-        self.dimension = dimension
-        self.obstacles = obstacles
-
         self.agents = agents
-        #self.agent_dict = {}
+        self.agent_dict = {}
 
-        #self.make_agent_dict()
+        self.make_agent_dict()
 
         self.constraints = Constraints()
         self.constraint_dict = {}
-
-    def get_neighbors(self, state):
-        neighbors = []
-
-        # Wait action
-        n = State(state.time + 1, state.location)
-        if self.state_valid(n):
-            neighbors.append(n)
-        # Up action
-        n = State(state.time + 1, Location(state.location.x, state.location.y+1))
-        if self.state_valid(n) and self.transition_valid(state, n):
-            neighbors.append(n)
-        # Down action
-        n = State(state.time + 1, Location(state.location.x, state.location.y-1))
-        if self.state_valid(n) and self.transition_valid(state, n):
-            neighbors.append(n)
-        # Left action
-        n = State(state.time + 1, Location(state.location.x-1, state.location.y))
-        if self.state_valid(n) and self.transition_valid(state, n):
-            neighbors.append(n)
-        # Right action
-        n = State(state.time + 1, Location(state.location.x+1, state.location.y))
-        if self.state_valid(n) and self.transition_valid(state, n):
-            neighbors.append(n)
-        return neighbors
-
 
     def get_first_conflict(self, solution):
         max_t = max([len(plan) for plan in solution.values()])
@@ -110,33 +81,12 @@ class Environment(object):
         else:
             return solution[agent_name][-1]
 
-    def state_valid(self, state):
-        return state.location.x >= 0 and state.location.x < self.dimension[0] \
-            and state.location.y >= 0 and state.location.y < self.dimension[1] \
-            and VertexConstraint(state.time, state.location) not in self.constraints.vertex_constraints \
-            and (state.location.x, state.location.y) not in self.obstacles
-
-    def transition_valid(self, state_1, state_2):
-        return EdgeConstraint(state_1.time, state_1.location, state_2.location) not in self.constraints.edge_constraints
-
-    def is_solution(self, agent_name):
-        pass
-
-    def admissible_heuristic(self, state, agent_name):
-        goal = self.agent_dict[agent_name]["goal"]
-        return fabs(state.location.x - goal.location.x) + fabs(state.location.y - goal.location.y)
-
-
-    def is_at_goal(self, state, agent_name):
-        goal_state = self.agent_dict[agent_name]["goal"]
-        return state.is_equal_except_time(goal_state)
-
     def make_agent_dict(self):
         for agent in self.agents:
-            start_state = State(0, Location(agent['start'][0], agent['start'][1]))
-            goal_state = State(0, Location(agent['goal'][0], agent['goal'][1]))
+            start_state = State(0, DiscreteLocation(self.agents[agent]['start'].pose.position.x, self.agents[agent]['start'].pose.position.y))
+            goal_state = State(0, DiscreteLocation(self.agents[agent]['goal'].pose.position.x, self.agents[agent]['goal'].pose.position.y))
 
-            self.agent_dict.update({agent['name']:{'start':start_state, 'goal':goal_state}})
+            self.agent_dict.update({agent:{'start':start_state, 'goal':goal_state}})
 
     def compute_solution(self, plans):
         solution = {}

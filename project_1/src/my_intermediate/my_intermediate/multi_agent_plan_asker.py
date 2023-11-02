@@ -66,7 +66,6 @@ class MultiAgentPlanAskerNode(Node):
                result = goal_handle.get_result_async()
                #result.add_done_callback(partial(self.callback_get_result, i=i))
                results.append(result)
-               self.get_logger().info("PROVA")
 
         for r in results:
             await r

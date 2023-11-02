@@ -5,4 +5,6 @@
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/AgentPath.idl
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/VertexConstraint.idl
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/EdgeConstraint.idl
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/Coordinates3D.idl
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:msg/StartGoal.idl
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces:action/MyComputePathToPose.idl

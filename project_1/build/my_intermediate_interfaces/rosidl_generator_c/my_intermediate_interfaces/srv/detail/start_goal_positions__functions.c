@@ -11,13 +11,8 @@
 #include "rcutils/allocator.h"
 
 // Include directives for member types
-// Member `start_x`
-// Member `start_y`
-// Member `start_z`
-// Member `end_x`
-// Member `end_y`
-// Member `end_z`
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
+// Member `requests`
+#include "my_intermediate_interfaces/msg/detail/start_goal__functions.h"
 
 bool
 my_intermediate_interfaces__srv__StartGoalPositions_Request__init(my_intermediate_interfaces__srv__StartGoalPositions_Request * msg)
@@ -25,33 +20,8 @@ my_intermediate_interfaces__srv__StartGoalPositions_Request__init(my_intermediat
   if (!msg) {
     return false;
   }
-  // start_x
-  if (!rosidl_runtime_c__double__Sequence__init(&msg->start_x, 0)) {
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(msg);
-    return false;
-  }
-  // start_y
-  if (!rosidl_runtime_c__double__Sequence__init(&msg->start_y, 0)) {
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(msg);
-    return false;
-  }
-  // start_z
-  if (!rosidl_runtime_c__double__Sequence__init(&msg->start_z, 0)) {
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(msg);
-    return false;
-  }
-  // end_x
-  if (!rosidl_runtime_c__double__Sequence__init(&msg->end_x, 0)) {
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(msg);
-    return false;
-  }
-  // end_y
-  if (!rosidl_runtime_c__double__Sequence__init(&msg->end_y, 0)) {
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(msg);
-    return false;
-  }
-  // end_z
-  if (!rosidl_runtime_c__double__Sequence__init(&msg->end_z, 0)) {
+  // requests
+  if (!my_intermediate_interfaces__msg__StartGoal__Sequence__init(&msg->requests, 0)) {
     my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(msg);
     return false;
   }
@@ -64,18 +34,8 @@ my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(my_intermediat
   if (!msg) {
     return;
   }
-  // start_x
-  rosidl_runtime_c__double__Sequence__fini(&msg->start_x);
-  // start_y
-  rosidl_runtime_c__double__Sequence__fini(&msg->start_y);
-  // start_z
-  rosidl_runtime_c__double__Sequence__fini(&msg->start_z);
-  // end_x
-  rosidl_runtime_c__double__Sequence__fini(&msg->end_x);
-  // end_y
-  rosidl_runtime_c__double__Sequence__fini(&msg->end_y);
-  // end_z
-  rosidl_runtime_c__double__Sequence__fini(&msg->end_z);
+  // requests
+  my_intermediate_interfaces__msg__StartGoal__Sequence__fini(&msg->requests);
 }
 
 bool
@@ -84,39 +44,9 @@ my_intermediate_interfaces__srv__StartGoalPositions_Request__are_equal(const my_
   if (!lhs || !rhs) {
     return false;
   }
-  // start_x
-  if (!rosidl_runtime_c__double__Sequence__are_equal(
-      &(lhs->start_x), &(rhs->start_x)))
-  {
-    return false;
-  }
-  // start_y
-  if (!rosidl_runtime_c__double__Sequence__are_equal(
-      &(lhs->start_y), &(rhs->start_y)))
-  {
-    return false;
-  }
-  // start_z
-  if (!rosidl_runtime_c__double__Sequence__are_equal(
-      &(lhs->start_z), &(rhs->start_z)))
-  {
-    return false;
-  }
-  // end_x
-  if (!rosidl_runtime_c__double__Sequence__are_equal(
-      &(lhs->end_x), &(rhs->end_x)))
-  {
-    return false;
-  }
-  // end_y
-  if (!rosidl_runtime_c__double__Sequence__are_equal(
-      &(lhs->end_y), &(rhs->end_y)))
-  {
-    return false;
-  }
-  // end_z
-  if (!rosidl_runtime_c__double__Sequence__are_equal(
-      &(lhs->end_z), &(rhs->end_z)))
+  // requests
+  if (!my_intermediate_interfaces__msg__StartGoal__Sequence__are_equal(
+      &(lhs->requests), &(rhs->requests)))
   {
     return false;
   }
@@ -131,39 +61,9 @@ my_intermediate_interfaces__srv__StartGoalPositions_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // start_x
-  if (!rosidl_runtime_c__double__Sequence__copy(
-      &(input->start_x), &(output->start_x)))
-  {
-    return false;
-  }
-  // start_y
-  if (!rosidl_runtime_c__double__Sequence__copy(
-      &(input->start_y), &(output->start_y)))
-  {
-    return false;
-  }
-  // start_z
-  if (!rosidl_runtime_c__double__Sequence__copy(
-      &(input->start_z), &(output->start_z)))
-  {
-    return false;
-  }
-  // end_x
-  if (!rosidl_runtime_c__double__Sequence__copy(
-      &(input->end_x), &(output->end_x)))
-  {
-    return false;
-  }
-  // end_y
-  if (!rosidl_runtime_c__double__Sequence__copy(
-      &(input->end_y), &(output->end_y)))
-  {
-    return false;
-  }
-  // end_z
-  if (!rosidl_runtime_c__double__Sequence__copy(
-      &(input->end_z), &(output->end_z)))
+  // requests
+  if (!my_intermediate_interfaces__msg__StartGoal__Sequence__copy(
+      &(input->requests), &(output->requests)))
   {
     return false;
   }

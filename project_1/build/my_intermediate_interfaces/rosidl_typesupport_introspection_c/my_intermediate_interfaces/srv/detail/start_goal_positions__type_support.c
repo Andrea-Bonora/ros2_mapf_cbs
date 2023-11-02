@@ -13,13 +13,10 @@
 
 
 // Include directives for member types
-// Member `start_x`
-// Member `start_y`
-// Member `start_z`
-// Member `end_x`
-// Member `end_y`
-// Member `end_z`
-#include "rosidl_runtime_c/primitives_sequence_functions.h"
+// Member `requests`
+#include "my_intermediate_interfaces/msg/start_goal.h"
+// Member `requests`
+#include "my_intermediate_interfaces/msg/detail/start_goal__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -40,445 +37,85 @@ void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesup
   my_intermediate_interfaces__srv__StartGoalPositions_Request__fini(message_memory);
 }
 
-size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__start_x(
+size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__requests(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  const my_intermediate_interfaces__msg__StartGoal__Sequence * member =
+    (const my_intermediate_interfaces__msg__StartGoal__Sequence *)(untyped_member);
   return member->size;
 }
 
-const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_x(
+const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__requests(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  const my_intermediate_interfaces__msg__StartGoal__Sequence * member =
+    (const my_intermediate_interfaces__msg__StartGoal__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
-void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_x(
+void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__requests(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  my_intermediate_interfaces__msg__StartGoal__Sequence * member =
+    (my_intermediate_interfaces__msg__StartGoal__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__start_x(
+void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__requests(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const double * item =
-    ((const double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_x(untyped_member, index));
-  double * value =
-    (double *)(untyped_value);
+  const my_intermediate_interfaces__msg__StartGoal * item =
+    ((const my_intermediate_interfaces__msg__StartGoal *)
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__requests(untyped_member, index));
+  my_intermediate_interfaces__msg__StartGoal * value =
+    (my_intermediate_interfaces__msg__StartGoal *)(untyped_value);
   *value = *item;
 }
 
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__start_x(
+void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__requests(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  double * item =
-    ((double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_x(untyped_member, index));
-  const double * value =
-    (const double *)(untyped_value);
+  my_intermediate_interfaces__msg__StartGoal * item =
+    ((my_intermediate_interfaces__msg__StartGoal *)
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__requests(untyped_member, index));
+  const my_intermediate_interfaces__msg__StartGoal * value =
+    (const my_intermediate_interfaces__msg__StartGoal *)(untyped_value);
   *item = *value;
 }
 
-bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__start_x(
+bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__requests(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  rosidl_runtime_c__double__Sequence__fini(member);
-  return rosidl_runtime_c__double__Sequence__init(member, size);
+  my_intermediate_interfaces__msg__StartGoal__Sequence * member =
+    (my_intermediate_interfaces__msg__StartGoal__Sequence *)(untyped_member);
+  my_intermediate_interfaces__msg__StartGoal__Sequence__fini(member);
+  return my_intermediate_interfaces__msg__StartGoal__Sequence__init(member, size);
 }
 
-size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__start_y(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_y(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_y(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__start_y(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const double * item =
-    ((const double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_y(untyped_member, index));
-  double * value =
-    (double *)(untyped_value);
-  *value = *item;
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__start_y(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  double * item =
-    ((double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_y(untyped_member, index));
-  const double * value =
-    (const double *)(untyped_value);
-  *item = *value;
-}
-
-bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__start_y(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  rosidl_runtime_c__double__Sequence__fini(member);
-  return rosidl_runtime_c__double__Sequence__init(member, size);
-}
-
-size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__start_z(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_z(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_z(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__start_z(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const double * item =
-    ((const double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_z(untyped_member, index));
-  double * value =
-    (double *)(untyped_value);
-  *value = *item;
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__start_z(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  double * item =
-    ((double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_z(untyped_member, index));
-  const double * value =
-    (const double *)(untyped_value);
-  *item = *value;
-}
-
-bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__start_z(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  rosidl_runtime_c__double__Sequence__fini(member);
-  return rosidl_runtime_c__double__Sequence__init(member, size);
-}
-
-size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__end_x(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_x(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_x(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__end_x(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const double * item =
-    ((const double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_x(untyped_member, index));
-  double * value =
-    (double *)(untyped_value);
-  *value = *item;
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__end_x(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  double * item =
-    ((double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_x(untyped_member, index));
-  const double * value =
-    (const double *)(untyped_value);
-  *item = *value;
-}
-
-bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__end_x(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  rosidl_runtime_c__double__Sequence__fini(member);
-  return rosidl_runtime_c__double__Sequence__init(member, size);
-}
-
-size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__end_y(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_y(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_y(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__end_y(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const double * item =
-    ((const double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_y(untyped_member, index));
-  double * value =
-    (double *)(untyped_value);
-  *value = *item;
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__end_y(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  double * item =
-    ((double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_y(untyped_member, index));
-  const double * value =
-    (const double *)(untyped_value);
-  *item = *value;
-}
-
-bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__end_y(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  rosidl_runtime_c__double__Sequence__fini(member);
-  return rosidl_runtime_c__double__Sequence__init(member, size);
-}
-
-size_t my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__end_z(
-  const void * untyped_member)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return member->size;
-}
-
-const void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_z(
-  const void * untyped_member, size_t index)
-{
-  const rosidl_runtime_c__double__Sequence * member =
-    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void * my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_z(
-  void * untyped_member, size_t index)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  return &member->data[index];
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__end_z(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const double * item =
-    ((const double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_z(untyped_member, index));
-  double * value =
-    (double *)(untyped_value);
-  *value = *item;
-}
-
-void my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__end_z(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  double * item =
-    ((double *)
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_z(untyped_member, index));
-  const double * value =
-    (const double *)(untyped_value);
-  *item = *value;
-}
-
-bool my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__end_z(
-  void * untyped_member, size_t size)
-{
-  rosidl_runtime_c__double__Sequence * member =
-    (rosidl_runtime_c__double__Sequence *)(untyped_member);
-  rosidl_runtime_c__double__Sequence__fini(member);
-  return rosidl_runtime_c__double__Sequence__init(member, size);
-}
-
-static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_member_array[1] = {
   {
-    "start_x",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    "requests",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     true,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, start_x),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, requests),  // bytes offset in struct
     NULL,  // default value
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__start_x,  // size() function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_x,  // get_const(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_x,  // get(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__start_x,  // fetch(index, &value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__start_x,  // assign(index, value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__start_x  // resize(index) function pointer
-  },
-  {
-    "start_y",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, start_y),  // bytes offset in struct
-    NULL,  // default value
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__start_y,  // size() function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_y,  // get_const(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_y,  // get(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__start_y,  // fetch(index, &value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__start_y,  // assign(index, value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__start_y  // resize(index) function pointer
-  },
-  {
-    "start_z",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, start_z),  // bytes offset in struct
-    NULL,  // default value
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__start_z,  // size() function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__start_z,  // get_const(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__start_z,  // get(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__start_z,  // fetch(index, &value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__start_z,  // assign(index, value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__start_z  // resize(index) function pointer
-  },
-  {
-    "end_x",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, end_x),  // bytes offset in struct
-    NULL,  // default value
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__end_x,  // size() function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_x,  // get_const(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_x,  // get(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__end_x,  // fetch(index, &value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__end_x,  // assign(index, value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__end_x  // resize(index) function pointer
-  },
-  {
-    "end_y",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, end_y),  // bytes offset in struct
-    NULL,  // default value
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__end_y,  // size() function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_y,  // get_const(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_y,  // get(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__end_y,  // fetch(index, &value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__end_y,  // assign(index, value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__end_y  // resize(index) function pointer
-  },
-  {
-    "end_z",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces__srv__StartGoalPositions_Request, end_z),  // bytes offset in struct
-    NULL,  // default value
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__end_z,  // size() function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__end_z,  // get_const(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__end_z,  // get(index) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__end_z,  // fetch(index, &value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__end_z,  // assign(index, value) function pointer
-    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__end_z  // resize(index) function pointer
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__size_function__StartGoalPositions_Request__requests,  // size() function pointer
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_const_function__StartGoalPositions_Request__requests,  // get_const(index) function pointer
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__get_function__StartGoalPositions_Request__requests,  // get(index) function pointer
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__fetch_function__StartGoalPositions_Request__requests,  // fetch(index, &value) function pointer
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__assign_function__StartGoalPositions_Request__requests,  // assign(index, value) function pointer
+    my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__resize_function__StartGoalPositions_Request__requests  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_members = {
   "my_intermediate_interfaces__srv",  // message namespace
   "StartGoalPositions_Request",  // message name
-  6,  // number of fields
+  1,  // number of fields
   sizeof(my_intermediate_interfaces__srv__StartGoalPositions_Request),
   my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_member_array,  // message members
   my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -496,6 +133,8 @@ static rosidl_message_type_support_t my_intermediate_interfaces__srv__StartGoalP
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, srv, StartGoalPositions_Request)() {
+  my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, StartGoal)();
   if (!my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_type_support_handle.typesupport_identifier) {
     my_intermediate_interfaces__srv__StartGoalPositions_Request__rosidl_typesupport_introspection_c__StartGoalPositions_Request_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

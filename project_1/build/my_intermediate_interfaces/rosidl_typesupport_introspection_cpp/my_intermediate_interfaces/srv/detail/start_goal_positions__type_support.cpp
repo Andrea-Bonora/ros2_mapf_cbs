@@ -37,385 +37,75 @@ void StartGoalPositions_Request_fini_function(void * message_memory)
   typed_message->~StartGoalPositions_Request();
 }
 
-size_t size_function__StartGoalPositions_Request__start_x(const void * untyped_member)
+size_t size_function__StartGoalPositions_Request__requests(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<my_intermediate_interfaces::msg::StartGoal> *>(untyped_member);
   return member->size();
 }
 
-const void * get_const_function__StartGoalPositions_Request__start_x(const void * untyped_member, size_t index)
+const void * get_const_function__StartGoalPositions_Request__requests(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<double> *>(untyped_member);
+    *reinterpret_cast<const std::vector<my_intermediate_interfaces::msg::StartGoal> *>(untyped_member);
   return &member[index];
 }
 
-void * get_function__StartGoalPositions_Request__start_x(void * untyped_member, size_t index)
+void * get_function__StartGoalPositions_Request__requests(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<double> *>(untyped_member);
+    *reinterpret_cast<std::vector<my_intermediate_interfaces::msg::StartGoal> *>(untyped_member);
   return &member[index];
 }
 
-void fetch_function__StartGoalPositions_Request__start_x(
+void fetch_function__StartGoalPositions_Request__requests(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const double *>(
-    get_const_function__StartGoalPositions_Request__start_x(untyped_member, index));
-  auto & value = *reinterpret_cast<double *>(untyped_value);
+  const auto & item = *reinterpret_cast<const my_intermediate_interfaces::msg::StartGoal *>(
+    get_const_function__StartGoalPositions_Request__requests(untyped_member, index));
+  auto & value = *reinterpret_cast<my_intermediate_interfaces::msg::StartGoal *>(untyped_value);
   value = item;
 }
 
-void assign_function__StartGoalPositions_Request__start_x(
+void assign_function__StartGoalPositions_Request__requests(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<double *>(
-    get_function__StartGoalPositions_Request__start_x(untyped_member, index));
-  const auto & value = *reinterpret_cast<const double *>(untyped_value);
+  auto & item = *reinterpret_cast<my_intermediate_interfaces::msg::StartGoal *>(
+    get_function__StartGoalPositions_Request__requests(untyped_member, index));
+  const auto & value = *reinterpret_cast<const my_intermediate_interfaces::msg::StartGoal *>(untyped_value);
   item = value;
 }
 
-void resize_function__StartGoalPositions_Request__start_x(void * untyped_member, size_t size)
+void resize_function__StartGoalPositions_Request__requests(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<double> *>(untyped_member);
+    reinterpret_cast<std::vector<my_intermediate_interfaces::msg::StartGoal> *>(untyped_member);
   member->resize(size);
 }
 
-size_t size_function__StartGoalPositions_Request__start_y(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__StartGoalPositions_Request__start_y(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__StartGoalPositions_Request__start_y(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__StartGoalPositions_Request__start_y(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const double *>(
-    get_const_function__StartGoalPositions_Request__start_y(untyped_member, index));
-  auto & value = *reinterpret_cast<double *>(untyped_value);
-  value = item;
-}
-
-void assign_function__StartGoalPositions_Request__start_y(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<double *>(
-    get_function__StartGoalPositions_Request__start_y(untyped_member, index));
-  const auto & value = *reinterpret_cast<const double *>(untyped_value);
-  item = value;
-}
-
-void resize_function__StartGoalPositions_Request__start_y(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<double> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__StartGoalPositions_Request__start_z(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__StartGoalPositions_Request__start_z(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__StartGoalPositions_Request__start_z(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__StartGoalPositions_Request__start_z(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const double *>(
-    get_const_function__StartGoalPositions_Request__start_z(untyped_member, index));
-  auto & value = *reinterpret_cast<double *>(untyped_value);
-  value = item;
-}
-
-void assign_function__StartGoalPositions_Request__start_z(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<double *>(
-    get_function__StartGoalPositions_Request__start_z(untyped_member, index));
-  const auto & value = *reinterpret_cast<const double *>(untyped_value);
-  item = value;
-}
-
-void resize_function__StartGoalPositions_Request__start_z(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<double> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__StartGoalPositions_Request__end_x(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__StartGoalPositions_Request__end_x(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__StartGoalPositions_Request__end_x(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__StartGoalPositions_Request__end_x(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const double *>(
-    get_const_function__StartGoalPositions_Request__end_x(untyped_member, index));
-  auto & value = *reinterpret_cast<double *>(untyped_value);
-  value = item;
-}
-
-void assign_function__StartGoalPositions_Request__end_x(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<double *>(
-    get_function__StartGoalPositions_Request__end_x(untyped_member, index));
-  const auto & value = *reinterpret_cast<const double *>(untyped_value);
-  item = value;
-}
-
-void resize_function__StartGoalPositions_Request__end_x(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<double> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__StartGoalPositions_Request__end_y(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__StartGoalPositions_Request__end_y(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__StartGoalPositions_Request__end_y(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__StartGoalPositions_Request__end_y(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const double *>(
-    get_const_function__StartGoalPositions_Request__end_y(untyped_member, index));
-  auto & value = *reinterpret_cast<double *>(untyped_value);
-  value = item;
-}
-
-void assign_function__StartGoalPositions_Request__end_y(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<double *>(
-    get_function__StartGoalPositions_Request__end_y(untyped_member, index));
-  const auto & value = *reinterpret_cast<const double *>(untyped_value);
-  item = value;
-}
-
-void resize_function__StartGoalPositions_Request__end_y(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<double> *>(untyped_member);
-  member->resize(size);
-}
-
-size_t size_function__StartGoalPositions_Request__end_z(const void * untyped_member)
-{
-  const auto * member = reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return member->size();
-}
-
-const void * get_const_function__StartGoalPositions_Request__end_z(const void * untyped_member, size_t index)
-{
-  const auto & member =
-    *reinterpret_cast<const std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void * get_function__StartGoalPositions_Request__end_z(void * untyped_member, size_t index)
-{
-  auto & member =
-    *reinterpret_cast<std::vector<double> *>(untyped_member);
-  return &member[index];
-}
-
-void fetch_function__StartGoalPositions_Request__end_z(
-  const void * untyped_member, size_t index, void * untyped_value)
-{
-  const auto & item = *reinterpret_cast<const double *>(
-    get_const_function__StartGoalPositions_Request__end_z(untyped_member, index));
-  auto & value = *reinterpret_cast<double *>(untyped_value);
-  value = item;
-}
-
-void assign_function__StartGoalPositions_Request__end_z(
-  void * untyped_member, size_t index, const void * untyped_value)
-{
-  auto & item = *reinterpret_cast<double *>(
-    get_function__StartGoalPositions_Request__end_z(untyped_member, index));
-  const auto & value = *reinterpret_cast<const double *>(untyped_value);
-  item = value;
-}
-
-void resize_function__StartGoalPositions_Request__end_z(void * untyped_member, size_t size)
-{
-  auto * member =
-    reinterpret_cast<std::vector<double> *>(untyped_member);
-  member->resize(size);
-}
-
-static const ::rosidl_typesupport_introspection_cpp::MessageMember StartGoalPositions_Request_message_member_array[6] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember StartGoalPositions_Request_message_member_array[1] = {
   {
-    "start_x",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    "requests",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<my_intermediate_interfaces::msg::StartGoal>(),  // members of sub message
     true,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, start_x),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, requests),  // bytes offset in struct
     nullptr,  // default value
-    size_function__StartGoalPositions_Request__start_x,  // size() function pointer
-    get_const_function__StartGoalPositions_Request__start_x,  // get_const(index) function pointer
-    get_function__StartGoalPositions_Request__start_x,  // get(index) function pointer
-    fetch_function__StartGoalPositions_Request__start_x,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPositions_Request__start_x,  // assign(index, value) function pointer
-    resize_function__StartGoalPositions_Request__start_x  // resize(index) function pointer
-  },
-  {
-    "start_y",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, start_y),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__StartGoalPositions_Request__start_y,  // size() function pointer
-    get_const_function__StartGoalPositions_Request__start_y,  // get_const(index) function pointer
-    get_function__StartGoalPositions_Request__start_y,  // get(index) function pointer
-    fetch_function__StartGoalPositions_Request__start_y,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPositions_Request__start_y,  // assign(index, value) function pointer
-    resize_function__StartGoalPositions_Request__start_y  // resize(index) function pointer
-  },
-  {
-    "start_z",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, start_z),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__StartGoalPositions_Request__start_z,  // size() function pointer
-    get_const_function__StartGoalPositions_Request__start_z,  // get_const(index) function pointer
-    get_function__StartGoalPositions_Request__start_z,  // get(index) function pointer
-    fetch_function__StartGoalPositions_Request__start_z,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPositions_Request__start_z,  // assign(index, value) function pointer
-    resize_function__StartGoalPositions_Request__start_z  // resize(index) function pointer
-  },
-  {
-    "end_x",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, end_x),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__StartGoalPositions_Request__end_x,  // size() function pointer
-    get_const_function__StartGoalPositions_Request__end_x,  // get_const(index) function pointer
-    get_function__StartGoalPositions_Request__end_x,  // get(index) function pointer
-    fetch_function__StartGoalPositions_Request__end_x,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPositions_Request__end_x,  // assign(index, value) function pointer
-    resize_function__StartGoalPositions_Request__end_x  // resize(index) function pointer
-  },
-  {
-    "end_y",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, end_y),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__StartGoalPositions_Request__end_y,  // size() function pointer
-    get_const_function__StartGoalPositions_Request__end_y,  // get_const(index) function pointer
-    get_function__StartGoalPositions_Request__end_y,  // get(index) function pointer
-    fetch_function__StartGoalPositions_Request__end_y,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPositions_Request__end_y,  // assign(index, value) function pointer
-    resize_function__StartGoalPositions_Request__end_y  // resize(index) function pointer
-  },
-  {
-    "end_z",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    true,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(my_intermediate_interfaces::srv::StartGoalPositions_Request, end_z),  // bytes offset in struct
-    nullptr,  // default value
-    size_function__StartGoalPositions_Request__end_z,  // size() function pointer
-    get_const_function__StartGoalPositions_Request__end_z,  // get_const(index) function pointer
-    get_function__StartGoalPositions_Request__end_z,  // get(index) function pointer
-    fetch_function__StartGoalPositions_Request__end_z,  // fetch(index, &value) function pointer
-    assign_function__StartGoalPositions_Request__end_z,  // assign(index, value) function pointer
-    resize_function__StartGoalPositions_Request__end_z  // resize(index) function pointer
+    size_function__StartGoalPositions_Request__requests,  // size() function pointer
+    get_const_function__StartGoalPositions_Request__requests,  // get_const(index) function pointer
+    get_function__StartGoalPositions_Request__requests,  // get(index) function pointer
+    fetch_function__StartGoalPositions_Request__requests,  // fetch(index, &value) function pointer
+    assign_function__StartGoalPositions_Request__requests,  // assign(index, value) function pointer
+    resize_function__StartGoalPositions_Request__requests  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers StartGoalPositions_Request_message_members = {
   "my_intermediate_interfaces::srv",  // message namespace
   "StartGoalPositions_Request",  // message name
-  6,  // number of fields
+  1,  // number of fields
   sizeof(my_intermediate_interfaces::srv::StartGoalPositions_Request),
   StartGoalPositions_Request_message_member_array,  // message members
   StartGoalPositions_Request_init_function,  // function to initialize message memory (memory has to be allocated)

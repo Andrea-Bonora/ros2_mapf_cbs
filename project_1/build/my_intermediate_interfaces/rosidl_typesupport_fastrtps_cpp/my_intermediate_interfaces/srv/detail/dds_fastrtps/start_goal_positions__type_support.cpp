@@ -16,6 +16,30 @@
 
 
 // forward declaration of message dependencies and their conversion functions
+namespace my_intermediate_interfaces
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const my_intermediate_interfaces::msg::StartGoal &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  my_intermediate_interfaces::msg::StartGoal &);
+size_t get_serialized_size(
+  const my_intermediate_interfaces::msg::StartGoal &,
+  size_t current_alignment);
+size_t
+max_serialized_size_StartGoal(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace my_intermediate_interfaces
+
 
 namespace my_intermediate_interfaces
 {
@@ -32,29 +56,15 @@ cdr_serialize(
   const my_intermediate_interfaces::srv::StartGoalPositions_Request & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: start_x
+  // Member: requests
   {
-    cdr << ros_message.start_x;
-  }
-  // Member: start_y
-  {
-    cdr << ros_message.start_y;
-  }
-  // Member: start_z
-  {
-    cdr << ros_message.start_z;
-  }
-  // Member: end_x
-  {
-    cdr << ros_message.end_x;
-  }
-  // Member: end_y
-  {
-    cdr << ros_message.end_y;
-  }
-  // Member: end_z
-  {
-    cdr << ros_message.end_z;
+    size_t size = ros_message.requests.size();
+    cdr << static_cast<uint32_t>(size);
+    for (size_t i = 0; i < size; i++) {
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+        ros_message.requests[i],
+        cdr);
+    }
   }
   return true;
 }
@@ -65,34 +75,16 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   my_intermediate_interfaces::srv::StartGoalPositions_Request & ros_message)
 {
-  // Member: start_x
+  // Member: requests
   {
-    cdr >> ros_message.start_x;
-  }
-
-  // Member: start_y
-  {
-    cdr >> ros_message.start_y;
-  }
-
-  // Member: start_z
-  {
-    cdr >> ros_message.start_z;
-  }
-
-  // Member: end_x
-  {
-    cdr >> ros_message.end_x;
-  }
-
-  // Member: end_y
-  {
-    cdr >> ros_message.end_y;
-  }
-
-  // Member: end_z
-  {
-    cdr >> ros_message.end_z;
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    ros_message.requests.resize(size);
+    for (size_t i = 0; i < size; i++) {
+      my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+        cdr, ros_message.requests[i]);
+    }
   }
 
   return true;
@@ -111,65 +103,18 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: start_x
+  // Member: requests
   {
-    size_t array_size = ros_message.start_x.size();
+    size_t array_size = ros_message.requests.size();
 
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.start_x[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: start_y
-  {
-    size_t array_size = ros_message.start_y.size();
 
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.start_y[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: start_z
-  {
-    size_t array_size = ros_message.start_z.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.start_z[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: end_x
-  {
-    size_t array_size = ros_message.end_x.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.end_x[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: end_y
-  {
-    size_t array_size = ros_message.end_y.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.end_y[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: end_z
-  {
-    size_t array_size = ros_message.end_z.size();
-
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    size_t item_size = sizeof(ros_message.end_z[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+        ros_message.requests[index], current_alignment);
+    }
   }
 
   return current_alignment - initial_alignment;
@@ -193,7 +138,7 @@ max_serialized_size_StartGoalPositions_Request(
   is_plain = true;
 
 
-  // Member: start_x
+  // Member: requests
   {
     size_t array_size = 0;
     full_bounded = false;
@@ -201,68 +146,16 @@ max_serialized_size_StartGoalPositions_Request(
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
 
-  // Member: start_y
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Member: start_z
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Member: end_x
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Member: end_y
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
-  // Member: end_z
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      current_alignment +=
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_StartGoal(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
   }
 
   return current_alignment - initial_alignment;

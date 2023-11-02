@@ -34,10 +34,20 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/primitives_sequence.h"  // end_x, end_y, end_z, start_x, start_y, start_z
-#include "rosidl_runtime_c/primitives_sequence_functions.h"  // end_x, end_y, end_z, start_x, start_y, start_z
+#include "my_intermediate_interfaces/msg/detail/start_goal__functions.h"  // requests
 
 // forward declare type support functions
+size_t get_serialized_size_my_intermediate_interfaces__msg__StartGoal(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_my_intermediate_interfaces__msg__StartGoal(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, StartGoal)();
 
 
 using _StartGoalPositions_Request__ros_msg_type = my_intermediate_interfaces__srv__StartGoalPositions_Request;
@@ -51,52 +61,23 @@ static bool _StartGoalPositions_Request__cdr_serialize(
     return false;
   }
   const _StartGoalPositions_Request__ros_msg_type * ros_message = static_cast<const _StartGoalPositions_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: start_x
+  // Field name: requests
   {
-    size_t size = ros_message->start_x.size;
-    auto array_ptr = ros_message->start_x.data;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, StartGoal
+      )()->data);
+    size_t size = ros_message->requests.size;
+    auto array_ptr = ros_message->requests.data;
     cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: start_y
-  {
-    size_t size = ros_message->start_y.size;
-    auto array_ptr = ros_message->start_y.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: start_z
-  {
-    size_t size = ros_message->start_z.size;
-    auto array_ptr = ros_message->start_z.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: end_x
-  {
-    size_t size = ros_message->end_x.size;
-    auto array_ptr = ros_message->end_x.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: end_y
-  {
-    size_t size = ros_message->end_y.size;
-    auto array_ptr = ros_message->end_y.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
-  }
-
-  // Field name: end_z
-  {
-    size_t size = ros_message->end_z.size;
-    auto array_ptr = ros_message->end_z.data;
-    cdr << static_cast<uint32_t>(size);
-    cdr.serializeArray(array_ptr, size);
+    for (size_t i = 0; i < size; ++i) {
+      if (!callbacks->cdr_serialize(
+          &array_ptr[i], cdr))
+      {
+        return false;
+      }
+    }
   }
 
   return true;
@@ -111,100 +92,31 @@ static bool _StartGoalPositions_Request__cdr_deserialize(
     return false;
   }
   _StartGoalPositions_Request__ros_msg_type * ros_message = static_cast<_StartGoalPositions_Request__ros_msg_type *>(untyped_ros_message);
-  // Field name: start_x
+  // Field name: requests
   {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, StartGoal
+      )()->data);
     uint32_t cdrSize;
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->start_x.data) {
-      rosidl_runtime_c__double__Sequence__fini(&ros_message->start_x);
+    if (ros_message->requests.data) {
+      my_intermediate_interfaces__msg__StartGoal__Sequence__fini(&ros_message->requests);
     }
-    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->start_x, size)) {
-      fprintf(stderr, "failed to create array for field 'start_x'");
+    if (!my_intermediate_interfaces__msg__StartGoal__Sequence__init(&ros_message->requests, size)) {
+      fprintf(stderr, "failed to create array for field 'requests'");
       return false;
     }
-    auto array_ptr = ros_message->start_x.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: start_y
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->start_y.data) {
-      rosidl_runtime_c__double__Sequence__fini(&ros_message->start_y);
+    auto array_ptr = ros_message->requests.data;
+    for (size_t i = 0; i < size; ++i) {
+      if (!callbacks->cdr_deserialize(
+          cdr, &array_ptr[i]))
+      {
+        return false;
+      }
     }
-    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->start_y, size)) {
-      fprintf(stderr, "failed to create array for field 'start_y'");
-      return false;
-    }
-    auto array_ptr = ros_message->start_y.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: start_z
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->start_z.data) {
-      rosidl_runtime_c__double__Sequence__fini(&ros_message->start_z);
-    }
-    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->start_z, size)) {
-      fprintf(stderr, "failed to create array for field 'start_z'");
-      return false;
-    }
-    auto array_ptr = ros_message->start_z.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: end_x
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->end_x.data) {
-      rosidl_runtime_c__double__Sequence__fini(&ros_message->end_x);
-    }
-    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->end_x, size)) {
-      fprintf(stderr, "failed to create array for field 'end_x'");
-      return false;
-    }
-    auto array_ptr = ros_message->end_x.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: end_y
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->end_y.data) {
-      rosidl_runtime_c__double__Sequence__fini(&ros_message->end_y);
-    }
-    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->end_y, size)) {
-      fprintf(stderr, "failed to create array for field 'end_y'");
-      return false;
-    }
-    auto array_ptr = ros_message->end_y.data;
-    cdr.deserializeArray(array_ptr, size);
-  }
-
-  // Field name: end_z
-  {
-    uint32_t cdrSize;
-    cdr >> cdrSize;
-    size_t size = static_cast<size_t>(cdrSize);
-    if (ros_message->end_z.data) {
-      rosidl_runtime_c__double__Sequence__fini(&ros_message->end_z);
-    }
-    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->end_z, size)) {
-      fprintf(stderr, "failed to create array for field 'end_z'");
-      return false;
-    }
-    auto array_ptr = ros_message->end_z.data;
-    cdr.deserializeArray(array_ptr, size);
   }
 
   return true;
@@ -224,71 +136,17 @@ size_t get_serialized_size_my_intermediate_interfaces__srv__StartGoalPositions_R
   (void)padding;
   (void)wchar_size;
 
-  // field.name start_x
+  // field.name requests
   {
-    size_t array_size = ros_message->start_x.size;
-    auto array_ptr = ros_message->start_x.data;
+    size_t array_size = ros_message->requests.size;
+    auto array_ptr = ros_message->requests.data;
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name start_y
-  {
-    size_t array_size = ros_message->start_y.size;
-    auto array_ptr = ros_message->start_y.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name start_z
-  {
-    size_t array_size = ros_message->start_z.size;
-    auto array_ptr = ros_message->start_z.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name end_x
-  {
-    size_t array_size = ros_message->end_x.size;
-    auto array_ptr = ros_message->end_x.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name end_y
-  {
-    size_t array_size = ros_message->end_y.size;
-    auto array_ptr = ros_message->end_y.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name end_z
-  {
-    size_t array_size = ros_message->end_z.size;
-    auto array_ptr = ros_message->end_z.data;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-    (void)array_ptr;
-    size_t item_size = sizeof(array_ptr[0]);
-    current_alignment += array_size * item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += get_serialized_size_my_intermediate_interfaces__msg__StartGoal(
+        &array_ptr[index], current_alignment);
+    }
   }
 
   return current_alignment - initial_alignment;
@@ -317,7 +175,7 @@ size_t max_serialized_size_my_intermediate_interfaces__srv__StartGoalPositions_R
   full_bounded = true;
   is_plain = true;
 
-  // member: start_x
+  // member: requests
   {
     size_t array_size = 0;
     full_bounded = false;
@@ -325,63 +183,16 @@ size_t max_serialized_size_my_intermediate_interfaces__srv__StartGoalPositions_R
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: start_y
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: start_z
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: end_x
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: end_y
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-  // member: end_z
-  {
-    size_t array_size = 0;
-    full_bounded = false;
-    is_plain = false;
-    current_alignment += padding +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      current_alignment +=
+        max_serialized_size_my_intermediate_interfaces__msg__StartGoal(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
   }
 
   return current_alignment - initial_alignment;

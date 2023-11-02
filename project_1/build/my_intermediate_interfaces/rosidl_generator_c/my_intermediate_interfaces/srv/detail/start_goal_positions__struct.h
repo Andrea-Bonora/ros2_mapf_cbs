@@ -18,23 +18,13 @@ extern "C"
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'start_x'
-// Member 'start_y'
-// Member 'start_z'
-// Member 'end_x'
-// Member 'end_y'
-// Member 'end_z'
-#include "rosidl_runtime_c/primitives_sequence.h"
+// Member 'requests'
+#include "my_intermediate_interfaces/msg/detail/start_goal__struct.h"
 
 /// Struct defined in srv/StartGoalPositions in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__srv__StartGoalPositions_Request
 {
-  rosidl_runtime_c__double__Sequence start_x;
-  rosidl_runtime_c__double__Sequence start_y;
-  rosidl_runtime_c__double__Sequence start_z;
-  rosidl_runtime_c__double__Sequence end_x;
-  rosidl_runtime_c__double__Sequence end_y;
-  rosidl_runtime_c__double__Sequence end_z;
+  my_intermediate_interfaces__msg__StartGoal__Sequence requests;
 } my_intermediate_interfaces__srv__StartGoalPositions_Request;
 
 // Struct for a sequence of my_intermediate_interfaces__srv__StartGoalPositions_Request.

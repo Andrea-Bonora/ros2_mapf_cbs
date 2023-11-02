@@ -9,7 +9,9 @@ my_intermediate_interfaces/action/_my_compute_path_to_pose.py
 my_intermediate_interfaces/msg/__init__.py
 my_intermediate_interfaces/msg/_agent_path.py
 my_intermediate_interfaces/msg/_agent_path_request.py
+my_intermediate_interfaces/msg/_coordinates3_d.py
 my_intermediate_interfaces/msg/_edge_constraint.py
+my_intermediate_interfaces/msg/_start_goal.py
 my_intermediate_interfaces/msg/_vertex_constraint.py
 my_intermediate_interfaces/srv/__init__.py
 my_intermediate_interfaces/srv/_computed_plans.py

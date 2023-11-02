@@ -379,6 +379,12 @@ ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src
 # install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/EdgeConstraint.idl" "DESTINATION" "share/my_intermediate_interfaces/msg")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/EdgeConstraint.idl" "DESTINATION" "share/my_intermediate_interfaces/msg")
 
+# install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/Coordinates3D.idl" "DESTINATION" "share/my_intermediate_interfaces/msg")
+ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/Coordinates3D.idl" "DESTINATION" "share/my_intermediate_interfaces/msg")
+
+# install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/StartGoal.idl" "DESTINATION" "share/my_intermediate_interfaces/msg")
+ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/msg/StartGoal.idl" "DESTINATION" "share/my_intermediate_interfaces/msg")
+
 # install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/action/MyComputePathToPose.idl" "DESTINATION" "share/my_intermediate_interfaces/action")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_adapter/my_intermediate_interfaces/action/MyComputePathToPose.idl" "DESTINATION" "share/my_intermediate_interfaces/action")
 
@@ -420,6 +426,12 @@ ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src
 
 # install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/EdgeConstraint.msg" "DESTINATION" "share/my_intermediate_interfaces/msg")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/EdgeConstraint.msg" "DESTINATION" "share/my_intermediate_interfaces/msg")
+
+# install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/Coordinates3D.msg" "DESTINATION" "share/my_intermediate_interfaces/msg")
+ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/Coordinates3D.msg" "DESTINATION" "share/my_intermediate_interfaces/msg")
+
+# install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/StartGoal.msg" "DESTINATION" "share/my_intermediate_interfaces/msg")
+ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/msg/StartGoal.msg" "DESTINATION" "share/my_intermediate_interfaces/msg")
 
 # install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/action/MyComputePathToPose.action" "DESTINATION" "share/my_intermediate_interfaces/action")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate_interfaces/action/MyComputePathToPose.action" "DESTINATION" "share/my_intermediate_interfaces/action")

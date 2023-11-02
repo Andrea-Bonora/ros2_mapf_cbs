@@ -11,6 +11,7 @@ find_package(nav_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav2_msgs REQUIRED)
 find_package(ament_cmake REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -21,10 +22,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/AgentPath.msg"
   "msg/VertexConstraint.msg"
   "msg/EdgeConstraint.msg"
+  "msg/Coordinates3D.msg"
+  "msg/StartGoal.msg"
   "action/MyComputePathToPose.action"
   DEPENDENCIES nav_msgs
   DEPENDENCIES nav2_msgs
   DEPENDENCIES geometry_msgs
+  DEPENDENCIES std_msgs
 )
 
 ament_package()

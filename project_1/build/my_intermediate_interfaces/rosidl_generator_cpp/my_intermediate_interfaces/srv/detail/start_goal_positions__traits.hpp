@@ -14,6 +14,10 @@
 #include "my_intermediate_interfaces/srv/detail/start_goal_positions__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
+// Include directives for member types
+// Member 'requests'
+#include "my_intermediate_interfaces/msg/detail/start_goal__traits.hpp"
+
 namespace my_intermediate_interfaces
 {
 
@@ -25,105 +29,15 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: start_x
+  // member: requests
   {
-    if (msg.start_x.size() == 0) {
-      out << "start_x: []";
+    if (msg.requests.size() == 0) {
+      out << "requests: []";
     } else {
-      out << "start_x: [";
-      size_t pending_items = msg.start_x.size();
-      for (auto item : msg.start_x) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: start_y
-  {
-    if (msg.start_y.size() == 0) {
-      out << "start_y: []";
-    } else {
-      out << "start_y: [";
-      size_t pending_items = msg.start_y.size();
-      for (auto item : msg.start_y) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: start_z
-  {
-    if (msg.start_z.size() == 0) {
-      out << "start_z: []";
-    } else {
-      out << "start_z: [";
-      size_t pending_items = msg.start_z.size();
-      for (auto item : msg.start_z) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: end_x
-  {
-    if (msg.end_x.size() == 0) {
-      out << "end_x: []";
-    } else {
-      out << "end_x: [";
-      size_t pending_items = msg.end_x.size();
-      for (auto item : msg.end_x) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: end_y
-  {
-    if (msg.end_y.size() == 0) {
-      out << "end_y: []";
-    } else {
-      out << "end_y: [";
-      size_t pending_items = msg.end_y.size();
-      for (auto item : msg.end_y) {
-        rosidl_generator_traits::value_to_yaml(item, out);
-        if (--pending_items > 0) {
-          out << ", ";
-        }
-      }
-      out << "]";
-    }
-    out << ", ";
-  }
-
-  // member: end_z
-  {
-    if (msg.end_z.size() == 0) {
-      out << "end_z: []";
-    } else {
-      out << "end_z: [";
-      size_t pending_items = msg.end_z.size();
-      for (auto item : msg.end_z) {
-        rosidl_generator_traits::value_to_yaml(item, out);
+      out << "requests: [";
+      size_t pending_items = msg.requests.size();
+      for (auto item : msg.requests) {
+        to_flow_style_yaml(item, out);
         if (--pending_items > 0) {
           out << ", ";
         }
@@ -138,122 +52,21 @@ inline void to_block_style_yaml(
   const StartGoalPositions_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: start_x
+  // member: requests
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    if (msg.start_x.size() == 0) {
-      out << "start_x: []\n";
+    if (msg.requests.size() == 0) {
+      out << "requests: []\n";
     } else {
-      out << "start_x:\n";
-      for (auto item : msg.start_x) {
+      out << "requests:\n";
+      for (auto item : msg.requests) {
         if (indentation > 0) {
           out << std::string(indentation, ' ');
         }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-
-  // member: start_y
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.start_y.size() == 0) {
-      out << "start_y: []\n";
-    } else {
-      out << "start_y:\n";
-      for (auto item : msg.start_y) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-
-  // member: start_z
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.start_z.size() == 0) {
-      out << "start_z: []\n";
-    } else {
-      out << "start_z:\n";
-      for (auto item : msg.start_z) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-
-  // member: end_x
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.end_x.size() == 0) {
-      out << "end_x: []\n";
-    } else {
-      out << "end_x:\n";
-      for (auto item : msg.end_x) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-
-  // member: end_y
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.end_y.size() == 0) {
-      out << "end_y: []\n";
-    } else {
-      out << "end_y:\n";
-      for (auto item : msg.end_y) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
-      }
-    }
-  }
-
-  // member: end_z
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    if (msg.end_z.size() == 0) {
-      out << "end_z: []\n";
-    } else {
-      out << "end_z:\n";
-      for (auto item : msg.end_z) {
-        if (indentation > 0) {
-          out << std::string(indentation, ' ');
-        }
-        out << "- ";
-        rosidl_generator_traits::value_to_yaml(item, out);
-        out << "\n";
+        out << "-\n";
+        to_block_style_yaml(item, out, indentation + 2);
       }
     }
   }

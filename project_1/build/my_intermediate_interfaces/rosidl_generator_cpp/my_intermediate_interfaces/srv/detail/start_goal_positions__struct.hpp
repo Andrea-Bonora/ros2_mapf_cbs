@@ -15,6 +15,10 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
+// Include directives for member types
+// Member 'requests'
+#include "my_intermediate_interfaces/msg/detail/start_goal__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__srv__StartGoalPositions_Request __attribute__((deprecated))
 #else
@@ -45,60 +49,15 @@ struct StartGoalPositions_Request_
   }
 
   // field types and members
-  using _start_x_type =
-    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
-  _start_x_type start_x;
-  using _start_y_type =
-    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
-  _start_y_type start_y;
-  using _start_z_type =
-    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
-  _start_z_type start_z;
-  using _end_x_type =
-    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
-  _end_x_type end_x;
-  using _end_y_type =
-    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
-  _end_y_type end_y;
-  using _end_z_type =
-    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
-  _end_z_type end_z;
+  using _requests_type =
+    std::vector<my_intermediate_interfaces::msg::StartGoal_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::StartGoal_<ContainerAllocator>>>;
+  _requests_type requests;
 
   // setters for named parameter idiom
-  Type & set__start_x(
-    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
+  Type & set__requests(
+    const std::vector<my_intermediate_interfaces::msg::StartGoal_<ContainerAllocator>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<my_intermediate_interfaces::msg::StartGoal_<ContainerAllocator>>> & _arg)
   {
-    this->start_x = _arg;
-    return *this;
-  }
-  Type & set__start_y(
-    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
-  {
-    this->start_y = _arg;
-    return *this;
-  }
-  Type & set__start_z(
-    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
-  {
-    this->start_z = _arg;
-    return *this;
-  }
-  Type & set__end_x(
-    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
-  {
-    this->end_x = _arg;
-    return *this;
-  }
-  Type & set__end_y(
-    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
-  {
-    this->end_y = _arg;
-    return *this;
-  }
-  Type & set__end_z(
-    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
-  {
-    this->end_z = _arg;
+    this->requests = _arg;
     return *this;
   }
 
@@ -144,22 +103,7 @@ struct StartGoalPositions_Request_
   // comparison operators
   bool operator==(const StartGoalPositions_Request_ & other) const
   {
-    if (this->start_x != other.start_x) {
-      return false;
-    }
-    if (this->start_y != other.start_y) {
-      return false;
-    }
-    if (this->start_z != other.start_z) {
-      return false;
-    }
-    if (this->end_x != other.end_x) {
-      return false;
-    }
-    if (this->end_y != other.end_y) {
-      return false;
-    }
-    if (this->end_z != other.end_z) {
+    if (this->requests != other.requests) {
       return false;
     }
     return true;
