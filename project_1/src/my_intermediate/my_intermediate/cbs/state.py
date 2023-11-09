@@ -7,6 +7,6 @@ class State(object):
     def __hash__(self):
         return hash(str(self.time)+str(self.location.x) + str(self.location.y))
     def is_equal_except_time(self, state):
-        return self.location == state.location
+        return self.location.is_conflict(state.location)
     def __str__(self):
-        return str((self.time, self.location.x, self.location.y))
+        return str(self.time) + str(self.location)

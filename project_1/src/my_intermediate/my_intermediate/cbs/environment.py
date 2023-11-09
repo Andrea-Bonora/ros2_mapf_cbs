@@ -27,7 +27,9 @@ class Environment(object):
                 state_1 = self.get_state(agent_1, solution, t)
                 state_2 = self.get_state(agent_2, solution, t)
                 if state_1.is_equal_except_time(state_2):
-                    result.time = t
+                    result.time_a = len(solution[agent_1]) - t - 1
+                    result.time_b = len(solution[agent_2]) - t - 1
+                    result.index = t
                     result.type = Conflict.VERTEX
                     result.location_1 = state_1.location
                     result.agent_1 = agent_1
@@ -42,7 +44,9 @@ class Environment(object):
                 state_2b = self.get_state(agent_2, solution, t+1)
 
                 if state_1a.is_equal_except_time(state_2b) and state_1b.is_equal_except_time(state_2a):
-                    result.time = t
+                    result.time_a = len(solution[agent_1]) - t - 1
+                    result.time_b = len(solution[agent_2]) - t - 1
+                    result.index = t  
                     result.type = Conflict.EDGE
                     result.agent_1 = agent_1
                     result.agent_2 = agent_2
@@ -50,22 +54,66 @@ class Environment(object):
                     result.location_2 = state_1b.location
                     return result
         return False
+    
+    def get_first_c_conflict(self, solution):
+        max_t = max([len(plan) for plan in solution.values()])
+        result = Conflict()
+        for t in range(max_t):
+            for agent_1, agent_2 in combinations(solution.keys(), 2):
+                state_1 = self.get_state(agent_1, solution, t)
+                state_2 = self.get_state(agent_2, solution, t)
+                if state_1.is_equal_except_time(state_2):
+                    result.time_a = len(solution[agent_1]) - t
+                    result.time_b = len(solution[agent_2]) - t
+                    result.index = t
+                    result.type = Conflict.VERTEX
+                    result.location_1a = state_1.location
+                    result.location_2a = state_2.location
+                    result.agent_1 = agent_1
+                    result.agent_2 = agent_2
+                    return result
+
+            for agent_1, agent_2 in combinations(solution.keys(), 2):
+                state_1a = self.get_state(agent_1, solution, t)
+                state_1b = self.get_state(agent_1, solution, t+1)
+
+                state_2a = self.get_state(agent_2, solution, t)
+                state_2b = self.get_state(agent_2, solution, t+1)
+
+                if state_1a.is_equal_except_time(state_2b) and state_1b.is_equal_except_time(state_2a):
+                    result.time_a = len(solution[agent_1]) - t
+                    result.time_b = len(solution[agent_2]) - t 
+                    result.index = t  
+                    result.type = Conflict.EDGE
+                    result.agent_1 = agent_1
+                    result.agent_2 = agent_2
+                    result.location_1a = state_1a.location
+                    result.location_1b = state_1b.location
+                    result.location_2a = state_2a.location
+                    result.location_2b = state_2b.location
+                    return result
+        return False
 
     def create_constraints_from_conflict(self, conflict):
         constraint_dict = {}
         if conflict.type == Conflict.VERTEX:
-            v_constraint = VertexConstraint(conflict.time, conflict.location_1)
-            constraint = Constraints()
-            constraint.vertex_constraints |= {v_constraint}
-            constraint_dict[conflict.agent_1] = constraint
-            constraint_dict[conflict.agent_2] = constraint
+            constraint1 = Constraints()
+            constraint2 = Constraints()
+            #Add conflict for all the area of the robot (TODO)
+            v1_constraint = VertexConstraint(conflict.time_a+1, conflict.location_1a, conflict.index)
+            v2_constraint = VertexConstraint(conflict.time_b+1, conflict.location_2a, conflict.index)
+            constraint1.vertex_constraints |= {v1_constraint}
+            constraint2.vertex_constraints |= {v2_constraint}
+
+            constraint_dict[conflict.agent_1] = constraint1
+            constraint_dict[conflict.agent_2] = constraint2
 
         elif conflict.type == Conflict.EDGE:
             constraint1 = Constraints()
             constraint2 = Constraints()
 
-            e_constraint1 = EdgeConstraint(conflict.time, conflict.location_1, conflict.location_2)
-            e_constraint2 = EdgeConstraint(conflict.time, conflict.location_2, conflict.location_1)
+            e_constraint1 = EdgeConstraint(conflict.time_a+1, conflict.location_1a, conflict.location_1b, conflict.index)
+            e_constraint2 = EdgeConstraint(conflict.time_b+1, conflict.location_2a, conflict.location_2b, conflict.index)
 
             constraint1.edge_constraints |= {e_constraint1}
             constraint2.edge_constraints |= {e_constraint2}

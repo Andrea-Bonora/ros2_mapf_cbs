@@ -1,0 +1,244 @@
+[0.000000] (-) TimerEvent: {}
+[0.000230] (-) JobUnselected: {'identifier': 'my_intermediate'}
+[0.000425] (-) JobUnselected: {'identifier': 'my_intermediate_interfaces'}
+[0.000440] (-) JobUnselected: {'identifier': 'my_nav2_core'}
+[0.000452] (-) JobUnselected: {'identifier': 'my_nav2_planner'}
+[0.000463] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000474] (-) JobUnselected: {'identifier': 'my_try_bringup'}
+[0.000484] (-) JobUnselected: {'identifier': 'nav2_straightline_planner'}
+[0.000495] (-) JobUnselected: {'identifier': 'turtlebot3_multi_robot'}
+[0.000508] (my_nav2_navfn_planner) JobQueued: {'identifier': 'my_nav2_navfn_planner', 'dependencies': OrderedDict([('my_intermediate_interfaces', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces'), ('my_nav2_core', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core')])}
+[0.000528] (my_nav2_navfn_planner) JobStarted: {'identifier': 'my_nav2_navfn_planner'}
+[0.075633] (my_nav2_navfn_planner) JobProgress: {'identifier': 'my_nav2_navfn_planner', 'progress': 'cmake'}
+[0.076114] (my_nav2_navfn_planner) JobProgress: {'identifier': 'my_nav2_navfn_planner', 'progress': 'build'}
+[0.076799] (my_nav2_navfn_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner', '--', '-j8', '-l8'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('SYSTEMD_EXEC_PID', '2015'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/1990,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/1990'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/264e6ecf_5cfa_4142_82cf_938661d74570'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S5D5D2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.168'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_navfn_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.099757] (-) TimerEvent: {}
+[0.118923] (my_nav2_navfn_planner) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_nav2_navfn_planner\x1b[0m\n'}
+[0.142144] (my_nav2_navfn_planner) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o\x1b[0m\n'}
+[0.199856] (-) TimerEvent: {}
+[0.300149] (-) TimerEvent: {}
+[0.400477] (-) TimerEvent: {}
+[0.500892] (-) TimerEvent: {}
+[0.601153] (-) TimerEvent: {}
+[0.701489] (-) TimerEvent: {}
+[0.801814] (-) TimerEvent: {}
+[0.902197] (-) TimerEvent: {}
+[1.002559] (-) TimerEvent: {}
+[1.103164] (-) TimerEvent: {}
+[1.203632] (-) TimerEvent: {}
+[1.304019] (-) TimerEvent: {}
+[1.404749] (-) TimerEvent: {}
+[1.505097] (-) TimerEvent: {}
+[1.605531] (-) TimerEvent: {}
+[1.705890] (-) TimerEvent: {}
+[1.806213] (-) TimerEvent: {}
+[1.906553] (-) TimerEvent: {}
+[2.006926] (-) TimerEvent: {}
+[2.107263] (-) TimerEvent: {}
+[2.207633] (-) TimerEvent: {}
+[2.308018] (-) TimerEvent: {}
+[2.408364] (-) TimerEvent: {}
+[2.450074] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.450330] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.450499] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.450583] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.450658] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.450734] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.450807] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.450875] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.450943] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.451074] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.451150] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.451222] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.451296] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint my_nav2_navfn_planner::MyNavFn::calcPath(int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, int*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.451383] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:823:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.451454] (my_nav2_navfn_planner) StderrLine: {'line': b'  823 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.451639] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.451738] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.451815] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.451888] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:823:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.451961] (my_nav2_navfn_planner) StderrLine: {'line': b'  823 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.452033] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.452271] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.452361] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.452448] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.452539] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.452617] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.452687] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.452753] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.452833] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.453052] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.453127] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.453198] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.453305] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.453388] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.453459] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.453557] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.453763] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:826:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.453855] (my_nav2_navfn_planner) StderrLine: {'line': b'  826 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.453929] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.454002] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.454075] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.454146] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:826:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.454214] (my_nav2_navfn_planner) StderrLine: {'line': b'  826 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.454365] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.454440] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.454512] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.454584] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.454656] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.454732] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.454805] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.454876] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.454950] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.455030] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.455384] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.455458] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.455528] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.455595] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.455667] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.455738] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.455811] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:829:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.455887] (my_nav2_navfn_planner) StderrLine: {'line': b'  829 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.455960] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.456033] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.456113] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.456187] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:829:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.456260] (my_nav2_navfn_planner) StderrLine: {'line': b'  829 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.456334] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.456406] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.456477] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.456549] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.456630] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.456702] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.456775] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.456843] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.456916] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.456981] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.457047] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.457114] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.457178] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.457240] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.457305] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.457370] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.457438] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:832:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.457509] (my_nav2_navfn_planner) StderrLine: {'line': b'  832 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.457581] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.457649] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.457715] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.457779] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:832:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.457841] (my_nav2_navfn_planner) StderrLine: {'line': b'  832 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.457906] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.457973] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.458039] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.458105] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.458173] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.458239] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.458314] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.458381] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.458451] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.458519] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.458587] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.458650] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.458714] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.458779] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.458846] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.458909] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.458972] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:835:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.459046] (my_nav2_navfn_planner) StderrLine: {'line': b'  835 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.459112] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.459177] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.459243] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.459308] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:835:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.459369] (my_nav2_navfn_planner) StderrLine: {'line': b'  835 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.459437] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.459507] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.459577] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.459651] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.459728] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.459797] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.459867] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.459942] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.460018] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.460105] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.460190] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.460253] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.460303] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.460356] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.460408] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.460469] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.460533] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:838:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.460604] (my_nav2_navfn_planner) StderrLine: {'line': b'  838 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.460667] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.460734] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.460797] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.460862] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:838:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.460922] (my_nav2_navfn_planner) StderrLine: {'line': b'  838 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.460984] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.461046] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.461127] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.461193] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.461256] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.461317] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.461381] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.461446] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.461510] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.461579] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.461642] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.461713] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.461779] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.461844] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.461908] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.461971] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.462036] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:841:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.462109] (my_nav2_navfn_planner) StderrLine: {'line': b'  841 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.462176] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.462240] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.462304] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.462368] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:841:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.462431] (my_nav2_navfn_planner) StderrLine: {'line': b'  841 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.462500] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.462563] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.462628] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.462691] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.462754] (my_nav2_navfn_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.462818] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.462881] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.462946] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.463010] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.463075] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.463140] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.463206] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.463271] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.463337] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.463400] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.463463] (my_nav2_navfn_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:47\x1b[m\x1b[K:\n'}
+[2.463524] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:844:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%d\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Werror=format=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.463597] (my_nav2_navfn_planner) StderrLine: {'line': b'  844 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp"),\x1b[01;31m\x1b[K" %d < %d"\x1b[m\x1b[K, \x1b[32m\x1b[Kpotarr_copy[st]\x1b[m\x1b[K, minp);\n'}
+[2.463659] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.463725] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.463790] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                                          \x1b[32m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[2.463880] (my_nav2_navfn_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:844:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.463954] (my_nav2_navfn_planner) StderrLine: {'line': b'  844 |       RCLCPP_WARN(rclcpp::get_logger("rclcpp")," \x1b[01;36m\x1b[K%d\x1b[m\x1b[K < %d", potarr_copy[st], minp);\n'}
+[2.464029] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.464107] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.464180] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.464254] (my_nav2_navfn_planner) StderrLine: {'line': b'      |                                                  \x1b[32m\x1b[K%f\x1b[m\x1b[K\n'}
+[2.508478] (-) TimerEvent: {}
+[2.608831] (-) TimerEvent: {}
+[2.709162] (-) TimerEvent: {}
+[2.809500] (-) TimerEvent: {}
+[2.909819] (-) TimerEvent: {}
+[3.010158] (-) TimerEvent: {}
+[3.110485] (-) TimerEvent: {}
+[3.210826] (-) TimerEvent: {}
+[3.311245] (-) TimerEvent: {}
+[3.411615] (-) TimerEvent: {}
+[3.512043] (-) TimerEvent: {}
+[3.566399] (my_nav2_navfn_planner) StderrLine: {'line': b'cc1plus: all warnings being treated as errors\n'}
+[3.585571] (my_nav2_navfn_planner) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o] Error 1\n'}
+[3.585793] (my_nav2_navfn_planner) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2\n'}
+[3.585907] (my_nav2_navfn_planner) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.587553] (my_nav2_navfn_planner) CommandEnded: {'returncode': 2}
+[3.612476] (-) TimerEvent: {}
+[3.671135] (my_nav2_navfn_planner) JobEnded: {'identifier': 'my_nav2_navfn_planner', 'rc': 2}
+[3.681776] (-) EventReactorShutdown: {}

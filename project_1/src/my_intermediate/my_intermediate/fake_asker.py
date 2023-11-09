@@ -7,6 +7,9 @@ from rclpy.action import ActionClient
 from nav2_msgs.action import FollowPath
 from my_intermediate_interfaces.srv import StartGoalPositions
 from my_intermediate_interfaces.msg import StartGoal
+from geometry_msgs.msg import Pose, PoseStamped, Point, Quaternion
+from std_msgs.msg import Header
+from builtin_interfaces.msg import Duration, Time
 
 
 class FakeAskerNode(Node):
@@ -69,7 +72,7 @@ class FakeAskerNode(Node):
 
             for i, plan in enumerate(response.plans):
                 self.get_logger().info(str(len(plan.path.poses)))
-                self.execute_plan(plan)
+                #self.execute_plan(plan)
 
         except Exception as e:
             self.get_logger().error("Service call failed %r" % (e,))   

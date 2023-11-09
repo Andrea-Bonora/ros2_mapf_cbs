@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner_lattice[0m
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner_2d[0m
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner[0m
+[  6%] [32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o[0m
+[ 36%] Built target my_nav2_smac_planner
+[ 69%] Built target my_nav2_smac_planner_lattice
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:258:7:[m[K [01;31m[Kerror: [m[K‘[01m[KworldToMap[m[K’ was not declared in this scope
+  258 |       [01;31m[KworldToMap[m[K(constr_x, constr_y, cx, cy);
+      |       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:259:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+  259 |       int idx = cy * [01;31m[Kplanner_[m[K->nx + cx;
+      |                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:270:7:[m[K [01;31m[Kerror: [m[K‘[01m[KworldToMap[m[K’ was not declared in this scope
+  270 |       [01;31m[KworldToMap[m[K(constr_1_x, constr_1_y, cx1, cy1);
+      |       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:272:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanner_[m[K’ was not declared in this scope
+  272 |       int idx1 = cy1 * [01;31m[Kplanner_[m[K->nx + cx1;
+      |                        [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_smac_planner_2d.dir/build.make:76: CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/my_nav2_smac_planner_2d.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,18 @@
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:[m[K In member function ‘[01m[Kvoid my_nav2_navfn_planner::MyNavFn::updateCellAstar(int, int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:448:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kif[m[K’
+  448 |     tmp = potarr[cell_value]
+      |                             [01;31m[K^[m[K
+      |                             [32m[K;[m[K
+  449 |     //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "%d", step - ts_value);
+  450 |     [32m[Kif[m[K(ts_value - 1 == step)
+      |     [32m[K~~[m[K                       
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:447:9:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kts_value[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+  447 |     int [01;31m[Kts_value[m[K = obj.at("time_step");
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:438:37:[m[K [01;31m[Kerror: [m[Kunused parameter ‘[01m[Kstep[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Werror=unused-parameter]8;;[m[K]
+  438 | MyNavFn::updateCellAstar(int n, [01;31m[Kint step[m[K, std::vector<std::map<std::string, int>> vc,
+      |                                 [01;31m[K~~~~^~~~[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

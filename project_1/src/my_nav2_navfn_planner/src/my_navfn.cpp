@@ -246,7 +246,6 @@ MyNavFn::calcNavFnDijkstra(bool atStart)
 //
 // calculate navigation function, given a costmap, goal, and start
 //
-
 bool
 MyNavFn::calcNavFnAstar()
 {
@@ -438,10 +437,12 @@ MyNavFn::updateCellAstar(int n)
 {
   // get neighbors
   float u, d, l, r;
+
   l = potarr[n - 1];
   r = potarr[n + 1];
   u = potarr[n - nx];
   d = potarr[n + nx];
+
   // ROS_INFO("[Update] c: %0.1f  l: %0.1f  r: %0.1f  u: %0.1f  d: %0.1f\n",
   // potarr[n], l, r, u, d);
   // ROS_INFO("[Update] cost of %d: %d\n", n, costarr[n]);
@@ -612,7 +613,7 @@ MyNavFn::propNavFnAstar(int cycles)
   for (; cycle < cycles; cycle++) {  // go for this many cycles, unless interrupted
     if (curPe == 0 && nextPe == 0) {  // priority blocks empty
       break;
-    }
+    }    
 
     // stats
     nc += curPe;
@@ -701,7 +702,7 @@ MyNavFn::calcPath(int n,
 {
   // test write
   // savemap("test");
-
+  int* stcs = new int[n];
   // check path arrays
   if (npathbuf < n) {
     if (pathx) {delete[] pathx;}
@@ -715,35 +716,26 @@ MyNavFn::calcPath(int n,
   // st is always upper left corner for 4-point bilinear interpolation
   if (st == NULL) {st = start;}
   int stc = st[1] * nx + st[0];
-
   // set up offset
   float dx = 0;
   float dy = 0;
-  npath = 0;
+  npath = 0;  
 
+  int i = 0;
   // go for <n> cycles at most
-  for (int i = 0; i < n; i++) {
+  int nskip = 0;
+  bool skipPoint = false;
 
-    //deep copy the potarr array
-    potarr_copy = new float[ns];
-    for (int j = 0; j < ns; ++j) {
-        potarr_copy[j] = potarr[j];
+  while( i < n && nskip < 15) {
+    if(!skipPoint){
+      //deep copy the potarr array
+      potarr_copy = new float[ns];
+      for (int j = 0; j < ns; ++j) {
+          potarr_copy[j] = potarr[j];
+      }
     }
 
-    //check if constraint allow each move otherwise set potarr[x] to high number, but save current values
-    int time_step = n - ( i + 1 );
-    for (const auto& obj : vertex_constraints) {
-        int cell_value = obj.at("cell");
-        int ts_value = obj.at("time_step");
-        if(ts_value == time_step) potarr_copy[cell_value] = COST_OBS;
-    }
-
-    for (const auto& obj : edge_constraints) {
-        int cell_from_value = obj.at("cell_from");
-        int cell_to_value = obj.at("cell_to");
-        int ts_value = obj.at("time_step");
-        if(ts_value == time_step && cell_from_value == stc) potarr_copy[cell_to_value] = COST_OBS;
-    }
+    skipPoint = false;
 
     // check if near goal
     int nearest_point = std::max(
@@ -751,7 +743,8 @@ MyNavFn::calcPath(int n,
       std::min(
         nx * ny - 1, stc + static_cast<int>(round(dx)) +
         static_cast<int>(nx * round(dy))));
-    if (potarr[nearest_point] < COST_NEUTRAL) {
+    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Nearest point: %d, COST_NEUTRAL = %d", nearest_point, COST_NEUTRAL);
+    if (potarr_copy[nearest_point] < COST_NEUTRAL) {
       pathx[npath] = static_cast<float>(goal[0]);
       pathy[npath] = static_cast<float>(goal[1]);
       delete[] potarr_copy;
@@ -764,10 +757,44 @@ MyNavFn::calcPath(int n,
       return 0;
     }
 
+    for (const auto& obj : vertex_constraints) {
+        int cell_value = obj.at("cell");
+        int ts_value = obj.at("time_step");
+        RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d , %d == %d", ts_value, npath, cell_value, stc);
+        if(ts_value - 1 == npath + 1 && cell_value == stc){
+          //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Blocking vc stc %d", cell_value);
+          potarr_copy[cell_value] = POT_HIGH;
+          skipPoint = true;
+          stc = stcs[npath-1];
+        }
+    }
+
+    for (const auto& obj : edge_constraints) {
+        int cell_from_value = obj.at("cell_from");
+        int cell_to_value = obj.at("cell_to");
+        int ts_value = obj.at("time_step");
+        if(ts_value - 1 == npath + 1 && cell_to_value == stcs[npath-1] && cell_from_value == stc){
+          //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Blocking ec stc %d", cell_from_value);
+          potarr_copy[cell_from_value] = POT_HIGH;
+          skipPoint = true;
+          stc = stcs[npath-1];
+        }
+    }
+
     // add to path
-    pathx[npath] = stc % nx + dx;
-    pathy[npath] = stc / nx + dy;
-    npath++;
+    if(skipPoint){
+      nskip++;
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"skipping");
+    }
+    else{
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"time step: %d, new stc: %d", npath, stc);
+      nskip = 0;
+      pathx[npath] = stc % nx; //+ dx;
+      pathy[npath] = stc / nx; // + dy;
+      stcs[npath] = stc;
+      npath++;
+      i++;
+    }
 
     bool oscillation_detected = false;
     if (npath > 2 &&
@@ -784,49 +811,57 @@ MyNavFn::calcPath(int n,
     int stcpx = stc - nx;
 
     // check for potentials at eight positions near cell
-    if (potarr[stc] >= POT_HIGH ||
-      potarr[stc + 1] >= POT_HIGH ||
-      potarr[stc - 1] >= POT_HIGH ||
-      potarr[stcnx] >= POT_HIGH ||
-      potarr[stcnx + 1] >= POT_HIGH ||
-      potarr[stcnx - 1] >= POT_HIGH ||
-      potarr[stcpx] >= POT_HIGH ||
-      potarr[stcpx + 1] >= POT_HIGH ||
-      potarr[stcpx - 1] >= POT_HIGH ||
+    if (potarr_copy[stc] >= POT_HIGH ||
+      potarr_copy[stc + 1] >= POT_HIGH ||
+      potarr_copy[stc - 1] >= POT_HIGH ||
+      potarr_copy[stcnx] >= POT_HIGH ||
+      potarr_copy[stcnx + 1] >= POT_HIGH ||
+      potarr_copy[stcnx - 1] >= POT_HIGH ||
+      potarr_copy[stcpx] >= POT_HIGH ||
+      potarr_copy[stcpx + 1] >= POT_HIGH ||
+      potarr_copy[stcpx - 1] >= POT_HIGH ||
       oscillation_detected)
     {
       RCLCPP_DEBUG(
         rclcpp::get_logger("rclcpp"),
-        "[Path] Pot fn boundary, following grid (%0.1f/%d)", potarr[stc], npath);
+        "[Path] Pot fn boundary, following grid (%0.1f/%d)", potarr_copy[stc], npath);
 
       // check eight neighbors to find the lowest
       int minc = stc;
-      int minp = potarr[stc];
+      int minp = potarr_copy[stc];
       int st = stcpx - 1;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st++;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st++;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st = stc - 1;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st = stc + 1;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st = stcnx - 1;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st++;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       st++;
-      if (potarr[st] < minp) {minp = potarr[st]; minc = st;}
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f < %d", potarr_copy[st], minp);
+      if (potarr_copy[st] < minp || minp < 0) {minp = potarr_copy[st]; minc = st;}
       stc = minc;
       dx = 0;
       dy = 0;
 
       RCLCPP_DEBUG(
         rclcpp::get_logger("rclcpp"), "[Path] Pot: %0.1f  pos: %0.1f,%0.1f",
-        potarr[stc], pathx[npath - 1], pathy[npath - 1]);
+        potarr_copy[stc], pathx[npath - 1], pathy[npath - 1]);
 
-      if (potarr[stc] >= POT_HIGH) {
+      if (potarr_copy[stc] >= POT_HIGH) {
         RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] No path found, high potential");
         // savemap("navfn_highpot");
         delete[] potarr_copy;
@@ -879,12 +914,14 @@ MyNavFn::calcPath(int n,
 
     //      ROS_INFO("[Path] Pot: %0.1f  grad: %0.1f,%0.1f  pos: %0.1f,%0.1f\n",
     //      potarr[stc], x, y, pathx[npath-1], pathy[npath-1]);
-
-    delete[] potarr_copy;
+    if(!skipPoint) 
+      delete[] potarr_copy;
   }
 
+
+  //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"i = %d", i);
   //  return npath;  // out of cycles, return failure
-  RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] No path found, path too long");
+  //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "[PathCalc] No path found, path too long");
   // savemap("navfn_pathlong");
   return 0;  // out of cycles, return failure
 }
@@ -907,37 +944,38 @@ MyNavFn::gradCell(int n)
     return 0.0;
   }
 
-  float cv = potarr[n];
+  float cv = potarr_copy[n];
   float dx = 0.0;
   float dy = 0.0;
 
   // check for in an obstacle
+  //RCLCPP_WARN(rclcpp::get_logger("rclcpp")," %f >= %f", cv, POT_HIGH);
   if (cv >= POT_HIGH) {
-    if (potarr[n - 1] < POT_HIGH) {
+    if (potarr_copy[n - 1] < POT_HIGH) {
       dx = -COST_OBS;
-    } else if (potarr[n + 1] < POT_HIGH) {
+    } else if (potarr_copy[n + 1] < POT_HIGH) {
       dx = COST_OBS;
     }
-    if (potarr[n - nx] < POT_HIGH) {
+    if (potarr_copy[n - nx] < POT_HIGH) {
       dy = -COST_OBS;
-    } else if (potarr[n + nx] < POT_HIGH) {
+    } else if (potarr_copy[n + nx] < POT_HIGH) {
       dy = COST_OBS;
     }
   } else {  // not in an obstacle
     // dx calc, average to sides
-    if (potarr[n - 1] < POT_HIGH) {
-      dx += potarr[n - 1] - cv;
+    if (potarr_copy[n - 1] < POT_HIGH) {
+      dx += potarr_copy[n - 1] - cv;
     }
-    if (potarr[n + 1] < POT_HIGH) {
-      dx += cv - potarr[n + 1];
+    if (potarr_copy[n + 1] < POT_HIGH) {
+      dx += cv - potarr_copy[n + 1];
     }
 
     // dy calc, average to sides
-    if (potarr[n - nx] < POT_HIGH) {
-      dy += potarr[n - nx] - cv;
+    if (potarr_copy[n - nx] < POT_HIGH) {
+      dy += potarr_copy[n - nx] - cv;
     }
-    if (potarr[n + nx] < POT_HIGH) {
-      dy += cv - potarr[n + nx];
+    if (potarr_copy[n + nx] < POT_HIGH) {
+      dy += cv - potarr_copy[n + nx];
     }
   }
 

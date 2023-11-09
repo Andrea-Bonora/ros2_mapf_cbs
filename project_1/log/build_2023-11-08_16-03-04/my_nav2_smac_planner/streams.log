@@ -1,0 +1,76 @@
+[0.058s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner
+[0.067s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.176s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.176s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.196s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.197s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.202s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.211s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.221s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.261s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.262s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.281s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.406s] -- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.464s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.489s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.662s] -- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)
+[1.032s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.032s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.156s] -- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)
+[2.216s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.216s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[2.218s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.218s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[10.820s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[10.873s] -- Added test 'copyright' to check source files copyright and LICENSE
+[10.873s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[10.874s] -- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include
+[10.874s] -- Configured cppcheck exclude dirs and/or files: include/nav2_smac_planner/thirdparty/robin_hood.h
+[10.875s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[10.875s] -- Configured cpplint exclude dirs and/or files: include/nav2_smac_planner/thirdparty/robin_hood.h
+[10.875s] -- Added test 'lint_cmake' to check CMake code style
+[10.876s] -- Added test 'uncrustify' to check C / C++ code style
+[10.876s] -- Configured uncrustify additional arguments: 
+[10.876s] -- Added test 'xmllint' to check XML markup files
+[10.877s] -- Configuring done
+[10.880s] [31mCMake Error at CMakeLists.txt:75 (add_library):
+[10.880s]   Cannot find source file:
+[10.881s] 
+[10.881s]     src/smac_planner_hybrid.cpp
+[10.881s] 
+[10.881s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[10.881s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[10.881s] 
+[10.881s] [0m
+[10.882s] [31mCMake Error at CMakeLists.txt:96 (add_library):
+[10.882s]   Cannot find source file:
+[10.882s] 
+[10.882s]     src/node_hybrid.cpp
+[10.882s] 
+[10.883s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[10.883s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[10.883s] 
+[10.883s] [0m
+[10.883s] [31mCMake Error at CMakeLists.txt:117 (add_library):
+[10.883s]   Cannot find source file:
+[10.883s] 
+[10.883s]     src/smac_planner_lattice.cpp
+[10.883s] 
+[10.883s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h
+[10.883s]   .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc
+[10.883s] 
+[10.883s] [0m
+[10.885s] [31mCMake Error at CMakeLists.txt:75 (add_library):
+[10.885s]   No SOURCES given to target: nav2_smac_planner
+[10.885s] 
+[10.885s] [0m
+[10.885s] [31mCMake Error at CMakeLists.txt:96 (add_library):
+[10.885s]   No SOURCES given to target: nav2_smac_planner_2d
+[10.885s] 
+[10.886s] [0m
+[10.886s] [31mCMake Error at CMakeLists.txt:117 (add_library):
+[10.886s]   No SOURCES given to target: nav2_smac_planner_lattice
+[10.886s] 
+[10.886s] [0m
+[10.886s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[10.892s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner

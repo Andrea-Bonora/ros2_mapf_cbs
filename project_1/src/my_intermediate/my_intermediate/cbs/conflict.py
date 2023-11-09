@@ -4,14 +4,18 @@ class Conflict(object):
     VERTEX = 1
     EDGE = 2
     def __init__(self):
-        self.time = -1
+        self.time_a = -1
+        self.time_b = -1
+        self.index = -1
         self.type = -1
 
         self.agent_1 = ''
         self.agent_2 = ''
 
-        self.location_1 = DiscreteLocation()
-        self.location_2 = DiscreteLocation()
+        self.location_1a = DiscreteLocation()
+        self.location_1b = DiscreteLocation()
+        self.location_2a = DiscreteLocation()
+        self.location_2b = DiscreteLocation()
 
     def __str__(self):
         return '(' + str(self.time) + ', ' + self.agent_1 + ', ' + self.agent_2 + \

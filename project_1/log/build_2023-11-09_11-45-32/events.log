@@ -1,0 +1,656 @@
+[0.000000] (-) TimerEvent: {}
+[0.000178] (-) JobUnselected: {'identifier': 'my_intermediate'}
+[0.000210] (-) JobUnselected: {'identifier': 'my_intermediate_interfaces'}
+[0.000239] (-) JobUnselected: {'identifier': 'my_nav2_core'}
+[0.000250] (-) JobUnselected: {'identifier': 'my_nav2_navfn_planner'}
+[0.000261] (-) JobUnselected: {'identifier': 'my_nav2_planner'}
+[0.000272] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000283] (-) JobUnselected: {'identifier': 'my_try_bringup'}
+[0.000293] (-) JobUnselected: {'identifier': 'nav2_straightline_planner'}
+[0.000303] (-) JobUnselected: {'identifier': 'turtlebot3_multi_robot'}
+[0.000315] (my_nav2_smac_planner) JobQueued: {'identifier': 'my_nav2_smac_planner', 'dependencies': OrderedDict([('my_intermediate_interfaces', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces'), ('my_nav2_core', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core')])}
+[0.000343] (my_nav2_smac_planner) JobStarted: {'identifier': 'my_nav2_smac_planner'}
+[0.057817] (my_nav2_smac_planner) JobProgress: {'identifier': 'my_nav2_smac_planner', 'progress': 'cmake'}
+[0.059205] (my_nav2_smac_planner) JobProgress: {'identifier': 'my_nav2_smac_planner', 'progress': 'build'}
+[0.059275] (my_nav2_smac_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner', '--', '-j8', '-l8'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('SYSTEMD_EXEC_PID', '2917'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/2863,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/2863'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f812ee0e_9a5e_4d41_98c0_0a36f1cd8e37'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.21G2D2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.082848] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099526] (-) TimerEvent: {}
+[0.199579] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.199718] (-) TimerEvent: {}
+[0.211862] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)\n'}
+[0.212411] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.249175] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.253079] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.260411] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.273819] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.287412] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299803] (-) TimerEvent: {}
+[0.339691] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.342031] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.370146] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.399975] (-) TimerEvent: {}
+[0.489038] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.500166] (-) TimerEvent: {}
+[0.566988] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.597554] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.600320] (-) TimerEvent: {}
+[0.700622] (-) TimerEvent: {}
+[0.795560] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)\n'}
+[0.800776] (-) TimerEvent: {}
+[0.901085] (-) TimerEvent: {}
+[1.001431] (-) TimerEvent: {}
+[1.101812] (-) TimerEvent: {}
+[1.187872] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.188993] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.201952] (-) TimerEvent: {}
+[1.302255] (-) TimerEvent: {}
+[1.318336] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)\n'}
+[1.402470] (-) TimerEvent: {}
+[1.502857] (-) TimerEvent: {}
+[1.603239] (-) TimerEvent: {}
+[1.703632] (-) TimerEvent: {}
+[1.804035] (-) TimerEvent: {}
+[1.904417] (-) TimerEvent: {}
+[2.004784] (-) TimerEvent: {}
+[2.105067] (-) TimerEvent: {}
+[2.205424] (-) TimerEvent: {}
+[2.305741] (-) TimerEvent: {}
+[2.406163] (-) TimerEvent: {}
+[2.410317] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found my_nav2_core: 1.1.12 (/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/share/my_nav2_core/cmake)\n'}
+[2.506354] (-) TimerEvent: {}
+[2.606751] (-) TimerEvent: {}
+[2.707128] (-) TimerEvent: {}
+[2.807521] (-) TimerEvent: {}
+[2.907919] (-) TimerEvent: {}
+[3.008293] (-) TimerEvent: {}
+[3.043006] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_C: -fopenmp (found version "4.5") \n'}
+[3.043192] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_CXX: -fopenmp (found version "4.5") \n'}
+[3.044553] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_C: -fopenmp (found version "4.5") \n'}
+[3.044724] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_CXX: -fopenmp (found version "4.5") \n'}
+[3.108506] (-) TimerEvent: {}
+[3.208906] (-) TimerEvent: {}
+[3.309305] (-) TimerEvent: {}
+[3.409582] (-) TimerEvent: {}
+[3.509988] (-) TimerEvent: {}
+[3.610372] (-) TimerEvent: {}
+[3.710745] (-) TimerEvent: {}
+[3.811102] (-) TimerEvent: {}
+[3.911476] (-) TimerEvent: {}
+[4.011856] (-) TimerEvent: {}
+[4.112253] (-) TimerEvent: {}
+[4.212636] (-) TimerEvent: {}
+[4.313009] (-) TimerEvent: {}
+[4.413317] (-) TimerEvent: {}
+[4.513624] (-) TimerEvent: {}
+[4.613950] (-) TimerEvent: {}
+[4.714321] (-) TimerEvent: {}
+[4.814665] (-) TimerEvent: {}
+[4.915050] (-) TimerEvent: {}
+[5.015423] (-) TimerEvent: {}
+[5.115805] (-) TimerEvent: {}
+[5.216178] (-) TimerEvent: {}
+[5.316492] (-) TimerEvent: {}
+[5.416868] (-) TimerEvent: {}
+[5.517263] (-) TimerEvent: {}
+[5.617605] (-) TimerEvent: {}
+[5.717971] (-) TimerEvent: {}
+[5.818345] (-) TimerEvent: {}
+[5.918723] (-) TimerEvent: {}
+[6.019094] (-) TimerEvent: {}
+[6.119469] (-) TimerEvent: {}
+[6.219849] (-) TimerEvent: {}
+[6.320228] (-) TimerEvent: {}
+[6.420610] (-) TimerEvent: {}
+[6.520945] (-) TimerEvent: {}
+[6.621332] (-) TimerEvent: {}
+[6.721703] (-) TimerEvent: {}
+[6.822008] (-) TimerEvent: {}
+[6.922385] (-) TimerEvent: {}
+[7.022757] (-) TimerEvent: {}
+[7.123165] (-) TimerEvent: {}
+[7.223548] (-) TimerEvent: {}
+[7.323942] (-) TimerEvent: {}
+[7.424329] (-) TimerEvent: {}
+[7.524715] (-) TimerEvent: {}
+[7.625097] (-) TimerEvent: {}
+[7.725399] (-) TimerEvent: {}
+[7.825774] (-) TimerEvent: {}
+[7.926088] (-) TimerEvent: {}
+[8.026465] (-) TimerEvent: {}
+[8.126848] (-) TimerEvent: {}
+[8.227238] (-) TimerEvent: {}
+[8.327624] (-) TimerEvent: {}
+[8.428006] (-) TimerEvent: {}
+[8.528394] (-) TimerEvent: {}
+[8.628768] (-) TimerEvent: {}
+[8.729156] (-) TimerEvent: {}
+[8.829563] (-) TimerEvent: {}
+[8.929953] (-) TimerEvent: {}
+[9.030352] (-) TimerEvent: {}
+[9.130721] (-) TimerEvent: {}
+[9.231101] (-) TimerEvent: {}
+[9.331489] (-) TimerEvent: {}
+[9.431873] (-) TimerEvent: {}
+[9.532263] (-) TimerEvent: {}
+[9.632642] (-) TimerEvent: {}
+[9.733028] (-) TimerEvent: {}
+[9.833336] (-) TimerEvent: {}
+[9.933708] (-) TimerEvent: {}
+[10.034075] (-) TimerEvent: {}
+[10.134463] (-) TimerEvent: {}
+[10.234842] (-) TimerEvent: {}
+[10.335239] (-) TimerEvent: {}
+[10.435614] (-) TimerEvent: {}
+[10.536006] (-) TimerEvent: {}
+[10.636328] (-) TimerEvent: {}
+[10.736706] (-) TimerEvent: {}
+[10.837092] (-) TimerEvent: {}
+[10.937384] (-) TimerEvent: {}
+[11.037750] (-) TimerEvent: {}
+[11.138123] (-) TimerEvent: {}
+[11.238501] (-) TimerEvent: {}
+[11.338883] (-) TimerEvent: {}
+[11.439267] (-) TimerEvent: {}
+[11.539647] (-) TimerEvent: {}
+[11.640026] (-) TimerEvent: {}
+[11.740416] (-) TimerEvent: {}
+[11.840794] (-) TimerEvent: {}
+[11.941203] (-) TimerEvent: {}
+[12.041540] (-) TimerEvent: {}
+[12.141838] (-) TimerEvent: {}
+[12.242197] (-) TimerEvent: {}
+[12.342582] (-) TimerEvent: {}
+[12.442970] (-) TimerEvent: {}
+[12.543351] (-) TimerEvent: {}
+[12.643740] (-) TimerEvent: {}
+[12.744116] (-) TimerEvent: {}
+[12.844480] (-) TimerEvent: {}
+[12.944873] (-) TimerEvent: {}
+[13.045257] (-) TimerEvent: {}
+[13.145650] (-) TimerEvent: {}
+[13.246046] (-) TimerEvent: {}
+[13.346441] (-) TimerEvent: {}
+[13.446828] (-) TimerEvent: {}
+[13.547220] (-) TimerEvent: {}
+[13.647626] (-) TimerEvent: {}
+[13.748009] (-) TimerEvent: {}
+[13.848415] (-) TimerEvent: {}
+[13.948802] (-) TimerEvent: {}
+[14.049219] (-) TimerEvent: {}
+[14.149593] (-) TimerEvent: {}
+[14.249967] (-) TimerEvent: {}
+[14.350353] (-) TimerEvent: {}
+[14.450736] (-) TimerEvent: {}
+[14.551125] (-) TimerEvent: {}
+[14.651513] (-) TimerEvent: {}
+[14.751898] (-) TimerEvent: {}
+[14.852284] (-) TimerEvent: {}
+[14.952668] (-) TimerEvent: {}
+[15.053050] (-) TimerEvent: {}
+[15.153348] (-) TimerEvent: {}
+[15.253741] (-) TimerEvent: {}
+[15.354126] (-) TimerEvent: {}
+[15.454504] (-) TimerEvent: {}
+[15.554884] (-) TimerEvent: {}
+[15.655268] (-) TimerEvent: {}
+[15.755650] (-) TimerEvent: {}
+[15.856033] (-) TimerEvent: {}
+[15.956424] (-) TimerEvent: {}
+[16.056806] (-) TimerEvent: {}
+[16.157219] (-) TimerEvent: {}
+[16.257603] (-) TimerEvent: {}
+[16.357989] (-) TimerEvent: {}
+[16.458378] (-) TimerEvent: {}
+[16.558786] (-) TimerEvent: {}
+[16.659169] (-) TimerEvent: {}
+[16.759547] (-) TimerEvent: {}
+[16.859942] (-) TimerEvent: {}
+[16.960341] (-) TimerEvent: {}
+[17.060723] (-) TimerEvent: {}
+[17.161097] (-) TimerEvent: {}
+[17.261489] (-) TimerEvent: {}
+[17.361862] (-) TimerEvent: {}
+[17.462242] (-) TimerEvent: {}
+[17.562621] (-) TimerEvent: {}
+[17.662999] (-) TimerEvent: {}
+[17.763386] (-) TimerEvent: {}
+[17.863771] (-) TimerEvent: {}
+[17.964149] (-) TimerEvent: {}
+[18.064538] (-) TimerEvent: {}
+[18.164932] (-) TimerEvent: {}
+[18.175852] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[18.238673] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[18.240792] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[18.241719] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include\n'}
+[18.241823] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: include/my_nav2_smac_planner/thirdparty/robin_hood.h\n'}
+[18.243788] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[18.243877] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: include/my_nav2_smac_planner/thirdparty/robin_hood.h\n'}
+[18.244264] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[18.244915] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[18.245425] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[18.247165] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[18.247250] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[18.247670] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[18.251075] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[18.265041] (-) TimerEvent: {}
+[18.316666] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[18.318445] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner\n'}
+[18.348850] (my_nav2_smac_planner) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner_lattice\x1b[0m\n'}
+[18.349038] (my_nav2_smac_planner) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner_2d\x1b[0m\n'}
+[18.349102] (my_nav2_smac_planner) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner\x1b[0m\n'}
+[18.365249] (-) TimerEvent: {}
+[18.403940] (my_nav2_smac_planner) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smac_planner_lattice.cpp.o\x1b[0m\n'}
+[18.404357] (my_nav2_smac_planner) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/a_star.cpp.o\x1b[0m\n'}
+[18.405131] (my_nav2_smac_planner) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smoother.cpp.o\x1b[0m\n'}
+[18.407033] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o\x1b[0m\n'}
+[18.407941] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o\x1b[0m\n'}
+[18.410340] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/analytic_expansion.cpp.o\x1b[0m\n'}
+[18.413181] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/collision_checker.cpp.o\x1b[0m\n'}
+[18.437290] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o\x1b[0m\n'}
+[18.465791] (-) TimerEvent: {}
+[18.566172] (-) TimerEvent: {}
+[18.666552] (-) TimerEvent: {}
+[18.766940] (-) TimerEvent: {}
+[18.867315] (-) TimerEvent: {}
+[18.967752] (-) TimerEvent: {}
+[19.068182] (-) TimerEvent: {}
+[19.168629] (-) TimerEvent: {}
+[19.269092] (-) TimerEvent: {}
+[19.369526] (-) TimerEvent: {}
+[19.469972] (-) TimerEvent: {}
+[19.570437] (-) TimerEvent: {}
+[19.670871] (-) TimerEvent: {}
+[19.771285] (-) TimerEvent: {}
+[19.871699] (-) TimerEvent: {}
+[19.972135] (-) TimerEvent: {}
+[20.072592] (-) TimerEvent: {}
+[20.173057] (-) TimerEvent: {}
+[20.273419] (-) TimerEvent: {}
+[20.373776] (-) TimerEvent: {}
+[20.474148] (-) TimerEvent: {}
+[20.574504] (-) TimerEvent: {}
+[20.674858] (-) TimerEvent: {}
+[20.775211] (-) TimerEvent: {}
+[20.875576] (-) TimerEvent: {}
+[20.975948] (-) TimerEvent: {}
+[21.076315] (-) TimerEvent: {}
+[21.176674] (-) TimerEvent: {}
+[21.277071] (-) TimerEvent: {}
+[21.377458] (-) TimerEvent: {}
+[21.477838] (-) TimerEvent: {}
+[21.578242] (-) TimerEvent: {}
+[21.678641] (-) TimerEvent: {}
+[21.779025] (-) TimerEvent: {}
+[21.879406] (-) TimerEvent: {}
+[21.979797] (-) TimerEvent: {}
+[22.080175] (-) TimerEvent: {}
+[22.180559] (-) TimerEvent: {}
+[22.280949] (-) TimerEvent: {}
+[22.381339] (-) TimerEvent: {}
+[22.481728] (-) TimerEvent: {}
+[22.582150] (-) TimerEvent: {}
+[22.682793] (-) TimerEvent: {}
+[22.783351] (-) TimerEvent: {}
+[22.883700] (-) TimerEvent: {}
+[22.984876] (-) TimerEvent: {}
+[23.085235] (-) TimerEvent: {}
+[23.185621] (-) TimerEvent: {}
+[23.286011] (-) TimerEvent: {}
+[23.317335] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o\x1b[0m\n'}
+[23.386133] (-) TimerEvent: {}
+[23.486493] (-) TimerEvent: {}
+[23.586851] (-) TimerEvent: {}
+[23.687212] (-) TimerEvent: {}
+[23.787604] (-) TimerEvent: {}
+[23.888012] (-) TimerEvent: {}
+[23.988391] (-) TimerEvent: {}
+[24.088791] (-) TimerEvent: {}
+[24.189221] (-) TimerEvent: {}
+[24.289581] (-) TimerEvent: {}
+[24.389965] (-) TimerEvent: {}
+[24.490354] (-) TimerEvent: {}
+[24.590742] (-) TimerEvent: {}
+[24.691127] (-) TimerEvent: {}
+[24.791703] (-) TimerEvent: {}
+[24.892290] (-) TimerEvent: {}
+[24.992591] (-) TimerEvent: {}
+[25.092984] (-) TimerEvent: {}
+[25.193372] (-) TimerEvent: {}
+[25.293748] (-) TimerEvent: {}
+[25.394204] (-) TimerEvent: {}
+[25.494589] (-) TimerEvent: {}
+[25.595100] (-) TimerEvent: {}
+[25.695747] (-) TimerEvent: {}
+[25.796118] (-) TimerEvent: {}
+[25.896886] (-) TimerEvent: {}
+[25.997284] (-) TimerEvent: {}
+[26.097889] (-) TimerEvent: {}
+[26.198623] (-) TimerEvent: {}
+[26.299188] (-) TimerEvent: {}
+[26.399624] (-) TimerEvent: {}
+[26.499981] (-) TimerEvent: {}
+[26.600610] (-) TimerEvent: {}
+[26.701134] (-) TimerEvent: {}
+[26.801600] (-) TimerEvent: {}
+[26.902101] (-) TimerEvent: {}
+[27.002417] (-) TimerEvent: {}
+[27.102875] (-) TimerEvent: {}
+[27.203291] (-) TimerEvent: {}
+[27.303666] (-) TimerEvent: {}
+[27.356035] (my_nav2_smac_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:193:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kdefault argument given for parameter 3 of \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[27.361836] (my_nav2_smac_planner) StderrLine: {'line': b'  193 | nav_msgs::msg::Path \x1b[01;31m\x1b[KMySmacPlanner2D\x1b[m\x1b[K::createPlan(\n'}
+[27.362317] (my_nav2_smac_planner) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.362528] (my_nav2_smac_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:21\x1b[m\x1b[K:\n'}
+[27.362725] (my_nav2_smac_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/smac_planner_2d.hpp:90:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious specification in \xe2\x80\x98\x1b[01m\x1b[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99 here\n'}
+[27.362933] (my_nav2_smac_planner) StderrLine: {'line': b'   90 |   nav_msgs::msg::Path \x1b[01;36m\x1b[KcreatePlan\x1b[m\x1b[K(\n'}
+[27.363122] (my_nav2_smac_planner) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.363310] (my_nav2_smac_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:193:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kdefault argument given for parameter 4 of \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[27.363551] (my_nav2_smac_planner) StderrLine: {'line': b'  193 | nav_msgs::msg::Path \x1b[01;31m\x1b[KMySmacPlanner2D\x1b[m\x1b[K::createPlan(\n'}
+[27.363743] (my_nav2_smac_planner) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.363930] (my_nav2_smac_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:21\x1b[m\x1b[K:\n'}
+[27.364117] (my_nav2_smac_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/smac_planner_2d.hpp:90:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious specification in \xe2\x80\x98\x1b[01m\x1b[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)\x1b[m\x1b[K\xe2\x80\x99 here\n'}
+[27.364334] (my_nav2_smac_planner) StderrLine: {'line': b'   90 |   nav_msgs::msg::Path \x1b[01;36m\x1b[KcreatePlan\x1b[m\x1b[K(\n'}
+[27.364519] (my_nav2_smac_planner) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[27.403849] (-) TimerEvent: {}
+[27.504298] (-) TimerEvent: {}
+[27.604889] (-) TimerEvent: {}
+[27.705526] (-) TimerEvent: {}
+[27.806163] (-) TimerEvent: {}
+[27.906687] (-) TimerEvent: {}
+[28.007157] (-) TimerEvent: {}
+[28.254468] (-) TimerEvent: {}
+[28.354934] (-) TimerEvent: {}
+[28.455412] (-) TimerEvent: {}
+[28.555683] (-) TimerEvent: {}
+[28.656125] (-) TimerEvent: {}
+[28.756593] (-) TimerEvent: {}
+[28.857051] (-) TimerEvent: {}
+[28.957312] (-) TimerEvent: {}
+[29.057605] (-) TimerEvent: {}
+[29.157873] (-) TimerEvent: {}
+[29.258253] (-) TimerEvent: {}
+[29.358565] (-) TimerEvent: {}
+[29.458891] (-) TimerEvent: {}
+[29.559275] (-) TimerEvent: {}
+[29.659633] (-) TimerEvent: {}
+[29.760179] (-) TimerEvent: {}
+[29.860509] (-) TimerEvent: {}
+[29.966651] (-) TimerEvent: {}
+[30.067257] (-) TimerEvent: {}
+[30.167718] (-) TimerEvent: {}
+[30.276201] (-) TimerEvent: {}
+[30.469341] (-) TimerEvent: {}
+[30.647166] (-) TimerEvent: {}
+[30.926572] (-) TimerEvent: {}
+[31.365281] (-) TimerEvent: {}
+[32.017048] (-) TimerEvent: {}
+[34.260594] (-) TimerEvent: {}
+[34.719379] (-) TimerEvent: {}
+[34.819802] (-) TimerEvent: {}
+[34.920203] (-) TimerEvent: {}
+[35.020593] (-) TimerEvent: {}
+[35.120991] (-) TimerEvent: {}
+[35.221447] (-) TimerEvent: {}
+[35.321880] (-) TimerEvent: {}
+[35.422311] (-) TimerEvent: {}
+[35.522600] (-) TimerEvent: {}
+[35.623249] (-) TimerEvent: {}
+[35.723813] (-) TimerEvent: {}
+[35.824110] (-) TimerEvent: {}
+[35.924496] (-) TimerEvent: {}
+[36.024887] (-) TimerEvent: {}
+[36.125362] (-) TimerEvent: {}
+[36.225820] (-) TimerEvent: {}
+[36.326129] (-) TimerEvent: {}
+[36.426687] (-) TimerEvent: {}
+[36.527230] (-) TimerEvent: {}
+[36.627747] (-) TimerEvent: {}
+[36.728233] (-) TimerEvent: {}
+[36.828553] (-) TimerEvent: {}
+[36.928995] (-) TimerEvent: {}
+[37.029453] (-) TimerEvent: {}
+[37.130008] (-) TimerEvent: {}
+[37.230419] (-) TimerEvent: {}
+[37.330696] (-) TimerEvent: {}
+[37.430983] (-) TimerEvent: {}
+[37.531529] (-) TimerEvent: {}
+[37.632056] (-) TimerEvent: {}
+[37.732465] (-) TimerEvent: {}
+[37.832861] (-) TimerEvent: {}
+[37.933163] (-) TimerEvent: {}
+[38.033565] (-) TimerEvent: {}
+[38.134007] (-) TimerEvent: {}
+[38.234398] (-) TimerEvent: {}
+[38.297354] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o\x1b[0m\n'}
+[38.299624] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/a_star.cpp.o\x1b[0m\n'}
+[38.334503] (-) TimerEvent: {}
+[38.434825] (-) TimerEvent: {}
+[38.535158] (-) TimerEvent: {}
+[38.635705] (-) TimerEvent: {}
+[38.736016] (-) TimerEvent: {}
+[38.836581] (-) TimerEvent: {}
+[38.937035] (-) TimerEvent: {}
+[39.037508] (-) TimerEvent: {}
+[39.137935] (-) TimerEvent: {}
+[39.211813] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smoother.cpp.o\x1b[0m\n'}
+[39.238047] (-) TimerEvent: {}
+[39.338408] (-) TimerEvent: {}
+[39.438774] (-) TimerEvent: {}
+[39.539135] (-) TimerEvent: {}
+[39.639492] (-) TimerEvent: {}
+[39.739869] (-) TimerEvent: {}
+[39.840233] (-) TimerEvent: {}
+[39.859374] (my_nav2_smac_planner) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_nav2_smac_planner_2d.dir/build.make:76: CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o] Error 1\n'}
+[39.860553] (my_nav2_smac_planner) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[39.886077] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_hybrid.cpp.o\x1b[0m\n'}
+[39.940358] (-) TimerEvent: {}
+[40.040693] (-) TimerEvent: {}
+[40.141038] (-) TimerEvent: {}
+[40.241473] (-) TimerEvent: {}
+[40.342051] (-) TimerEvent: {}
+[40.442494] (-) TimerEvent: {}
+[40.543114] (-) TimerEvent: {}
+[40.643457] (-) TimerEvent: {}
+[40.743810] (-) TimerEvent: {}
+[40.844163] (-) TimerEvent: {}
+[40.944766] (-) TimerEvent: {}
+[41.045416] (-) TimerEvent: {}
+[41.145955] (-) TimerEvent: {}
+[41.246605] (-) TimerEvent: {}
+[41.347241] (-) TimerEvent: {}
+[41.447883] (-) TimerEvent: {}
+[41.548255] (-) TimerEvent: {}
+[41.648650] (-) TimerEvent: {}
+[41.714999] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_lattice.cpp.o\x1b[0m\n'}
+[41.748783] (-) TimerEvent: {}
+[41.849335] (-) TimerEvent: {}
+[41.914627] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.o\x1b[0m\n'}
+[41.949453] (-) TimerEvent: {}
+[42.049806] (-) TimerEvent: {}
+[42.150346] (-) TimerEvent: {}
+[42.250878] (-) TimerEvent: {}
+[42.351412] (-) TimerEvent: {}
+[42.451989] (-) TimerEvent: {}
+[42.552546] (-) TimerEvent: {}
+[42.653110] (-) TimerEvent: {}
+[42.753673] (-) TimerEvent: {}
+[42.854225] (-) TimerEvent: {}
+[42.954791] (-) TimerEvent: {}
+[43.055344] (-) TimerEvent: {}
+[43.155929] (-) TimerEvent: {}
+[43.256513] (-) TimerEvent: {}
+[43.357123] (-) TimerEvent: {}
+[43.457713] (-) TimerEvent: {}
+[43.558303] (-) TimerEvent: {}
+[43.658709] (-) TimerEvent: {}
+[43.705116] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/node_hybrid.cpp.o\x1b[0m\n'}
+[43.758839] (-) TimerEvent: {}
+[43.859230] (-) TimerEvent: {}
+[43.959624] (-) TimerEvent: {}
+[44.059993] (-) TimerEvent: {}
+[44.160369] (-) TimerEvent: {}
+[44.260818] (-) TimerEvent: {}
+[44.361239] (-) TimerEvent: {}
+[44.461607] (-) TimerEvent: {}
+[44.468730] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/costmap_downsampler.cpp.o\x1b[0m\n'}
+[44.561725] (-) TimerEvent: {}
+[44.662087] (-) TimerEvent: {}
+[44.762543] (-) TimerEvent: {}
+[44.863012] (-) TimerEvent: {}
+[44.963500] (-) TimerEvent: {}
+[45.063978] (-) TimerEvent: {}
+[45.164450] (-) TimerEvent: {}
+[45.264894] (-) TimerEvent: {}
+[45.365365] (-) TimerEvent: {}
+[45.465832] (-) TimerEvent: {}
+[45.566309] (-) TimerEvent: {}
+[45.666778] (-) TimerEvent: {}
+[45.767236] (-) TimerEvent: {}
+[45.867693] (-) TimerEvent: {}
+[45.968143] (-) TimerEvent: {}
+[46.068622] (-) TimerEvent: {}
+[46.169074] (-) TimerEvent: {}
+[46.176310] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.o\x1b[0m\n'}
+[46.269202] (-) TimerEvent: {}
+[46.369995] (-) TimerEvent: {}
+[46.470451] (-) TimerEvent: {}
+[46.570905] (-) TimerEvent: {}
+[46.574633] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/costmap_downsampler.cpp.o\x1b[0m\n'}
+[46.671032] (-) TimerEvent: {}
+[46.771655] (-) TimerEvent: {}
+[46.872010] (-) TimerEvent: {}
+[46.972365] (-) TimerEvent: {}
+[47.072722] (-) TimerEvent: {}
+[47.173076] (-) TimerEvent: {}
+[47.273439] (-) TimerEvent: {}
+[47.373799] (-) TimerEvent: {}
+[47.474149] (-) TimerEvent: {}
+[47.574527] (-) TimerEvent: {}
+[47.674909] (-) TimerEvent: {}
+[47.775293] (-) TimerEvent: {}
+[47.875673] (-) TimerEvent: {}
+[47.976061] (-) TimerEvent: {}
+[48.076462] (-) TimerEvent: {}
+[48.176830] (-) TimerEvent: {}
+[48.277210] (-) TimerEvent: {}
+[48.377573] (-) TimerEvent: {}
+[48.477968] (-) TimerEvent: {}
+[48.578340] (-) TimerEvent: {}
+[48.678912] (-) TimerEvent: {}
+[48.779466] (-) TimerEvent: {}
+[48.880068] (-) TimerEvent: {}
+[48.980441] (-) TimerEvent: {}
+[49.080815] (-) TimerEvent: {}
+[49.106700] (my_nav2_smac_planner) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/my_nav2_smac_planner_2d.dir/all] Error 2\n'}
+[49.113530] (my_nav2_smac_planner) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[49.120566] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/node_2d.cpp.o\x1b[0m\n'}
+[49.180946] (-) TimerEvent: {}
+[49.281502] (-) TimerEvent: {}
+[49.381868] (-) TimerEvent: {}
+[49.443251] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_2d.cpp.o\x1b[0m\n'}
+[49.481985] (-) TimerEvent: {}
+[49.582343] (-) TimerEvent: {}
+[49.682702] (-) TimerEvent: {}
+[49.783064] (-) TimerEvent: {}
+[49.883434] (-) TimerEvent: {}
+[49.983812] (-) TimerEvent: {}
+[50.084190] (-) TimerEvent: {}
+[50.184570] (-) TimerEvent: {}
+[50.284939] (-) TimerEvent: {}
+[50.385318] (-) TimerEvent: {}
+[50.485685] (-) TimerEvent: {}
+[50.586043] (-) TimerEvent: {}
+[50.686400] (-) TimerEvent: {}
+[50.786762] (-) TimerEvent: {}
+[50.887131] (-) TimerEvent: {}
+[50.987513] (-) TimerEvent: {}
+[51.024376] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_basic.cpp.o\x1b[0m\n'}
+[51.087647] (-) TimerEvent: {}
+[51.188019] (-) TimerEvent: {}
+[51.288391] (-) TimerEvent: {}
+[51.388762] (-) TimerEvent: {}
+[51.489171] (-) TimerEvent: {}
+[51.589548] (-) TimerEvent: {}
+[51.689939] (-) TimerEvent: {}
+[51.790319] (-) TimerEvent: {}
+[51.816206] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/node_basic.cpp.o\x1b[0m\n'}
+[51.890445] (-) TimerEvent: {}
+[51.990823] (-) TimerEvent: {}
+[52.091377] (-) TimerEvent: {}
+[52.191947] (-) TimerEvent: {}
+[52.292339] (-) TimerEvent: {}
+[52.392711] (-) TimerEvent: {}
+[52.493072] (-) TimerEvent: {}
+[52.593433] (-) TimerEvent: {}
+[52.693788] (-) TimerEvent: {}
+[52.794144] (-) TimerEvent: {}
+[52.894500] (-) TimerEvent: {}
+[52.994863] (-) TimerEvent: {}
+[53.095226] (-) TimerEvent: {}
+[53.195578] (-) TimerEvent: {}
+[53.295956] (-) TimerEvent: {}
+[53.396352] (-) TimerEvent: {}
+[53.496745] (-) TimerEvent: {}
+[53.597191] (-) TimerEvent: {}
+[53.697530] (-) TimerEvent: {}
+[53.797862] (-) TimerEvent: {}
+[53.898227] (-) TimerEvent: {}
+[53.998588] (-) TimerEvent: {}
+[54.098967] (-) TimerEvent: {}
+[54.199333] (-) TimerEvent: {}
+[54.299685] (-) TimerEvent: {}
+[54.400052] (-) TimerEvent: {}
+[54.500409] (-) TimerEvent: {}
+[54.600785] (-) TimerEvent: {}
+[54.701134] (-) TimerEvent: {}
+[54.801486] (-) TimerEvent: {}
+[54.901826] (-) TimerEvent: {}
+[55.002179] (-) TimerEvent: {}
+[55.102544] (-) TimerEvent: {}
+[55.202908] (-) TimerEvent: {}
+[55.303256] (-) TimerEvent: {}
+[55.411254] (-) TimerEvent: {}
+[55.511626] (-) TimerEvent: {}
+[55.612006] (-) TimerEvent: {}
+[55.712400] (-) TimerEvent: {}
+[55.812767] (-) TimerEvent: {}
+[55.913158] (-) TimerEvent: {}
+[56.013542] (-) TimerEvent: {}
+[56.113918] (-) TimerEvent: {}
+[56.214256] (-) TimerEvent: {}
+[56.314597] (-) TimerEvent: {}
+[56.414946] (-) TimerEvent: {}
+[56.515310] (-) TimerEvent: {}
+[56.615663] (-) TimerEvent: {}
+[56.716005] (-) TimerEvent: {}
+[56.816366] (-) TimerEvent: {}
+[56.916711] (-) TimerEvent: {}
+[56.930065] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libmy_nav2_smac_planner_lattice.so\x1b[0m\n'}
+[57.016832] (-) TimerEvent: {}
+[57.117272] (-) TimerEvent: {}
+[57.217552] (-) TimerEvent: {}
+[57.317846] (-) TimerEvent: {}
+[57.418146] (-) TimerEvent: {}
+[57.439174] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 72%] Built target my_nav2_smac_planner_lattice\n'}
+[57.518353] (-) TimerEvent: {}
+[57.618710] (-) TimerEvent: {}
+[57.719059] (-) TimerEvent: {}
+[57.819407] (-) TimerEvent: {}
+[57.919765] (-) TimerEvent: {}
+[58.020143] (-) TimerEvent: {}
+[58.120434] (-) TimerEvent: {}
+[58.220780] (-) TimerEvent: {}
+[58.321191] (-) TimerEvent: {}
+[58.347994] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libmy_nav2_smac_planner.so\x1b[0m\n'}
+[58.421339] (-) TimerEvent: {}
+[58.521655] (-) TimerEvent: {}
+[58.621991] (-) TimerEvent: {}
+[58.681629] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 75%] Built target my_nav2_smac_planner\n'}
+[58.686645] (my_nav2_smac_planner) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[58.724312] (-) TimerEvent: {}
+[58.742088] (my_nav2_smac_planner) CommandEnded: {'returncode': 2}
+[58.828444] (-) TimerEvent: {}
+[58.934382] (-) TimerEvent: {}
+[59.034681] (-) TimerEvent: {}
+[59.080726] (my_nav2_smac_planner) JobEnded: {'identifier': 'my_nav2_smac_planner', 'rc': 2}
+[59.093403] (-) EventReactorShutdown: {}

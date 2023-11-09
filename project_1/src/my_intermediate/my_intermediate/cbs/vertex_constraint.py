@@ -1,7 +1,8 @@
 class VertexConstraint(object):
-    def __init__(self, time, location):
+    def __init__(self, time, location, index):
         self.time = time
         self.location = location
+        self.index = index
 
     def __eq__(self, other):
         return self.time == other.time and self.location == other.location

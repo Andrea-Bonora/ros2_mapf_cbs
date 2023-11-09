@@ -1,0 +1,35 @@
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:[m[K In member function ‘[01m[Kvoid my_nav2_navfn_planner::MyNavFn::updateCellAstar(int, int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:458:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfloat[m[K’
+  458 |   ec = {}
+      |          [01;31m[K^[m[K
+      |          [32m[K;[m[K
+......
+  466 |   [32m[Kfloat[m[K ta, tc;
+      |   [32m[K~~~~~[m[K   
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:467:15:[m[K [01;31m[Kerror: [m[K‘[01m[Ktc[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  467 |   if (l < r) {[01;31m[Ktc[m[K = l;} else {tc = r;}
+      |               [01;31m[K^~[m[K
+      |               [32m[Ktm[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:467:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktc[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  467 |   if (l < r) {tc = l;} else {[01;31m[Ktc[m[K = r;}
+      |                              [01;31m[K^~[m[K
+      |                              [32m[Ktm[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:468:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kta[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  468 |   if (u < d) {[01;31m[Kta[m[K = u;} else {ta = d;}
+      |               [01;31m[K^~[m[K
+      |               [32m[Ktm[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:468:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kta[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  468 |   if (u < d) {ta = u;} else {[01;31m[Kta[m[K = d;}
+      |                              [01;31m[K^~[m[K
+      |                              [32m[Ktm[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:473:16:[m[K [01;31m[Kerror: [m[K‘[01m[Ktc[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  473 |     float dc = [01;31m[Ktc[m[K - ta;  // relative cost between ta,tc
+      |                [01;31m[K^~[m[K
+      |                [32m[Ktm[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:473:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kta[m[K’ was not declared in this scope; did you mean ‘[01m[Ktm[m[K’?
+  473 |     float dc = tc - [01;31m[Kta[m[K;  // relative cost between ta,tc
+      |                     [01;31m[K^~[m[K
+      |                     [32m[Ktm[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

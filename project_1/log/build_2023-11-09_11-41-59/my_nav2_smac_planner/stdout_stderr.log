@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner_2d[0m
+[ 33%] Built target my_nav2_smac_planner
+[ 66%] Built target my_nav2_smac_planner_lattice
+[ 69%] [32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o[0m
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:193:21:[m[K [01;31m[Kerror: [m[Kdefault argument given for parameter 3 of ‘[01m[Knav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  193 | nav_msgs::msg::Path [01;31m[KMySmacPlanner2D[m[K::createPlan(
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:21[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/smac_planner_2d.hpp:88:23:[m[K [01;36m[Knote: [m[Kprevious specification in ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’ here
+   88 |   nav_msgs::msg::Path [01;36m[KcreatePlan[m[K(
+      |                       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:193:21:[m[K [01;31m[Kerror: [m[Kdefault argument given for parameter 4 of ‘[01m[Knav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  193 | nav_msgs::msg::Path [01;31m[KMySmacPlanner2D[m[K::createPlan(
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:21[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/smac_planner_2d.hpp:88:23:[m[K [01;36m[Knote: [m[Kprevious specification in ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’ here
+   88 |   nav_msgs::msg::Path [01;36m[KcreatePlan[m[K(
+      |                       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_smac_planner_2d.dir/build.make:76: CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/my_nav2_smac_planner_2d.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

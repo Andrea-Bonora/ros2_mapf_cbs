@@ -1,0 +1,34 @@
+[0.434s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner -- -j8 -l8
+[0.496s] [ 50%] [32mBuilding CXX object CMakeFiles/nav2_straightline_planner_plugin.dir/src/straight_line_planner.cpp.o[0m
+[4.950s] [100%] [32m[1mLinking CXX shared library libnav2_straightline_planner_plugin.so[0m
+[5.116s] [100%] Built target nav2_straightline_planner_plugin
+[5.125s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner -- -j8 -l8
+[5.146s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner
+[5.153s] -- Install configuration: ""
+[5.153s] -- Execute custom install script
+[5.153s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner//global_planner_plugin.xml
+[5.153s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib/libnav2_straightline_planner_plugin.so
+[5.153s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/include//nav2_straightline_planner/straight_line_planner.hpp
+[5.153s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/global_planner_plugin.xml
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/library_path.sh
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/library_path.dsv
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/ament_index/resource_index/package_run_dependencies/nav2_straightline_planner
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/ament_index/resource_index/parent_prefix_path/nav2_straightline_planner
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/ament_prefix_path.sh
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/ament_prefix_path.dsv
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/path.sh
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/environment/path.dsv
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.bash
+[5.154s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.sh
+[5.155s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.zsh
+[5.155s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/local_setup.dsv
+[5.155s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/package.dsv
+[5.162s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/ament_index/resource_index/packages/nav2_straightline_planner
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/ament_index/resource_index/nav2_core__pluginlib__plugin/nav2_straightline_planner
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/ament_cmake_export_libraries-extras.cmake
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/nav2_straightline_plannerConfig.cmake
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/cmake/nav2_straightline_plannerConfig-version.cmake
+[5.163s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/share/nav2_straightline_planner/package.xml
+[5.165s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/project_1/build/nav2_straightline_planner

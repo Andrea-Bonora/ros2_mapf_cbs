@@ -1,0 +1,39 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:20[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:29[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:24[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:[m[K In member function ‘[01m[Kbool my_nav2_navfn_planner::MyNavfnPlanner::makePlan(const Pose&, const Pose&, double, nav_msgs::msg::Path&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:359:7:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kbool[m[K’ to ‘[01m[Kconst char*[m[K’
+  359 |       [01;31m[Kuse_astar_[m[K);
+      |       [01;31m[K^~~~~~~~~~[m[K
+      |       [01;31m[K|[m[K
+      |       [01;31m[Kbool[m[K
+In file included from [01m[K/opt/ros/humble/include/rmw/rmw/types.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/types.h:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/log_level.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/arguments.h:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/context.h:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rcl/rcl/guard_condition.h:26[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:20[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp:29[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn_planner.cpp:24[m[K:
+[01m[K/opt/ros/humble/include/rcutils/rcutils/logging.h:479:16:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid rcutils_log(const rcutils_log_location_t*, int, const char*, const char*, ...)[m[K’
+  479 |   [01;36m[Kconst char * format[m[K,
+      |   [01;36m[K~~~~~~~~~~~~~^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:76: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

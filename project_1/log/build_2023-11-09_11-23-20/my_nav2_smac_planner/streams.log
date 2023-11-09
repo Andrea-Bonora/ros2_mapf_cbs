@@ -1,0 +1,44 @@
+[0.067s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner
+[0.082s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.197s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.211s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.212s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.243s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.246s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.256s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.268s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.286s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.342s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.345s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.374s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.501s] -- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.580s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.613s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.802s] -- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)
+[1.193s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.194s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.322s] -- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)
+[2.410s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.410s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[2.411s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.411s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[11.287s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[11.344s] [31mCMake Error at CMakeLists.txt:158 (add_subdirectory):
+[11.344s]   add_subdirectory given source "test" which is not an existing directory.
+[11.344s] 
+[11.344s] [0m
+[11.349s] -- Added test 'copyright' to check source files copyright and LICENSE
+[11.352s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[11.352s] -- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include
+[11.352s] -- Configured cppcheck exclude dirs and/or files: include/my_nav2_smac_planner/thirdparty/robin_hood.h
+[11.354s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[11.354s] -- Configured cpplint exclude dirs and/or files: include/my_nav2_smac_planner/thirdparty/robin_hood.h
+[11.355s] -- Added test 'flake8' to check Python code syntax and style conventions
+[11.357s] -- Added test 'lint_cmake' to check CMake code style
+[11.357s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[11.359s] -- Added test 'uncrustify' to check C / C++ code style
+[11.359s] -- Configured uncrustify additional arguments: 
+[11.360s] -- Added test 'xmllint' to check XML markup files
+[11.363s] -- Configuring incomplete, errors occurred!
+[11.363s] See also "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles/CMakeOutput.log".
+[11.372s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner

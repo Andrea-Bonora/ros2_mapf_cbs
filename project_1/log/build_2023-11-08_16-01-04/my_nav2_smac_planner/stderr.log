@@ -1,0 +1,4 @@
+[31mCMake Error at CMakeLists.txt:95 (install):
+  install TARGETS given target "my_nav2_smac_planner" which does not exist.
+
+[0m

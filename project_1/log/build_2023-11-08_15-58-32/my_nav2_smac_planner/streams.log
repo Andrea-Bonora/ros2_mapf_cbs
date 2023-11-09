@@ -1,0 +1,30 @@
+[0.057s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner
+[0.066s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.170s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.170s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.190s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.192s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.196s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.204s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.214s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.264s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.265s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.284s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.390s] -- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)
+[0.451s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.475s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.648s] -- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)
+[1.006s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.007s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.128s] -- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)
+[2.175s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.175s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[2.176s] -- Found OpenMP_C: -fopenmp (found version "4.5") 
+[2.176s] -- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+[5.154s] [31mCMake Error at CMakeLists.txt:95 (install):
+[5.154s]   install TARGETS given target "smac_planner" which does not exist.
+[5.154s] 
+[5.154s] [0m
+[5.203s] -- Configuring incomplete, errors occurred!
+[5.203s] See also "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles/CMakeOutput.log".
+[5.209s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner

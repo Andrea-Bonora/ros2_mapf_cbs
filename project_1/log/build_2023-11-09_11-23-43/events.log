@@ -1,0 +1,388 @@
+[0.000000] (-) TimerEvent: {}
+[0.000168] (-) JobUnselected: {'identifier': 'my_intermediate'}
+[0.000191] (-) JobUnselected: {'identifier': 'my_intermediate_interfaces'}
+[0.000205] (-) JobUnselected: {'identifier': 'my_nav2_core'}
+[0.000216] (-) JobUnselected: {'identifier': 'my_nav2_navfn_planner'}
+[0.000227] (-) JobUnselected: {'identifier': 'my_nav2_planner'}
+[0.000238] (-) JobUnselected: {'identifier': 'my_package'}
+[0.000249] (-) JobUnselected: {'identifier': 'my_try_bringup'}
+[0.000259] (-) JobUnselected: {'identifier': 'nav2_straightline_planner'}
+[0.000270] (-) JobUnselected: {'identifier': 'turtlebot3_multi_robot'}
+[0.000283] (my_nav2_smac_planner) JobQueued: {'identifier': 'my_nav2_smac_planner', 'dependencies': OrderedDict()}
+[0.000297] (my_nav2_smac_planner) JobStarted: {'identifier': 'my_nav2_smac_planner'}
+[0.057923] (my_nav2_smac_planner) JobProgress: {'identifier': 'my_nav2_smac_planner', 'progress': 'cmake'}
+[0.059065] (my_nav2_smac_planner) Command: {'cmd': ['/usr/bin/cmake', '/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('SYSTEMD_EXEC_PID', '1990'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/1969,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/1969'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2363e446_7ac5_4154_8369_817cf80ed2de'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UCC5D2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1341'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[0.069662] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099535] (-) TimerEvent: {}
+[0.175333] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.179908] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)\n'}
+[0.180079] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199705] (-) TimerEvent: {}
+[0.199952] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.201651] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.205638] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.213870] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.224213] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.267728] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.268782] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.289626] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.299847] (-) TimerEvent: {}
+[0.400261] (-) TimerEvent: {}
+[0.411504] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[0.478306] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)\n'}
+[0.500453] (-) TimerEvent: {}
+[0.503805] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.600643] (-) TimerEvent: {}
+[0.699775] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)\n'}
+[0.700712] (-) TimerEvent: {}
+[0.801009] (-) TimerEvent: {}
+[0.901393] (-) TimerEvent: {}
+[1.001773] (-) TimerEvent: {}
+[1.063064] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.063948] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.101945] (-) TimerEvent: {}
+[1.201215] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)\n'}
+[1.202009] (-) TimerEvent: {}
+[1.302260] (-) TimerEvent: {}
+[1.402550] (-) TimerEvent: {}
+[1.502960] (-) TimerEvent: {}
+[1.603369] (-) TimerEvent: {}
+[1.703796] (-) TimerEvent: {}
+[1.804206] (-) TimerEvent: {}
+[1.904611] (-) TimerEvent: {}
+[2.005020] (-) TimerEvent: {}
+[2.105380] (-) TimerEvent: {}
+[2.205795] (-) TimerEvent: {}
+[2.273813] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_C: -fopenmp (found version "4.5") \n'}
+[2.274001] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_CXX: -fopenmp (found version "4.5") \n'}
+[2.275415] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_C: -fopenmp (found version "4.5") \n'}
+[2.275585] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found OpenMP_CXX: -fopenmp (found version "4.5") \n'}
+[2.305909] (-) TimerEvent: {}
+[2.406288] (-) TimerEvent: {}
+[2.506636] (-) TimerEvent: {}
+[2.607049] (-) TimerEvent: {}
+[2.707460] (-) TimerEvent: {}
+[2.807867] (-) TimerEvent: {}
+[2.908266] (-) TimerEvent: {}
+[3.008677] (-) TimerEvent: {}
+[3.109107] (-) TimerEvent: {}
+[3.209524] (-) TimerEvent: {}
+[3.309902] (-) TimerEvent: {}
+[3.410287] (-) TimerEvent: {}
+[3.510664] (-) TimerEvent: {}
+[3.610966] (-) TimerEvent: {}
+[3.711358] (-) TimerEvent: {}
+[3.811714] (-) TimerEvent: {}
+[3.912080] (-) TimerEvent: {}
+[4.012464] (-) TimerEvent: {}
+[4.112841] (-) TimerEvent: {}
+[4.213224] (-) TimerEvent: {}
+[4.313620] (-) TimerEvent: {}
+[4.413982] (-) TimerEvent: {}
+[4.514271] (-) TimerEvent: {}
+[4.614651] (-) TimerEvent: {}
+[4.715024] (-) TimerEvent: {}
+[4.815408] (-) TimerEvent: {}
+[4.915777] (-) TimerEvent: {}
+[5.016147] (-) TimerEvent: {}
+[5.116511] (-) TimerEvent: {}
+[5.216894] (-) TimerEvent: {}
+[5.317201] (-) TimerEvent: {}
+[5.417551] (-) TimerEvent: {}
+[5.517938] (-) TimerEvent: {}
+[5.618314] (-) TimerEvent: {}
+[5.718637] (-) TimerEvent: {}
+[5.819014] (-) TimerEvent: {}
+[5.919411] (-) TimerEvent: {}
+[6.019803] (-) TimerEvent: {}
+[6.120183] (-) TimerEvent: {}
+[6.220569] (-) TimerEvent: {}
+[6.320959] (-) TimerEvent: {}
+[6.421312] (-) TimerEvent: {}
+[6.521690] (-) TimerEvent: {}
+[6.622057] (-) TimerEvent: {}
+[6.722424] (-) TimerEvent: {}
+[6.822803] (-) TimerEvent: {}
+[6.923181] (-) TimerEvent: {}
+[7.023553] (-) TimerEvent: {}
+[7.123937] (-) TimerEvent: {}
+[7.224322] (-) TimerEvent: {}
+[7.324699] (-) TimerEvent: {}
+[7.425061] (-) TimerEvent: {}
+[7.525447] (-) TimerEvent: {}
+[7.625839] (-) TimerEvent: {}
+[7.726226] (-) TimerEvent: {}
+[7.826545] (-) TimerEvent: {}
+[7.926928] (-) TimerEvent: {}
+[8.027336] (-) TimerEvent: {}
+[8.127722] (-) TimerEvent: {}
+[8.228124] (-) TimerEvent: {}
+[8.328515] (-) TimerEvent: {}
+[8.428909] (-) TimerEvent: {}
+[8.529258] (-) TimerEvent: {}
+[8.629647] (-) TimerEvent: {}
+[8.729929] (-) TimerEvent: {}
+[8.830297] (-) TimerEvent: {}
+[8.930664] (-) TimerEvent: {}
+[9.030983] (-) TimerEvent: {}
+[9.131361] (-) TimerEvent: {}
+[9.231747] (-) TimerEvent: {}
+[9.332044] (-) TimerEvent: {}
+[9.432316] (-) TimerEvent: {}
+[9.532688] (-) TimerEvent: {}
+[9.633073] (-) TimerEvent: {}
+[9.733477] (-) TimerEvent: {}
+[9.833758] (-) TimerEvent: {}
+[9.934080] (-) TimerEvent: {}
+[10.034397] (-) TimerEvent: {}
+[10.134784] (-) TimerEvent: {}
+[10.235165] (-) TimerEvent: {}
+[10.335518] (-) TimerEvent: {}
+[10.435897] (-) TimerEvent: {}
+[10.536267] (-) TimerEvent: {}
+[10.636663] (-) TimerEvent: {}
+[10.737105] (-) TimerEvent: {}
+[10.837507] (-) TimerEvent: {}
+[10.924260] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[10.937710] (-) TimerEvent: {}
+[10.980561] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[10.983400] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[10.984090] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include\n'}
+[10.984190] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: include/my_nav2_smac_planner/thirdparty/robin_hood.h\n'}
+[10.985749] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[10.985836] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: include/my_nav2_smac_planner/thirdparty/robin_hood.h\n'}
+[10.986166] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[10.986902] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[10.987211] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[10.988844] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[10.988923] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[10.988988] (my_nav2_smac_planner) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[10.990669] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.037805] (-) TimerEvent: {}
+[11.064460] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[11.067250] (my_nav2_smac_planner) StdoutLine: {'line': b'-- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner\n'}
+[11.074555] (my_nav2_smac_planner) CommandEnded: {'returncode': 0}
+[11.075234] (my_nav2_smac_planner) JobProgress: {'identifier': 'my_nav2_smac_planner', 'progress': 'build'}
+[11.076276] (my_nav2_smac_planner) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner', '--', '-j8', '-l8'], 'cwd': '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'andrea'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib::/home/andrea/ws_online/build/ros2_bdi_on_litter_world'), ('HOME', '/home/andrea'), ('OLDPWD', '/home/andrea'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/andrea/.nvm/versions/node/v18.15.0/bin'), ('NVM_INC', '/home/andrea/.nvm/versions/node/v18.15.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GRADLE_HOME', '/opt/gradle/gradle-4.4.1'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('SYSTEMD_EXEC_PID', '1990'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/andrea/.nvm'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'andrea'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'andrea'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/andrea/.nvm/versions/node/v18.15.0/bin:/opt/ros/humble/bin:/home/andrea/.local/bin:/opt/gradle/gradle-4.4.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/andrea-IdeaPad-5-15ITL05:@/tmp/.ICE-unix/1969,unix/andrea-IdeaPad-5-15ITL05:/tmp/.ICE-unix/1969'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2363e446_7ac5_4154_8369_817cf80ed2de'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.UCC5D2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.1341'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner'), ('TURTLEBOT3_MODEL', 'waffle'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/local/lib/python3.10/dist-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_py_pkg:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg/lib/python3.10/site-packages:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/andrea/tesi/ros2_mapf_cbs/project_1/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/nav2_straightline_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_try_bringup:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_bringup:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_robot_interfaces:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble')]), 'shell': False}
+[11.121724] (my_nav2_smac_planner) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/collision_checker.cpp.o\x1b[0m\n'}
+[11.121928] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smoother.cpp.o\x1b[0m\n'}
+[11.122000] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/a_star.cpp.o\x1b[0m\n'}
+[11.122062] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o\x1b[0m\n'}
+[11.122120] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o\x1b[0m\n'}
+[11.122276] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o\x1b[0m\n'}
+[11.122805] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o\x1b[0m\n'}
+[11.123677] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smac_planner_lattice.cpp.o\x1b[0m\n'}
+[11.137917] (-) TimerEvent: {}
+[11.238232] (-) TimerEvent: {}
+[11.338556] (-) TimerEvent: {}
+[11.439114] (-) TimerEvent: {}
+[11.539725] (-) TimerEvent: {}
+[11.640313] (-) TimerEvent: {}
+[11.740899] (-) TimerEvent: {}
+[11.841482] (-) TimerEvent: {}
+[11.942056] (-) TimerEvent: {}
+[12.042661] (-) TimerEvent: {}
+[12.143330] (-) TimerEvent: {}
+[12.243909] (-) TimerEvent: {}
+[12.344508] (-) TimerEvent: {}
+[12.444875] (-) TimerEvent: {}
+[12.545423] (-) TimerEvent: {}
+[12.645946] (-) TimerEvent: {}
+[12.746496] (-) TimerEvent: {}
+[12.847090] (-) TimerEvent: {}
+[12.947646] (-) TimerEvent: {}
+[13.048015] (-) TimerEvent: {}
+[13.148568] (-) TimerEvent: {}
+[13.249083] (-) TimerEvent: {}
+[13.349721] (-) TimerEvent: {}
+[13.450066] (-) TimerEvent: {}
+[13.550414] (-) TimerEvent: {}
+[13.651032] (-) TimerEvent: {}
+[13.751398] (-) TimerEvent: {}
+[13.851773] (-) TimerEvent: {}
+[13.952140] (-) TimerEvent: {}
+[14.052504] (-) TimerEvent: {}
+[14.152882] (-) TimerEvent: {}
+[14.253267] (-) TimerEvent: {}
+[14.353636] (-) TimerEvent: {}
+[14.453987] (-) TimerEvent: {}
+[14.554327] (-) TimerEvent: {}
+[14.654691] (-) TimerEvent: {}
+[14.755055] (-) TimerEvent: {}
+[14.855439] (-) TimerEvent: {}
+[14.955796] (-) TimerEvent: {}
+[15.056170] (-) TimerEvent: {}
+[15.156557] (-) TimerEvent: {}
+[15.256923] (-) TimerEvent: {}
+[15.357325] (-) TimerEvent: {}
+[15.457747] (-) TimerEvent: {}
+[15.558107] (-) TimerEvent: {}
+[15.658474] (-) TimerEvent: {}
+[15.758835] (-) TimerEvent: {}
+[15.859162] (-) TimerEvent: {}
+[15.959567] (-) TimerEvent: {}
+[16.060072] (-) TimerEvent: {}
+[16.160594] (-) TimerEvent: {}
+[16.261083] (-) TimerEvent: {}
+[16.361493] (-) TimerEvent: {}
+[16.461896] (-) TimerEvent: {}
+[16.562480] (-) TimerEvent: {}
+[16.662828] (-) TimerEvent: {}
+[16.763398] (-) TimerEvent: {}
+[16.863790] (-) TimerEvent: {}
+[16.964246] (-) TimerEvent: {}
+[17.064763] (-) TimerEvent: {}
+[17.165144] (-) TimerEvent: {}
+[17.265529] (-) TimerEvent: {}
+[17.365989] (-) TimerEvent: {}
+[17.466352] (-) TimerEvent: {}
+[17.566691] (-) TimerEvent: {}
+[17.667244] (-) TimerEvent: {}
+[17.767801] (-) TimerEvent: {}
+[17.868239] (-) TimerEvent: {}
+[17.968778] (-) TimerEvent: {}
+[18.069292] (-) TimerEvent: {}
+[18.170067] (-) TimerEvent: {}
+[18.270492] (-) TimerEvent: {}
+[18.370876] (-) TimerEvent: {}
+[18.471519] (-) TimerEvent: {}
+[18.571965] (-) TimerEvent: {}
+[18.598343] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/a_star.cpp.o\x1b[0m\n'}
+[18.620418] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o\x1b[0m\n'}
+[18.672086] (-) TimerEvent: {}
+[18.772589] (-) TimerEvent: {}
+[18.872937] (-) TimerEvent: {}
+[18.973308] (-) TimerEvent: {}
+[19.073694] (-) TimerEvent: {}
+[19.175647] (-) TimerEvent: {}
+[19.276005] (-) TimerEvent: {}
+[19.376356] (-) TimerEvent: {}
+[19.476701] (-) TimerEvent: {}
+[19.577051] (-) TimerEvent: {}
+[19.677415] (-) TimerEvent: {}
+[19.777801] (-) TimerEvent: {}
+[19.878170] (-) TimerEvent: {}
+[19.978518] (-) TimerEvent: {}
+[20.078837] (-) TimerEvent: {}
+[20.179163] (-) TimerEvent: {}
+[20.288099] (-) TimerEvent: {}
+[20.388671] (-) TimerEvent: {}
+[20.489200] (-) TimerEvent: {}
+[20.589802] (-) TimerEvent: {}
+[20.690244] (-) TimerEvent: {}
+[20.790629] (-) TimerEvent: {}
+[20.890998] (-) TimerEvent: {}
+[20.991348] (-) TimerEvent: {}
+[21.091711] (-) TimerEvent: {}
+[21.192103] (-) TimerEvent: {}
+[21.292410] (-) TimerEvent: {}
+[21.392756] (-) TimerEvent: {}
+[21.493185] (-) TimerEvent: {}
+[21.593626] (-) TimerEvent: {}
+[21.694000] (-) TimerEvent: {}
+[21.794452] (-) TimerEvent: {}
+[21.894904] (-) TimerEvent: {}
+[21.995344] (-) TimerEvent: {}
+[22.095682] (-) TimerEvent: {}
+[22.196092] (-) TimerEvent: {}
+[22.296388] (-) TimerEvent: {}
+[22.396682] (-) TimerEvent: {}
+[22.496949] (-) TimerEvent: {}
+[22.597267] (-) TimerEvent: {}
+[22.697521] (-) TimerEvent: {}
+[22.798079] (-) TimerEvent: {}
+[22.800335] (my_nav2_smac_planner) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smoother.cpp.o\x1b[0m\n'}
+[22.898313] (-) TimerEvent: {}
+[22.998676] (-) TimerEvent: {}
+[23.099067] (-) TimerEvent: {}
+[23.199454] (-) TimerEvent: {}
+[23.299843] (-) TimerEvent: {}
+[23.400215] (-) TimerEvent: {}
+[23.500611] (-) TimerEvent: {}
+[23.601084] (-) TimerEvent: {}
+[23.701748] (-) TimerEvent: {}
+[23.802201] (-) TimerEvent: {}
+[23.902731] (-) TimerEvent: {}
+[24.003027] (-) TimerEvent: {}
+[24.103425] (-) TimerEvent: {}
+[24.203703] (-) TimerEvent: {}
+[24.304378] (-) TimerEvent: {}
+[24.406295] (-) TimerEvent: {}
+[24.506935] (-) TimerEvent: {}
+[24.607238] (-) TimerEvent: {}
+[24.707564] (-) TimerEvent: {}
+[24.807933] (-) TimerEvent: {}
+[24.908309] (-) TimerEvent: {}
+[25.008723] (-) TimerEvent: {}
+[25.109369] (-) TimerEvent: {}
+[25.209899] (-) TimerEvent: {}
+[25.341642] (-) TimerEvent: {}
+[25.441950] (-) TimerEvent: {}
+[25.542246] (-) TimerEvent: {}
+[25.642618] (-) TimerEvent: {}
+[25.742913] (-) TimerEvent: {}
+[25.843337] (-) TimerEvent: {}
+[25.943618] (-) TimerEvent: {}
+[26.043896] (-) TimerEvent: {}
+[26.144338] (-) TimerEvent: {}
+[26.244787] (-) TimerEvent: {}
+[26.345148] (-) TimerEvent: {}
+[26.445451] (-) TimerEvent: {}
+[26.545726] (-) TimerEvent: {}
+[26.646023] (-) TimerEvent: {}
+[26.746417] (-) TimerEvent: {}
+[26.846905] (-) TimerEvent: {}
+[26.947495] (-) TimerEvent: {}
+[27.048001] (-) TimerEvent: {}
+[27.148317] (-) TimerEvent: {}
+[27.248771] (-) TimerEvent: {}
+[27.349660] (-) TimerEvent: {}
+[27.450311] (-) TimerEvent: {}
+[27.551114] (-) TimerEvent: {}
+[27.651488] (-) TimerEvent: {}
+[27.751808] (-) TimerEvent: {}
+[27.852167] (-) TimerEvent: {}
+[27.952695] (-) TimerEvent: {}
+[28.053027] (-) TimerEvent: {}
+[28.153399] (-) TimerEvent: {}
+[28.253904] (-) TimerEvent: {}
+[28.354290] (-) TimerEvent: {}
+[28.454775] (-) TimerEvent: {}
+[28.555384] (-) TimerEvent: {}
+[28.655842] (-) TimerEvent: {}
+[28.756330] (-) TimerEvent: {}
+[28.856747] (-) TimerEvent: {}
+[28.957093] (-) TimerEvent: {}
+[29.057525] (-) TimerEvent: {}
+[29.157898] (-) TimerEvent: {}
+[29.258248] (-) TimerEvent: {}
+[29.358677] (-) TimerEvent: {}
+[29.459406] (-) TimerEvent: {}
+[29.559954] (-) TimerEvent: {}
+[29.660513] (-) TimerEvent: {}
+[29.761060] (-) TimerEvent: {}
+[29.861609] (-) TimerEvent: {}
+[29.961996] (-) TimerEvent: {}
+[30.062400] (-) TimerEvent: {}
+[30.164519] (-) TimerEvent: {}
+[30.264852] (-) TimerEvent: {}
+[30.365671] (-) TimerEvent: {}
+[30.466346] (-) TimerEvent: {}
+[30.567642] (-) TimerEvent: {}
+[30.673895] (-) TimerEvent: {}
+[30.800829] (-) TimerEvent: {}
+[30.964685] (-) TimerEvent: {}
+[31.154152] (-) TimerEvent: {}
+[31.616314] (-) TimerEvent: {}
+[32.150988] (-) TimerEvent: {}
+[32.659820] (-) TimerEvent: {}
+[33.453453] (-) TimerEvent: {}
+[34.341291] (-) TimerEvent: {}
+[37.100503] (-) TimerEvent: {}
+[40.743072] (-) TimerEvent: {}
+[44.498239] (-) TimerEvent: {}
+[46.622232] (-) TimerEvent: {}
+[50.482503] (-) TimerEvent: {}
+[53.096253] (-) TimerEvent: {}
+[57.061171] (-) TimerEvent: {}
+[70.435700] (-) TimerEvent: {}

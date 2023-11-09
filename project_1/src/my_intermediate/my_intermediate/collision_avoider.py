@@ -22,12 +22,14 @@ from my_intermediate.cbs.discrete_location import DiscreteLocation
 from copy import deepcopy
 from my_intermediate_interfaces.msg import AgentPathRequest
 import math
+from my_intermediate.cbs.constraint import Constraints
+from my_intermediate.cbs.vertex_constraint import VertexConstraint as VC2
 
 
 class CollisionAvoiderNode(Node):
     def __init__(self):
         super().__init__("collision_avoider")
-        self.declare_parameter("pixel_per_cell", 4)
+        self.declare_parameter("pixel_per_cell", 8)
         self.get_logger().info("Collision Avoider has been started!")
 
         client_cb_group = MutuallyExclusiveCallbackGroup()
@@ -73,22 +75,27 @@ class CollisionAvoiderNode(Node):
 
         #response.plans -> [AgentPath, AgentPath]
         #AgentPath -> name, path        
+        
         solution = await self.cbs_alg(self.convert_plans(response.plans), self.discretize_plans(response.plans), agents)        
 
         final_plans = []
-        for s in response.plans:
-            final_plan = AgentPath()
-            final_plan.name = s.name
-            #if(s.name == "tb2"):
-            #    self.get_logger().info(str(solution[s.name]))
-            final_plan.path.header = s.path.header
-            final_plan.path.poses = solution[s.name]
-            final_plans.append(final_plan)
+        if not solution == {}:
+            for s in response.plans:
+                final_plan = AgentPath()
+                final_plan.name = s.name
+                #if(s.name == "tb2"):
+                #    self.get_logger().info(str(solution[s.name]))
+                final_plan.path.header = s.path.header
+                final_plan.path.poses = solution[s.name]
+                for a in solution[s.name]:
+                    self.get_logger().info(str(a.pose.position.x) + " " + str(a.pose.position.y))
+                final_plans.append(final_plan)
+                self.get_logger().info(" --- ")
 
         response.plans = final_plans
 
         self.get_logger().info("Sending response")
-
+        
         return response
     
     async def cbs_alg(self, plans, discrete_plans, agents):
@@ -104,45 +111,74 @@ class CollisionAvoiderNode(Node):
             P = min(cbs.open_set)
             cbs.open_set -= {P}
             cbs.closed_set |= {P}
-            conflict_dict = cbs.env.get_first_conflict(P.solution)
-
+            conflict_dict = cbs.env.get_first_c_conflict(P.solution)
             if not conflict_dict:
                 self.get_logger().info("solution found, no conflicts!")
+                #for agez in P.solution:
+                #    for move in P.solution[agez]:
+                #        self.get_logger().info(str(move))
                 return cbs.generate_plan(P.solution)
 
             constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
 
-            self.get_logger().info("Conflicts found")
-            for a in cbs.env.agent_dict.keys():
-                self.get_logger().info(str(constraint_dict[a]))
+            #self.get_logger().info("Conflicts found")
+            #for a in cbs.env.agent_dict.keys():
+                #self.get_logger().info("Length:" + str(len(P.solution[a])))
 
             for agent in constraint_dict.keys():
                 new_node = deepcopy(P)
                 new_node.constraint_dict[agent].add_constraint(constraint_dict[agent])
-                
+                self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
                 vc, ec = self.get_constraints(new_node.constraint_dict[agent], agent, start)
 
+                #self.get_logger().info(str(new_node.constraint_dict[agent].vertex_constraints))
                 msg = self.get_request_message(agent, agents[agent]['start'], agents[agent]['goal'], vc, ec)
 
                 client_request = StartGoalPoseStamped.Request()
                 client_request.requests = [msg]
 
-                self.get_logger().info("Asking for a plan...")
+                #self.get_logger().info("Asking for a plan...")
                 future = self.client_.call_async(client_request)
                 await future
                 service_response = future.result()
                 new_plan = service_response.plans # Piani dei vari agenti
-                self.get_logger().info("New plan computed")
-
+                #self.get_logger().info("New plan computed")
                 new_node.solution.update({agent: self.convert_plans(new_plan)[0]['path']})
                 new_node.discrete_solution.update({agent: self.discretize_plans(new_plan)[0]['path']})
                 
                 new_node.cost = cbs.env.compute_solution_cost(new_node.discrete_solution)
-
+                
                 # TODO: ending condition
-                if new_node not in cbs.closed_set:
-                    cbs.open_set |= {new_node}
+                #self.get_logger().info(str(new_node))
+                #self.get_logger().info("P.solution == new_node.solution -> " + str(P.solution[agent] == new_node.solution[agent]))
+                
+                are_equals = True
+                for a1, a2 in zip(P.solution[agent], new_node.solution[agent]):
+                    #self.get_logger().info("->" + str(a1))
+                    if a1 != a2:
+                        are_equals = False
+                
+                #self.get_logger().info("are_equals ( P.solution == new_node.solution ) -> " + str(are_equals))
+                if are_equals:
+                    for m in P.solution[agent]:
+                        self.get_logger().info(str(m))
+                    self.get_logger().info(" --- ")
+                    for m in new_node.solution[agent]:
+                        self.get_logger().info(str(m))
+                    break
 
+                     
+                #if P.solution[agent] == new_node.solution[agent]:
+                    #errors = True
+                    #break
+                if new_node not in cbs.closed_set:
+                    #self.get_logger().info("Added new node")
+                    cbs.open_set |= {new_node}
+            
+            if are_equals:
+                break
+
+        self.get_logger().info("OUT OF THE WHILE")
         return {}
 
 
@@ -168,21 +204,36 @@ class CollisionAvoiderNode(Node):
         vc = []
         for vertex_constr in constraints.vertex_constraints:
             vc_tmp = VertexConstraint()
-            vc_tmp.cell.pose.position.x = start.solution[agent][vertex_constr.time].location.pose_stamped.pose.position.x
-            vc_tmp.cell.pose.position.y = start.solution[agent][vertex_constr.time].location.pose_stamped.pose.position.y
+            vc_tmp.cell = vertex_constr.location.pose_stamped
             vc_tmp.time_step = vertex_constr.time
             vc.append(vc_tmp)
 
         ec = []
         for edge_constr in constraints.edge_constraints:
             ec_tmp = EdgeConstraint()
-            ec_tmp.cell_from.pose.position.x = start.solution[agent][edge_constr.time].location.pose_stamped.pose.position.x
-            ec_tmp.cell_from.pose.position.y = start.solution[agent][edge_constr.time].location.pose_stamped.pose.position.y
-            ec_tmp.cell_to.pose.position.x = start.solution[agent][edge_constr.time+1].location.pose_stamped.pose.position.x
-            ec_tmp.cell_to.pose.position.y = start.solution[agent][edge_constr.time+1].location.pose_stamped.pose.position.y
+            ec_tmp.cell_from = edge_constr.location_1.pose_stamped
+            ec_tmp.cell_to = edge_constr.location_2.pose_stamped
             ec_tmp.time_step = edge_constr.time
             ec.append(ec_tmp)
+        '''
+        vc = []
+        for vertex_constr in constraints.vertex_constraints:
+            vc_tmp = VertexConstraint()
+            vc_tmp.cell.pose.position.x = start.solution[agent][vertex_constr.index].location.pose_stamped.pose.position.x
+            vc_tmp.cell.pose.position.y = start.solution[agent][vertex_constr.index].location.pose_stamped.pose.position.y
+            vc_tmp.time_step = vertex_constr.time
+            vc.append(vc_tmp)
 
+        ec = []
+        for edge_constr in constraints.edge_constraints:
+            ec_tmp = EdgeConstraint()
+            ec_tmp.cell_from.pose.position.x = start.solution[agent][edge_constr.index].location.pose_stamped.pose.position.x
+            ec_tmp.cell_from.pose.position.y = start.solution[agent][edge_constr.index].location.pose_stamped.pose.position.y
+            ec_tmp.cell_to.pose.position.x = start.solution[agent][edge_constr.index+1].location.pose_stamped.pose.position.x
+            ec_tmp.cell_to.pose.position.y = start.solution[agent][edge_constr.index+1].location.pose_stamped.pose.position.y
+            ec_tmp.time_step = edge_constr.time
+            ec.append(ec_tmp)
+        '''
         return vc, ec
 
     def convert_to_pose_stamped(self, objs):

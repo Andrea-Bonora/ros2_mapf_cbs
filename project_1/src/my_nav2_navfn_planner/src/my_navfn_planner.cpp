@@ -186,65 +186,6 @@ nav_msgs::msg::Path MyNavfnPlanner::createPlan(
   return path;
 }
 
-/*nav_msgs::msg::Path MyNavfnPlanner::createPlan(
-  const geometry_msgs::msg::PoseStamped & start,
-  const geometry_msgs::msg::PoseStamped & goal)
-{
-#ifdef BENCHMARK_TESTING
-  steady_clock::time_point a = steady_clock::now();
-#endif
-
-  // Update planner based on the new costmap size
-  if (isPlannerOutOfDate()) {
-    planner_->setNavArr(
-      costmap_->getSizeInCellsX(),
-      costmap_->getSizeInCellsY());
-  }
-  RCLCPP_WARN(logger_, "Trying to find a plan...");
-  nav_msgs::msg::Path path;
-  // Corner case of the start(x,y) = goal(x,y)
-  if (start.pose.position.x == goal.pose.position.x &&
-    start.pose.position.y == goal.pose.position.y)
-  {
-    unsigned int mx, my;
-    costmap_->worldToMap(start.pose.position.x, start.pose.position.y, mx, my);
-    if (costmap_->getCost(mx, my) == nav2_costmap_2d::LETHAL_OBSTACLE) {
-      RCLCPP_WARN(logger_, "Failed to create a unique pose path because of obstacles");
-      return path;
-    }
-    path.header.stamp = clock_->now();
-    path.header.frame_id = global_frame_;
-    geometry_msgs::msg::PoseStamped pose;
-    pose.header = path.header;
-    pose.pose.position.z = 0.0;
-
-    pose.pose = start.pose;
-    // if we have a different start and goal orientation, set the unique path pose to the goal
-    // orientation, unless use_final_approach_orientation=true where we need it to be the start
-    // orientation to avoid movement from the local planner
-    if (start.pose.orientation != goal.pose.orientation && !use_final_approach_orientation_) {
-      pose.pose.orientation = goal.pose.orientation;
-    }
-    path.poses.push_back(pose);
-    return path;
-  }
-
-  if (!makePlan(start.pose, goal.pose, tolerance_, path)) {
-    RCLCPP_WARN(
-      logger_, "%s: failed to create plan with "
-      "tolerance %.2f.", name_.c_str(), tolerance_);
-  }
-
-
-#ifdef BENCHMARK_TESTING
-  steady_clock::time_point b = steady_clock::now();
-  duration<double> time_span = duration_cast<duration<double>>(b - a);
-  std::cout << "It took " << time_span.count() * 1000 << std::endl;
-#endif
-
-  return path;
-}*/
-
 bool
 MyNavfnPlanner::isPlannerOutOfDate()
 {
@@ -327,11 +268,42 @@ MyNavfnPlanner::makePlan(
   // TODO(orduno): Explain why we are providing 'map_goal' to setStart().
   //               Same for setGoal, seems reversed. Computing backwards?
 
+  std::vector<std::map<std::string, int>> vert_constr;
+  std::vector<std::map<std::string, int>> edge_constr;
+
+  for (const auto& obj : vertex_constraints) {
+      double constr_x = obj.cell.pose.position.x;
+      double constr_y = obj.cell.pose.position.y;
+      unsigned int cx, cy;
+      worldToMap(constr_x, constr_y, cx, cy);
+      int idx = cy * planner_->nx + cx;
+      std::map<std::string, int> object = {{"cell", idx}, {"time_step", obj.time_step}};
+      vert_constr.push_back(object);
+  }
+
+  for (const auto& obj : edge_constraints) {
+      double constr_1_x = obj.cell_from.pose.position.x;
+      double constr_1_y = obj.cell_from.pose.position.y;
+      double constr_2_x = obj.cell_to.pose.position.x;
+      double constr_2_y = obj.cell_to.pose.position.y;
+      unsigned int cx1, cx2, cy1, cy2;
+      worldToMap(constr_1_x, constr_1_y, cx1, cy1);
+      worldToMap(constr_2_x, constr_2_y, cx2, cy2);
+      int idx1 = cy1 * planner_->nx + cx1;
+      int idx2 = cy2 * planner_->nx + cx2;
+      std::map<std::string, int> object = {{"cell_from", idx1}, {"cell_to", idx2}, {"time_step", obj.time_step}};
+      edge_constr.push_back(object);
+  }
+
   planner_->setStart(map_goal);
   planner_->setGoal(map_start);
+  use_astar_ = true;
   if (use_astar_) {
     planner_->calcNavFnAstar();
   } else {
+    RCLCPP_WARN(
+      logger_,
+      "Hello:(");
     planner_->calcNavFnDijkstra(true);
   }
 
@@ -371,7 +343,7 @@ MyNavfnPlanner::makePlan(
   if (found_legal) {
     // extract the plan
     if (getPlanFromPotential(best_pose, plan, vertex_constraints, edge_constraints)) {
-      smoothApproachToGoal(best_pose, plan);
+      //smoothApproachToGoal(best_pose, plan);
 
       // If use_final_approach_orientation=true, interpolate the last pose orientation from the
       // previous pose to set the orientation to the 'final approach' orientation of the robot so
@@ -439,13 +411,10 @@ MyNavfnPlanner::getPlanFromPotential(
   const std::vector<my_intermediate_interfaces::msg::VertexConstraint> vertex_constraints,
   const std::vector<my_intermediate_interfaces::msg::EdgeConstraint> edge_constraints)
 {
-  // clear the plan, just in case
-  plan.poses.clear();
-
   // Goal should be in global frame
   double wx = goal.position.x;
   double wy = goal.position.y;
-
+  //RCLCPP_WARN(logger_, "origin: (%f, %f) - %f", costmap_->getOriginX(), costmap_->getOriginY(), costmap_->getResolution());
   // the potential has already been computed, so we won't update our copy of the costmap
   unsigned int mx, my;
   if (!worldToMap(wx, wy, mx, my)) {
@@ -507,11 +476,12 @@ MyNavfnPlanner::getPlanFromPotential(
   float * x = planner_->getPathX();
   float * y = planner_->getPathY();
   int len = planner_->getPathLen();
-
+  //int added_el = 0;
   for (int i = len - 1; i >= 0; --i) {
     // convert the plan to world coordinates
     double world_x, world_y;
     mapToWorld(x[i], y[i], world_x, world_y);
+    //RCLCPP_WARN(logger_,"Step: %f, %f, %f, %f",x[i], y[i], world_x, world_y);
 
     geometry_msgs::msg::PoseStamped pose;
     pose.pose.position.x = world_x;
@@ -522,6 +492,10 @@ MyNavfnPlanner::getPlanFromPotential(
     pose.pose.orientation.z = 0.0;
     pose.pose.orientation.w = 1.0;
     plan.poses.push_back(pose);
+    /*if(added_el == 0 || pose != plan.poses[added_el-1]){
+      plan.poses.push_back(pose);
+      added_el++;
+    }*/
   }
 
   return !plan.poses.empty();

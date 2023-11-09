@@ -35,7 +35,7 @@ class MultiAgentPlanAskerNode(Node):
     async def ask_plan(self, s_request):
 
         futures = []
-        self.get_logger().info(str(len(s_request.requests)))
+        #self.get_logger().info(str(len(s_request.requests)))
         for i in range(len(s_request.requests)):
             r = s_request.requests[i]
             client_cb_group_actions = MutuallyExclusiveCallbackGroup()
@@ -49,7 +49,7 @@ class MultiAgentPlanAskerNode(Node):
             request.use_start = False
             request.vertex_constraints = r.vertex_constraints
             request.edge_constraints = r.edge_constraints
-            self.get_logger().info("Searching plan for " + r.name)
+            #self.get_logger().info("Searching plan for " + r.name)
             future = client.send_goal_async(request)
             #future.add_done_callback(partial(self.callback_ask_plan, i=i))
             futures.append(future)
@@ -77,7 +77,7 @@ class MultiAgentPlanAskerNode(Node):
             ap.name = s_request.requests[i].name
             ap.path = result.path
             plans.append(ap)
-            self.get_logger().info("Plan found")
+            #self.get_logger().info("Plan found")
         
         return plans
 

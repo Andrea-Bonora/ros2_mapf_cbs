@@ -498,9 +498,7 @@ MyPlannerServer::computePlan()
     if (!transformPosesToGlobalFrame(action_server_pose_no_constraints_, start, goal_pose)) {
       return;
     }
-    RCLCPP_WARN(
-        get_logger(),
-        "HELLO!");
+    
     result->path = getPlan(start, goal_pose, goal->planner_id);
 
     if (!validatePath(action_server_pose_no_constraints_, goal_pose, result->path, goal->planner_id)) {

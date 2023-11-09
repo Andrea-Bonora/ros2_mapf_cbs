@@ -7,7 +7,7 @@ class HighLevelNode(object):
 
     def __eq__(self, other):
         if not isinstance(other, type(self)): return NotImplemented
-        return self.solution == other.solution and self.cost == other.cost
+        return self.solution == other.solution and self.cost == other.cost and self.discrete_solution == other.discrete_solution
 
     def __hash__(self):
         return hash((self.cost))

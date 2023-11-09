@@ -1,0 +1,47 @@
+[0.761s] Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_parallel_executor/executor/parallel.py", line 75, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build
+    return await extension.build(additional_hooks=additional_hooks)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 85, in build
+    available_commands = await self._get_available_commands(
+  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 175, in _get_available_commands
+    output = await check_output(
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/usr/bin/python3', 'setup.py', '--help-commands'] to pass: Traceback (most recent call last):
+  File "/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_intermediate/setup.py", line 1, in <module>
+    from setuptools import find_packages, setup
+  File "/home/andrea/.local/lib/python3.10/site-packages/setuptools/__init__.py", line 10, in <module>
+    import distutils.core
+  File "/usr/lib/python3.10/distutils/core.py", line 17, in <module>
+    from distutils.cmd import Command
+  File "/usr/lib/python3.10/distutils/cmd.py", line 9, in <module>
+    from distutils import util, dir_util, file_util, archive_util, dep_util
+  File "/usr/lib/python3.10/distutils/archive_util.py", line 11, in <module>
+    import zipfile
+  File "/usr/lib/python3.10/zipfile.py", line 12, in <module>
+    import shutil
+  File "/usr/lib/python3.10/shutil.py", line 22, in <module>
+    import bz2
+  File "/usr/lib/python3.10/bz2.py", line 17, in <module>
+    from _bz2 import BZ2Compressor, BZ2Decompressor
+KeyboardInterrupt
+

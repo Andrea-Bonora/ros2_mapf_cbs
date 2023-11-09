@@ -1,0 +1,23 @@
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:438:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid my_nav2_navfn_planner::MyNavFn::updateCellAstar(int, int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+  438 | [01;31m[KMyNavFn[m[K::updateCellAstar(int n, int step, std::vector<std::map<std::string, int>> vc,
+      | [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:44[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:226:8:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid my_nav2_navfn_planner::MyNavFn::updateCellAstar(int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+  226 |   void [01;36m[KupdateCellAstar[m[K(int n, std::vector<std::map<std::string, int>> vertex_constraints = {},
+      |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:107:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass my_nav2_navfn_planner::MyNavFn[m[K’ defined here
+  107 | class [01;36m[KMyNavFn[m[K
+      |       [01;36m[K^~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:[m[K In member function ‘[01m[Kbool my_nav2_navfn_planner::MyNavFn::propNavFnAstar(int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:649:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmy_nav2_navfn_planner::MyNavFn::updateCellAstar(int&, int&, std::vector<std::map<std::__cxx11::basic_string<char>, int> >&, std::vector<std::map<std::__cxx11::basic_string<char>, int> >&)[m[K’
+  649 |       [01;31m[KupdateCellAstar(*pb++, cycle, vc, ec)[m[K;
+      |       [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/src/my_navfn.cpp:44[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:226:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid my_nav2_navfn_planner::MyNavFn::updateCellAstar(int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’
+  226 |   void [01;36m[KupdateCellAstar[m[K(int n, std::vector<std::map<std::string, int>> vertex_constraints = {},
+      |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn.hpp:226:8:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+gmake[2]: *** [CMakeFiles/my_nav2_navfn_planner.dir/build.make:90: CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_navfn_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
