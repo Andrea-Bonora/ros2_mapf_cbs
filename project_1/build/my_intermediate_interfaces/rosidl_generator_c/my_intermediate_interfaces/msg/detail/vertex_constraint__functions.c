@@ -11,21 +11,13 @@
 #include "rcutils/allocator.h"
 
 
-// Include directives for member types
-// Member `cell`
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__functions.h"
-
 bool
 my_intermediate_interfaces__msg__VertexConstraint__init(my_intermediate_interfaces__msg__VertexConstraint * msg)
 {
   if (!msg) {
     return false;
   }
-  // cell
-  if (!my_intermediate_interfaces__msg__Coordinates3D__init(&msg->cell)) {
-    my_intermediate_interfaces__msg__VertexConstraint__fini(msg);
-    return false;
-  }
+  // cell_index
   // time_step
   return true;
 }
@@ -36,8 +28,7 @@ my_intermediate_interfaces__msg__VertexConstraint__fini(my_intermediate_interfac
   if (!msg) {
     return;
   }
-  // cell
-  my_intermediate_interfaces__msg__Coordinates3D__fini(&msg->cell);
+  // cell_index
   // time_step
 }
 
@@ -47,10 +38,8 @@ my_intermediate_interfaces__msg__VertexConstraint__are_equal(const my_intermedia
   if (!lhs || !rhs) {
     return false;
   }
-  // cell
-  if (!my_intermediate_interfaces__msg__Coordinates3D__are_equal(
-      &(lhs->cell), &(rhs->cell)))
-  {
+  // cell_index
+  if (lhs->cell_index != rhs->cell_index) {
     return false;
   }
   // time_step
@@ -68,12 +57,8 @@ my_intermediate_interfaces__msg__VertexConstraint__copy(
   if (!input || !output) {
     return false;
   }
-  // cell
-  if (!my_intermediate_interfaces__msg__Coordinates3D__copy(
-      &(input->cell), &(output->cell)))
-  {
-    return false;
-  }
+  // cell_index
+  output->cell_index = input->cell_index;
   // time_step
   output->time_step = input->time_step;
   return true;

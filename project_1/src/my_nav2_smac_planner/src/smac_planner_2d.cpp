@@ -256,27 +256,12 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
   std::vector<std::map<std::string, int>> edge_constr;
 
   for (const auto& obj : vertex_constraints) {
-      double constr_x = obj.cell.x;
-      double constr_y = obj.cell.y;
-      unsigned int cx, cy;
-      costmap->worldToMap(constr_x, constr_y, cx, cy);
-      //int idx = cy * planner_->nx + cx;
-      int idx = cy * _a_star->getSizeX() + cx;
-      std::map<std::string, int> object = {{"cell", idx}, {"time_step", obj.time_step}};
+      std::map<std::string, int> object = {{"cell", obj.cell_index}, {"time_step", obj.time_step}};
       vert_constr.push_back(object);
   }
 
   for (const auto& obj : edge_constraints) {
-      double constr_1_x = obj.cell_from.x;
-      double constr_1_y = obj.cell_from.y;
-      double constr_2_x = obj.cell_to.x;
-      double constr_2_y = obj.cell_to.y;
-      unsigned int cx1, cx2, cy1, cy2;
-      costmap->worldToMap(constr_1_x, constr_1_y, cx1, cy1);
-      costmap->worldToMap(constr_2_x, constr_2_y, cx2, cy2);
-      int idx1 = cy1 * _a_star->getSizeX() + cx1;
-      int idx2 = cy2 * _a_star->getSizeX() + cx2;
-      std::map<std::string, int> object = {{"cell_from", idx1}, {"cell_to", idx2}, {"time_step", obj.time_step}};
+      std::map<std::string, int> object = {{"cell_from", obj.cell_from_index}, {"cell_to", obj.cell_to_index}, {"time_step", obj.time_step}};
       edge_constr.push_back(object);
   }
 
@@ -330,7 +315,7 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
 #endif
 
   // Smooth plan
-  _smoother->smooth(plan, costmap, time_remaining);
+  //_smoother->smooth(plan, costmap, time_remaining);
 
   // If use_final_approach_orientation=true, interpolate the last pose orientation from the
   // previous pose to set the orientation to the 'final approach' orientation of the robot so

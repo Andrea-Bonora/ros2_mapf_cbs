@@ -14,10 +14,6 @@
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp"
 #include "rosidl_runtime_cpp/traits.hpp"
 
-// Include directives for member types
-// Member 'cell'
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp"
-
 namespace my_intermediate_interfaces
 {
 
@@ -29,10 +25,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: cell
+  // member: cell_index
   {
-    out << "cell: ";
-    to_flow_style_yaml(msg.cell, out);
+    out << "cell_index: ";
+    rosidl_generator_traits::value_to_yaml(msg.cell_index, out);
     out << ", ";
   }
 
@@ -48,13 +44,14 @@ inline void to_block_style_yaml(
   const VertexConstraint & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: cell
+  // member: cell_index
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "cell:\n";
-    to_block_style_yaml(msg.cell, out, indentation + 2);
+    out << "cell_index: ";
+    rosidl_generator_traits::value_to_yaml(msg.cell_index, out);
+    out << "\n";
   }
 
   // member: time_step
@@ -114,11 +111,11 @@ inline const char * name<my_intermediate_interfaces::msg::VertexConstraint>()
 
 template<>
 struct has_fixed_size<my_intermediate_interfaces::msg::VertexConstraint>
-  : std::integral_constant<bool, has_fixed_size<my_intermediate_interfaces::msg::Coordinates3D>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<my_intermediate_interfaces::msg::VertexConstraint>
-  : std::integral_constant<bool, has_bounded_size<my_intermediate_interfaces::msg::Coordinates3D>::value> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<my_intermediate_interfaces::msg::VertexConstraint>

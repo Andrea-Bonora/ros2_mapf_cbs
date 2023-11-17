@@ -2,14 +2,13 @@
 // with input from my_intermediate_interfaces/msg/EdgeConstraint.msg
 // generated code does not contain a copyright notice
 
-#include "my_intermediate_interfaces/msg/Coordinates3D.idl"
 
 module my_intermediate_interfaces {
   module msg {
     struct EdgeConstraint {
-      my_intermediate_interfaces::msg::Coordinates3D cell_from;
+      int64 cell_from_index;
 
-      my_intermediate_interfaces::msg::Coordinates3D cell_to;
+      int64 cell_to_index;
 
       int64 time_step;
     };

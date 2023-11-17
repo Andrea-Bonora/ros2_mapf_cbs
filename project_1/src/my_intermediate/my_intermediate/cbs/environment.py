@@ -10,15 +10,26 @@ from math import fabs, atan
 import numpy as np
 
 class Environment(object):
-    def __init__(self, agents):
+    def __init__(self, agents, nx, ny):
         
         self.agents = agents
         self.agent_dict = {}
+        self.nx = nx
+        self.ny = ny
 
         self.make_agent_dict()
 
         self.constraints = Constraints()
         self.constraint_dict = {}
+
+    def world_to_map(self, location):
+        #CHANGE VALUES AND ADAPT THEM TO REAL RESOLUTION AND ORIGIN
+        x = int( (location.x + 10) / 0.05 )
+        y = int( (location.y + 10) / 0.05 )
+        index = y * self.nx + x
+        if index > 0 and index < self.nx*self.ny:
+            return index
+        return -1
 
     def get_first_conflict(self, solution):
         max_t = max([len(plan) for plan in solution.values()])
@@ -127,8 +138,8 @@ class Environment(object):
             #tmp.x = conflict.location_1a.x
             #tmp.y = conflict.location_1a.y
             '''
-            v1_constraint = VertexConstraint(conflict.time_a, conflict.location_1a, conflict.index)
-            v2_constraint = VertexConstraint(conflict.time_b, conflict.location_2a, conflict.index)
+            v1_constraint = VertexConstraint(conflict.time_a, self.world_to_map(conflict.location_1b))
+            v2_constraint = VertexConstraint(conflict.time_b, self.world_to_map(conflict.location_2b))
             constraint1.vertex_constraints |= {v1_constraint}
             constraint2.vertex_constraints |= {v2_constraint}
             
@@ -159,8 +170,8 @@ class Environment(object):
                 e_constraint2 = EdgeConstraint(conflict.time_b, conflict.location_2a, tmp, conflict.index)
                 constraint2.edge_constraints |= {e_constraint2}
             '''
-            e_constraint1 = EdgeConstraint(conflict.time_a, conflict.location_1a, conflict.location_1b, conflict.index)
-            e_constraint2 = EdgeConstraint(conflict.time_b, conflict.location_2a, conflict.location_2b, conflict.index)
+            e_constraint1 = EdgeConstraint(conflict.time_a, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
+            e_constraint2 = EdgeConstraint(conflict.time_b, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
 
             constraint1.edge_constraints |= {e_constraint1}
             constraint2.edge_constraints |= {e_constraint2}

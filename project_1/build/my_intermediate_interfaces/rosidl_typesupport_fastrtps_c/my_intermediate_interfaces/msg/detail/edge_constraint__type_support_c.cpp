@@ -34,20 +34,8 @@ extern "C"
 {
 #endif
 
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__functions.h"  // cell_from, cell_to
 
 // forward declare type support functions
-size_t get_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D)();
 
 
 using _EdgeConstraint__ros_msg_type = my_intermediate_interfaces__msg__EdgeConstraint;
@@ -61,32 +49,14 @@ static bool _EdgeConstraint__cdr_serialize(
     return false;
   }
   const _EdgeConstraint__ros_msg_type * ros_message = static_cast<const _EdgeConstraint__ros_msg_type *>(untyped_ros_message);
-  // Field name: cell_from
+  // Field name: cell_from_index
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->cell_from, cdr))
-    {
-      return false;
-    }
+    cdr << ros_message->cell_from_index;
   }
 
-  // Field name: cell_to
+  // Field name: cell_to_index
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->cell_to, cdr))
-    {
-      return false;
-    }
+    cdr << ros_message->cell_to_index;
   }
 
   // Field name: time_step
@@ -106,32 +76,14 @@ static bool _EdgeConstraint__cdr_deserialize(
     return false;
   }
   _EdgeConstraint__ros_msg_type * ros_message = static_cast<_EdgeConstraint__ros_msg_type *>(untyped_ros_message);
-  // Field name: cell_from
+  // Field name: cell_from_index
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->cell_from))
-    {
-      return false;
-    }
+    cdr >> ros_message->cell_from_index;
   }
 
-  // Field name: cell_to
+  // Field name: cell_to_index
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->cell_to))
-    {
-      return false;
-    }
+    cdr >> ros_message->cell_to_index;
   }
 
   // Field name: time_step
@@ -156,14 +108,18 @@ size_t get_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
   (void)padding;
   (void)wchar_size;
 
-  // field.name cell_from
-
-  current_alignment += get_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
-    &(ros_message->cell_from), current_alignment);
-  // field.name cell_to
-
-  current_alignment += get_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
-    &(ros_message->cell_to), current_alignment);
+  // field.name cell_from_index
+  {
+    size_t item_size = sizeof(ros_message->cell_from_index);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name cell_to_index
+  {
+    size_t item_size = sizeof(ros_message->cell_to_index);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name time_step
   {
     size_t item_size = sizeof(ros_message->time_step);
@@ -197,35 +153,19 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
   full_bounded = true;
   is_plain = true;
 
-  // member: cell_from
+  // member: cell_from_index
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: cell_to
+  // member: cell_to_index
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        max_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: time_step
   {

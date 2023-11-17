@@ -16,30 +16,6 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace my_intermediate_interfaces
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const my_intermediate_interfaces::msg::Coordinates3D &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  my_intermediate_interfaces::msg::Coordinates3D &);
-size_t get_serialized_size(
-  const my_intermediate_interfaces::msg::Coordinates3D &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Coordinates3D(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace my_intermediate_interfaces
-
 
 namespace my_intermediate_interfaces
 {
@@ -56,10 +32,8 @@ cdr_serialize(
   const my_intermediate_interfaces::msg::VertexConstraint & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: cell
-  my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.cell,
-    cdr);
+  // Member: cell_index
+  cdr << ros_message.cell_index;
   // Member: time_step
   cdr << ros_message.time_step;
   return true;
@@ -71,9 +45,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   my_intermediate_interfaces::msg::VertexConstraint & ros_message)
 {
-  // Member: cell
-  my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.cell);
+  // Member: cell_index
+  cdr >> ros_message.cell_index;
 
   // Member: time_step
   cdr >> ros_message.time_step;
@@ -94,11 +67,12 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: cell
-
-  current_alignment +=
-    my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.cell, current_alignment);
+  // Member: cell_index
+  {
+    size_t item_size = sizeof(ros_message.cell_index);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: time_step
   {
     size_t item_size = sizeof(ros_message.time_step);
@@ -127,20 +101,12 @@ max_serialized_size_VertexConstraint(
   is_plain = true;
 
 
-  // Member: cell
+  // Member: cell_index
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      current_alignment +=
-        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Coordinates3D(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: time_step

@@ -12,14 +12,6 @@
 #include "my_intermediate_interfaces/msg/detail/edge_constraint__struct.h"
 
 
-// Include directives for member types
-// Member `cell_from`
-// Member `cell_to`
-#include "my_intermediate_interfaces/msg/coordinates3_d.h"
-// Member `cell_from`
-// Member `cell_to`
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__rosidl_typesupport_introspection_c.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -41,14 +33,14 @@ void my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introsp
 
 static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introspection_c__EdgeConstraint_message_member_array[3] = {
   {
-    "cell_from",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "cell_from_index",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, cell_from),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, cell_from_index),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -58,14 +50,14 @@ static rosidl_typesupport_introspection_c__MessageMember my_intermediate_interfa
     NULL  // resize(index) function pointer
   },
   {
-    "cell_to",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "cell_to_index",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, cell_to),  // bytes offset in struct
+    offsetof(my_intermediate_interfaces__msg__EdgeConstraint, cell_to_index),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -114,10 +106,6 @@ static rosidl_message_type_support_t my_intermediate_interfaces__msg__EdgeConstr
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, EdgeConstraint)() {
-  my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introspection_c__EdgeConstraint_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, Coordinates3D)();
-  my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introspection_c__EdgeConstraint_message_member_array[1].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, Coordinates3D)();
   if (!my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introspection_c__EdgeConstraint_message_type_support_handle.typesupport_identifier) {
     my_intermediate_interfaces__msg__EdgeConstraint__rosidl_typesupport_introspection_c__EdgeConstraint_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

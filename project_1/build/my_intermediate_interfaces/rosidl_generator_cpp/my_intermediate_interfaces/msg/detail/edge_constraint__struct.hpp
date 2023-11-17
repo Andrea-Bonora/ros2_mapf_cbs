@@ -15,11 +15,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'cell_from'
-// Member 'cell_to'
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__msg__EdgeConstraint __attribute__((deprecated))
 #else
@@ -39,49 +34,50 @@ struct EdgeConstraint_
   using Type = EdgeConstraint_<ContainerAllocator>;
 
   explicit EdgeConstraint_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : cell_from(_init),
-    cell_to(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->cell_from_index = 0ll;
+      this->cell_to_index = 0ll;
       this->time_step = 0ll;
     }
   }
 
   explicit EdgeConstraint_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : cell_from(_alloc, _init),
-    cell_to(_alloc, _init)
   {
+    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->cell_from_index = 0ll;
+      this->cell_to_index = 0ll;
       this->time_step = 0ll;
     }
   }
 
   // field types and members
-  using _cell_from_type =
-    my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator>;
-  _cell_from_type cell_from;
-  using _cell_to_type =
-    my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator>;
-  _cell_to_type cell_to;
+  using _cell_from_index_type =
+    int64_t;
+  _cell_from_index_type cell_from_index;
+  using _cell_to_index_type =
+    int64_t;
+  _cell_to_index_type cell_to_index;
   using _time_step_type =
     int64_t;
   _time_step_type time_step;
 
   // setters for named parameter idiom
-  Type & set__cell_from(
-    const my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator> & _arg)
+  Type & set__cell_from_index(
+    const int64_t & _arg)
   {
-    this->cell_from = _arg;
+    this->cell_from_index = _arg;
     return *this;
   }
-  Type & set__cell_to(
-    const my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator> & _arg)
+  Type & set__cell_to_index(
+    const int64_t & _arg)
   {
-    this->cell_to = _arg;
+    this->cell_to_index = _arg;
     return *this;
   }
   Type & set__time_step(
@@ -133,10 +129,10 @@ struct EdgeConstraint_
   // comparison operators
   bool operator==(const EdgeConstraint_ & other) const
   {
-    if (this->cell_from != other.cell_from) {
+    if (this->cell_from_index != other.cell_from_index) {
       return false;
     }
-    if (this->cell_to != other.cell_to) {
+    if (this->cell_to_index != other.cell_to_index) {
       return false;
     }
     if (this->time_step != other.time_step) {

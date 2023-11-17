@@ -16,8 +16,6 @@
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h"
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h"
 
-bool my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__msg__vertex_constraint__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -52,15 +50,13 @@ bool my_intermediate_interfaces__msg__vertex_constraint__convert_from_py(PyObjec
     assert(strncmp("my_intermediate_interfaces.msg._vertex_constraint.VertexConstraint", full_classname_dest, 66) == 0);
   }
   my_intermediate_interfaces__msg__VertexConstraint * ros_message = _ros_message;
-  {  // cell
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cell");
+  {  // cell_index
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_index");
     if (!field) {
       return false;
     }
-    if (!my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(field, &ros_message->cell)) {
-      Py_DECREF(field);
-      return false;
-    }
+    assert(PyLong_Check(field));
+    ros_message->cell_index = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
   {  // time_step
@@ -94,14 +90,11 @@ PyObject * my_intermediate_interfaces__msg__vertex_constraint__convert_to_py(voi
     }
   }
   my_intermediate_interfaces__msg__VertexConstraint * ros_message = (my_intermediate_interfaces__msg__VertexConstraint *)raw_ros_message;
-  {  // cell
+  {  // cell_index
     PyObject * field = NULL;
-    field = my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(&ros_message->cell);
-    if (!field) {
-      return NULL;
-    }
+    field = PyLong_FromLongLong(ros_message->cell_index);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cell", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cell_index", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

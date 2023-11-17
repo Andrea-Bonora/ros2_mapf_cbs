@@ -258,7 +258,6 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h \
-  rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h \
   /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.h \
@@ -527,7 +526,6 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h \
-  rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__functions.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/rosidl_generator_c__visibility_control.h \
@@ -1296,7 +1294,6 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_
   /usr/include/python3.10/numpy/__multiarray_api.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h \
-  rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functions.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/rosidl_generator_c__visibility_control.h
 
@@ -1800,7 +1797,6 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_
   /usr/include/python3.10/numpy/__multiarray_api.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h \
-  rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/rosidl_generator_c__visibility_control.h
 
@@ -2325,7 +2321,6 @@ CMakeFiles/my_intermediate_interfaces__rosidl_generator_py.dir/rosidl_generator_
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h \
-  rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h \
   rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path__struct.h \
   /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h \
@@ -2620,6 +2615,8 @@ rosidl_generator_py/my_intermediate_interfaces/msg/_start_goal_s.c:
 
 rosidl_generator_py/my_intermediate_interfaces/msg/_edge_constraint_s.c:
 
+rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h:
+
 rosidl_generator_py/my_intermediate_interfaces/msg/_coordinates3_d_s.c:
 
 rosidl_generator_c/my_intermediate_interfaces/msg/detail/agent_path_request__functions.h:
@@ -2631,8 +2628,6 @@ rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__functi
 /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.h:
 
 rosidl_generator_c/my_intermediate_interfaces/msg/detail/edge_constraint__struct.h:
-
-rosidl_generator_c/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h:
 
 /usr/include/asm-generic/errno-base.h:
 

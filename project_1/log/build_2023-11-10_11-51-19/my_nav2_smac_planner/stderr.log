@@ -1,8 +1,0 @@
-[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’:
-[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:285:44:[m[K [01;31m[Kerror: [m[Kinvalid ‘[01m[Kstatic_cast[m[K’ from type ‘[01m[Kstd::vector<std::map<std::__cxx11::basic_string<char>, int> >[m[K’ to type ‘[01m[Kfloat[m[K’
-  285 |         path, num_iterations, _tolerance / [01;31m[Kstatic_cast<float>(costmap->getResolution(), vert_constr, edge_constr)[m[K))
-      |                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-gmake[2]: *** [CMakeFiles/my_nav2_smac_planner.dir/build.make:76: CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o] Error 1
-gmake[2]: *** Waiting for unfinished jobs....
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_smac_planner.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

@@ -37,15 +37,15 @@ private:
   ::my_intermediate_interfaces::msg::VertexConstraint msg_;
 };
 
-class Init_VertexConstraint_cell
+class Init_VertexConstraint_cell_index
 {
 public:
-  Init_VertexConstraint_cell()
+  Init_VertexConstraint_cell_index()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_VertexConstraint_time_step cell(::my_intermediate_interfaces::msg::VertexConstraint::_cell_type arg)
+  Init_VertexConstraint_time_step cell_index(::my_intermediate_interfaces::msg::VertexConstraint::_cell_index_type arg)
   {
-    msg_.cell = std::move(arg);
+    msg_.cell_index = std::move(arg);
     return Init_VertexConstraint_time_step(msg_);
   }
 
@@ -64,7 +64,7 @@ template<>
 inline
 auto build<::my_intermediate_interfaces::msg::VertexConstraint>()
 {
-  return my_intermediate_interfaces::msg::builder::Init_VertexConstraint_cell();
+  return my_intermediate_interfaces::msg::builder::Init_VertexConstraint_cell_index();
 }
 
 }  // namespace my_intermediate_interfaces

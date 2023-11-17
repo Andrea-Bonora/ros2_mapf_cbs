@@ -15,10 +15,6 @@
 #include "rosidl_runtime_cpp/message_initialization.hpp"
 
 
-// Include directives for member types
-// Member 'cell'
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__msg__VertexConstraint __attribute__((deprecated))
 #else
@@ -38,38 +34,39 @@ struct VertexConstraint_
   using Type = VertexConstraint_<ContainerAllocator>;
 
   explicit VertexConstraint_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : cell(_init)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->cell_index = 0ll;
       this->time_step = 0ll;
     }
   }
 
   explicit VertexConstraint_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : cell(_alloc, _init)
   {
+    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->cell_index = 0ll;
       this->time_step = 0ll;
     }
   }
 
   // field types and members
-  using _cell_type =
-    my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator>;
-  _cell_type cell;
+  using _cell_index_type =
+    int64_t;
+  _cell_index_type cell_index;
   using _time_step_type =
     int64_t;
   _time_step_type time_step;
 
   // setters for named parameter idiom
-  Type & set__cell(
-    const my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator> & _arg)
+  Type & set__cell_index(
+    const int64_t & _arg)
   {
-    this->cell = _arg;
+    this->cell_index = _arg;
     return *this;
   }
   Type & set__time_step(
@@ -121,7 +118,7 @@ struct VertexConstraint_
   // comparison operators
   bool operator==(const VertexConstraint_ & other) const
   {
-    if (this->cell != other.cell) {
+    if (this->cell_index != other.cell_index) {
       return false;
     }
     if (this->time_step != other.time_step) {

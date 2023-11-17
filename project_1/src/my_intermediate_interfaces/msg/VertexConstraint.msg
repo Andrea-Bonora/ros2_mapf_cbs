@@ -1,2 +1,2 @@
-Coordinates3D cell
+int64 cell_index
 int64 time_step

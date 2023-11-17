@@ -947,10 +947,8 @@ CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o: /home/andrea/te
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/vertex_constraint.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__builder.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__traits.hpp \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/edge_constraint.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__builder.hpp \
@@ -1721,6 +1719,8 @@ CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o: /home/andrea/te
 
 /opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/detail/clear_costmap_except_region__builder.hpp:
 
+/opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/clear_costmap_except_region.hpp:
+
 /opt/ros/humble/include/nav2_costmap_2d/clear_costmap_service.hpp:
 
 /opt/ros/humble/include/nav2_costmap_2d/footprint.hpp:
@@ -1903,6 +1903,8 @@ CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o: /home/andrea/te
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__struct.h:
 
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/polygon.h:
+
 /opt/ros/humble/include/nav2_costmap_2d/costmap_2d_ros.hpp:
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:
@@ -1913,10 +1915,6 @@ CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o: /home/andrea/te
 
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/edge_constraint.hpp:
 
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/clear_costmap_except_region.hpp:
-
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp:
-
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/transform_stamped__builder.hpp:
 
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__traits.hpp:
@@ -1924,10 +1922,6 @@ CMakeFiles/my_nav2_navfn_planner.dir/src/my_navfn_planner.cpp.o: /home/andrea/te
 /usr/include/c++/11/bits/deque.tcc:
 
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__builder.hpp:
-
-/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/polygon.h:
-
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp:
 

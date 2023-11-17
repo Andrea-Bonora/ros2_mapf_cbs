@@ -4,8 +4,8 @@ from my_intermediate.cbs.environment import Environment
 from copy import deepcopy
 
 class CBS(object):
-    def __init__(self, agents):
-        self.env = Environment(agents)
+    def __init__(self, agents, nx, ny):
+        self.env = Environment(agents, nx, ny)
         self.open_set = set()
         self.closed_set = set()
 

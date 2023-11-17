@@ -81,13 +81,14 @@ bool Node2D::isNodeValid(
         int cell_from_value = obj.at("cell_from");
         int cell_to_value = obj.at("cell_to");
         int ts_value = obj.at("time_step");
-        /*if (time_step == ts_value){
+        //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d %d %d %d", time_step, cell_from_value, cell_to_value, ts_value);
+        /*if (time_step == ts_value && cell_from_value == parent_index){
           RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?", ts_value, time_step);
           RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_from_value, parent_index);
           RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_to_value, index);
         }*/
         if(time_step == ts_value && parent_index == cell_from_value && index == cell_to_value){
-          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Collision detected");
+          //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Collision detected");
           return false;
         }
   }

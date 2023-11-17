@@ -800,10 +800,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
   /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/include/my_nav2_navfn_planner/my_navfn_planner.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/vertex_constraint.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__builder.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__traits.hpp \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/edge_constraint.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp \
   /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__builder.hpp \
@@ -2458,6 +2456,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 
 /usr/include/boost/mpl/aux_/config/adl.hpp:
 
+/usr/include/boost/mpl/aux_/adl_barrier.hpp:
+
 /usr/include/boost/mpl/bool_fwd.hpp:
 
 /usr/include/boost/mpl/bool.hpp:
@@ -2741,10 +2741,6 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /usr/include/boost/iterator/detail/config_def.hpp:
 
 /usr/include/boost/config/user.hpp:
-
-/usr/include/boost/config.hpp:
-
-/usr/include/boost/concept/assert.hpp:
 
 /opt/ros/humble/include/rmw/rmw/qos_profiles.h:
 
@@ -3345,6 +3341,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
 
 /usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/boost/concept/assert.hpp:
 
 /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_planner/include/my_nav2_planner/my_planner_server.hpp:
 
@@ -4682,6 +4680,8 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
 
+/usr/include/boost/config.hpp:
+
 /usr/include/boost/mpl/long_fwd.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__traits.hpp:
@@ -4986,27 +4986,11 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 
 /opt/ros/humble/include/tf2_ros/tf2_ros/visibility_control.h:
 
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp:
-
-/usr/include/boost/array.hpp:
-
-/usr/include/boost/type_traits/is_void.hpp:
-
-/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/polygon.h:
-
 /usr/include/nlohmann/detail/input/lexer.hpp:
 
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__builder.hpp:
 
 /usr/include/c++/11/bits/deque.tcc:
-
-/usr/include/boost/mpl/aux_/adl_barrier.hpp:
-
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp:
-
-/opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/clear_costmap_except_region.hpp:
-
-/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
 /usr/include/c++/11/cstddef:
 
@@ -5017,6 +5001,12 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
 /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp:
+
+/usr/include/boost/array.hpp:
+
+/usr/include/boost/type_traits/is_void.hpp:
+
+/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/polygon.h:
 
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/polygon__struct.h:
 
@@ -5177,6 +5167,10 @@ CMakeFiles/my_planner_server_core.dir/src/my_planner_server.cpp.o: /home/andrea/
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_value.hpp:
 
 /opt/ros/humble/include/nav2_costmap_2d/clear_costmap_service.hpp:
+
+/opt/ros/humble/include/nav2_msgs/nav2_msgs/srv/clear_costmap_except_region.hpp:
+
+/usr/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/waitable.hpp:
 

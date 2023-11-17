@@ -17,14 +17,10 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'cell'
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h"
-
 /// Struct defined in msg/VertexConstraint in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__msg__VertexConstraint
 {
-  my_intermediate_interfaces__msg__Coordinates3D cell;
+  int64_t cell_index;
   int64_t time_step;
 } my_intermediate_interfaces__msg__VertexConstraint;
 

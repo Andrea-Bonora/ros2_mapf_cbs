@@ -42,10 +42,6 @@ class Metaclass_VertexConstraint(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__vertex_constraint
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__vertex_constraint
 
-            from my_intermediate_interfaces.msg import Coordinates3D
-            if Coordinates3D.__class__._TYPE_SUPPORT is None:
-                Coordinates3D.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -59,17 +55,17 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     """Message class 'VertexConstraint'."""
 
     __slots__ = [
-        '_cell',
+        '_cell_index',
         '_time_step',
     ]
 
     _fields_and_field_types = {
-        'cell': 'my_intermediate_interfaces/Coordinates3D',
+        'cell_index': 'int64',
         'time_step': 'int64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'Coordinates3D'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -77,8 +73,7 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from my_intermediate_interfaces.msg import Coordinates3D
-        self.cell = kwargs.get('cell', Coordinates3D())
+        self.cell_index = kwargs.get('cell_index', int())
         self.time_step = kwargs.get('time_step', int())
 
     def __repr__(self):
@@ -110,7 +105,7 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.cell != other.cell:
+        if self.cell_index != other.cell_index:
             return False
         if self.time_step != other.time_step:
             return False
@@ -122,18 +117,19 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def cell(self):
-        """Message field 'cell'."""
-        return self._cell
+    def cell_index(self):
+        """Message field 'cell_index'."""
+        return self._cell_index
 
-    @cell.setter
-    def cell(self, value):
+    @cell_index.setter
+    def cell_index(self, value):
         if __debug__:
-            from my_intermediate_interfaces.msg import Coordinates3D
             assert \
-                isinstance(value, Coordinates3D), \
-                "The 'cell' field must be a sub message of type 'Coordinates3D'"
-        self._cell = value
+                isinstance(value, int), \
+                "The 'cell_index' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'cell_index' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._cell_index = value
 
     @builtins.property
     def time_step(self):

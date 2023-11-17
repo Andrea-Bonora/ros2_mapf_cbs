@@ -16,10 +16,6 @@
 #include "my_intermediate_interfaces/msg/detail/edge_constraint__struct.h"
 #include "my_intermediate_interfaces/msg/detail/edge_constraint__functions.h"
 
-bool my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(void * raw_ros_message);
-bool my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__msg__edge_constraint__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -54,26 +50,22 @@ bool my_intermediate_interfaces__msg__edge_constraint__convert_from_py(PyObject 
     assert(strncmp("my_intermediate_interfaces.msg._edge_constraint.EdgeConstraint", full_classname_dest, 62) == 0);
   }
   my_intermediate_interfaces__msg__EdgeConstraint * ros_message = _ros_message;
-  {  // cell_from
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_from");
+  {  // cell_from_index
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_from_index");
     if (!field) {
       return false;
     }
-    if (!my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(field, &ros_message->cell_from)) {
-      Py_DECREF(field);
-      return false;
-    }
+    assert(PyLong_Check(field));
+    ros_message->cell_from_index = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
-  {  // cell_to
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_to");
+  {  // cell_to_index
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cell_to_index");
     if (!field) {
       return false;
     }
-    if (!my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(field, &ros_message->cell_to)) {
-      Py_DECREF(field);
-      return false;
-    }
+    assert(PyLong_Check(field));
+    ros_message->cell_to_index = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
   {  // time_step
@@ -107,28 +99,22 @@ PyObject * my_intermediate_interfaces__msg__edge_constraint__convert_to_py(void 
     }
   }
   my_intermediate_interfaces__msg__EdgeConstraint * ros_message = (my_intermediate_interfaces__msg__EdgeConstraint *)raw_ros_message;
-  {  // cell_from
+  {  // cell_from_index
     PyObject * field = NULL;
-    field = my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(&ros_message->cell_from);
-    if (!field) {
-      return NULL;
-    }
+    field = PyLong_FromLongLong(ros_message->cell_from_index);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cell_from", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cell_from_index", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // cell_to
+  {  // cell_to_index
     PyObject * field = NULL;
-    field = my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(&ros_message->cell_to);
-    if (!field) {
-      return NULL;
-    }
+    field = PyLong_FromLongLong(ros_message->cell_to_index);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cell_to", field);
+      int rc = PyObject_SetAttrString(_pymessage, "cell_to_index", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

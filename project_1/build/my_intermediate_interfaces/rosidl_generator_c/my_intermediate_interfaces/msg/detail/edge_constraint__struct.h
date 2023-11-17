@@ -17,16 +17,11 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'cell_from'
-// Member 'cell_to'
-#include "my_intermediate_interfaces/msg/detail/coordinates3_d__struct.h"
-
 /// Struct defined in msg/EdgeConstraint in the package my_intermediate_interfaces.
 typedef struct my_intermediate_interfaces__msg__EdgeConstraint
 {
-  my_intermediate_interfaces__msg__Coordinates3D cell_from;
-  my_intermediate_interfaces__msg__Coordinates3D cell_to;
+  int64_t cell_from_index;
+  int64_t cell_to_index;
   int64_t time_step;
 } my_intermediate_interfaces__msg__EdgeConstraint;
 

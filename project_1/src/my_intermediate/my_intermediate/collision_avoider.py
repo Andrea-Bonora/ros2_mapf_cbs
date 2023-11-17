@@ -22,8 +22,6 @@ from my_intermediate.cbs.discrete_location import DiscreteLocation
 from copy import deepcopy
 from my_intermediate_interfaces.msg import AgentPathRequest
 import math
-from my_intermediate.cbs.constraint import Constraints
-from my_intermediate.cbs.vertex_constraint import VertexConstraint as VC2
 
 
 class CollisionAvoiderNode(Node):
@@ -105,7 +103,7 @@ class CollisionAvoiderNode(Node):
     
     async def cbs_alg(self, plans, discrete_plans, agents):
 
-        cbs = CBS(agents)
+        cbs = CBS(agents, self.nx, self.ny)
 
         #First solution computation, we already have it, so it is simply a conversion in the desired format
         start = cbs.get_starting_node(plans, discrete_plans)
@@ -134,7 +132,7 @@ class CollisionAvoiderNode(Node):
             for agent in constraint_dict.keys():
                 new_node = deepcopy(P)
                 new_node.constraint_dict[agent].add_constraint(constraint_dict[agent])
-                #self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
+                self.get_logger().info(str(agent) + " -> AFTER: " + str(new_node.constraint_dict[agent]))
 
                 vc, ec = self.get_constraints(new_node.constraint_dict[agent], agent, start)
 
@@ -166,12 +164,16 @@ class CollisionAvoiderNode(Node):
                     if new_node.solution[agent] == {}:
                         are_equals = False
                     if are_equals:
-                        self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
+                        #self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
                         for m in P.solution[agent]:
-                            self.get_logger().info(str(m))
+                            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
+                            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+                            self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
                         self.get_logger().info(" --- ")
                         for m in new_node.solution[agent]:
-                            self.get_logger().info(str(m))
+                            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
+                            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+                            self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
                         break
    
                     #if P.solution[agent] == new_node.solution[agent]:
@@ -210,21 +212,15 @@ class CollisionAvoiderNode(Node):
         vc = []
         for vertex_constr in constraints.vertex_constraints:
             vc_tmp = VertexConstraint()
-            vc_tmp.cell.x = vertex_constr.location.x
-            vc_tmp.cell.y = vertex_constr.location.y
-            vc_tmp.cell.z = 0.0
+            vc_tmp.cell_index = vertex_constr.index
             vc_tmp.time_step = vertex_constr.time
             vc.append(vc_tmp)
 
         ec = []
         for edge_constr in constraints.edge_constraints:
             ec_tmp = EdgeConstraint()
-            ec_tmp.cell_from.x = edge_constr.location_1.x
-            ec_tmp.cell_from.y = edge_constr.location_1.y
-            ec_tmp.cell_from.z = 0.0
-            ec_tmp.cell_to.x = edge_constr.location_2.x
-            ec_tmp.cell_to.y = edge_constr.location_2.y
-            ec_tmp.cell_to.z = 0.0
+            ec_tmp.cell_from_index = edge_constr.from_index
+            ec_tmp.cell_to_index = edge_constr.to_index
             ec_tmp.time_step = edge_constr.time
             ec.append(ec_tmp)
 

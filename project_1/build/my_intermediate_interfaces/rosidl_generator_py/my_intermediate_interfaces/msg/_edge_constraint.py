@@ -42,10 +42,6 @@ class Metaclass_EdgeConstraint(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__edge_constraint
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__edge_constraint
 
-            from my_intermediate_interfaces.msg import Coordinates3D
-            if Coordinates3D.__class__._TYPE_SUPPORT is None:
-                Coordinates3D.__class__.__import_type_support__()
-
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
         # list constant names here so that they appear in the help text of
@@ -59,20 +55,20 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     """Message class 'EdgeConstraint'."""
 
     __slots__ = [
-        '_cell_from',
-        '_cell_to',
+        '_cell_from_index',
+        '_cell_to_index',
         '_time_step',
     ]
 
     _fields_and_field_types = {
-        'cell_from': 'my_intermediate_interfaces/Coordinates3D',
-        'cell_to': 'my_intermediate_interfaces/Coordinates3D',
+        'cell_from_index': 'int64',
+        'cell_to_index': 'int64',
         'time_step': 'int64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'Coordinates3D'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'Coordinates3D'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -80,10 +76,8 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from my_intermediate_interfaces.msg import Coordinates3D
-        self.cell_from = kwargs.get('cell_from', Coordinates3D())
-        from my_intermediate_interfaces.msg import Coordinates3D
-        self.cell_to = kwargs.get('cell_to', Coordinates3D())
+        self.cell_from_index = kwargs.get('cell_from_index', int())
+        self.cell_to_index = kwargs.get('cell_to_index', int())
         self.time_step = kwargs.get('time_step', int())
 
     def __repr__(self):
@@ -115,9 +109,9 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.cell_from != other.cell_from:
+        if self.cell_from_index != other.cell_from_index:
             return False
-        if self.cell_to != other.cell_to:
+        if self.cell_to_index != other.cell_to_index:
             return False
         if self.time_step != other.time_step:
             return False
@@ -129,32 +123,34 @@ class EdgeConstraint(metaclass=Metaclass_EdgeConstraint):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def cell_from(self):
-        """Message field 'cell_from'."""
-        return self._cell_from
+    def cell_from_index(self):
+        """Message field 'cell_from_index'."""
+        return self._cell_from_index
 
-    @cell_from.setter
-    def cell_from(self, value):
+    @cell_from_index.setter
+    def cell_from_index(self, value):
         if __debug__:
-            from my_intermediate_interfaces.msg import Coordinates3D
             assert \
-                isinstance(value, Coordinates3D), \
-                "The 'cell_from' field must be a sub message of type 'Coordinates3D'"
-        self._cell_from = value
+                isinstance(value, int), \
+                "The 'cell_from_index' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'cell_from_index' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._cell_from_index = value
 
     @builtins.property
-    def cell_to(self):
-        """Message field 'cell_to'."""
-        return self._cell_to
+    def cell_to_index(self):
+        """Message field 'cell_to_index'."""
+        return self._cell_to_index
 
-    @cell_to.setter
-    def cell_to(self, value):
+    @cell_to_index.setter
+    def cell_to_index(self, value):
         if __debug__:
-            from my_intermediate_interfaces.msg import Coordinates3D
             assert \
-                isinstance(value, Coordinates3D), \
-                "The 'cell_to' field must be a sub message of type 'Coordinates3D'"
-        self._cell_to = value
+                isinstance(value, int), \
+                "The 'cell_to_index' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'cell_to_index' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._cell_to_index = value
 
     @builtins.property
     def time_step(self):
