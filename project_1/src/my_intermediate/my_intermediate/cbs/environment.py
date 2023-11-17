@@ -115,33 +115,35 @@ class Environment(object):
         if conflict.type == Conflict.VERTEX:
             constraint1 = Constraints()
             constraint2 = Constraints()
-            '''
-            #Add conflict for all the area of the robot (TODO)
-            blocked_points_1 = self.get_points_colliding(conflict.location_1a, conflict.location_2b)  
-            blocked_points_2 = self.get_points_colliding(conflict.location_2a, conflict.location_1b)            
+
+            loc_1a = self.world_to_map(conflict.location_1a)
+            loc_1b = self.world_to_map(conflict.location_1b)
             
-            for point in blocked_points_1:
-                tmp = DiscreteLocation()
-                tmp.x = point[0]
-                tmp.y = point[1]
-                v1_constraint = VertexConstraint(conflict.time_a, tmp, conflict.index)
+            points1a = [loc_1a, loc_1a+1, loc_1a-1, loc_1a-self.nx, loc_1a+self.nx,
+                      loc_1a+1+self.nx, loc_1a-1+self.nx, loc_1a+1-self.nx, loc_1a-1-self.nx]
+            points1b = [loc_1b, loc_1b+1, loc_1b-1, loc_1b-self.nx, loc_1b+self.nx,
+                      loc_1b+1+self.nx, loc_1b-1+self.nx, loc_1b+1-self.nx, loc_1b-1-self.nx]
+            points1 = list(set(points1a) & set(points1b))
+
+            loc_2a = self.world_to_map(conflict.location_2a)
+            loc_2b = self.world_to_map(conflict.location_2b)
+            points2a = [loc_2a, loc_2a+1, loc_2a-1, loc_2a-self.nx, loc_2a+self.nx,
+                      loc_2a+1+self.nx, loc_2a-1+self.nx, loc_2a+1-self.nx, loc_2a-1-self.nx]
+            points2b = [loc_2b, loc_2b+1, loc_2b-1, loc_2b-self.nx, loc_2b+self.nx,
+                      loc_2b+1+self.nx, loc_2b-1+self.nx, loc_2b+1-self.nx, loc_2b-1-self.nx]
+            points2 = list(set(points2a) & set(points2b))
+
+            for p in points1:
+                v1_constraint = VertexConstraint(conflict.time_a, p)
                 constraint1.vertex_constraints |= {v1_constraint}
-            
-            for point in blocked_points_2:
-                tmp = DiscreteLocation()
-                tmp.x = point[0]
-                tmp.y = point[1]
-                v2_constraint = VertexConstraint(conflict.time_b, tmp, conflict.index)
+            for p in points2:
+                v2_constraint = VertexConstraint(conflict.time_b, p)
                 constraint2.vertex_constraints |= {v2_constraint}
-               
-            #tmp = DiscreteLocation()
-            #tmp.x = conflict.location_1a.x
-            #tmp.y = conflict.location_1a.y
-            '''
-            v1_constraint = VertexConstraint(conflict.time_a, self.world_to_map(conflict.location_1b))
-            v2_constraint = VertexConstraint(conflict.time_b, self.world_to_map(conflict.location_2b))
-            constraint1.vertex_constraints |= {v1_constraint}
-            constraint2.vertex_constraints |= {v2_constraint}
+
+            #v1_constraint = VertexConstraint(conflict.time_a, self.world_to_map(conflict.location_1b))
+            #v2_constraint = VertexConstraint(conflict.time_b, self.world_to_map(conflict.location_2b))
+            #constraint1.vertex_constraints |= {v1_constraint}
+            #constraint2.vertex_constraints |= {v2_constraint}
             
             constraint_dict[conflict.agent_1] = constraint1
             constraint_dict[conflict.agent_2] = constraint2
@@ -149,45 +151,45 @@ class Environment(object):
         elif conflict.type == Conflict.EDGE:
             constraint1 = Constraints()
             constraint2 = Constraints()
-            '''
-            blocked_points_1 = self.get_points_colliding(conflict.location_1a, conflict.location_2b)
-            blocked_points_2 = self.get_points_colliding(conflict.location_2a, conflict.location_1b)
+
+            loc_1_from = self.world_to_map(conflict.location_1a)
+            loc_1_to = self.world_to_map(conflict.location_1b)
+            points1_from = [loc_1_from, loc_1_from+1, loc_1_from-1, loc_1_from-self.nx, loc_1_from+self.nx,
+                      loc_1_from+1+self.nx, loc_1_from-1+self.nx, loc_1_from+1-self.nx, loc_1_from-1-self.nx]
+            points1_to = [loc_1_to, loc_1_to+1, loc_1_to-1, loc_1_to-self.nx, loc_1_to+self.nx,
+                      loc_1_to+1+self.nx, loc_1_to-1+self.nx, loc_1_to+1-self.nx, loc_1_to-1-self.nx]
+            points1 = list(set(points1_from) & set(points1_to))
             
-            #blocked_points_1b = self.get_points_colliding_edges(conflict.location_1a.x, conflict.location_1a.y, conflict.location_2a.x, conflict.location_2a.y, max_dist = 0.05)
-            #blocked_points_2b = self.get_points_colliding_edges(conflict.location_2a.x, conflict.location_2a.y, conflict.location_1a.x, conflict.location_1a.y, max_dist = 0.05)
+            loc_2_from = self.world_to_map(conflict.location_2a)
+            loc_2_to = self.world_to_map(conflict.location_2b)
+            points2_from = [loc_2_from, loc_2_from+1, loc_2_from-1, loc_2_from-self.nx, loc_2_from+self.nx,
+                      loc_2_from+1+self.nx, loc_2_from-1+self.nx, loc_2_from+1-self.nx, loc_2_from-1-self.nx]
+            points2_to = [loc_2_to, loc_2_to+1, loc_2_to-1, loc_2_to-self.nx, loc_2_to+self.nx,
+                      loc_2_to+1+self.nx, loc_2_to-1+self.nx, loc_2_to+1-self.nx, loc_2_to-1-self.nx]
+            points2 = list(set(points2_from) & set(points2_to))
+            
+            for p in points1:
+                e_constraint1a = EdgeConstraint(conflict.time_a, p, loc_1_to)
+                e_constraint1b = EdgeConstraint(conflict.time_a, loc_1_from, p)
+                constraint1.edge_constraints |= {e_constraint1a}
+                constraint1.edge_constraints |= {e_constraint1b}
 
-            for point in blocked_points_1:
-                tmp = DiscreteLocation()
-                tmp.x = point[0]
-                tmp.y = point[1]
-                e_constraint1 = EdgeConstraint(conflict.time_a, conflict.location_1a, tmp, conflict.index)
-                constraint1.edge_constraints |= {e_constraint1}
+            for p in points2:
+                e_constraint2a = EdgeConstraint(conflict.time_b, p, loc_2_to)
+                e_constraint2b = EdgeConstraint(conflict.time_b, loc_2_from, p)
+                constraint2.edge_constraints |= {e_constraint2a}
+                constraint2.edge_constraints |= {e_constraint2b}
 
-            for point in blocked_points_2:
-                tmp = DiscreteLocation()
-                tmp.x = point[0]
-                tmp.y = point[1]
-                e_constraint2 = EdgeConstraint(conflict.time_b, conflict.location_2a, tmp, conflict.index)
-                constraint2.edge_constraints |= {e_constraint2}
-            '''
-            e_constraint1 = EdgeConstraint(conflict.time_a, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
-            e_constraint2 = EdgeConstraint(conflict.time_b, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
+            #e_constraint1 = EdgeConstraint(conflict.time_a, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
+            #e_constraint2 = EdgeConstraint(conflict.time_b, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
 
-            constraint1.edge_constraints |= {e_constraint1}
-            constraint2.edge_constraints |= {e_constraint2}
+            #constraint1.edge_constraints |= {e_constraint1}
+            #constraint2.edge_constraints |= {e_constraint2}
             constraint_dict[conflict.agent_1] = constraint1
             constraint_dict[conflict.agent_2] = constraint2
 
         return constraint_dict
     
-    def get_points_colliding(self, start, ref, step = 0.05, max_dist = 0.8):
-        bc = []
-        for x in np.arange(start.x - step, start.x + step + step/2, step):
-            for y in np.arange(start.y - step, start.y + step + step/2, step):
-                if abs(x - ref.x) < 0.8 and abs(y - ref.y) < 0.8:
-                    bc.append((x,y))
-        return bc
-
     def get_state(self, agent_name, solution, t):
         if t < len(solution[agent_name]):
             return solution[agent_name][t]
