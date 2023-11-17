@@ -69,19 +69,19 @@ include CMakeFiles/my_nav2_smac_planner.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/my_nav2_smac_planner.dir/flags.make
 
-CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
-CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_hybrid.cpp
-CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o -MF CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o.d -o CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_hybrid.cpp
+CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
+CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp
+CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o -MF CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o.d -o CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp
 
-CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_hybrid.cpp > CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.i
+CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp > CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.i
 
-CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_hybrid.cpp -o CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.s
+CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp -o CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.s
 
 CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
 CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/a_star.cpp
@@ -97,24 +97,10 @@ CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/a_star.cpp -o CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.s
 
-CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
-CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp
-CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o -MF CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o.d -o CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp
-
-CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp > CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i
-
-CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp -o CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s
-
 CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
 CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smoother.cpp
 CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o -MF CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o.d -o CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smoother.cpp
 
 CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.i: cmake_force
@@ -124,6 +110,20 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.i: cmake_force
 CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smoother.cpp -o CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.s
+
+CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
+CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp
+CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o -MF CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o.d -o CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o -c /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp
+
+CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp > CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i
+
+CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/collision_checker.cpp -o CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s
 
 CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.o: CMakeFiles/my_nav2_smac_planner.dir/flags.make
 CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/analytic_expansion.cpp
@@ -211,10 +211,10 @@ CMakeFiles/my_nav2_smac_planner.dir/src/node_basic.cpp.s: cmake_force
 
 # Object files for target my_nav2_smac_planner
 my_nav2_smac_planner_OBJECTS = \
-"CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o" \
+"CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o" \
 "CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o" \
-"CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o" \
 "CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o" \
+"CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o" \
 "CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.o" \
 "CMakeFiles/my_nav2_smac_planner.dir/src/node_hybrid.cpp.o" \
 "CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.o" \
@@ -225,10 +225,10 @@ my_nav2_smac_planner_OBJECTS = \
 # External object files for target my_nav2_smac_planner
 my_nav2_smac_planner_EXTERNAL_OBJECTS =
 
-libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o
+libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o
 libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o
-libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o
 libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o
+libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o
 libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.o
 libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/node_hybrid.cpp.o
 libmy_nav2_smac_planner.so: CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.o
@@ -430,8 +430,6 @@ libmy_nav2_smac_planner.so: /opt/ros/humble/lib/libtf2_msgs__rosidl_typesupport_
 libmy_nav2_smac_planner.so: /opt/ros/humble/lib/libtf2_msgs__rosidl_typesupport_introspection_cpp.so
 libmy_nav2_smac_planner.so: /opt/ros/humble/lib/libtf2_msgs__rosidl_typesupport_cpp.so
 libmy_nav2_smac_planner.so: /opt/ros/humble/lib/libtf2_msgs__rosidl_generator_py.so
-libmy_nav2_smac_planner.so: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
-libmy_nav2_smac_planner.so: /usr/lib/x86_64-linux-gnu/libpthread.a
 libmy_nav2_smac_planner.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_typesupport_c.so
 libmy_nav2_smac_planner.so: /opt/ros/humble/lib/liblifecycle_msgs__rosidl_generator_c.so
 libmy_nav2_smac_planner.so: /opt/ros/humble/lib/libvisualization_msgs__rosidl_generator_c.so

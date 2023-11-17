@@ -105,7 +105,9 @@ public:
    * @param tolerance Reference to tolerance in costmap nodes
    * @return if plan was successful
    */
-  bool createPath(CoordinateVector & path, int & num_iterations, const float & tolerance);
+  bool createPath(CoordinateVector & path, int & num_iterations, const float & tolerance,
+                  const std::vector<std::map<std::string, int>> vertex_constraints = {},
+                  const std::vector<std::map<std::string, int>> edge_constraints = {});
 
   /**
    * @brief Sets the collision checker to use

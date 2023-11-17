@@ -310,23 +310,14 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(FILES "smac_plugin_hybrid.xml" "DESTINATION" "share/my_nav2_smac_planner/")
-ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "smac_plugin_hybrid.xml" "DESTINATION" "share/my_nav2_smac_planner/")
-
 # install(FILES "smac_plugin_2d.xml" "DESTINATION" "share/my_nav2_smac_planner/")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "smac_plugin_2d.xml" "DESTINATION" "share/my_nav2_smac_planner/")
 
-# install(FILES "smac_plugin_lattice.xml" "DESTINATION" "share/my_nav2_smac_planner/")
-ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "smac_plugin_lattice.xml" "DESTINATION" "share/my_nav2_smac_planner/")
-
-# install("TARGETS" "my_nav2_smac_planner" "my_nav2_smac_planner_2d" "my_nav2_smac_planner_lattice" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/my_nav2_smac_planner")
+# install("TARGETS" "my_nav2_smac_planner" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "lib/my_nav2_smac_planner")
 include("/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(DIRECTORY "include/" "DESTINATION" "include/")
 ament_cmake_symlink_install_directory("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" DIRECTORY "include/" "DESTINATION" "include/")
-
-# install(DIRECTORY "lattice_primitives/sample_primitives" "DESTINATION" "share/my_nav2_smac_planner")
-ament_cmake_symlink_install_directory("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" DIRECTORY "lattice_primitives/sample_primitives" "DESTINATION" "share/my_nav2_smac_planner")
 
 # install(FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/my_nav2_smac_planner/environment")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "/opt/ros/humble/lib/python3.10/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/my_nav2_smac_planner/environment")
@@ -370,8 +361,8 @@ ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src
 # install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_index/share/ament_index/resource_index/packages/my_nav2_smac_planner" "DESTINATION" "share/ament_index/resource_index/packages")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_index/share/ament_index/resource_index/packages/my_nav2_smac_planner" "DESTINATION" "share/ament_index/resource_index/packages")
 
-# install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_index/share/ament_index/resource_index/nav2_core__pluginlib__plugin/my_nav2_smac_planner" "DESTINATION" "share/ament_index/resource_index/nav2_core__pluginlib__plugin")
-ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_index/share/ament_index/resource_index/nav2_core__pluginlib__plugin/my_nav2_smac_planner" "DESTINATION" "share/ament_index/resource_index/nav2_core__pluginlib__plugin")
+# install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_index/share/ament_index/resource_index/my_nav2_core__pluginlib__plugin/my_nav2_smac_planner" "DESTINATION" "share/ament_index/resource_index/my_nav2_core__pluginlib__plugin")
+ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_index/share/ament_index/resource_index/my_nav2_core__pluginlib__plugin/my_nav2_smac_planner" "DESTINATION" "share/ament_index/resource_index/my_nav2_core__pluginlib__plugin")
 
 # install(FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/my_nav2_smac_planner/cmake")
 ament_cmake_symlink_install_files("/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner" FILES "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/my_nav2_smac_planner/cmake")

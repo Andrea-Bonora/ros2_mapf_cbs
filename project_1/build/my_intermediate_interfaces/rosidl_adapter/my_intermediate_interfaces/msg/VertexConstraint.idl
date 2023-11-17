@@ -2,12 +2,12 @@
 // with input from my_intermediate_interfaces/msg/VertexConstraint.msg
 // generated code does not contain a copyright notice
 
-#include "geometry_msgs/msg/PoseStamped.idl"
+#include "my_intermediate_interfaces/msg/Coordinates3D.idl"
 
 module my_intermediate_interfaces {
   module msg {
     struct VertexConstraint {
-      geometry_msgs::msg::PoseStamped cell;
+      my_intermediate_interfaces::msg::Coordinates3D cell;
 
       int64 time_step;
     };

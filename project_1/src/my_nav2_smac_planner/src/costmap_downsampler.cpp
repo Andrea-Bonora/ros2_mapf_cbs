@@ -131,7 +131,8 @@ void CostmapDownsampler::setCostOfCell(
   unsigned char cost = _use_min_cost_neighbor ? 255 : 0;
   unsigned int x_offset = new_mx * _downsampling_factor;
   unsigned int y_offset = new_my * _downsampling_factor;
-
+  _use_min_cost_neighbor = 1;
+  RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "--> %d ", _use_min_cost_neighbor);
   for (unsigned int i = 0; i < _downsampling_factor; ++i) {
     mx = x_offset + i;
     if (mx >= _size_x) {

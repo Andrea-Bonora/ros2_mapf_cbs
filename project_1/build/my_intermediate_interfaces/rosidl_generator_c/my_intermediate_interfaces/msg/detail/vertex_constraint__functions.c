@@ -13,7 +13,7 @@
 
 // Include directives for member types
 // Member `cell`
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"
+#include "my_intermediate_interfaces/msg/detail/coordinates3_d__functions.h"
 
 bool
 my_intermediate_interfaces__msg__VertexConstraint__init(my_intermediate_interfaces__msg__VertexConstraint * msg)
@@ -22,7 +22,7 @@ my_intermediate_interfaces__msg__VertexConstraint__init(my_intermediate_interfac
     return false;
   }
   // cell
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->cell)) {
+  if (!my_intermediate_interfaces__msg__Coordinates3D__init(&msg->cell)) {
     my_intermediate_interfaces__msg__VertexConstraint__fini(msg);
     return false;
   }
@@ -37,7 +37,7 @@ my_intermediate_interfaces__msg__VertexConstraint__fini(my_intermediate_interfac
     return;
   }
   // cell
-  geometry_msgs__msg__PoseStamped__fini(&msg->cell);
+  my_intermediate_interfaces__msg__Coordinates3D__fini(&msg->cell);
   // time_step
 }
 
@@ -48,7 +48,7 @@ my_intermediate_interfaces__msg__VertexConstraint__are_equal(const my_intermedia
     return false;
   }
   // cell
-  if (!geometry_msgs__msg__PoseStamped__are_equal(
+  if (!my_intermediate_interfaces__msg__Coordinates3D__are_equal(
       &(lhs->cell), &(rhs->cell)))
   {
     return false;
@@ -69,7 +69,7 @@ my_intermediate_interfaces__msg__VertexConstraint__copy(
     return false;
   }
   // cell
-  if (!geometry_msgs__msg__PoseStamped__copy(
+  if (!my_intermediate_interfaces__msg__Coordinates3D__copy(
       &(input->cell), &(output->cell)))
   {
     return false;

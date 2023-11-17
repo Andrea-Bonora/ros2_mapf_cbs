@@ -16,14 +16,10 @@
 #include "my_intermediate_interfaces/msg/detail/edge_constraint__struct.h"
 #include "my_intermediate_interfaces/msg/detail/edge_constraint__functions.h"
 
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
+bool my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(void * raw_ros_message);
+bool my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__msg__edge_constraint__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -63,7 +59,7 @@ bool my_intermediate_interfaces__msg__edge_constraint__convert_from_py(PyObject 
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->cell_from)) {
+    if (!my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(field, &ros_message->cell_from)) {
       Py_DECREF(field);
       return false;
     }
@@ -74,7 +70,7 @@ bool my_intermediate_interfaces__msg__edge_constraint__convert_from_py(PyObject 
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->cell_to)) {
+    if (!my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(field, &ros_message->cell_to)) {
       Py_DECREF(field);
       return false;
     }
@@ -113,7 +109,7 @@ PyObject * my_intermediate_interfaces__msg__edge_constraint__convert_to_py(void 
   my_intermediate_interfaces__msg__EdgeConstraint * ros_message = (my_intermediate_interfaces__msg__EdgeConstraint *)raw_ros_message;
   {  // cell_from
     PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->cell_from);
+    field = my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(&ros_message->cell_from);
     if (!field) {
       return NULL;
     }
@@ -127,7 +123,7 @@ PyObject * my_intermediate_interfaces__msg__edge_constraint__convert_to_py(void 
   }
   {  // cell_to
     PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->cell_to);
+    field = my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(&ros_message->cell_to);
     if (!field) {
       return NULL;
     }

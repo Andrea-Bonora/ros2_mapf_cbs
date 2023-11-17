@@ -1,0 +1,59 @@
+[0.304s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner
+[0.593s] -- The C compiler identification is GNU 11.4.0
+[0.594s] -- The CXX compiler identification is GNU 11.4.0
+[0.594s] -- Detecting C compiler ABI info
+[0.594s] -- Detecting C compiler ABI info - done
+[0.594s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.594s] -- Detecting C compile features
+[0.594s] -- Detecting C compile features - done
+[0.594s] -- Detecting CXX compiler ABI info
+[0.594s] -- Detecting CXX compiler ABI info - done
+[0.595s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.595s] -- Detecting CXX compile features
+[0.595s] -- Detecting CXX compile features - done
+[0.595s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.760s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.839s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.873s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.876s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.928s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.935s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.947s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.967s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.995s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.091s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.097s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[1.147s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.161s] -- Looking for pthread.h
+[1.259s] -- Looking for pthread.h - found
+[1.260s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.347s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.348s] -- Found Threads: TRUE  
+[1.522s] -- Found rclcpp_action: 16.0.6 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.657s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.711s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[2.018s] -- Found nav2_util: 1.1.12 (/opt/ros/humble/share/nav2_util/cmake)
+[2.571s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.572s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.572s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.728s] -- Found nav2_core: 1.1.12 (/opt/ros/humble/share/nav2_core/cmake)
+[4.224s] [31mCMake Error at CMakeLists.txt:15 (find_package):
+[4.224s]   By not providing "Findmy_nav2_core.cmake" in CMAKE_MODULE_PATH this project
+[4.224s]   has asked CMake to find a package configuration file provided by
+[4.224s]   "my_nav2_core", but CMake did not find one.
+[4.224s] 
+[4.224s]   Could not find a package configuration file provided by "my_nav2_core" with
+[4.224s]   any of the following names:
+[4.225s] 
+[4.225s]     my_nav2_coreConfig.cmake
+[4.225s]     my_nav2_core-config.cmake
+[4.225s] 
+[4.225s]   Add the installation prefix of "my_nav2_core" to CMAKE_PREFIX_PATH or set
+[4.225s]   "my_nav2_core_DIR" to a directory containing one of the above files.  If
+[4.225s]   "my_nav2_core" provides a separate development package or SDK, be sure it
+[4.225s]   has been installed.
+[4.225s] 
+[4.225s] -- Configuring incomplete, errors occurred!
+[4.225s] See also "/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles/CMakeOutput.log".
+[4.225s] [0m
+[4.236s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate:/home/andrea/tesi/ros2_mapf_cbs/simple_example/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner

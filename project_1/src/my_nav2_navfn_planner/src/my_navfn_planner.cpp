@@ -268,42 +268,12 @@ MyNavfnPlanner::makePlan(
   // TODO(orduno): Explain why we are providing 'map_goal' to setStart().
   //               Same for setGoal, seems reversed. Computing backwards?
 
-  std::vector<std::map<std::string, int>> vert_constr;
-  std::vector<std::map<std::string, int>> edge_constr;
-
-  for (const auto& obj : vertex_constraints) {
-      double constr_x = obj.cell.pose.position.x;
-      double constr_y = obj.cell.pose.position.y;
-      unsigned int cx, cy;
-      worldToMap(constr_x, constr_y, cx, cy);
-      int idx = cy * planner_->nx + cx;
-      std::map<std::string, int> object = {{"cell", idx}, {"time_step", obj.time_step}};
-      vert_constr.push_back(object);
-  }
-
-  for (const auto& obj : edge_constraints) {
-      double constr_1_x = obj.cell_from.pose.position.x;
-      double constr_1_y = obj.cell_from.pose.position.y;
-      double constr_2_x = obj.cell_to.pose.position.x;
-      double constr_2_y = obj.cell_to.pose.position.y;
-      unsigned int cx1, cx2, cy1, cy2;
-      worldToMap(constr_1_x, constr_1_y, cx1, cy1);
-      worldToMap(constr_2_x, constr_2_y, cx2, cy2);
-      int idx1 = cy1 * planner_->nx + cx1;
-      int idx2 = cy2 * planner_->nx + cx2;
-      std::map<std::string, int> object = {{"cell_from", idx1}, {"cell_to", idx2}, {"time_step", obj.time_step}};
-      edge_constr.push_back(object);
-  }
-
   planner_->setStart(map_goal);
   planner_->setGoal(map_start);
   use_astar_ = true;
   if (use_astar_) {
     planner_->calcNavFnAstar();
   } else {
-    RCLCPP_WARN(
-      logger_,
-      "Hello:(");
     planner_->calcNavFnDijkstra(true);
   }
 
@@ -438,8 +408,8 @@ MyNavfnPlanner::getPlanFromPotential(
   std::vector<std::map<std::string, int>> edge_constr;
 
   for (const auto& obj : vertex_constraints) {
-      double constr_x = obj.cell.pose.position.x;
-      double constr_y = obj.cell.pose.position.y;
+      double constr_x = obj.cell.x;
+      double constr_y = obj.cell.y;
       unsigned int cx, cy;
       worldToMap(constr_x, constr_y, cx, cy);
       int idx = cy * planner_->nx + cx;
@@ -448,10 +418,10 @@ MyNavfnPlanner::getPlanFromPotential(
   }
 
   for (const auto& obj : edge_constraints) {
-      double constr_1_x = obj.cell_from.pose.position.x;
-      double constr_1_y = obj.cell_from.pose.position.y;
-      double constr_2_x = obj.cell_to.pose.position.x;
-      double constr_2_y = obj.cell_to.pose.position.y;
+      double constr_1_x = obj.cell_from.x;
+      double constr_1_y = obj.cell_from.y;
+      double constr_2_x = obj.cell_to.x;
+      double constr_2_y = obj.cell_to.y;
       unsigned int cx1, cx2, cy1, cy2;
       worldToMap(constr_1_x, constr_1_y, cx1, cy1);
       worldToMap(constr_2_x, constr_2_y, cx2, cy2);

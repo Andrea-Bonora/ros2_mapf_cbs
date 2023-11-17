@@ -41,6 +41,8 @@ class CollisionAvoiderNode(Node):
         while not self.map_client.wait_for_service(1.0):
             self.get_logger().warn("Waiting for Server /map_server/map...")
 
+        self.nx = 0
+        self.ny = 0
         self.pixel_per_cell = self.get_parameter("pixel_per_cell").value
         self.original_map = None
         self.discrete_map = self.get_map()
@@ -73,11 +75,14 @@ class CollisionAvoiderNode(Node):
         service_response = future.result()
         response.plans = service_response.plans  # Piani dei vari agenti
 
+        for x in response.plans:
+            self.get_logger().info(str(len(x.path.poses)))
         #response.plans -> [AgentPath, AgentPath]
         #AgentPath -> name, path        
         
         solution = await self.cbs_alg(self.convert_plans(response.plans), self.discretize_plans(response.plans), agents)        
-
+        final_plans = response.plans
+        '''
         final_plans = []
         if not solution == {}:
             for s in response.plans:
@@ -91,7 +96,7 @@ class CollisionAvoiderNode(Node):
                     self.get_logger().info(str(a.pose.position.x) + " " + str(a.pose.position.y))
                 final_plans.append(final_plan)
                 self.get_logger().info(" --- ")
-
+        '''
         response.plans = final_plans
 
         self.get_logger().info("Sending response")
@@ -120,7 +125,8 @@ class CollisionAvoiderNode(Node):
                 return cbs.generate_plan(P.solution)
 
             constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
-
+            
+            self.get_logger().info(str(conflict_dict))
             #self.get_logger().info("Conflicts found")
             #for a in cbs.env.agent_dict.keys():
                 #self.get_logger().info("Length:" + str(len(P.solution[a])))
@@ -128,7 +134,8 @@ class CollisionAvoiderNode(Node):
             for agent in constraint_dict.keys():
                 new_node = deepcopy(P)
                 new_node.constraint_dict[agent].add_constraint(constraint_dict[agent])
-                self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
+                #self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
+
                 vc, ec = self.get_constraints(new_node.constraint_dict[agent], agent, start)
 
                 #self.get_logger().info(str(new_node.constraint_dict[agent].vertex_constraints))
@@ -142,39 +149,38 @@ class CollisionAvoiderNode(Node):
                 await future
                 service_response = future.result()
                 new_plan = service_response.plans # Piani dei vari agenti
-                #self.get_logger().info("New plan computed")
-                new_node.solution.update({agent: self.convert_plans(new_plan)[0]['path']})
-                new_node.discrete_solution.update({agent: self.discretize_plans(new_plan)[0]['path']})
-                
-                new_node.cost = cbs.env.compute_solution_cost(new_node.discrete_solution)
-                
-                # TODO: ending condition
-                #self.get_logger().info(str(new_node))
-                #self.get_logger().info("P.solution == new_node.solution -> " + str(P.solution[agent] == new_node.solution[agent]))
-                
-                are_equals = True
-                for a1, a2 in zip(P.solution[agent], new_node.solution[agent]):
-                    #self.get_logger().info("->" + str(a1))
-                    if a1 != a2:
-                        are_equals = False
-                
-                #self.get_logger().info("are_equals ( P.solution == new_node.solution ) -> " + str(are_equals))
-                if are_equals:
-                    for m in P.solution[agent]:
-                        self.get_logger().info(str(m))
-                    self.get_logger().info(" --- ")
-                    for m in new_node.solution[agent]:
-                        self.get_logger().info(str(m))
-                    break
+                #self.get_logger().info(str(new_plan[0].path.poses) + str(len(new_plan[0].path.poses) == 0))
+                if not len(new_plan[0].path.poses) == 0:
 
-                     
-                #if P.solution[agent] == new_node.solution[agent]:
-                    #errors = True
-                    #break
-                if new_node not in cbs.closed_set:
-                    #self.get_logger().info("Added new node")
-                    cbs.open_set |= {new_node}
-            
+                    new_node.solution.update({agent: self.convert_plans(new_plan)[0]['path']})
+                    new_node.discrete_solution.update({agent: self.discretize_plans(new_plan)[0]['path']})
+                    
+                    new_node.cost = cbs.env.compute_solution_cost(new_node.discrete_solution)
+                    
+                    are_equals = True
+                    for a1, a2 in zip(P.solution[agent], new_node.solution[agent]):
+                        #self.get_logger().info("->" + str(a1))
+                        if a1 != a2:
+                            are_equals = False
+                    
+                    if new_node.solution[agent] == {}:
+                        are_equals = False
+                    if are_equals:
+                        self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
+                        for m in P.solution[agent]:
+                            self.get_logger().info(str(m))
+                        self.get_logger().info(" --- ")
+                        for m in new_node.solution[agent]:
+                            self.get_logger().info(str(m))
+                        break
+   
+                    #if P.solution[agent] == new_node.solution[agent]:
+                        #errors = True
+                        #break
+                    if new_node != {} and new_node not in cbs.closed_set:
+                        #self.get_logger().info("Added new node")
+                        cbs.open_set |= {new_node}
+
             if are_equals:
                 break
 
@@ -204,36 +210,24 @@ class CollisionAvoiderNode(Node):
         vc = []
         for vertex_constr in constraints.vertex_constraints:
             vc_tmp = VertexConstraint()
-            vc_tmp.cell = vertex_constr.location.pose_stamped
+            vc_tmp.cell.x = vertex_constr.location.x
+            vc_tmp.cell.y = vertex_constr.location.y
+            vc_tmp.cell.z = 0.0
             vc_tmp.time_step = vertex_constr.time
             vc.append(vc_tmp)
 
         ec = []
         for edge_constr in constraints.edge_constraints:
             ec_tmp = EdgeConstraint()
-            ec_tmp.cell_from = edge_constr.location_1.pose_stamped
-            ec_tmp.cell_to = edge_constr.location_2.pose_stamped
+            ec_tmp.cell_from.x = edge_constr.location_1.x
+            ec_tmp.cell_from.y = edge_constr.location_1.y
+            ec_tmp.cell_from.z = 0.0
+            ec_tmp.cell_to.x = edge_constr.location_2.x
+            ec_tmp.cell_to.y = edge_constr.location_2.y
+            ec_tmp.cell_to.z = 0.0
             ec_tmp.time_step = edge_constr.time
             ec.append(ec_tmp)
-        '''
-        vc = []
-        for vertex_constr in constraints.vertex_constraints:
-            vc_tmp = VertexConstraint()
-            vc_tmp.cell.pose.position.x = start.solution[agent][vertex_constr.index].location.pose_stamped.pose.position.x
-            vc_tmp.cell.pose.position.y = start.solution[agent][vertex_constr.index].location.pose_stamped.pose.position.y
-            vc_tmp.time_step = vertex_constr.time
-            vc.append(vc_tmp)
 
-        ec = []
-        for edge_constr in constraints.edge_constraints:
-            ec_tmp = EdgeConstraint()
-            ec_tmp.cell_from.pose.position.x = start.solution[agent][edge_constr.index].location.pose_stamped.pose.position.x
-            ec_tmp.cell_from.pose.position.y = start.solution[agent][edge_constr.index].location.pose_stamped.pose.position.y
-            ec_tmp.cell_to.pose.position.x = start.solution[agent][edge_constr.index+1].location.pose_stamped.pose.position.x
-            ec_tmp.cell_to.pose.position.y = start.solution[agent][edge_constr.index+1].location.pose_stamped.pose.position.y
-            ec_tmp.time_step = edge_constr.time
-            ec.append(ec_tmp)
-        '''
         return vc, ec
 
     def convert_to_pose_stamped(self, objs):
@@ -287,6 +281,8 @@ class CollisionAvoiderNode(Node):
 
         n_rows = int(self.map_height / self.pixel_per_cell)
         n_cols = int(self.map_width / self.pixel_per_cell)
+        self.nx = self.map_width
+        self.ny = self.map_height
 
         discrete_whole_map = np.zeros((self.map_height, self.map_width))
 

@@ -221,7 +221,9 @@ bool AStarAlgorithm<NodeT>::areInputsValid()
 template<typename NodeT>
 bool AStarAlgorithm<NodeT>::createPath(
   CoordinateVector & path, int & iterations,
-  const float & tolerance)
+  const float & tolerance, 
+  const std::vector<std::map<std::string, int>> vc,
+  const std::vector<std::map<std::string, int>> ec)
 {
   steady_clock::time_point start_time = steady_clock::now();
   _tolerance = tolerance;
@@ -229,12 +231,14 @@ bool AStarAlgorithm<NodeT>::createPath(
   clearQueue();
 
   if (!areInputsValid()) {
+    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO1");
     return false;
   }
 
   // 0) Add starting point to the open set
   addNode(0.0, getStart());
   getStart()->setAccumulatedCost(0.0);
+  getStart()->setTimeStep(0);
 
   // Optimization: preallocate all variables
   NodePtr current_node = nullptr;
@@ -261,18 +265,21 @@ bool AStarAlgorithm<NodeT>::createPath(
     };
 
   while (iterations < getMaxIterations() && !_queue.empty()) {
+    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "PROVA");
     // Check for planning timeout only on every Nth iteration
     if (iterations % _timing_interval == 0) {
       std::chrono::duration<double> planning_duration =
         std::chrono::duration_cast<std::chrono::duration<double>>(steady_clock::now() - start_time);
       if (static_cast<double>(planning_duration.count()) >= _max_planning_time) {
+        //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO2");
         return false;
       }
     }
 
     // 1) Pick Nbest from O s.t. min(f(Nbest)), remove from queue
     current_node = getNextNode();
-
+    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "%d - %d ", iterations, getMaxIterations());
+    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "%d", current_node->wasVisited());
     // We allow for nodes to be queued multiple times in case
     // shorter paths result in it, but we can visit only once
     if (current_node->wasVisited()) {
@@ -294,18 +301,20 @@ bool AStarAlgorithm<NodeT>::createPath(
 
     // 3) Check if we're at the goal, backtrace if required
     if (isGoal(current_node)) {
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO3");
       return current_node->backtracePath(path);
     } else if (_best_heuristic_node.first < getToleranceHeuristic()) {
       // Optimization: Let us find when in tolerance and refine within reason
       approach_iterations++;
       if (approach_iterations >= getOnApproachMaxIterations()) {
+        //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO4");
         return _graph.at(_best_heuristic_node.second).backtracePath(path);
       }
     }
 
     // 4) Expand neighbors of Nbest not visited
     neighbors.clear();
-    current_node->getNeighbors(neighborGetter, _collision_checker, _traverse_unknown, neighbors);
+    current_node->getNeighbors(neighborGetter, _collision_checker, _traverse_unknown, neighbors, vc, ec);
 
     for (neighbor_iterator = neighbors.begin();
       neighbor_iterator != neighbors.end(); ++neighbor_iterator)
@@ -319,6 +328,7 @@ bool AStarAlgorithm<NodeT>::createPath(
       if (g_cost < neighbor->getAccumulatedCost()) {
         neighbor->setAccumulatedCost(g_cost);
         neighbor->parent = current_node;
+        neighbor->setTimeStep(current_node->getTimeStep()+1);
 
         // 4.3) Add to queue with heuristic cost
         addNode(g_cost + getHeuristicCost(neighbor), neighbor);
@@ -328,9 +338,11 @@ bool AStarAlgorithm<NodeT>::createPath(
 
   if (_best_heuristic_node.first < getToleranceHeuristic()) {
     // If we run out of serach options, return the path that is closest, if within tolerance.
+    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO5");
     return _graph.at(_best_heuristic_node.second).backtracePath(path);
   }
 
+  //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO6");
   return false;
 }
 
@@ -437,7 +449,7 @@ unsigned int & AStarAlgorithm<NodeT>::getSizeDim3()
 
 // Instantiate algorithm for the supported template types
 template class AStarAlgorithm<Node2D>;
-template class AStarAlgorithm<NodeHybrid>;
-template class AStarAlgorithm<NodeLattice>;
+//template class AStarAlgorithm<NodeHybrid>;
+//template class AStarAlgorithm<NodeLattice>;
 
 }  // namespace my_nav2_smac_planner

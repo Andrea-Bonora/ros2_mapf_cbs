@@ -16,29 +16,29 @@
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace geometry_msgs
+namespace my_intermediate_interfaces
 {
 namespace msg
 {
 namespace typesupport_fastrtps_cpp
 {
 bool cdr_serialize(
-  const geometry_msgs::msg::PoseStamped &,
+  const my_intermediate_interfaces::msg::Coordinates3D &,
   eprosima::fastcdr::Cdr &);
 bool cdr_deserialize(
   eprosima::fastcdr::Cdr &,
-  geometry_msgs::msg::PoseStamped &);
+  my_intermediate_interfaces::msg::Coordinates3D &);
 size_t get_serialized_size(
-  const geometry_msgs::msg::PoseStamped &,
+  const my_intermediate_interfaces::msg::Coordinates3D &,
   size_t current_alignment);
 size_t
-max_serialized_size_PoseStamped(
+max_serialized_size_Coordinates3D(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 }  // namespace typesupport_fastrtps_cpp
 }  // namespace msg
-}  // namespace geometry_msgs
+}  // namespace my_intermediate_interfaces
 
 
 namespace my_intermediate_interfaces
@@ -57,7 +57,7 @@ cdr_serialize(
   eprosima::fastcdr::Cdr & cdr)
 {
   // Member: cell
-  geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_serialize(
+  my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.cell,
     cdr);
   // Member: time_step
@@ -72,7 +72,7 @@ cdr_deserialize(
   my_intermediate_interfaces::msg::VertexConstraint & ros_message)
 {
   // Member: cell
-  geometry_msgs::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+  my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.cell);
 
   // Member: time_step
@@ -97,7 +97,7 @@ get_serialized_size(
   // Member: cell
 
   current_alignment +=
-    geometry_msgs::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.cell, current_alignment);
   // Member: time_step
   {
@@ -136,7 +136,7 @@ max_serialized_size_VertexConstraint(
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        geometry_msgs::msg::typesupport_fastrtps_cpp::max_serialized_size_PoseStamped(
+        my_intermediate_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Coordinates3D(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

@@ -1,0 +1,24 @@
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:[m[K In member function ‘[01m[Kbool my_nav2_smac_planner::Node2D::isNodeValid(const bool&, my_nav2_smac_planner::GridCollisionChecker*, int, int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:80:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpotarr_copy[m[K’ was not declared in this scope
+   80 |           [01;31m[Kpotarr_copy[m[K[cell_from_value] = POT_HIGH;
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:80:42:[m[K [01;31m[Kerror: [m[K‘[01m[KPOT_HIGH[m[K’ was not declared in this scope
+   80 |           potarr_copy[cell_from_value] = [01;31m[KPOT_HIGH[m[K;
+      |                                          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:81:11:[m[K [01;31m[Kerror: [m[K‘[01m[KskipPoint[m[K’ was not declared in this scope
+   81 |           [01;31m[KskipPoint[m[K = true;
+      |           [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:82:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kstc[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd[m[K’?
+   82 |           [01;31m[Kstc[m[K = stcs[npath-1];
+      |           [01;31m[K^~~[m[K
+      |           [32m[Kstd[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:82:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstcs[m[K’ was not declared in this scope
+   82 |           stc = [01;31m[Kstcs[m[K[npath-1];
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:82:22:[m[K [01;31m[Kerror: [m[K‘[01m[Knpath[m[K’ was not declared in this scope
+   82 |           stc = stcs[[01;31m[Knpath[m[K-1];
+      |                      [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_smac_planner.dir/build.make:188: CMakeFiles/my_nav2_smac_planner.dir/src/node_2d.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_smac_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

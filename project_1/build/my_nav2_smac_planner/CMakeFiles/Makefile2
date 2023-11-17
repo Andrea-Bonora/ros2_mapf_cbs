@@ -64,8 +64,6 @@ CMAKE_BINARY_DIR = /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_
 
 # The main recursive "all" target.
 all: CMakeFiles/my_nav2_smac_planner.dir/all
-all: CMakeFiles/my_nav2_smac_planner_2d.dir/all
-all: CMakeFiles/my_nav2_smac_planner_lattice.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,8 +74,6 @@ preinstall:
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/my_nav2_smac_planner_uninstall.dir/clean
 clean: CMakeFiles/my_nav2_smac_planner.dir/clean
-clean: CMakeFiles/my_nav2_smac_planner_2d.dir/clean
-clean: CMakeFiles/my_nav2_smac_planner_lattice.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -157,58 +153,6 @@ my_nav2_smac_planner: CMakeFiles/my_nav2_smac_planner.dir/rule
 CMakeFiles/my_nav2_smac_planner.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/clean
 .PHONY : CMakeFiles/my_nav2_smac_planner.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/my_nav2_smac_planner_2d.dir
-
-# All Build rule for target.
-CMakeFiles/my_nav2_smac_planner_2d.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=12,13,14,15,16,17,18,19,20,21,22 "Built target my_nav2_smac_planner_2d"
-.PHONY : CMakeFiles/my_nav2_smac_planner_2d.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/my_nav2_smac_planner_2d.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/my_nav2_smac_planner_2d.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles 0
-.PHONY : CMakeFiles/my_nav2_smac_planner_2d.dir/rule
-
-# Convenience name for target.
-my_nav2_smac_planner_2d: CMakeFiles/my_nav2_smac_planner_2d.dir/rule
-.PHONY : my_nav2_smac_planner_2d
-
-# clean rule for target.
-CMakeFiles/my_nav2_smac_planner_2d.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/clean
-.PHONY : CMakeFiles/my_nav2_smac_planner_2d.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/my_nav2_smac_planner_lattice.dir
-
-# All Build rule for target.
-CMakeFiles/my_nav2_smac_planner_lattice.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33 "Built target my_nav2_smac_planner_lattice"
-.PHONY : CMakeFiles/my_nav2_smac_planner_lattice.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/my_nav2_smac_planner_lattice.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles 11
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/my_nav2_smac_planner_lattice.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_nav2_smac_planner/CMakeFiles 0
-.PHONY : CMakeFiles/my_nav2_smac_planner_lattice.dir/rule
-
-# Convenience name for target.
-my_nav2_smac_planner_lattice: CMakeFiles/my_nav2_smac_planner_lattice.dir/rule
-.PHONY : my_nav2_smac_planner_lattice
-
-# clean rule for target.
-CMakeFiles/my_nav2_smac_planner_lattice.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/clean
-.PHONY : CMakeFiles/my_nav2_smac_planner_lattice.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

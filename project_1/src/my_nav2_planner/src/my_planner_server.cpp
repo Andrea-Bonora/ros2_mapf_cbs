@@ -30,6 +30,7 @@
 #include "nav2_util/node_utils.hpp"
 #include "nav2_util/geometry_utils.hpp"
 #include "my_nav2_navfn_planner/my_navfn_planner.hpp"
+#include "my_nav2_smac_planner/my_smac_planner_2d.hpp"
 #include "nav2_costmap_2d/cost_values.hpp"
 #include "my_nav2_planner/my_planner_server.hpp"
 
@@ -44,7 +45,7 @@ MyPlannerServer::MyPlannerServer(const rclcpp::NodeOptions & options)
 : nav2_util::LifecycleNode("planner_server", "", options),
   gp_loader_("my_nav2_core", "my_nav2_core::MultiAgentGlobalPlanner"),
   default_ids_{"GridBased"},
-  default_types_{"my_nav2_navfn_planner/MyNavfnPlanner"},
+  default_types_{"my_nav2_smac_planner/MySmacPlanner2D"},
   costmap_(nullptr)
 {
   RCLCPP_INFO(get_logger(), "Creating");

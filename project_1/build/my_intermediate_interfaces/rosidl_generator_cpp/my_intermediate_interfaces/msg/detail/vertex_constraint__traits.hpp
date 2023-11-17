@@ -16,7 +16,7 @@
 
 // Include directives for member types
 // Member 'cell'
-#include "geometry_msgs/msg/detail/pose_stamped__traits.hpp"
+#include "my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp"
 
 namespace my_intermediate_interfaces
 {
@@ -114,11 +114,11 @@ inline const char * name<my_intermediate_interfaces::msg::VertexConstraint>()
 
 template<>
 struct has_fixed_size<my_intermediate_interfaces::msg::VertexConstraint>
-  : std::integral_constant<bool, has_fixed_size<geometry_msgs::msg::PoseStamped>::value> {};
+  : std::integral_constant<bool, has_fixed_size<my_intermediate_interfaces::msg::Coordinates3D>::value> {};
 
 template<>
 struct has_bounded_size<my_intermediate_interfaces::msg::VertexConstraint>
-  : std::integral_constant<bool, has_bounded_size<geometry_msgs::msg::PoseStamped>::value> {};
+  : std::integral_constant<bool, has_bounded_size<my_intermediate_interfaces::msg::Coordinates3D>::value> {};
 
 template<>
 struct is_message<my_intermediate_interfaces::msg::VertexConstraint>

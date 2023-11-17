@@ -203,6 +203,7 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosid
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp \
+  rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp \
   /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
   /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp \
@@ -784,6 +785,7 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosid
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp \
+  rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp \
   /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
   /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
@@ -1271,12 +1273,7 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosid
   /usr/include/c++/11/stdexcept \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
-  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
   /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
   /opt/ros/humble/include/fastcdr/fastcdr/config.h \
@@ -1764,12 +1761,7 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosid
   /usr/include/c++/11/stdexcept \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
-  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
-  /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   /opt/ros/humble/include/fastcdr/fastcdr/Cdr.h \
   /opt/ros/humble/include/fastcdr/fastcdr/fastcdr_dll.h \
   /opt/ros/humble/include/fastcdr/fastcdr/config.h \
@@ -2317,6 +2309,7 @@ CMakeFiles/my_intermediate_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosid
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp \
+  rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp \
   rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/agent_path__struct.hpp \
   /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
@@ -2842,6 +2835,8 @@ rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/msg/detail/agent_path
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__traits.hpp:
 
+/opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
@@ -3108,12 +3103,6 @@ rosidl_generator_cpp/my_intermediate_interfaces/action/detail/my_compute_path_to
 
 /opt/ros/humble/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
-rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp:
-
-rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp:
-
-/usr/include/stdio.h:
-
 /opt/ros/humble/include/rmw/rmw/serialized_message.h:
 
 /usr/include/c++/11/memory:
@@ -3121,6 +3110,12 @@ rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__st
 /usr/include/c++/11/bits/stl_heap.h:
 
 /usr/include/c++/11/bits/std_abs.h:
+
+rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp:
+
+/usr/include/stdio.h:
+
+rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -3419,5 +3414,3 @@ rosidl_typesupport_fastrtps_cpp/my_intermediate_interfaces/srv/detail/dds_fastrt
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
 /opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_info__traits.hpp:
-
-/opt/ros/humble/include/action_msgs/action_msgs/msg/detail/goal_status_array__builder.hpp:

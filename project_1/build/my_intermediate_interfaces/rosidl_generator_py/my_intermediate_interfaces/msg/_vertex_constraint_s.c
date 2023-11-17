@@ -16,10 +16,8 @@
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__struct.h"
 #include "my_intermediate_interfaces/msg/detail/vertex_constraint__functions.h"
 
-ROSIDL_GENERATOR_C_IMPORT
-bool geometry_msgs__msg__pose_stamped__convert_from_py(PyObject * _pymsg, void * _ros_message);
-ROSIDL_GENERATOR_C_IMPORT
-PyObject * geometry_msgs__msg__pose_stamped__convert_to_py(void * raw_ros_message);
+bool my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool my_intermediate_interfaces__msg__vertex_constraint__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -59,7 +57,7 @@ bool my_intermediate_interfaces__msg__vertex_constraint__convert_from_py(PyObjec
     if (!field) {
       return false;
     }
-    if (!geometry_msgs__msg__pose_stamped__convert_from_py(field, &ros_message->cell)) {
+    if (!my_intermediate_interfaces__msg__coordinates3_d__convert_from_py(field, &ros_message->cell)) {
       Py_DECREF(field);
       return false;
     }
@@ -98,7 +96,7 @@ PyObject * my_intermediate_interfaces__msg__vertex_constraint__convert_to_py(voi
   my_intermediate_interfaces__msg__VertexConstraint * ros_message = (my_intermediate_interfaces__msg__VertexConstraint *)raw_ros_message;
   {  // cell
     PyObject * field = NULL;
-    field = geometry_msgs__msg__pose_stamped__convert_to_py(&ros_message->cell);
+    field = my_intermediate_interfaces__msg__coordinates3_d__convert_to_py(&ros_message->cell);
     if (!field) {
       return NULL;
     }

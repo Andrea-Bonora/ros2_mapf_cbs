@@ -13,6 +13,7 @@ from my_intermediate_interfaces.srv import StartGoalPoseStamped
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 from my_intermediate_interfaces.msg import AgentPath
 from my_intermediate_interfaces.action import MyComputePathToPose
+from nav2_msgs.action import ComputePathToPose
 
 
 class MultiAgentPlanAskerNode(Node):

@@ -42,9 +42,9 @@ class Metaclass_VertexConstraint(type):
             cls._TYPE_SUPPORT = module.type_support_msg__msg__vertex_constraint
             cls._DESTROY_ROS_MESSAGE = module.destroy_ros_message_msg__msg__vertex_constraint
 
-            from geometry_msgs.msg import PoseStamped
-            if PoseStamped.__class__._TYPE_SUPPORT is None:
-                PoseStamped.__class__.__import_type_support__()
+            from my_intermediate_interfaces.msg import Coordinates3D
+            if Coordinates3D.__class__._TYPE_SUPPORT is None:
+                Coordinates3D.__class__.__import_type_support__()
 
     @classmethod
     def __prepare__(cls, name, bases, **kwargs):
@@ -64,12 +64,12 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     ]
 
     _fields_and_field_types = {
-        'cell': 'geometry_msgs/PoseStamped',
+        'cell': 'my_intermediate_interfaces/Coordinates3D',
         'time_step': 'int64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.NamespacedType(['geometry_msgs', 'msg'], 'PoseStamped'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['my_intermediate_interfaces', 'msg'], 'Coordinates3D'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
@@ -77,8 +77,8 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        from geometry_msgs.msg import PoseStamped
-        self.cell = kwargs.get('cell', PoseStamped())
+        from my_intermediate_interfaces.msg import Coordinates3D
+        self.cell = kwargs.get('cell', Coordinates3D())
         self.time_step = kwargs.get('time_step', int())
 
     def __repr__(self):
@@ -129,10 +129,10 @@ class VertexConstraint(metaclass=Metaclass_VertexConstraint):
     @cell.setter
     def cell(self, value):
         if __debug__:
-            from geometry_msgs.msg import PoseStamped
+            from my_intermediate_interfaces.msg import Coordinates3D
             assert \
-                isinstance(value, PoseStamped), \
-                "The 'cell' field must be a sub message of type 'PoseStamped'"
+                isinstance(value, Coordinates3D), \
+                "The 'cell' field must be a sub message of type 'Coordinates3D'"
         self._cell = value
 
     @builtins.property

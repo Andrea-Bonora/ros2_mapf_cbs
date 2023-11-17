@@ -14,7 +14,7 @@
 // Include directives for member types
 // Member `cell_from`
 // Member `cell_to`
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"
+#include "my_intermediate_interfaces/msg/detail/coordinates3_d__functions.h"
 
 bool
 my_intermediate_interfaces__msg__EdgeConstraint__init(my_intermediate_interfaces__msg__EdgeConstraint * msg)
@@ -23,12 +23,12 @@ my_intermediate_interfaces__msg__EdgeConstraint__init(my_intermediate_interfaces
     return false;
   }
   // cell_from
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->cell_from)) {
+  if (!my_intermediate_interfaces__msg__Coordinates3D__init(&msg->cell_from)) {
     my_intermediate_interfaces__msg__EdgeConstraint__fini(msg);
     return false;
   }
   // cell_to
-  if (!geometry_msgs__msg__PoseStamped__init(&msg->cell_to)) {
+  if (!my_intermediate_interfaces__msg__Coordinates3D__init(&msg->cell_to)) {
     my_intermediate_interfaces__msg__EdgeConstraint__fini(msg);
     return false;
   }
@@ -43,9 +43,9 @@ my_intermediate_interfaces__msg__EdgeConstraint__fini(my_intermediate_interfaces
     return;
   }
   // cell_from
-  geometry_msgs__msg__PoseStamped__fini(&msg->cell_from);
+  my_intermediate_interfaces__msg__Coordinates3D__fini(&msg->cell_from);
   // cell_to
-  geometry_msgs__msg__PoseStamped__fini(&msg->cell_to);
+  my_intermediate_interfaces__msg__Coordinates3D__fini(&msg->cell_to);
   // time_step
 }
 
@@ -56,13 +56,13 @@ my_intermediate_interfaces__msg__EdgeConstraint__are_equal(const my_intermediate
     return false;
   }
   // cell_from
-  if (!geometry_msgs__msg__PoseStamped__are_equal(
+  if (!my_intermediate_interfaces__msg__Coordinates3D__are_equal(
       &(lhs->cell_from), &(rhs->cell_from)))
   {
     return false;
   }
   // cell_to
-  if (!geometry_msgs__msg__PoseStamped__are_equal(
+  if (!my_intermediate_interfaces__msg__Coordinates3D__are_equal(
       &(lhs->cell_to), &(rhs->cell_to)))
   {
     return false;
@@ -83,13 +83,13 @@ my_intermediate_interfaces__msg__EdgeConstraint__copy(
     return false;
   }
   // cell_from
-  if (!geometry_msgs__msg__PoseStamped__copy(
+  if (!my_intermediate_interfaces__msg__Coordinates3D__copy(
       &(input->cell_from), &(output->cell_from)))
   {
     return false;
   }
   // cell_to
-  if (!geometry_msgs__msg__PoseStamped__copy(
+  if (!my_intermediate_interfaces__msg__Coordinates3D__copy(
       &(input->cell_to), &(output->cell_to)))
   {
     return false;

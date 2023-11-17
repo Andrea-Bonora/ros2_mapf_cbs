@@ -726,6 +726,12 @@ MyNavFn::calcPath(int n,
   int nskip = 0;
   bool skipPoint = false;
 
+  for (const auto& obj : vertex_constraints) {
+        int cell_value = obj.at("cell");
+        int ts_value = obj.at("time_step");
+        RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d - %d", ts_value, cell_value);
+  }
+
   while( i < n && nskip < 15) {
     if(!skipPoint){
       //deep copy the potarr array
@@ -734,7 +740,7 @@ MyNavFn::calcPath(int n,
           potarr_copy[j] = potarr[j];
       }
     }
-
+    RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d -> %d", npath, stc);
     skipPoint = false;
 
     // check if near goal
@@ -752,7 +758,7 @@ MyNavFn::calcPath(int n,
     }
 
     if (stc < nx || stc > ns - nx) {  // would be out of bounds
-      RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] Out of bounds");
+      RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "[PathCalc] Out of bounds");
       delete[] potarr_copy;
       return 0;
     }
@@ -760,9 +766,9 @@ MyNavFn::calcPath(int n,
     for (const auto& obj : vertex_constraints) {
         int cell_value = obj.at("cell");
         int ts_value = obj.at("time_step");
-        RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d , %d == %d", ts_value, npath, cell_value, stc);
+        //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d , %d == %d", ts_value, npath, cell_value, stc);
         if(ts_value - 1 == npath + 1 && cell_value == stc){
-          //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Blocking vc stc %d", cell_value);
+          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Blocking vc stc %d", cell_value);
           potarr_copy[cell_value] = POT_HIGH;
           skipPoint = true;
           stc = stcs[npath-1];
@@ -784,7 +790,7 @@ MyNavFn::calcPath(int n,
     // add to path
     if(skipPoint){
       nskip++;
-      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"skipping");
+      RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"skipping");
     }
     else{
       //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"time step: %d, new stc: %d", npath, stc);
@@ -862,7 +868,7 @@ MyNavFn::calcPath(int n,
         potarr_copy[stc], pathx[npath - 1], pathy[npath - 1]);
 
       if (potarr_copy[stc] >= POT_HIGH) {
-        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] No path found, high potential");
+        RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "[PathCalc] No path found, high potential");
         // savemap("navfn_highpot");
         delete[] potarr_copy;
         return 0;
@@ -895,7 +901,7 @@ MyNavFn::calcPath(int n,
 
       // check for zero gradient, failed
       if (x == 0.0 && y == 0.0) {
-        RCLCPP_DEBUG(rclcpp::get_logger("rclcpp"), "[PathCalc] Zero gradient");
+        RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "[PathCalc] Zero gradient");
         delete[] potarr_copy;
         return 0;
       }

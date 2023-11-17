@@ -22,6 +22,7 @@
   <depend>tf2_ros</depend>
   <depend>nav2_costmap_2d</depend>
   <depend>nav2_core</depend>
+  <depend>my_nav2_core</depend>
   <depend>pluginlib</depend>
   <depend>eigen3_cmake_module</depend>
   <depend>eigen</depend>
@@ -36,8 +37,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <nav2_core plugin="${prefix}/smac_plugin_hybrid.xml" />
-    <nav2_core plugin="${prefix}/smac_plugin_2d.xml" />
-    <nav2_core plugin="${prefix}/smac_plugin_lattice.xml" />
+    <my_nav2_core plugin="${prefix}/smac_plugin_2d.xml" />
   </export>
 </package>

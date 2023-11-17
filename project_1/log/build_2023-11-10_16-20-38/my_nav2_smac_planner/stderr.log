@@ -1,0 +1,18 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node.hpp:55[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/types.hpp:23[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/node_2d.hpp:27[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:16[m[K:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:[m[K In member function ‘[01m[Kbool my_nav2_smac_planner::Node2D::isNodeValid(const bool&, my_nav2_smac_planner::GridCollisionChecker*, int, int, std::vector<std::map<std::__cxx11::basic_string<char>, int> >, std::vector<std::map<std::__cxx11::basic_string<char>, int> >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:84:52:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 7 has type ‘[01m[Kmy_nav2_smac_planner::Node2D*[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   84 |           RCLCPP_WARN(rclcpp::get_logger("rclcpp"),[01;35m[K"%d == %d == %d ?'"[m[K, cell_from_value, parent_index, [32m[Kthis->parent[m[K);
+      |                                                    [01;35m[K^~~~~~~~~~~~~~~~~~~[m[K                                 [32m[K~~~~~~~~~~~~[m[K
+      |                                                                                                              [32m[K|[m[K
+      |                                                                                                              [32m[Kmy_nav2_smac_planner::Node2D*[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/node_2d.cpp:84:66:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   84 |           RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d == [01;36m[K%d[m[K ?'", cell_from_value, parent_index, this->parent);
+      |                                                                 [01;36m[K~^[m[K
+      |                                                                  [01;36m[K|[m[K
+      |                                                                  [01;36m[Kint[m[K

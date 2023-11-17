@@ -10628,7 +10628,7 @@ CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.o: /home/andrea/tesi/ro
   /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/utils.hpp \
   /opt/ros/humble/include/nav2_costmap_2d/inflation_layer.hpp
 
-CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_hybrid.cpp \
+CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp \
   /usr/include/stdc-predef.h \
   /usr/include/c++/11/string \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -10819,6 +10819,7 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/c++/11/limits \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/bits/stl_algo.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
@@ -10834,7 +10835,44 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
-  /usr/include/c++/11/limits \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/my_smac_planner_2d.hpp \
+  /usr/include/c++/11/mutex \
+  /usr/include/c++/11/chrono \
+  /usr/include/c++/11/ratio \
+  /usr/include/c++/11/ctime \
+  /usr/include/c++/11/bits/parse_numbers.h \
+  /usr/include/c++/11/system_error \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
+  /usr/include/c++/11/stdexcept \
+  /usr/include/c++/11/bits/std_mutex.h \
+  /usr/include/c++/11/bits/unique_lock.h \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/a_star.hpp \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
+  /usr/include/c++/11/bits/locale_classes.tcc \
+  /usr/include/c++/11/streambuf \
+  /usr/include/c++/11/bits/streambuf.tcc \
+  /usr/include/c++/11/bits/basic_ios.h \
+  /usr/include/c++/11/bits/locale_facets.h \
+  /usr/include/c++/11/cwctype \
+  /usr/include/wctype.h \
+  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
+  /usr/include/c++/11/bits/streambuf_iterator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
+  /usr/include/c++/11/bits/locale_facets.tcc \
+  /usr/include/c++/11/bits/basic_ios.tcc \
+  /usr/include/c++/11/bits/ostream.tcc \
+  /usr/include/c++/11/istream \
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/include/c++/11/bits/stl_queue.h \
   /usr/include/eigen3/Eigen/Core \
   /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
   /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -10870,29 +10908,6 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/
   /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/complex \
   /usr/include/c++/11/sstream \
-  /usr/include/c++/11/istream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/bits/ios_base.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/bits/locale_classes.tcc \
-  /usr/include/c++/11/system_error \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
-  /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/streambuf \
-  /usr/include/c++/11/bits/streambuf.tcc \
-  /usr/include/c++/11/bits/basic_ios.h \
-  /usr/include/c++/11/bits/locale_facets.h \
-  /usr/include/c++/11/cwctype \
-  /usr/include/wctype.h \
-  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
-  /usr/include/c++/11/bits/streambuf_iterator.h \
-  /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h \
-  /usr/include/c++/11/bits/locale_facets.tcc \
-  /usr/include/c++/11/bits/basic_ios.tcc \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/bits/ostream.tcc \
-  /usr/include/c++/11/bits/istream.tcc \
   /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/eigen3/Eigen/src/Core/util/MKL_support.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
@@ -11038,22 +11053,7 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/
   /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
   /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
   /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/smac_planner_hybrid.hpp \
-  /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/a_star.hpp \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/queue \
-  /usr/include/c++/11/deque \
-  /usr/include/c++/11/bits/stl_deque.h \
-  /usr/include/c++/11/bits/deque.tcc \
-  /usr/include/c++/11/bits/stl_queue.h \
   /opt/ros/humble/include/nav2_costmap_2d/costmap_2d.hpp \
-  /usr/include/c++/11/mutex \
-  /usr/include/c++/11/chrono \
-  /usr/include/c++/11/ratio \
-  /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h \
-  /usr/include/c++/11/bits/std_mutex.h \
-  /usr/include/c++/11/bits/unique_lock.h \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
   /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/bounded_vector.hpp \
@@ -12365,6 +12365,17 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o: /home/andrea/
   /usr/include/boost/math/special_functions/trunc.hpp \
   /usr/include/boost/math/policies/error_handling.hpp \
   /opt/ros/humble/include/nav2_core/global_planner.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/vertex_constraint.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__builder.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__traits.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/edge_constraint.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__builder.hpp \
+  /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__traits.hpp \
   /opt/ros/humble/include/pluginlib/pluginlib/class_list_macros.hpp
 
 CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smoother.cpp \
@@ -13929,11 +13940,21 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 
 /opt/ros/humble/include/pluginlib/pluginlib/class_list_macros.hpp:
 
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__traits.hpp:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__builder.hpp:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_core/include/my_nav2_core/multi_agent_global_planner.hpp:
+
 /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp:
 
 /opt/ros/humble/include/nav2_util/geometry_utils.hpp:
 
-/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/smac_planner_hybrid.hpp:
+/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/my_smac_planner_2d.hpp:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
@@ -14345,8 +14366,6 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 
 /usr/include/boost/mpl/sequence_tag.hpp:
 
-/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_hybrid.cpp:
-
 /usr/include/boost/mpl/contains.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/list.hpp:
@@ -14429,6 +14448,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 
 /usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
 
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__traits.hpp:
+
 /usr/include/boost/mpl/aux_/lambda_arity_param.hpp:
 
 /usr/include/boost/mpl/int.hpp:
@@ -14472,6 +14493,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
 
 /usr/include/boost/mpl/aux_/config/adl.hpp:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/coordinates3_d__traits.hpp:
 
 /usr/include/boost/mpl/aux_/adl_barrier.hpp:
 
@@ -14550,6 +14573,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 /usr/include/nlohmann/detail/input/parser.hpp:
 
 /usr/include/nlohmann/detail/meta/is_sax.hpp:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__builder.hpp:
 
 /usr/include/nlohmann/detail/input/lexer.hpp:
 
@@ -14861,6 +14886,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 
 /usr/include/c++/11/tr1/exp_integral.tcc:
 
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/vertex_constraint.hpp:
+
 /opt/ros/humble/include/rmw/rmw/events_statuses/events_statuses.h:
 
 /opt/ros/humble/include/rcutils/rcutils/types/string_array.h:
@@ -15004,6 +15031,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 /opt/ros/humble/include/rmw/rmw/events_statuses/requested_deadline_missed.h:
 
 /usr/include/eigen3/Eigen/src/Core/Inverse.h:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/edge_constraint__struct.hpp:
 
 /usr/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
@@ -15709,6 +15738,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 
 /usr/include/c++/11/bits/std_abs.h:
 
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/detail/vertex_constraint__struct.hpp:
+
 /opt/ros/humble/include/rcpputils/rcpputils/pointer_traits.hpp:
 
 /usr/include/c++/11/bits/locale_classes.h:
@@ -16196,6 +16227,8 @@ CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o: /home/andrea/tesi/ros2_m
 /opt/ros/humble/include/ompl-1.6/ompl/base/spaces/RealVectorStateSpace.h:
 
 /usr/include/c++/11/bits/erase_if.h:
+
+/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_intermediate_interfaces/rosidl_generator_cpp/my_intermediate_interfaces/msg/edge_constraint.hpp:
 
 /usr/include/c++/11/cstddef:
 

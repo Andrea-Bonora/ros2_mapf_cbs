@@ -101,6 +101,10 @@ public:
     _accumulated_cost = cost_in;
   }
 
+  inline void setTimeStep(int ts){
+    _time_step = ts;
+  }
+
   /**
    * @brief Gets the costmap cost at this node
    * @return costmap cost
@@ -154,6 +158,10 @@ public:
     _is_queued = true;
   }
 
+  inline int getTimeStep(){
+    return _time_step;
+  }
+
   /**
    * @brief Gets cell index
    * @return Reference to cell index
@@ -169,7 +177,10 @@ public:
    * @param collision_checker Pointer to collision checker object
    * @return whether this node is valid and collision free
    */
-  bool isNodeValid(const bool & traverse_unknown, GridCollisionChecker * collision_checker);
+  bool isNodeValid(const bool & traverse_unknown, GridCollisionChecker * collision_checker, const int time_step = -1,
+                  const int parent_index = -1,
+                  const std::vector<std::map<std::string, int>> vertex_constraints = {},
+                  const std::vector<std::map<std::string, int>> edge_constraints = {});
 
   /**
    * @brief get traversal cost from this node to child node
@@ -258,7 +269,9 @@ public:
     std::function<bool(const unsigned int &, my_nav2_smac_planner::Node2D * &)> & validity_checker,
     GridCollisionChecker * collision_checker,
     const bool & traverse_unknown,
-    NodeVector & neighbors);
+    NodeVector & neighbors,
+    const std::vector<std::map<std::string, int>> vertex_constraints = {},
+    const std::vector<std::map<std::string, int>> edge_constraints = {});
 
   /**
    * @brief Set the starting pose for planning, as a node index
@@ -277,6 +290,7 @@ private:
   unsigned int _index;
   bool _was_visited;
   bool _is_queued;
+  int _time_step;
 };
 
 }  // namespace my_nav2_smac_planner

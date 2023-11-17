@@ -18,7 +18,7 @@
 #include <limits>
 #include <algorithm>
 
-#include "my_nav2_smac_planner/smac_planner_2d.hpp"
+#include "my_nav2_smac_planner/my_smac_planner_2d.hpp"
 #include "nav2_util/geometry_utils.hpp"
 
 // #define BENCHMARK_TESTING
@@ -90,6 +90,9 @@ void MySmacPlanner2D::configure(
   nav2_util::declare_parameter_if_not_declared(
     node, name + ".max_planning_time", rclcpp::ParameterValue(2.0));
   node->get_parameter(name + ".max_planning_time", _max_planning_time);
+
+  //_downsample_costmap = true;
+  //_downsampling_factor = 4;
 
   _motion_model = MotionModel::TWOD;
 
@@ -200,6 +203,7 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
   steady_clock::time_point a = steady_clock::now();
 
   std::unique_lock<nav2_costmap_2d::Costmap2D::mutex_t> lock(*(_costmap->getMutex()));
+
   // Downsample costmap, if required
   nav2_costmap_2d::Costmap2D * costmap = _costmap;
   if (_costmap_downsampler) {
@@ -230,7 +234,7 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
   pose.pose.orientation.y = 0.0;
   pose.pose.orientation.z = 0.0;
   pose.pose.orientation.w = 1.0;
-
+  //RCLCPP_WARN(_logger, "SMAC PLANNER");
   // Corner case of start and goal beeing on the same cell
   if (mx_start == mx_goal && my_start == my_goal) {
     if (costmap->getCost(mx_start, my_start) == nav2_costmap_2d::LETHAL_OBSTACLE) {
@@ -252,26 +256,27 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
   std::vector<std::map<std::string, int>> edge_constr;
 
   for (const auto& obj : vertex_constraints) {
-      double constr_x = obj.cell.pose.position.x;
-      double constr_y = obj.cell.pose.position.y;
+      double constr_x = obj.cell.x;
+      double constr_y = obj.cell.y;
       unsigned int cx, cy;
       costmap->worldToMap(constr_x, constr_y, cx, cy);
       //int idx = cy * planner_->nx + cx;
-      std::map<std::string, int> object = {{"cell", 1}, {"time_step", obj.time_step}};
+      int idx = cy * _a_star->getSizeX() + cx;
+      std::map<std::string, int> object = {{"cell", idx}, {"time_step", obj.time_step}};
       vert_constr.push_back(object);
   }
 
   for (const auto& obj : edge_constraints) {
-      double constr_1_x = obj.cell_from.pose.position.x;
-      double constr_1_y = obj.cell_from.pose.position.y;
-      double constr_2_x = obj.cell_to.pose.position.x;
-      double constr_2_y = obj.cell_to.pose.position.y;
+      double constr_1_x = obj.cell_from.x;
+      double constr_1_y = obj.cell_from.y;
+      double constr_2_x = obj.cell_to.x;
+      double constr_2_y = obj.cell_to.y;
       unsigned int cx1, cx2, cy1, cy2;
       costmap->worldToMap(constr_1_x, constr_1_y, cx1, cy1);
       costmap->worldToMap(constr_2_x, constr_2_y, cx2, cy2);
-      //int idx1 = cy1 * planner_->nx + cx1;
-      //int idx2 = cy2 * planner_->nx + cx2;
-      std::map<std::string, int> object = {{"cell_from", 1}, {"cell_to", 1}, {"time_step", obj.time_step}};
+      int idx1 = cy1 * _a_star->getSizeX() + cx1;
+      int idx2 = cy2 * _a_star->getSizeX() + cx2;
+      std::map<std::string, int> object = {{"cell_from", idx1}, {"cell_to", idx2}, {"time_step", obj.time_step}};
       edge_constr.push_back(object);
   }
 
@@ -281,7 +286,7 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
   std::string error;
   try {
     if (!_a_star->createPath(
-        path, num_iterations, _tolerance / static_cast<float>(costmap->getResolution())))
+        path, num_iterations, _tolerance / static_cast<float>(costmap->getResolution()), vert_constr, edge_constr))
     {
       if (num_iterations < _a_star->getMaxIterations()) {
         error = std::string("no valid path found");

@@ -42,7 +42,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EdgeConstrain
     "cell_from",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::PoseStamped>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<my_intermediate_interfaces::msg::Coordinates3D>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
@@ -59,7 +59,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember EdgeConstrain
     "cell_to",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<geometry_msgs::msg::PoseStamped>(),  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<my_intermediate_interfaces::msg::Coordinates3D>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound

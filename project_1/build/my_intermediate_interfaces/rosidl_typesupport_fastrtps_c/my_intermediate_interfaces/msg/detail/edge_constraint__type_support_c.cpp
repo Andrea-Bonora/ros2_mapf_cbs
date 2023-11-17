@@ -34,23 +34,20 @@ extern "C"
 {
 #endif
 
-#include "geometry_msgs/msg/detail/pose_stamped__functions.h"  // cell_from, cell_to
+#include "my_intermediate_interfaces/msg/detail/coordinates3_d__functions.h"  // cell_from, cell_to
 
 // forward declare type support functions
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
-size_t get_serialized_size_geometry_msgs__msg__PoseStamped(
+size_t get_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
   const void * untyped_ros_message,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
-size_t max_serialized_size_geometry_msgs__msg__PoseStamped(
+size_t max_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
   bool & full_bounded,
   bool & is_plain,
   size_t current_alignment);
 
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped)();
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D)();
 
 
 using _EdgeConstraint__ros_msg_type = my_intermediate_interfaces__msg__EdgeConstraint;
@@ -69,7 +66,7 @@ static bool _EdgeConstraint__cdr_serialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
       )()->data);
     if (!callbacks->cdr_serialize(
         &ros_message->cell_from, cdr))
@@ -83,7 +80,7 @@ static bool _EdgeConstraint__cdr_serialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
       )()->data);
     if (!callbacks->cdr_serialize(
         &ros_message->cell_to, cdr))
@@ -114,7 +111,7 @@ static bool _EdgeConstraint__cdr_deserialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
       )()->data);
     if (!callbacks->cdr_deserialize(
         cdr, &ros_message->cell_from))
@@ -128,7 +125,7 @@ static bool _EdgeConstraint__cdr_deserialize(
     const message_type_support_callbacks_t * callbacks =
       static_cast<const message_type_support_callbacks_t *>(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, geometry_msgs, msg, PoseStamped
+        rosidl_typesupport_fastrtps_c, my_intermediate_interfaces, msg, Coordinates3D
       )()->data);
     if (!callbacks->cdr_deserialize(
         cdr, &ros_message->cell_to))
@@ -161,11 +158,11 @@ size_t get_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
 
   // field.name cell_from
 
-  current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
+  current_alignment += get_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
     &(ros_message->cell_from), current_alignment);
   // field.name cell_to
 
-  current_alignment += get_serialized_size_geometry_msgs__msg__PoseStamped(
+  current_alignment += get_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
     &(ros_message->cell_to), current_alignment);
   // field.name time_step
   {
@@ -209,7 +206,7 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        max_serialized_size_geometry_msgs__msg__PoseStamped(
+        max_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;
@@ -224,7 +221,7 @@ size_t max_serialized_size_my_intermediate_interfaces__msg__EdgeConstraint(
       bool inner_full_bounded;
       bool inner_is_plain;
       current_alignment +=
-        max_serialized_size_geometry_msgs__msg__PoseStamped(
+        max_serialized_size_my_intermediate_interfaces__msg__Coordinates3D(
         inner_full_bounded, inner_is_plain, current_alignment);
       full_bounded &= inner_full_bounded;
       is_plain &= inner_is_plain;

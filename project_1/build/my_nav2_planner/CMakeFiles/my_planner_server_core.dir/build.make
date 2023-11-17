@@ -108,6 +108,7 @@ libmy_planner_server_core.so: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/
 libmy_planner_server_core.so: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_typesupport_cpp.so
 libmy_planner_server_core.so: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_intermediate_interfaces/lib/libmy_intermediate_interfaces__rosidl_generator_py.so
 libmy_planner_server_core.so: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_navfn_planner/lib/libmy_nav2_navfn_planner.so
+libmy_planner_server_core.so: /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_nav2_smac_planner/lib/libmy_nav2_smac_planner.so
 libmy_planner_server_core.so: /opt/ros/humble/lib/liblayers.so
 libmy_planner_server_core.so: /opt/ros/humble/lib/libfilters.so
 libmy_planner_server_core.so: /opt/ros/humble/lib/libnav2_costmap_2d_core.so

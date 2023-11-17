@@ -1,6 +1,6 @@
 # generated from ament_cmake_export_libraries/cmake/template/ament_cmake_export_libraries.cmake.in
 
-set(_exported_libraries "my_nav2_smac_planner;my_nav2_smac_planner_2d;my_nav2_smac_planner_lattice")
+set(_exported_libraries "my_nav2_smac_planner")
 set(_exported_library_names "")
 
 # populate my_nav2_smac_planner_LIBRARIES

@@ -14,9 +14,9 @@
 
 // Include directives for member types
 // Member `cell`
-#include "geometry_msgs/msg/pose_stamped.h"
+#include "my_intermediate_interfaces/msg/coordinates3_d.h"
 // Member `cell`
-#include "geometry_msgs/msg/detail/pose_stamped__rosidl_typesupport_introspection_c.h"
+#include "my_intermediate_interfaces/msg/detail/coordinates3_d__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -96,7 +96,7 @@ ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_my_intermediate_interfaces
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, VertexConstraint)() {
   my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, geometry_msgs, msg, PoseStamped)();
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, my_intermediate_interfaces, msg, Coordinates3D)();
   if (!my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_type_support_handle.typesupport_identifier) {
     my_intermediate_interfaces__msg__VertexConstraint__rosidl_typesupport_introspection_c__VertexConstraint_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

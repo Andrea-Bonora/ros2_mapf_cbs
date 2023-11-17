@@ -1,0 +1,17 @@
+[31mCMake Error at CMakeLists.txt:15 (find_package):
+  By not providing "Findmy_nav2_core.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "my_nav2_core", but CMake did not find one.
+
+  Could not find a package configuration file provided by "my_nav2_core" with
+  any of the following names:
+
+    my_nav2_coreConfig.cmake
+    my_nav2_core-config.cmake
+
+  Add the installation prefix of "my_nav2_core" to CMAKE_PREFIX_PATH or set
+  "my_nav2_core_DIR" to a directory containing one of the above files.  If
+  "my_nav2_core" provides a separate development package or SDK, be sure it
+  has been installed.
+
+[0m

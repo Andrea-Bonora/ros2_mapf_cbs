@@ -18,7 +18,7 @@
 // Include directives for member types
 // Member 'cell_from'
 // Member 'cell_to'
-#include "geometry_msgs/msg/detail/pose_stamped__struct.hpp"
+#include "my_intermediate_interfaces/msg/detail/coordinates3_d__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__my_intermediate_interfaces__msg__EdgeConstraint __attribute__((deprecated))
@@ -62,10 +62,10 @@ struct EdgeConstraint_
 
   // field types and members
   using _cell_from_type =
-    geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
+    my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator>;
   _cell_from_type cell_from;
   using _cell_to_type =
-    geometry_msgs::msg::PoseStamped_<ContainerAllocator>;
+    my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator>;
   _cell_to_type cell_to;
   using _time_step_type =
     int64_t;
@@ -73,13 +73,13 @@ struct EdgeConstraint_
 
   // setters for named parameter idiom
   Type & set__cell_from(
-    const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
+    const my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator> & _arg)
   {
     this->cell_from = _arg;
     return *this;
   }
   Type & set__cell_to(
-    const geometry_msgs::msg::PoseStamped_<ContainerAllocator> & _arg)
+    const my_intermediate_interfaces::msg::Coordinates3D_<ContainerAllocator> & _arg)
   {
     this->cell_to = _arg;
     return *this;

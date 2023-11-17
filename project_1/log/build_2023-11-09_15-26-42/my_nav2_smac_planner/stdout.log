@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target my_nav2_smac_planner_2d[0m
-[ 36%] Built target my_nav2_smac_planner_lattice
-[ 66%] Built target my_nav2_smac_planner
-[ 69%] [32mBuilding CXX object CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o[0m

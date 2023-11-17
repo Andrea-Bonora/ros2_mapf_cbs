@@ -278,7 +278,7 @@ planner_server:
     use_sim_time: True
     planner_plugins: ["GridBased"]
     GridBased:
-      plugin: "my_nav2_navfn_planner/MyNavfnPlanner"
+      plugin: "my_nav2_smac_planner/MySmacPlanner2D"
       tolerance: 0.5
       use_astar: true
       allow_unknown: true

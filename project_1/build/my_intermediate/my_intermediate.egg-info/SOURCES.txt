@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-../../build/my_intermediate/my_intermediate.egg-info/PKG-INFO
-../../build/my_intermediate/my_intermediate.egg-info/SOURCES.txt
-../../build/my_intermediate/my_intermediate.egg-info/dependency_links.txt
-../../build/my_intermediate/my_intermediate.egg-info/entry_points.txt
-../../build/my_intermediate/my_intermediate.egg-info/requires.txt
-../../build/my_intermediate/my_intermediate.egg-info/top_level.txt
-../../build/my_intermediate/my_intermediate.egg-info/zip-safe
 my_intermediate/__init__.py
 my_intermediate/collision_avoider.py
 my_intermediate/fake_asker.py

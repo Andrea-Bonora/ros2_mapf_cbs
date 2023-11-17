@@ -210,40 +210,12 @@ my_nav2_smac_planner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/build
 .PHONY : my_nav2_smac_planner/fast
 
-#=============================================================================
-# Target rules for targets named my_nav2_smac_planner_2d
-
-# Build rule for target.
-my_nav2_smac_planner_2d: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_nav2_smac_planner_2d
-.PHONY : my_nav2_smac_planner_2d
-
-# fast build rule for target.
-my_nav2_smac_planner_2d/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/build
-.PHONY : my_nav2_smac_planner_2d/fast
-
-#=============================================================================
-# Target rules for targets named my_nav2_smac_planner_lattice
-
-# Build rule for target.
-my_nav2_smac_planner_lattice: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_nav2_smac_planner_lattice
-.PHONY : my_nav2_smac_planner_lattice
-
-# fast build rule for target.
-my_nav2_smac_planner_lattice/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/build
-.PHONY : my_nav2_smac_planner_lattice/fast
-
 src/a_star.o: src/a_star.cpp.o
 .PHONY : src/a_star.o
 
 # target to build an object file
 src/a_star.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/a_star.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/a_star.cpp.o
 .PHONY : src/a_star.cpp.o
 
 src/a_star.i: src/a_star.cpp.i
@@ -252,8 +224,6 @@ src/a_star.i: src/a_star.cpp.i
 # target to preprocess a source file
 src/a_star.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/a_star.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/a_star.cpp.i
 .PHONY : src/a_star.cpp.i
 
 src/a_star.s: src/a_star.cpp.s
@@ -262,8 +232,6 @@ src/a_star.s: src/a_star.cpp.s
 # target to generate assembly for a file
 src/a_star.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/a_star.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/a_star.cpp.s
 .PHONY : src/a_star.cpp.s
 
 src/analytic_expansion.o: src/analytic_expansion.cpp.o
@@ -272,8 +240,6 @@ src/analytic_expansion.o: src/analytic_expansion.cpp.o
 # target to build an object file
 src/analytic_expansion.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/analytic_expansion.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/analytic_expansion.cpp.o
 .PHONY : src/analytic_expansion.cpp.o
 
 src/analytic_expansion.i: src/analytic_expansion.cpp.i
@@ -282,8 +248,6 @@ src/analytic_expansion.i: src/analytic_expansion.cpp.i
 # target to preprocess a source file
 src/analytic_expansion.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/analytic_expansion.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/analytic_expansion.cpp.i
 .PHONY : src/analytic_expansion.cpp.i
 
 src/analytic_expansion.s: src/analytic_expansion.cpp.s
@@ -292,8 +256,6 @@ src/analytic_expansion.s: src/analytic_expansion.cpp.s
 # target to generate assembly for a file
 src/analytic_expansion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/analytic_expansion.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/analytic_expansion.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/analytic_expansion.cpp.s
 .PHONY : src/analytic_expansion.cpp.s
 
 src/collision_checker.o: src/collision_checker.cpp.o
@@ -302,8 +264,6 @@ src/collision_checker.o: src/collision_checker.cpp.o
 # target to build an object file
 src/collision_checker.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/collision_checker.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/collision_checker.cpp.o
 .PHONY : src/collision_checker.cpp.o
 
 src/collision_checker.i: src/collision_checker.cpp.i
@@ -312,8 +272,6 @@ src/collision_checker.i: src/collision_checker.cpp.i
 # target to preprocess a source file
 src/collision_checker.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/collision_checker.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/collision_checker.cpp.i
 .PHONY : src/collision_checker.cpp.i
 
 src/collision_checker.s: src/collision_checker.cpp.s
@@ -322,8 +280,6 @@ src/collision_checker.s: src/collision_checker.cpp.s
 # target to generate assembly for a file
 src/collision_checker.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/collision_checker.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/collision_checker.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/collision_checker.cpp.s
 .PHONY : src/collision_checker.cpp.s
 
 src/costmap_downsampler.o: src/costmap_downsampler.cpp.o
@@ -332,8 +288,6 @@ src/costmap_downsampler.o: src/costmap_downsampler.cpp.o
 # target to build an object file
 src/costmap_downsampler.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/costmap_downsampler.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/costmap_downsampler.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/costmap_downsampler.cpp.o
 .PHONY : src/costmap_downsampler.cpp.o
 
 src/costmap_downsampler.i: src/costmap_downsampler.cpp.i
@@ -342,8 +296,6 @@ src/costmap_downsampler.i: src/costmap_downsampler.cpp.i
 # target to preprocess a source file
 src/costmap_downsampler.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/costmap_downsampler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/costmap_downsampler.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/costmap_downsampler.cpp.i
 .PHONY : src/costmap_downsampler.cpp.i
 
 src/costmap_downsampler.s: src/costmap_downsampler.cpp.s
@@ -352,8 +304,6 @@ src/costmap_downsampler.s: src/costmap_downsampler.cpp.s
 # target to generate assembly for a file
 src/costmap_downsampler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/costmap_downsampler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/costmap_downsampler.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/costmap_downsampler.cpp.s
 .PHONY : src/costmap_downsampler.cpp.s
 
 src/node_2d.o: src/node_2d.cpp.o
@@ -362,8 +312,6 @@ src/node_2d.o: src/node_2d.cpp.o
 # target to build an object file
 src/node_2d.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_2d.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_2d.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_2d.cpp.o
 .PHONY : src/node_2d.cpp.o
 
 src/node_2d.i: src/node_2d.cpp.i
@@ -372,8 +320,6 @@ src/node_2d.i: src/node_2d.cpp.i
 # target to preprocess a source file
 src/node_2d.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_2d.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_2d.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_2d.cpp.i
 .PHONY : src/node_2d.cpp.i
 
 src/node_2d.s: src/node_2d.cpp.s
@@ -382,8 +328,6 @@ src/node_2d.s: src/node_2d.cpp.s
 # target to generate assembly for a file
 src/node_2d.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_2d.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_2d.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_2d.cpp.s
 .PHONY : src/node_2d.cpp.s
 
 src/node_basic.o: src/node_basic.cpp.o
@@ -392,8 +336,6 @@ src/node_basic.o: src/node_basic.cpp.o
 # target to build an object file
 src/node_basic.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_basic.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_basic.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_basic.cpp.o
 .PHONY : src/node_basic.cpp.o
 
 src/node_basic.i: src/node_basic.cpp.i
@@ -402,8 +344,6 @@ src/node_basic.i: src/node_basic.cpp.i
 # target to preprocess a source file
 src/node_basic.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_basic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_basic.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_basic.cpp.i
 .PHONY : src/node_basic.cpp.i
 
 src/node_basic.s: src/node_basic.cpp.s
@@ -412,8 +352,6 @@ src/node_basic.s: src/node_basic.cpp.s
 # target to generate assembly for a file
 src/node_basic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_basic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_basic.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_basic.cpp.s
 .PHONY : src/node_basic.cpp.s
 
 src/node_hybrid.o: src/node_hybrid.cpp.o
@@ -422,8 +360,6 @@ src/node_hybrid.o: src/node_hybrid.cpp.o
 # target to build an object file
 src/node_hybrid.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_hybrid.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_hybrid.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_hybrid.cpp.o
 .PHONY : src/node_hybrid.cpp.o
 
 src/node_hybrid.i: src/node_hybrid.cpp.i
@@ -432,8 +368,6 @@ src/node_hybrid.i: src/node_hybrid.cpp.i
 # target to preprocess a source file
 src/node_hybrid.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_hybrid.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_hybrid.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_hybrid.cpp.i
 .PHONY : src/node_hybrid.cpp.i
 
 src/node_hybrid.s: src/node_hybrid.cpp.s
@@ -442,8 +376,6 @@ src/node_hybrid.s: src/node_hybrid.cpp.s
 # target to generate assembly for a file
 src/node_hybrid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_hybrid.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_hybrid.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_hybrid.cpp.s
 .PHONY : src/node_hybrid.cpp.s
 
 src/node_lattice.o: src/node_lattice.cpp.o
@@ -452,8 +384,6 @@ src/node_lattice.o: src/node_lattice.cpp.o
 # target to build an object file
 src/node_lattice.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_lattice.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_lattice.cpp.o
 .PHONY : src/node_lattice.cpp.o
 
 src/node_lattice.i: src/node_lattice.cpp.i
@@ -462,8 +392,6 @@ src/node_lattice.i: src/node_lattice.cpp.i
 # target to preprocess a source file
 src/node_lattice.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_lattice.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_lattice.cpp.i
 .PHONY : src/node_lattice.cpp.i
 
 src/node_lattice.s: src/node_lattice.cpp.s
@@ -472,8 +400,6 @@ src/node_lattice.s: src/node_lattice.cpp.s
 # target to generate assembly for a file
 src/node_lattice.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/node_lattice.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/node_lattice.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/node_lattice.cpp.s
 .PHONY : src/node_lattice.cpp.s
 
 src/smac_planner_2d.o: src/smac_planner_2d.cpp.o
@@ -481,7 +407,7 @@ src/smac_planner_2d.o: src/smac_planner_2d.cpp.o
 
 # target to build an object file
 src/smac_planner_2d.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o
 .PHONY : src/smac_planner_2d.cpp.o
 
 src/smac_planner_2d.i: src/smac_planner_2d.cpp.i
@@ -489,7 +415,7 @@ src/smac_planner_2d.i: src/smac_planner_2d.cpp.i
 
 # target to preprocess a source file
 src/smac_planner_2d.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.i
 .PHONY : src/smac_planner_2d.cpp.i
 
 src/smac_planner_2d.s: src/smac_planner_2d.cpp.s
@@ -497,56 +423,8 @@ src/smac_planner_2d.s: src/smac_planner_2d.cpp.s
 
 # target to generate assembly for a file
 src/smac_planner_2d.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/smac_planner_2d.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.s
 .PHONY : src/smac_planner_2d.cpp.s
-
-src/smac_planner_hybrid.o: src/smac_planner_hybrid.cpp.o
-.PHONY : src/smac_planner_hybrid.o
-
-# target to build an object file
-src/smac_planner_hybrid.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.o
-.PHONY : src/smac_planner_hybrid.cpp.o
-
-src/smac_planner_hybrid.i: src/smac_planner_hybrid.cpp.i
-.PHONY : src/smac_planner_hybrid.i
-
-# target to preprocess a source file
-src/smac_planner_hybrid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.i
-.PHONY : src/smac_planner_hybrid.cpp.i
-
-src/smac_planner_hybrid.s: src/smac_planner_hybrid.cpp.s
-.PHONY : src/smac_planner_hybrid.s
-
-# target to generate assembly for a file
-src/smac_planner_hybrid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_hybrid.cpp.s
-.PHONY : src/smac_planner_hybrid.cpp.s
-
-src/smac_planner_lattice.o: src/smac_planner_lattice.cpp.o
-.PHONY : src/smac_planner_lattice.o
-
-# target to build an object file
-src/smac_planner_lattice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smac_planner_lattice.cpp.o
-.PHONY : src/smac_planner_lattice.cpp.o
-
-src/smac_planner_lattice.i: src/smac_planner_lattice.cpp.i
-.PHONY : src/smac_planner_lattice.i
-
-# target to preprocess a source file
-src/smac_planner_lattice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smac_planner_lattice.cpp.i
-.PHONY : src/smac_planner_lattice.cpp.i
-
-src/smac_planner_lattice.s: src/smac_planner_lattice.cpp.s
-.PHONY : src/smac_planner_lattice.s
-
-# target to generate assembly for a file
-src/smac_planner_lattice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smac_planner_lattice.cpp.s
-.PHONY : src/smac_planner_lattice.cpp.s
 
 src/smoother.o: src/smoother.cpp.o
 .PHONY : src/smoother.o
@@ -554,8 +432,6 @@ src/smoother.o: src/smoother.cpp.o
 # target to build an object file
 src/smoother.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/smoother.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smoother.cpp.o
 .PHONY : src/smoother.cpp.o
 
 src/smoother.i: src/smoother.cpp.i
@@ -564,8 +440,6 @@ src/smoother.i: src/smoother.cpp.i
 # target to preprocess a source file
 src/smoother.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/smoother.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smoother.cpp.i
 .PHONY : src/smoother.cpp.i
 
 src/smoother.s: src/smoother.cpp.s
@@ -574,8 +448,6 @@ src/smoother.s: src/smoother.cpp.s
 # target to generate assembly for a file
 src/smoother.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner.dir/build.make CMakeFiles/my_nav2_smac_planner.dir/src/smoother.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_2d.dir/build.make CMakeFiles/my_nav2_smac_planner_2d.dir/src/smoother.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_nav2_smac_planner_lattice.dir/build.make CMakeFiles/my_nav2_smac_planner_lattice.dir/src/smoother.cpp.s
 .PHONY : src/smoother.cpp.s
 
 # Help Target
@@ -594,8 +466,6 @@ help:
 	@echo "... my_nav2_smac_planner_uninstall"
 	@echo "... uninstall"
 	@echo "... my_nav2_smac_planner"
-	@echo "... my_nav2_smac_planner_2d"
-	@echo "... my_nav2_smac_planner_lattice"
 	@echo "... src/a_star.o"
 	@echo "... src/a_star.i"
 	@echo "... src/a_star.s"
@@ -623,12 +493,6 @@ help:
 	@echo "... src/smac_planner_2d.o"
 	@echo "... src/smac_planner_2d.i"
 	@echo "... src/smac_planner_2d.s"
-	@echo "... src/smac_planner_hybrid.o"
-	@echo "... src/smac_planner_hybrid.i"
-	@echo "... src/smac_planner_hybrid.s"
-	@echo "... src/smac_planner_lattice.o"
-	@echo "... src/smac_planner_lattice.i"
-	@echo "... src/smac_planner_lattice.s"
 	@echo "... src/smoother.o"
 	@echo "... src/smoother.i"
 	@echo "... src/smoother.s"

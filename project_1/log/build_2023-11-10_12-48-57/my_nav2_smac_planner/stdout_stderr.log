@@ -1,0 +1,25 @@
+[  9%] [32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/my_nav2_smac_planner.dir/src/a_star.cpp.o[0m
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:[m[K In member function ‘[01m[Kvirtual nav_msgs::msg::Path my_nav2_smac_planner::MySmacPlanner2D::createPlan(const PoseStamped&, const PoseStamped&, std::vector<my_intermediate_interfaces::msg::VertexConstraint_<std::allocator<void> > >, std::vector<my_intermediate_interfaces::msg::EdgeConstraint_<std::allocator<void> > >)[m[K’:
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:261:42:[m[K [01;31m[Kerror: [m[K‘[01m[KgetSizeX[m[K’ was not declared in this scope
+  261 |       int idx = Node2D::getIndex(cx, cy, [01;31m[KgetSizeX[m[K())
+      |                                          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:263:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject[m[K’ was not declared in this scope; did you mean ‘[01m[Knlohmann::detail::value_t::object[m[K’?
+  263 |       vert_constr.push_back([01;31m[Kobject[m[K);
+      |                             [01;31m[K^~~~~~[m[K
+      |                             [32m[Knlohmann::detail::value_t::object[m[K
+In file included from [01m[K/usr/include/nlohmann/detail/exceptions.hpp:8[m[K,
+                 from [01m[K/usr/include/nlohmann/detail/conversions/from_json.hpp:15[m[K,
+                 from [01m[K/usr/include/nlohmann/adl_serializer.hpp:6[m[K,
+                 from [01m[K/usr/include/nlohmann/json.hpp:60[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/node_lattice.hpp:30[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/analytic_expansion.hpp:25[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/a_star.hpp:30[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/include/my_nav2_smac_planner/my_smac_planner_2d.hpp:23[m[K,
+                 from [01m[K/home/andrea/tesi/ros2_mapf_cbs/project_1/src/my_nav2_smac_planner/src/smac_planner_2d.cpp:21[m[K:
+[01m[K/usr/include/nlohmann/detail/value_t.hpp:43:5:[m[K [01;36m[Knote: [m[K‘[01m[Knlohmann::detail::value_t::object[m[K’ declared here
+   43 |     [01;36m[Kobject[m[K,           ///< object (unordered set of name/value pairs)
+      |     [01;36m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_nav2_smac_planner.dir/build.make:76: CMakeFiles/my_nav2_smac_planner.dir/src/smac_planner_2d.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/my_nav2_smac_planner.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

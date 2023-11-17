@@ -31,7 +31,8 @@ Node2D::Node2D(const unsigned int index)
   _accumulated_cost(std::numeric_limits<float>::max()),
   _index(index),
   _was_visited(false),
-  _is_queued(false)
+  _is_queued(false),
+  _time_step(-1)
 {
 }
 
@@ -47,15 +48,53 @@ void Node2D::reset()
   _accumulated_cost = std::numeric_limits<float>::max();
   _was_visited = false;
   _is_queued = false;
+  _time_step = -1;
 }
 
 bool Node2D::isNodeValid(
   const bool & traverse_unknown,
-  GridCollisionChecker * collision_checker)
+  GridCollisionChecker * collision_checker,
+  const int time_step,
+  const int parent_index,
+  const std::vector<std::map<std::string, int>> vertex_constraints,
+  const std::vector<std::map<std::string, int>> edge_constraints)
 {
-  if (collision_checker->inCollision(this->getIndex(), traverse_unknown)) {
-    return false;
+
+  int index = this->getIndex();
+  //cell_value == index, index+1, index-1, index+nx, index-nx
+  //VCs
+  for (const auto& obj : vertex_constraints) {
+    int cell_value = obj.at("cell");
+    int ts_value = obj.at("time_step");
+    //if (time_step+2 >= ts_value && ts_value >= time_step){
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?", ts_value, time_step + 1);
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_value, index);
+    //}
+    if (time_step + 1 == ts_value && index == cell_value){
+      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Collision detected");
+      return false;
+    }
   }
+
+  //ECs
+  for (const auto& obj : edge_constraints) {
+        int cell_from_value = obj.at("cell_from");
+        int cell_to_value = obj.at("cell_to");
+        int ts_value = obj.at("time_step");
+        /*if (time_step == ts_value){
+          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?", ts_value, time_step);
+          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_from_value, parent_index);
+          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_to_value, index);
+        }*/
+        if(time_step == ts_value && parent_index == cell_from_value && index == cell_to_value){
+          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Collision detected");
+          return false;
+        }
+  }
+
+  /*if (collision_checker->inCollision(this->getIndex(), traverse_unknown)) {
+    return false;
+  }*/
 
   _cell_cost = collision_checker->getCost();
   return true;
@@ -112,7 +151,9 @@ void Node2D::getNeighbors(
   std::function<bool(const unsigned int &, my_nav2_smac_planner::Node2D * &)> & NeighborGetter,
   GridCollisionChecker * collision_checker,
   const bool & traverse_unknown,
-  NodeVector & neighbors)
+  NodeVector & neighbors,
+  const std::vector<std::map<std::string, int>> vertex_constraints,
+  const std::vector<std::map<std::string, int>> edge_constraints)
 {
   // NOTE(stevemacenski): Irritatingly, the order here matters. If you start in free
   // space and then expand 8-connected, the first set of neighbors will be all cost
@@ -130,7 +171,7 @@ void Node2D::getNeighbors(
   int node_i = this->getIndex();
   const Coordinates parent = getCoords(this->getIndex());
   Coordinates child;
-
+  //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "Index: %d", node_i);
   for (unsigned int i = 0; i != _neighbors_grid_offsets.size(); ++i) {
     index = node_i + _neighbors_grid_offsets[i];
 
@@ -141,7 +182,8 @@ void Node2D::getNeighbors(
     }
 
     if (NeighborGetter(index, neighbor)) {
-      if (neighbor->isNodeValid(traverse_unknown, collision_checker) && !neighbor->wasVisited()) {
+      if (neighbor->isNodeValid(traverse_unknown, collision_checker, this->getTimeStep(), node_i, vertex_constraints, edge_constraints)
+                 && !neighbor->wasVisited()) {
         neighbors.push_back(neighbor);
       }
     }

@@ -1,2 +1,2 @@
-geometry_msgs/PoseStamped cell
+Coordinates3D cell
 int64 time_step

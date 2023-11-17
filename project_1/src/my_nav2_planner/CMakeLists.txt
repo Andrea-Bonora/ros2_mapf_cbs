@@ -17,6 +17,7 @@ find_package(builtin_interfaces REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(nav2_costmap_2d REQUIRED)
 find_package(my_nav2_navfn_planner REQUIRED)
+find_package(my_nav2_smac_planner REQUIRED)
 find_package(pluginlib REQUIRED)
 find_package(nav2_core REQUIRED)
 find_package(my_intermediate_interfaces REQUIRED)
@@ -45,6 +46,7 @@ set(dependencies
   tf2_ros
   nav2_costmap_2d
   my_nav2_navfn_planner
+  my_nav2_smac_planner
   pluginlib
   my_nav2_core
   my_intermediate_interfaces
