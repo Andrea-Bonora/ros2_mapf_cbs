@@ -51,12 +51,12 @@ void GridCollisionChecker::setFootprint(
 {
   possible_inscribed_cost_ = possible_inscribed_cost;
   footprint_is_radius_ = radius;
-
+  
   // Use radius, no caching required
   if (radius) {
     return;
   }
-
+  
   // No change, no updates required
   if (footprint == unoriented_footprint_) {
     return;
@@ -176,7 +176,6 @@ bool GridCollisionChecker::inCollision(
   if (footprint_cost_ == UNKNOWN && traverse_unknown) {
     return false;
   }
-
   // if occupied or unknown and not to traverse unknown space
   return footprint_cost_ >= INSCRIBED;
 }

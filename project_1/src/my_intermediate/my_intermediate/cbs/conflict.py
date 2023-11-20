@@ -18,5 +18,5 @@ class Conflict(object):
         self.location_2b = DiscreteLocation()
 
     def __str__(self):
-        return '(' + str(self.time_a) + ', ' + self.agent_1 + ', ' + str(self.location_1a) + ', ' + str(self.location_1b) + ', ' \
+        return '(' + str(self.type) + ", " + str(self.time_a) + ', ' + self.agent_1 + ', ' + str(self.location_1a) + ', ' + str(self.location_1b) + ', ' \
                 + '(' + str(self.time_b) + ', ' + self.agent_2 + ', ' + str(self.location_2a) + ', ' + str(self.location_2b) + ', '

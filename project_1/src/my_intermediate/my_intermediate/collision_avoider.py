@@ -75,12 +75,15 @@ class CollisionAvoiderNode(Node):
 
         for x in response.plans:
             self.get_logger().info(str(len(x.path.poses)))
+            #for p in x.path.poses:
+            #    self.get_logger().info(str(p.pose.position.x) + " " + str(p.pose.position.y))
         #response.plans -> [AgentPath, AgentPath]
         #AgentPath -> name, path        
         
         solution = await self.cbs_alg(self.convert_plans(response.plans), self.discretize_plans(response.plans), agents)        
         final_plans = response.plans
-        '''
+
+        
         final_plans = []
         if not solution == {}:
             for s in response.plans:
@@ -90,11 +93,11 @@ class CollisionAvoiderNode(Node):
                 #    self.get_logger().info(str(solution[s.name]))
                 final_plan.path.header = s.path.header
                 final_plan.path.poses = solution[s.name]
-                for a in solution[s.name]:
-                    self.get_logger().info(str(a.pose.position.x) + " " + str(a.pose.position.y))
+                #for a in solution[s.name]:
+                #    self.get_logger().info(str(a.pose.position.x) + " " + str(a.pose.position.y))
                 final_plans.append(final_plan)
                 self.get_logger().info(" --- ")
-        '''
+        
         response.plans = final_plans
 
         self.get_logger().info("Sending response")
@@ -103,6 +106,7 @@ class CollisionAvoiderNode(Node):
     
     async def cbs_alg(self, plans, discrete_plans, agents):
 
+        ICBS = False
         cbs = CBS(agents, self.nx, self.ny)
 
         #First solution computation, we already have it, so it is simply a conversion in the desired format
@@ -113,79 +117,193 @@ class CollisionAvoiderNode(Node):
         while cbs.open_set:
             P = min(cbs.open_set)
             cbs.open_set -= {P}
-            cbs.closed_set |= {P}
-            conflict_dict = cbs.env.get_first_c_conflict(P.solution)
-            if not conflict_dict:
-                self.get_logger().info("solution found, no conflicts!")
-                #for agez in P.solution:
-                #    for move in P.solution[agez]:
-                #        self.get_logger().info(str(move))
-                return cbs.generate_plan(P.solution)
-
-            constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
             
-            self.get_logger().info(str(conflict_dict))
-            #self.get_logger().info("Conflicts found")
-            #for a in cbs.env.agent_dict.keys():
-                #self.get_logger().info("Length:" + str(len(P.solution[a])))
+            if not ICBS:
+                cbs.closed_set |= {P}
 
-            for agent in constraint_dict.keys():
-                new_node = deepcopy(P)
-                new_node.constraint_dict[agent].add_constraint(constraint_dict[agent])
-                self.get_logger().info(str(agent) + " -> AFTER: " + str(new_node.constraint_dict[agent]))
-
-                vc, ec = self.get_constraints(new_node.constraint_dict[agent], agent, start)
-
-                #self.get_logger().info(str(new_node.constraint_dict[agent].vertex_constraints))
-                msg = self.get_request_message(agent, agents[agent]['start'], agents[agent]['goal'], vc, ec)
-
-                client_request = StartGoalPoseStamped.Request()
-                client_request.requests = [msg]
-
-                #self.get_logger().info("Asking for a plan...")
-                future = self.client_.call_async(client_request)
-                await future
-                service_response = future.result()
-                new_plan = service_response.plans # Piani dei vari agenti
-                #self.get_logger().info(str(new_plan[0].path.poses) + str(len(new_plan[0].path.poses) == 0))
-                if not len(new_plan[0].path.poses) == 0:
-
-                    new_node.solution.update({agent: self.convert_plans(new_plan)[0]['path']})
-                    new_node.discrete_solution.update({agent: self.discretize_plans(new_plan)[0]['path']})
-                    
-                    new_node.cost = cbs.env.compute_solution_cost(new_node.discrete_solution)
-                    
-                    are_equals = True
-                    for a1, a2 in zip(P.solution[agent], new_node.solution[agent]):
-                        #self.get_logger().info("->" + str(a1))
-                        if a1 != a2:
-                            are_equals = False
-                    
-                    if new_node.solution[agent] == {}:
+            #ICBS
+            if ICBS:
+                conflict_dict = cbs.env.get_all_conflicts(P.solution)
+                NC = len(conflict_dict)
+                if not conflict_dict or conflict_dict == []:
+                    self.get_logger().info("solution found, no conflicts!")
+                    #for agez in P.solution:
+                    #    for move in P.solution[agez]:
+                    #        self.get_logger().info(str(move))
+                    return cbs.generate_plan(P.solution)
+                self.get_logger().info("Number of conflicts: " + str(NC))
+                
+                first_non_cardinal_conflict = first_semi_cardinal_conflict = None
+                for conf in conflict_dict:
+                    constraint_dict = cbs.env.create_constraints_from_conflict(conf)
+                    #self.get_logger().info(str(constraint_dict["tb1"]))
+                    cardinal_conflict = 0
+                    new_plans = {}
+                    for agent in constraint_dict.keys():
                         are_equals = False
+                        cd = deepcopy(P.constraint_dict[agent])
+                        cd.add_constraint(constraint_dict[agent])
+                        vc, ec = self.get_constraints(cd, agent, start)
+                        new_plan = await self.get_plan(agent, agents[agent]['start'], agents[agent]['goal'], vc, ec)
+                        if not len(new_plan[0].path.poses) == 0:
+                            new_plans[agent] = new_plan
+                            new_plan = self.convert_plans(new_plan)[0]['path']
+                            
+                            if self.are_equals(P.solution[agent], new_plan):
+                                self.get_logger().info(str(conf))
+                                are_equals = True
+                                break
+                            if len(new_plan) > len(P.solution[agent]):
+                                cardinal_conflict += 1
+
                     if are_equals:
-                        #self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
-                        for m in P.solution[agent]:
-                            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
-                            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
-                            self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
-                        self.get_logger().info(" --- ")
-                        for m in new_node.solution[agent]:
-                            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
-                            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
-                            self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
                         break
-   
-                    #if P.solution[agent] == new_node.solution[agent]:
-                        #errors = True
-                        #break
-                    if new_node != {} and new_node not in cbs.closed_set:
-                        #self.get_logger().info("Added new node")
-                        cbs.open_set |= {new_node}
 
-            if are_equals:
-                break
+                    #self.get_logger().info(str(cardinal_conflict))
+                    if cardinal_conflict == 2:
+                        #self.get_logger().info("CARDINAL")
+                        #SPLIT
+                        cbs.closed_set |= {P}
 
+                        new_node_1 = deepcopy(P)
+                        new_node_2 = deepcopy(P)
+
+                        agents_name = list(new_plans.keys())
+
+                        new_node_1.solution.update({agents_name[0]: self.convert_plans(new_plans[agents_name[0]])[0]['path']})
+                        new_node_1.discrete_solution.update({agents_name[0]: self.discretize_plans(new_plans[agents_name[0]])[0]['path']})
+                        new_node_1.cost = cbs.env.compute_solution_cost(new_node_1.discrete_solution)
+
+                        new_node_2.solution.update({agents_name[1]: self.convert_plans(new_plans[agents_name[1]])[0]['path']})
+                        new_node_2.discrete_solution.update({agents_name[1]: self.discretize_plans(new_plans[agents_name[1]])[0]['path']})
+                        new_node_2.cost = cbs.env.compute_solution_cost(new_node_2.discrete_solution)
+
+                        if new_node_1 != {} and new_node_1 not in cbs.closed_set:
+                            cbs.open_set |= {new_node_1}
+
+                        if new_node_2 != {} and new_node_2 not in cbs.closed_set:
+                            cbs.open_set |= {new_node_2}
+
+                        break
+                        
+                    elif cardinal_conflict == 1: #IT IS SEMI-CARDINAL
+                        if first_semi_cardinal_conflict == None:
+                            #self.get_logger().info("SEMI-CARDINAL")
+                            agents_name = list(new_plans.keys())
+                            tmp_solution = deepcopy(P.solution)
+                            tmp_solution.update({agents_name[0]: self.convert_plans(new_plans[agents_name[0]])[0]['path']})
+                            tmp_solution.update({agents_name[1]: self.convert_plans(new_plans[agents_name[1]])[0]['path']})
+                            tmp_nc = len(cbs.env.get_all_conflicts(tmp_solution))
+                            
+                            if tmp_nc <= NC: #IS IT USEFUL?
+                                first_semi_cardinal_conflict = new_plans
+
+                    elif first_non_cardinal_conflict == None:
+                        agents_name = list(new_plans.keys())
+                        tmp_solution = deepcopy(P.solution)
+                        tmp_solution.update({agents_name[0]: self.convert_plans(new_plans[agents_name[0]])[0]['path']})
+                        tmp_solution.update({agents_name[1]: self.convert_plans(new_plans[agents_name[1]])[0]['path']})
+                        tmp_nc = len(cbs.env.get_all_conflicts(tmp_solution))
+                        if tmp_nc <= NC: #IS IT USEFUL?
+                            first_non_cardinal_conflict = new_plans
+
+                #self.get_logger().info(str(cardinal_conflict) + " " + str(are_equals))
+                if are_equals:
+                    break
+
+                if cardinal_conflict == 2:
+                    #self.get_logger().info("CARDINAL CONFLICT")
+                    pass
+
+                if first_semi_cardinal_conflict != None:
+                    agents_name = list(first_semi_cardinal_conflict.keys())
+                    P.solution.update({agents_name[0]: self.convert_plans(new_plans[agents_name[0]])[0]['path']})
+                    P.solution.update({agents_name[1]: self.convert_plans(new_plans[agents_name[1]])[0]['path']})
+                    P.discrete_solution.update({agents_name[0]: self.discretize_plans(new_plans[agents_name[0]])[0]['path']})
+                    P.discrete_solution.update({agents_name[1]: self.discretize_plans(new_plans[agents_name[1]])[0]['path']})
+                    P.cost = cbs.env.compute_solution_cost(P.discrete_solution)
+                    cbs.open_set |= {P}
+                    #self.get_logger().info("SEMI-CARDINAL CONFLICT")
+
+                elif first_non_cardinal_conflict != None:
+                    agents_name = list(first_non_cardinal_conflict.keys())
+                    P.solution.update({agents_name[0]: self.convert_plans(new_plans[agents_name[0]])[0]['path']})
+                    P.solution.update({agents_name[1]: self.convert_plans(new_plans[agents_name[1]])[0]['path']})
+                    P.discrete_solution.update({agents_name[0]: self.discretize_plans(new_plans[agents_name[0]])[0]['path']})
+                    P.discrete_solution.update({agents_name[1]: self.discretize_plans(new_plans[agents_name[1]])[0]['path']})
+                    P.cost = cbs.env.compute_solution_cost(P.discrete_solution)
+                    cbs.open_set |= {P}
+                    #self.get_logger().info("NON-CARDINAL CONFLICT")
+
+            #CBS
+            else:
+                conflict_dict = cbs.env.get_first_c_conflict(P.solution, self.get_logger())
+
+                if not conflict_dict:
+                    self.get_logger().info("solution found, no conflicts!")
+                    #for agez in P.solution:
+                    #    for move in P.solution[agez]:
+                    #        self.get_logger().info(str(move))
+                    return cbs.generate_plan(P.solution)
+                
+                #self.get_logger().info(str(conflict_dict))
+                constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
+            
+                self.get_logger().info(str(conflict_dict))
+                self.get_logger().info("Conflicts found")
+                #for a in cbs.env.agent_dict.keys():
+                    #self.get_logger().info("Length:" + str(len(P.solution[a])))
+            
+                for agent in constraint_dict.keys():
+                    if conflict_dict.time_a < len(P.solution[agent]):
+                        new_node = deepcopy(P)
+                        new_node.constraint_dict[agent].add_constraint(constraint_dict[agent])
+
+                        vc, ec = self.get_constraints(new_node.constraint_dict[agent], agent, start)
+
+                        self.get_logger().info(str(conflict_dict.time_a))
+                        new_plan = await self.get_plan(agent, agents[agent]['start'], agents[agent]['goal'], vc, ec)
+                        #self.get_logger().info(str(new_plan[0].path.poses) + str(len(new_plan[0].path.poses) == 0))
+                        if not len(new_plan[0].path.poses) == 0:
+
+                            new_node.solution.update({agent: self.convert_plans(new_plan)[0]['path']})
+                            new_node.discrete_solution.update({agent: self.discretize_plans(new_plan)[0]['path']})
+                            
+                            new_node.cost = cbs.env.compute_solution_cost(new_node.discrete_solution)
+                            
+                            are_equals = False
+                            if len(P.solution[agent]) == len(new_node.solution[agent]):
+                                are_equals = True
+                                for a1, a2 in zip(P.solution[agent], new_node.solution[agent]):
+                                    #self.get_logger().info("->" + str(a1))
+                                    if a1 != a2:
+                                        are_equals = False
+                            
+                            if new_node.solution[agent] == {}:
+                                are_equals = False
+                            if are_equals:
+                                self.get_logger().info("AFTER: " + str(new_node.constraint_dict[agent]))
+                                for m in P.solution[agent]:
+                                    tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
+                                    tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+                                    self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
+                                self.get_logger().info(" --- ")
+                                for m in new_node.solution[agent]:
+                                    tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
+                                    tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+                                    self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
+                                break
+        
+                            #if P.solution[agent] == new_node.solution[agent]:
+                                #errors = True
+                                #break
+                            if new_node != {} and new_node not in cbs.closed_set:
+                                #self.get_logger().info("Added new node")
+                                cbs.open_set |= {new_node}
+
+                if are_equals:
+                    break
+            
         self.get_logger().info("OUT OF THE WHILE")
         return {}
 
@@ -197,6 +315,35 @@ class CollisionAvoiderNode(Node):
 
         except Exception as e:
             self.get_logger().error("Service call failed %r" % (e,))
+    
+    async def get_plan(self, agent, start, end, vc = [], ec = []):
+        msg = self.get_request_message(agent, start, end, vc, ec)
+        client_request = StartGoalPoseStamped.Request()
+        client_request.requests = [msg]
+
+        #self.get_logger().info("Asking for a plan...")
+        future = self.client_.call_async(client_request)
+        await future
+        service_response = future.result()
+        return service_response.plans # Piani dei vari agenti
+
+    def are_equals(self, p1, p2):
+        if p2 == {}:
+            return False
+        for a1, a2 in zip(p1, p2):
+            if a1 != a2:
+                return False
+                  
+        for m in p1:
+            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
+            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+            self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
+        self.get_logger().info(" --- ")
+        for m in p2:
+            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
+            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+            self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
+        return True
 
     def get_request_message(self, name, start, goal, vc = [], ec = []):
         msg = AgentPathRequest()

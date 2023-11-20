@@ -271,7 +271,7 @@ bool AStarAlgorithm<NodeT>::createPath(
       std::chrono::duration<double> planning_duration =
         std::chrono::duration_cast<std::chrono::duration<double>>(steady_clock::now() - start_time);
       if (static_cast<double>(planning_duration.count()) >= _max_planning_time) {
-        //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO2");
+        RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "A01");
         return false;
       }
     }
@@ -279,7 +279,6 @@ bool AStarAlgorithm<NodeT>::createPath(
     // 1) Pick Nbest from O s.t. min(f(Nbest)), remove from queue
     current_node = getNextNode();
     //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "%d - %d ", iterations, getMaxIterations());
-    //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "%d", current_node->wasVisited());
     // We allow for nodes to be queued multiple times in case
     // shorter paths result in it, but we can visit only once
     if (current_node->wasVisited()) {
@@ -342,7 +341,7 @@ bool AStarAlgorithm<NodeT>::createPath(
     return _graph.at(_best_heuristic_node.second).backtracePath(path);
   }
 
-  //RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO6");
+  RCLCPP_WARN(rclcpp::get_logger("rclcpp"), "AO6");
   return false;
 }
 

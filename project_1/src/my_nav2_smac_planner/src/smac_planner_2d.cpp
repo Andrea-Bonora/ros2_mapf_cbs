@@ -92,7 +92,7 @@ void MySmacPlanner2D::configure(
   node->get_parameter(name + ".max_planning_time", _max_planning_time);
 
   //_downsample_costmap = true;
-  //_downsampling_factor = 4;
+  //_downsampling_factor = 2;
 
   _motion_model = MotionModel::TWOD;
 
@@ -234,7 +234,6 @@ nav_msgs::msg::Path MySmacPlanner2D::createPlan(
   pose.pose.orientation.y = 0.0;
   pose.pose.orientation.z = 0.0;
   pose.pose.orientation.w = 1.0;
-  //RCLCPP_WARN(_logger, "SMAC PLANNER");
   // Corner case of start and goal beeing on the same cell
   if (mx_start == mx_goal && my_start == my_goal) {
     if (costmap->getCost(mx_start, my_start) == nav2_costmap_2d::LETHAL_OBSTACLE) {

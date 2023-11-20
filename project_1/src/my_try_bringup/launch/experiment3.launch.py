@@ -11,11 +11,11 @@ def generate_launch_description():
         name="fake_asker",
         parameters=[
             {"n": 2},
-            {"x_start": [-1.5, 1.5]},
+            {"x_start": [-1.5, -1.5]},
             {"y_start": [-0.5, 0.5]},
             {"z_start": [0.0, 0.0]},
-            {"x_end": [1.5, -1.5]},
-            {"y_end": [0.5, 0.5]},
+            {"x_end": [-1.5, -1.5]},
+            {"y_end": [0.8, -0.6]},
             {"z_end": [0.0, 0.0]}
         ]
     )

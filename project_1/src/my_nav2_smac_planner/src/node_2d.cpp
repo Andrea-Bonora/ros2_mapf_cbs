@@ -61,6 +61,10 @@ bool Node2D::isNodeValid(
 {
 
   int index = this->getIndex();
+
+  if (collision_checker->inCollision(index, traverse_unknown)) {
+    return false;
+  }
   //cell_value == index, index+1, index-1, index+nx, index-nx
   //VCs
   for (const auto& obj : vertex_constraints) {
@@ -92,10 +96,6 @@ bool Node2D::isNodeValid(
           return false;
         }
   }
-
-  /*if (collision_checker->inCollision(this->getIndex(), traverse_unknown)) {
-    return false;
-  }*/
 
   _cell_cost = collision_checker->getCost();
   return true;
@@ -144,7 +144,7 @@ void Node2D::initMotionModel(
 
   int x_size = static_cast<int>(x_size_uint);
   cost_travel_multiplier = search_info.cost_penalty;
-  _neighbors_grid_offsets = {-1, +1, -x_size, +x_size, -x_size - 1,
+  _neighbors_grid_offsets = {0, -1, +1, -x_size, +x_size, -x_size - 1,
     -x_size + 1, +x_size - 1, +x_size + 1};
 }
 

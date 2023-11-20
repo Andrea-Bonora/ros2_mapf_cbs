@@ -2,8 +2,8 @@ class Location(object):
     def __init__(self, ps):
         self.pose_stamped = ps
     def is_conflict(self, other):
-        if abs(self.pose_stamped.pose.position.x - other.pose_stamped.pose.position.x) <= 0.8 and \
-                    abs(self.pose_stamped.pose.position.y - other.pose_stamped.pose.position.y) <= 0.8:
+        if abs(self.pose_stamped.pose.position.x - other.pose_stamped.pose.position.x) <= 0.5 and \
+                    abs(self.pose_stamped.pose.position.y - other.pose_stamped.pose.position.y) <= 0.5:
                 return True
         return False
     def __eq__(self, other):
