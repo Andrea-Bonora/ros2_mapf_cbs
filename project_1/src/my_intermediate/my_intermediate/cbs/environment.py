@@ -185,6 +185,7 @@ class Environment(object):
             constraint1 = Constraints()
             constraint2 = Constraints()
             
+            '''
             loc_1b = self.world_to_map(conflict.location_1b)
             loc_2b = self.world_to_map(conflict.location_2b)
             points1 = []
@@ -200,11 +201,11 @@ class Environment(object):
             for p in points2:
                 v2_constraint = VertexConstraint(conflict.time_b, p)
                 constraint2.vertex_constraints |= {v2_constraint}
-
-            #v1_constraint = VertexConstraint(conflict.time_a, self.world_to_map(conflict.location_1b))
-            #v2_constraint = VertexConstraint(conflict.time_b, self.world_to_map(conflict.location_2b))
-            #constraint1.vertex_constraints |= {v1_constraint}
-            #constraint2.vertex_constraints |= {v2_constraint}
+            '''
+            v1_constraint = VertexConstraint(conflict.time_a, self.world_to_map(conflict.location_2b))
+            v2_constraint = VertexConstraint(conflict.time_b, self.world_to_map(conflict.location_1b))
+            constraint1.vertex_constraints |= {v1_constraint}
+            constraint2.vertex_constraints |= {v2_constraint}
             
             constraint_dict[conflict.agent_1] = constraint1
             constraint_dict[conflict.agent_2] = constraint2
@@ -242,6 +243,7 @@ class Environment(object):
                 constraint2.edge_constraints |= {e_constraint2a}
                 constraint2.edge_constraints |= {e_constraint2b}
             '''
+            '''
             loc_1b = self.world_to_map(conflict.location_1b)
             loc_2b = self.world_to_map(conflict.location_2b)
             points1 = []
@@ -257,11 +259,12 @@ class Environment(object):
             for p in points2:
                 v2_constraint = VertexConstraint(conflict.time_b+1, p)
                 constraint2.vertex_constraints |= {v2_constraint}
-            #e_constraint1 = EdgeConstraint(conflict.time_a, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
-            #e_constraint2 = EdgeConstraint(conflict.time_b, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
+            '''
+            e_constraint1 = EdgeConstraint(conflict.time_a, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
+            e_constraint2 = EdgeConstraint(conflict.time_b, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
 
-            #constraint1.edge_constraints |= {e_constraint1}
-            #constraint2.edge_constraints |= {e_constraint2}
+            constraint1.edge_constraints |= {e_constraint1}
+            constraint2.edge_constraints |= {e_constraint2}
             constraint_dict[conflict.agent_1] = constraint1
             constraint_dict[conflict.agent_2] = constraint2
 

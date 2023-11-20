@@ -72,8 +72,8 @@ class FakeAskerNode(Node):
 
             for i, plan in enumerate(response.plans):
                 self.get_logger().info(str(len(plan.path.poses)))
-                #for pose in plan.path.poses:
-                #    self.get_logger().info(str(pose.pose.position.x) + "-" + str(pose.pose.position.y))
+                for pose in plan.path.poses:
+                    self.get_logger().info(str(pose.pose.position.x) + "-" + str(pose.pose.position.y))
                 #self.execute_plan(plan)
 
         except Exception as e:
