@@ -10,12 +10,14 @@ from math import fabs, atan
 import numpy as np
 
 class Environment(object):
-    def __init__(self, agents, nx, ny):
+    def __init__(self, agents, nx, ny, origin, resolution):
         
         self.agents = agents
         self.agent_dict = {}
         self.nx = nx
         self.ny = ny
+        self.origin = origin
+        self.resolution = resolution
 
         self.make_agent_dict()
 
@@ -24,49 +26,13 @@ class Environment(object):
 
     def world_to_map(self, location):
         #CHANGE VALUES AND ADAPT THEM TO REAL RESOLUTION AND ORIGIN
-        x = int( (location.x + 10) / 0.05 )
-        y = int( (location.y + 10) / 0.05 )
+        x = int( (location.x - self.origin['x']) / self.resolution )
+        y = int( (location.y - self.origin['y']) / self.resolution )
         index = y * self.nx + x
         if index > 0 and index < self.nx*self.ny:
             return index
         return -1
 
-    def get_first_conflict(self, solution):
-        max_t = max([len(plan) for plan in solution.values()])
-        result = Conflict()
-        for t in range(max_t):
-            for agent_1, agent_2 in combinations(solution.keys(), 2):
-                state_1 = self.get_state(agent_1, solution, t)
-                state_2 = self.get_state(agent_2, solution, t)
-                if state_1.is_equal_except_time(state_2):
-                    result.time_a = len(solution[agent_1]) - t - 1
-                    result.time_b = len(solution[agent_2]) - t - 1
-                    result.index = t
-                    result.type = Conflict.VERTEX
-                    result.location_1 = state_1.location
-                    result.agent_1 = agent_1
-                    result.agent_2 = agent_2
-                    return result
-
-            for agent_1, agent_2 in combinations(solution.keys(), 2):
-                state_1a = self.get_state(agent_1, solution, t)
-                state_1b = self.get_state(agent_1, solution, t+1)
-
-                state_2a = self.get_state(agent_2, solution, t)
-                state_2b = self.get_state(agent_2, solution, t+1)
-
-                if state_1a.is_equal_except_time(state_2b) and state_1b.is_equal_except_time(state_2a):
-                    result.time_a = len(solution[agent_1]) - t - 1
-                    result.time_b = len(solution[agent_2]) - t - 1
-                    result.index = t  
-                    result.type = Conflict.EDGE
-                    result.agent_1 = agent_1
-                    result.agent_2 = agent_2
-                    result.location_1 = state_1a.location
-                    result.location_2 = state_1b.location
-                    return result
-        return False
-    
     def get_all_conflicts(self, solution):
         max_t = max([len(plan) for plan in solution.values()])
         conflicts = []
@@ -78,8 +44,8 @@ class Environment(object):
                     result = Conflict()
                     state_1_pre = self.get_state(agent_1, solution, t-1)
                     state_2_pre = self.get_state(agent_2, solution, t-1)
-                    result.time_a = t#len(solution[agent_1]) - t
-                    result.time_b = t#len(solution[agent_2]) - t
+                    result.time_1 = t
+                    result.time_2 = t
                     result.index = t
                     result.type = Conflict.VERTEX
                     result.location_1a = DiscreteLocation(state_1_pre.location.pose_stamped.pose.position.x, state_1_pre.location.pose_stamped.pose.position.y)
@@ -89,29 +55,27 @@ class Environment(object):
                     result.agent_1 = agent_1
                     result.agent_2 = agent_2
                     conflicts.append(result)
+            if t > 0:
+                for agent_1, agent_2 in combinations(solution.keys(), 2):
+                    state_1a = self.get_state(agent_1, solution, t-1)
+                    state_1b = self.get_state(agent_1, solution, t)
 
-            for agent_1, agent_2 in combinations(solution.keys(), 2):
-                state_1a = self.get_state(agent_1, solution, t)
-                state_1b = self.get_state(agent_1, solution, t+1)
+                    state_2a = self.get_state(agent_2, solution, t-1)
+                    state_2b = self.get_state(agent_2, solution, t)
 
-                state_2a = self.get_state(agent_2, solution, t)
-                state_2b = self.get_state(agent_2, solution, t+1)
-
-                if state_1a.is_equal_except_time(state_2b) and state_1b.is_equal_except_time(state_2a):
-                    result = Conflict()
-                    result.time_a = t#len(solution[agent_1]) - t
-                    result.time_b = t#len(solution[agent_2]) - t
-                    result.index = t  
-                    result.type = Conflict.EDGE
-                    result.agent_1 = agent_1
-                    result.agent_2 = agent_2
-                    result.location_1a = DiscreteLocation(state_1a.location.pose_stamped.pose.position.x, state_1a.location.pose_stamped.pose.position.y) 
-                    result.location_1b = DiscreteLocation(state_1b.location.pose_stamped.pose.position.x, state_1b.location.pose_stamped.pose.position.y) 
-                    result.location_2a = DiscreteLocation(state_2a.location.pose_stamped.pose.position.x, state_2a.location.pose_stamped.pose.position.y)
-                    result.location_2b = DiscreteLocation(state_2b.location.pose_stamped.pose.position.x, state_2b.location.pose_stamped.pose.position.y)
-                    conflicts.append(result)
+                    if state_1a.is_equal_except_time(state_2b) and state_1b.is_equal_except_time(state_2a):
+                        result = Conflict()
+                        result.time_1 = t - 1
+                        result.time_2 = t - 1  
+                        result.type = Conflict.EDGE
+                        result.agent_1 = agent_1
+                        result.agent_2 = agent_2
+                        result.location_1a = DiscreteLocation(state_1a.location.pose_stamped.pose.position.x, state_1a.location.pose_stamped.pose.position.y) 
+                        result.location_1b = DiscreteLocation(state_1b.location.pose_stamped.pose.position.x, state_1b.location.pose_stamped.pose.position.y) 
+                        result.location_2a = DiscreteLocation(state_2a.location.pose_stamped.pose.position.x, state_2a.location.pose_stamped.pose.position.y)
+                        result.location_2b = DiscreteLocation(state_2b.location.pose_stamped.pose.position.x, state_2b.location.pose_stamped.pose.position.y)
+                        conflicts.append(result)
         return self.group_conflicts(conflicts)
-        #return conflicts
     
     def group_conflicts(self, conflicts):
         if len(conflicts) == 0: return []
@@ -135,7 +99,7 @@ class Environment(object):
                     groupped_conflicts.append(conf)
         return groupped_conflicts    
 
-    def get_first_c_conflict(self, solution, printer):
+    def get_first_c_conflict(self, solution):
         max_t = max([len(plan) for plan in solution.values()])
         result = Conflict()
         for t in range(max_t):
@@ -145,9 +109,8 @@ class Environment(object):
                 if state_1.is_equal_except_time(state_2):
                     state_1_pre = self.get_state(agent_1, solution, t-1)
                     state_2_pre = self.get_state(agent_2, solution, t-1)
-                    result.time_a = t #len(solution[agent_1]) - t
-                    result.time_b = t #len(solution[agent_2]) - t
-                    result.index = t
+                    result.time_1 = t 
+                    result.time_2 = t 
                     result.type = Conflict.VERTEX
                     result.location_1a = DiscreteLocation(state_1_pre.location.pose_stamped.pose.position.x, state_1_pre.location.pose_stamped.pose.position.y)
                     result.location_2a = DiscreteLocation(state_2_pre.location.pose_stamped.pose.position.x, state_2_pre.location.pose_stamped.pose.position.y)
@@ -166,9 +129,8 @@ class Environment(object):
                     state_2b = self.get_state(agent_2, solution, t)
 
                     if state_1a.is_equal_except_time(state_2b) and state_1b.is_equal_except_time(state_2a):
-                        result.time_a = t-1#len(solution[agent_1]) - t
-                        result.time_b = t-1#len(solution[agent_2]) - t
-                        result.index = t  
+                        result.time_1 = t-1
+                        result.time_2 = t-1
                         result.type = Conflict.EDGE
                         result.agent_1 = agent_1
                         result.agent_2 = agent_2
@@ -185,25 +147,8 @@ class Environment(object):
             constraint1 = Constraints()
             constraint2 = Constraints()
             
-            '''
-            loc_1b = self.world_to_map(conflict.location_1b)
-            loc_2b = self.world_to_map(conflict.location_2b)
-            points1 = []
-            points2 = []
-            for i in range(-10, 11):
-                for j in range(-10, 11):
-                    points1.append(loc_2b + (i*self.nx) + j)
-                    points2.append(loc_1b + (i*self.nx) + j)
-            
-            for p in points1:
-                v1_constraint = VertexConstraint(conflict.time_a, p)
-                constraint1.vertex_constraints |= {v1_constraint}
-            for p in points2:
-                v2_constraint = VertexConstraint(conflict.time_b, p)
-                constraint2.vertex_constraints |= {v2_constraint}
-            '''
-            v1_constraint = VertexConstraint(conflict.time_a, self.world_to_map(conflict.location_2b))
-            v2_constraint = VertexConstraint(conflict.time_b, self.world_to_map(conflict.location_1b))
+            v1_constraint = VertexConstraint(conflict.time_1, self.world_to_map(conflict.location_2b))
+            v2_constraint = VertexConstraint(conflict.time_2, self.world_to_map(conflict.location_1b))
             constraint1.vertex_constraints |= {v1_constraint}
             constraint2.vertex_constraints |= {v2_constraint}
             
@@ -214,54 +159,8 @@ class Environment(object):
             constraint1 = Constraints()
             constraint2 = Constraints()
 
-            '''
-            loc_1_from = self.world_to_map(conflict.location_1a)
-            loc_1_to = self.world_to_map(conflict.location_1b)
-            points1_from = [loc_1_from, loc_1_from+1, loc_1_from-1, loc_1_from-self.nx, loc_1_from+self.nx,
-                      loc_1_from+1+self.nx, loc_1_from-1+self.nx, loc_1_from+1-self.nx, loc_1_from-1-self.nx]
-            points1_to = [loc_1_to, loc_1_to+1, loc_1_to-1, loc_1_to-self.nx, loc_1_to+self.nx,
-                      loc_1_to+1+self.nx, loc_1_to-1+self.nx, loc_1_to+1-self.nx, loc_1_to-1-self.nx]
-            points1 = list(set(points1_from) & set(points1_to))
-            
-            loc_2_from = self.world_to_map(conflict.location_2a)
-            loc_2_to = self.world_to_map(conflict.location_2b)
-            points2_from = [loc_2_from, loc_2_from+1, loc_2_from-1, loc_2_from-self.nx, loc_2_from+self.nx,
-                      loc_2_from+1+self.nx, loc_2_from-1+self.nx, loc_2_from+1-self.nx, loc_2_from-1-self.nx]
-            points2_to = [loc_2_to, loc_2_to+1, loc_2_to-1, loc_2_to-self.nx, loc_2_to+self.nx,
-                      loc_2_to+1+self.nx, loc_2_to-1+self.nx, loc_2_to+1-self.nx, loc_2_to-1-self.nx]
-            points2 = list(set(points2_from) & set(points2_to))
-            
-            for p in points1:
-                e_constraint1a = EdgeConstraint(conflict.time_a, p, loc_1_to)
-                e_constraint1b = EdgeConstraint(conflict.time_a, loc_1_from, p)
-                constraint1.edge_constraints |= {e_constraint1a}
-                constraint1.edge_constraints |= {e_constraint1b}
-
-            for p in points2:
-                e_constraint2a = EdgeConstraint(conflict.time_b, p, loc_2_to)
-                e_constraint2b = EdgeConstraint(conflict.time_b, loc_2_from, p)
-                constraint2.edge_constraints |= {e_constraint2a}
-                constraint2.edge_constraints |= {e_constraint2b}
-            '''
-            '''
-            loc_1b = self.world_to_map(conflict.location_1b)
-            loc_2b = self.world_to_map(conflict.location_2b)
-            points1 = []
-            points2 = []
-            for i in range(-10, 11):
-                for j in range(-10, 11):
-                    points1.append(loc_2b + (i*self.nx) + j)
-                    points2.append(loc_1b + (i*self.nx) + j)
-            
-            for p in points1:
-                v1_constraint = VertexConstraint(conflict.time_a+1, p)
-                constraint1.vertex_constraints |= {v1_constraint}
-            for p in points2:
-                v2_constraint = VertexConstraint(conflict.time_b+1, p)
-                constraint2.vertex_constraints |= {v2_constraint}
-            '''
-            e_constraint1 = EdgeConstraint(conflict.time_a, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
-            e_constraint2 = EdgeConstraint(conflict.time_b, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
+            e_constraint1 = EdgeConstraint(conflict.time_1, self.world_to_map(conflict.location_2a), self.world_to_map(conflict.location_2b))
+            e_constraint2 = EdgeConstraint(conflict.time_2, self.world_to_map(conflict.location_1a), self.world_to_map(conflict.location_1b))
 
             constraint1.edge_constraints |= {e_constraint1}
             constraint2.edge_constraints |= {e_constraint2}

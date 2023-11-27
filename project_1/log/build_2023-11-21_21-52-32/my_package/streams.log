@@ -1,0 +1,31 @@
+[0.777s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build --no-deps install_data
+[1.065s] running develop
+[1.265s] running egg_info
+[1.265s] creating my_package.egg-info
+[1.265s] writing my_package.egg-info/PKG-INFO
+[1.266s] writing dependency_links to my_package.egg-info/dependency_links.txt
+[1.266s] writing entry points to my_package.egg-info/entry_points.txt
+[1.266s] writing requirements to my_package.egg-info/requires.txt
+[1.266s] writing top-level names to my_package.egg-info/top_level.txt
+[1.266s] writing manifest file 'my_package.egg-info/SOURCES.txt'
+[1.267s] reading manifest file 'my_package.egg-info/SOURCES.txt'
+[1.268s] writing manifest file 'my_package.egg-info/SOURCES.txt'
+[1.269s] running build_ext
+[1.269s] Creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages/my-package.egg-link (link to .)
+[1.270s] Installing my_robot_driver script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/my_package
+[1.270s] Installing robot_spawner script to /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/my_package
+[1.270s] 
+[1.270s] Installed /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package
+[1.271s] running install_data
+[1.271s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/ament_index
+[1.271s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/ament_index/resource_index
+[1.271s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/ament_index/resource_index/packages
+[1.271s] copying resource/my_package -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/ament_index/resource_index/packages
+[1.271s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package/launch
+[1.271s] copying launch/robot_launch.py -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package/launch
+[1.271s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package/worlds
+[1.271s] copying worlds/my_world.wbt -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package/worlds
+[1.271s] creating /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package/resource
+[1.271s] copying resource/my_robot.urdf -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package/resource
+[1.271s] copying package.xml -> /home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/share/my_package
+[1.384s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/project_1/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_package/build --no-deps install_data

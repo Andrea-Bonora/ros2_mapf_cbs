@@ -1,1 +1,0 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/src/nav2_straightline_planner/include/nav2_straightline_planner/straight_line_planner.hpp

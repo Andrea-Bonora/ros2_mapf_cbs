@@ -313,7 +313,7 @@ bool AStarAlgorithm<NodeT>::createPath(
 
     // 4) Expand neighbors of Nbest not visited
     neighbors.clear();
-    current_node->getNeighbors(neighborGetter, _collision_checker, _traverse_unknown, neighbors, vc, ec);
+    current_node->getNeighbors(neighborGetter, _collision_checker, _traverse_unknown, neighbors, getSizeX(), vc, ec);
 
     for (neighbor_iterator = neighbors.begin();
       neighbor_iterator != neighbors.end(); ++neighbor_iterator)

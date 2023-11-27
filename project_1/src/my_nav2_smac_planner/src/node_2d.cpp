@@ -56,6 +56,7 @@ bool Node2D::isNodeValid(
   GridCollisionChecker * collision_checker,
   const int time_step,
   const int parent_index,
+  const int x_size,
   const std::vector<std::map<std::string, int>> vertex_constraints,
   const std::vector<std::map<std::string, int>> edge_constraints)
 {
@@ -65,23 +66,15 @@ bool Node2D::isNodeValid(
   if (collision_checker->inCollision(index, traverse_unknown)) {
     return false;
   }
-  //cell_value == index, index+1, index-1, index+nx, index-nx
   //VCs
   for (const auto& obj : vertex_constraints) {
     int cell_value = obj.at("cell");
-    int ts_value = obj.at("time_step"); //NOW IT IS THE POSITION OF THE CONFLICTING AGENT (THIS CHANGES EVERYTHING!!)
-    //if (time_step+2 >= ts_value && ts_value >= time_step){
-      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?", ts_value, time_step + 1);
-      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_value, index);
-    //}
-    /*if (time_step + 1 == ts_value && index == cell_value){
-      //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Collision detected");
-      return false;
-    }*/
+    int ts_value = obj.at("time_step");
     if( time_step + 1 == ts_value ){
+      //Expand the area of the conflict
       for(int i = -10; i <= 10; i++){
         for(int j = -10; j <= 10; j++){
-          if(index == cell_value + j + (384*i))
+          if(index == cell_value + j + (x_size*i))
             return false;
         }
       }
@@ -93,20 +86,11 @@ bool Node2D::isNodeValid(
         int cell_from_value = obj.at("cell_from");
         int cell_to_value = obj.at("cell_to");
         int ts_value = obj.at("time_step");
-        //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d %d %d %d", time_step, cell_from_value, cell_to_value, ts_value);
-        /*if (time_step == ts_value && cell_from_value == parent_index){
-          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?", ts_value, time_step);
-          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_from_value, parent_index);
-          RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"%d == %d ?'", cell_to_value, index);
-        }*/
-        /*if(time_step == ts_value && parent_index == cell_from_value && index == cell_to_value){
-          //RCLCPP_WARN(rclcpp::get_logger("rclcpp"),"Collision detected");
-          return false;
-        }*/
         if( time_step == ts_value ){
+          //Expand the area of the conflict
           for(int i = -10; i <= 10; i++){
             for(int j = -10; j <= 10; j++){
-              if(index == cell_to_value + j + (384*i))
+              if(index == cell_to_value + j + (x_size*i))
                 return false;
             }
           }
@@ -169,6 +153,7 @@ void Node2D::getNeighbors(
   GridCollisionChecker * collision_checker,
   const bool & traverse_unknown,
   NodeVector & neighbors,
+  const int x_size,
   const std::vector<std::map<std::string, int>> vertex_constraints,
   const std::vector<std::map<std::string, int>> edge_constraints)
 {
@@ -199,7 +184,7 @@ void Node2D::getNeighbors(
     }
 
     if (NeighborGetter(index, neighbor)) {
-      if (neighbor->isNodeValid(traverse_unknown, collision_checker, this->getTimeStep(), node_i, vertex_constraints, edge_constraints)
+      if (neighbor->isNodeValid(traverse_unknown, collision_checker, this->getTimeStep(), node_i, x_size, vertex_constraints, edge_constraints)
                  && !neighbor->wasVisited()) {
         neighbors.push_back(neighbor);
       }

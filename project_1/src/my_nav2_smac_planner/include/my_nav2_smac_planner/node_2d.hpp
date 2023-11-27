@@ -178,7 +178,7 @@ public:
    * @return whether this node is valid and collision free
    */
   bool isNodeValid(const bool & traverse_unknown, GridCollisionChecker * collision_checker, const int time_step = -1,
-                  const int parent_index = -1,
+                  const int parent_index = -1, const int x_size = 0,
                   const std::vector<std::map<std::string, int>> vertex_constraints = {},
                   const std::vector<std::map<std::string, int>> edge_constraints = {});
 
@@ -270,6 +270,7 @@ public:
     GridCollisionChecker * collision_checker,
     const bool & traverse_unknown,
     NodeVector & neighbors,
+    const int x_size,
     const std::vector<std::map<std::string, int>> vertex_constraints = {},
     const std::vector<std::map<std::string, int>> edge_constraints = {});
 

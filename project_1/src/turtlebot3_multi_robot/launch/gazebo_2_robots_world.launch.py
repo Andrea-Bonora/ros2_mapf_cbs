@@ -35,6 +35,9 @@ def generate_launch_description():
         {'name': 'tb1', 'x_pose': '-1.5', 'y_pose': '-0.5', 'z_pose': 0.01},
         #{'name': 'tb2', 'x_pose': '1.5', 'y_pose': '0.5', 'z_pose': 0.01} #EXP4
         {'name': 'tb2', 'x_pose': '-1.5', 'y_pose': '0.5', 'z_pose': 0.01} #EXP3
+
+        #{'name': 'tb1', 'x_pose': '-0.13', 'y_pose': '-1.91', 'z_pose': 0.01}, #EXP5_1
+        #{'name': 'tb2', 'x_pose': '-2.5', 'y_pose': '0.87', 'z_pose': 0.01} #EXP5_2
         # ...
         # ...
         ]
@@ -74,7 +77,7 @@ def generate_launch_description():
 
     world = os.path.join(
         get_package_share_directory('turtlebot3_multi_robot'),
-        'worlds', 'multi_robot_world.world')
+        'worlds', 'multi_robot_world.world') #'my_world.world')
 
     gzserver_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -112,7 +115,7 @@ def generate_launch_description():
         name='map_server',
         output='screen',
         parameters=[{'yaml_filename': os.path.join(get_package_share_directory('turtlebot3_navigation2'), 'map', 'map.yaml'),
-        #parameters=[{'yaml_filename': "/home/andrea/tesi/ros2_mapf_cbs/maps/my_map.yaml",
+        #parameters=[{'yaml_filename': os.path.join(get_package_share_directory('my_try_bringup'), 'map', 'map_name.yaml'),
                      },],
         remappings=remappings)
 
@@ -174,7 +177,7 @@ def generate_launch_description():
                                     'slam': 'False',
                                     'namespace': namespace,
                                     'use_namespace': 'True',
-                                    'map': '',
+                                    'map': '', #'~/map_name.yaml',
                                     'map_server': 'False',
                                     'params_file': params_file,
                                     'default_bt_xml_filename': os.path.join(

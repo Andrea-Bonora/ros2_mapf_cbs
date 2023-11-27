@@ -4,32 +4,20 @@ from my_intermediate.cbs.environment import Environment
 from copy import deepcopy
 
 class CBS(object):
-    def __init__(self, agents, nx, ny):
-        self.env = Environment(agents, nx, ny)
+    def __init__(self, agents, nx, ny, origin, resolution):
+        self.env = Environment(agents, nx, ny, origin, resolution)
         self.open_set = set()
         self.closed_set = set()
 
-    def create_start_node(self, plans, discrete_plans):
-        #First solution computation, we already have it, so it is simply a conversion in the desired format
+    def get_starting_node(self, plans):
         start = HighLevelNode()
         start.constraint_dict = {}
         for agent in self.env.agent_dict.keys():
            start.constraint_dict[agent] = Constraints()
-        start.discrete_solution = self.env.compute_solution(discrete_plans)
         start.solution = self.env.compute_solution(plans)
-        start.cost = self.env.compute_solution_cost(start.discrete_solution)
-        return start
-
-    def get_starting_node(self, plans, discrete_plans):
-        start = HighLevelNode()
-        start.constraint_dict = {}
-        for agent in self.env.agent_dict.keys():
-           start.constraint_dict[agent] = Constraints()
-        start.discrete_solution = self.env.compute_solution(discrete_plans)
-        start.solution = self.env.compute_solution(plans)
-        if not start.discrete_solution:
+        if not start.solution:
             return None
-        start.cost = self.env.compute_solution_cost(start.discrete_solution)
+        start.cost = self.env.compute_solution_cost(start.solution)
         return start
 
     def update_constraints_dict(self):

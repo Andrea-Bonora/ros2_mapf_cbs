@@ -4,9 +4,8 @@ class Conflict(object):
     VERTEX = 1
     EDGE = 2
     def __init__(self):
-        self.time_a = -1
-        self.time_b = -1
-        self.index = -1
+        self.time_1 = -1
+        self.time_2 = -1
         self.type = -1
 
         self.agent_1 = ''
