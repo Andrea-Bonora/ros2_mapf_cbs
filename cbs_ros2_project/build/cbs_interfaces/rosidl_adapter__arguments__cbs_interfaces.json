@@ -1,0 +1,15 @@
+{
+  "package_name": "cbs_interfaces",
+  "non_idl_tuples": [
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:srv/StartGoalPoseStamped.srv",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:srv/StartGoalPositions.srv",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:srv/ComputedPlans.srv",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:msg/AgentPathRequest.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:msg/AgentPath.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:msg/VertexConstraint.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:msg/EdgeConstraint.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:msg/Coordinates3D.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:msg/StartGoal.msg",
+    "/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces:action/ComputePathToPoseCBS.action"
+  ]
+}

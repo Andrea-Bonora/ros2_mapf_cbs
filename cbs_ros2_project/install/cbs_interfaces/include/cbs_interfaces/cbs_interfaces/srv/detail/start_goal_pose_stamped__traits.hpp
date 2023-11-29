@@ -1,0 +1,1 @@
+/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces/rosidl_generator_cpp/cbs_interfaces/srv/detail/start_goal_pose_stamped__traits.hpp

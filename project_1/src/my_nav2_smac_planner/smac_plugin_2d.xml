@@ -1,5 +1,0 @@
-<library path="my_nav2_smac_planner">
-  <class name="my_nav2_smac_planner/MySmacPlanner2D" type="my_nav2_smac_planner::MySmacPlanner2D" base_class_type="my_nav2_core::MultiAgentGlobalPlanner">
-    <description>2D A* SMAC Planner</description>
-  </class>
-</library>

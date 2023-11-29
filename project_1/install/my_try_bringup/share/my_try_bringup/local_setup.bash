@@ -1,1 +1,0 @@
-/home/andrea/tesi/ros2_mapf_cbs/project_1/build/my_try_bringup/ament_cmake_environment_hooks/local_setup.bash

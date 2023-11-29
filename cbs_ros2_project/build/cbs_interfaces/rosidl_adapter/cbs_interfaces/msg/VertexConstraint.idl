@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cbs_interfaces/msg/VertexConstraint.msg
+// generated code does not contain a copyright notice
+
+
+module cbs_interfaces {
+  module msg {
+    struct VertexConstraint {
+      int64 cell_index;
+
+      int64 time_step;
+    };
+  };
+};

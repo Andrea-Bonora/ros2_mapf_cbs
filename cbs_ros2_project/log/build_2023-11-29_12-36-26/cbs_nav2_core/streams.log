@@ -1,0 +1,76 @@
+[0.108s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_core -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core
+[0.148s] -- The C compiler identification is GNU 11.4.0
+[0.188s] -- The CXX compiler identification is GNU 11.4.0
+[0.193s] -- Detecting C compiler ABI info
+[0.239s] -- Detecting C compiler ABI info - done
+[0.247s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.247s] -- Detecting C compile features
+[0.247s] -- Detecting C compile features - done
+[0.250s] -- Detecting CXX compiler ABI info
+[0.307s] -- Detecting CXX compiler ABI info - done
+[0.313s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.313s] -- Detecting CXX compile features
+[0.313s] -- Detecting CXX compile features - done
+[0.315s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.438s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.482s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.513s] -- Found nav2_common: 1.1.12 (/opt/ros/humble/share/nav2_common/cmake)
+[0.515s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.550s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.554s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.561s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.572s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.586s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.646s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.649s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.681s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.690s] -- Looking for pthread.h
+[0.741s] -- Looking for pthread.h - found
+[0.741s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.795s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.796s] -- Found Threads: TRUE  
+[0.918s] -- Found rclcpp_lifecycle: 16.0.6 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[0.958s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.991s] -- Found nav2_costmap_2d: 1.1.12 (/opt/ros/humble/share/nav2_costmap_2d/cmake)
+[1.786s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.787s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.527s] -- Found cbs_interfaces: 0.0.0 (/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake)
+[2.659s] -- Setting build type to Release as none was specified.
+[2.668s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.750s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.750s] -- Configured cppcheck include dirs: 
+[2.750s] -- Configured cppcheck exclude dirs and/or files: 
+[2.751s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.751s] -- Configured cpplint exclude dirs and/or files: 
+[2.752s] -- Added test 'lint_cmake' to check CMake code style
+[2.753s] -- Added test 'uncrustify' to check C / C++ code style
+[2.753s] -- Configured uncrustify additional arguments: 
+[2.753s] -- Added test 'xmllint' to check XML markup files
+[2.756s] -- Configuring done
+[2.762s] -- Generating done
+[2.765s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core
+[2.774s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_core -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core
+[2.775s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core -- -j8 -l8
+[2.808s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core -- -j8 -l8
+[2.838s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core
+[2.848s] -- Install configuration: "Release"
+[2.849s] -- Execute custom install script
+[2.849s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/include//cbs_nav2_core/multi_agent_global_planner.hpp
+[2.857s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/ament_index/resource_index/package_run_dependencies/cbs_nav2_core
+[2.866s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/ament_index/resource_index/parent_prefix_path/cbs_nav2_core
+[2.873s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/ament_prefix_path.sh
+[2.879s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/ament_prefix_path.dsv
+[2.885s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/path.sh
+[2.890s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/path.dsv
+[2.899s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.bash
+[2.905s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.sh
+[2.911s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.zsh
+[2.917s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.dsv
+[2.923s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.dsv
+[2.928s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/ament_index/resource_index/packages/cbs_nav2_core
+[2.934s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.939s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.945s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/cbs_nav2_coreConfig.cmake
+[2.950s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/cbs_nav2_coreConfig-version.cmake
+[2.956s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.xml
+[2.964s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core

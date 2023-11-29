@@ -1,1 +1,0 @@
-/home/andrea/tesi/ros2_mapf_cbs/simple_example/src/my_robot_interfaces/msg/HardwareStatus.msg

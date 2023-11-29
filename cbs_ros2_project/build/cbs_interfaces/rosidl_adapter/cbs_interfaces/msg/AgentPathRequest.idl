@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from cbs_interfaces/msg/AgentPathRequest.msg
+// generated code does not contain a copyright notice
+
+#include "cbs_interfaces/msg/EdgeConstraint.idl"
+#include "cbs_interfaces/msg/VertexConstraint.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module cbs_interfaces {
+  module msg {
+    struct AgentPathRequest {
+      string name;
+
+      geometry_msgs::msg::PoseStamped start;
+
+      geometry_msgs::msg::PoseStamped goal;
+
+      sequence<cbs_interfaces::msg::VertexConstraint> vertex_constraints;
+
+      sequence<cbs_interfaces::msg::EdgeConstraint> edge_constraints;
+    };
+  };
+};

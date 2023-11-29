@@ -1,4 +1,0 @@
-/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/HardwareStatus.idl
-/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/LedStatus.idl
-/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/ComputeRectangleArea.idl
-/home/andrea/tesi/ros2_mapf_cbs/simple_example/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/SetLedStatus.idl

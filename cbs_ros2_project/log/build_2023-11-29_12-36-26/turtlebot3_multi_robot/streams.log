@@ -1,0 +1,72 @@
+[0.049s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/turtlebot3_multi_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot
+[0.114s] -- The C compiler identification is GNU 11.4.0
+[0.157s] -- The CXX compiler identification is GNU 11.4.0
+[0.165s] -- Detecting C compiler ABI info
+[0.223s] -- Detecting C compiler ABI info - done
+[0.233s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.233s] -- Detecting C compile features
+[0.233s] -- Detecting C compile features - done
+[0.237s] -- Detecting CXX compiler ABI info
+[0.303s] -- Detecting CXX compiler ABI info - done
+[0.313s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.313s] -- Detecting CXX compile features
+[0.314s] -- Detecting CXX compile features - done
+[0.316s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.459s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.509s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.585s] -- Configuring done
+[0.587s] -- Generating done
+[0.588s] -- Build files have been written to: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot
+[0.591s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/turtlebot3_multi_robot -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot
+[0.592s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot -- -j8 -l8
+[0.618s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot -- -j8 -l8
+[0.642s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot
+[0.647s] -- Install configuration: ""
+[0.648s] -- Execute custom install script
+[0.648s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/gazebo_2_robots_world.launch.py
+[0.654s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/gazebo_multi_nav2_world.launch.py
+[0.661s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/gazebo_multi_world.launch.py
+[0.668s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/nav2_bringup/bringup_launch.py
+[0.675s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/nav2_bringup/localization_launch.py
+[0.681s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/nav2_bringup/navigation_launch.py
+[0.689s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/nav2_bringup/rviz_launch.py
+[0.696s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//launch/nav2_bringup/slam_launch.py
+[0.703s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_burger/meshes/burger_base.dae
+[0.711s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_burger/meshes/lds.dae
+[0.717s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_burger/meshes/tire.dae
+[0.724s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_burger/model-1_4.sdf
+[0.732s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_burger/model.config
+[0.738s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_burger/model.sdf
+[0.746s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/meshes/lds.dae
+[0.753s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/meshes/r200.dae
+[0.760s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/meshes/tire.dae
+[0.767s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/meshes/waffle_base.dae
+[0.773s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/model-1_4.sdf
+[0.779s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/model.config
+[0.787s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/model.sdf
+[0.796s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//models/turtlebot3_waffle/model_nocamera.sdf
+[0.802s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//rviz/multi_nav2_default_view.rviz
+[0.809s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//rviz/nav2_default_view.rviz
+[0.815s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//urdf/common_properties.urdf
+[0.821s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//urdf/turtlebot3_burger.urdf
+[0.828s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//urdf/turtlebot3_waffle.urdf
+[0.835s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//worlds/multi_empty_world.world
+[0.841s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//worlds/multi_robot_world.world
+[0.848s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot//params/nav2_params.yaml
+[0.855s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/environment/multi_robot.dsv
+[0.862s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/ament_index/resource_index/package_run_dependencies/turtlebot3_multi_robot
+[0.868s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/ament_index/resource_index/parent_prefix_path/turtlebot3_multi_robot
+[0.875s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/environment/ament_prefix_path.sh
+[0.881s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/environment/ament_prefix_path.dsv
+[0.888s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/environment/path.sh
+[0.895s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/environment/path.dsv
+[0.901s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/local_setup.bash
+[0.908s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/local_setup.sh
+[0.914s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/local_setup.zsh
+[0.920s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/local_setup.dsv
+[0.928s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.dsv
+[0.934s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/ament_index/resource_index/packages/turtlebot3_multi_robot
+[0.940s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/cmake/turtlebot3_multi_robotConfig.cmake
+[0.946s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/cmake/turtlebot3_multi_robotConfig-version.cmake
+[0.953s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.xml
+[0.964s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot

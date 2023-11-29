@@ -1,0 +1,1 @@
+/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces/rosidl_generator_py/cbs_interfaces/srv/_start_goal_pose_stamped.py

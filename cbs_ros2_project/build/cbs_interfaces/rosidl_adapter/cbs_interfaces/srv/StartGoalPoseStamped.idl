@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from cbs_interfaces/srv/StartGoalPoseStamped.srv
+// generated code does not contain a copyright notice
+
+#include "cbs_interfaces/msg/AgentPath.idl"
+#include "cbs_interfaces/msg/AgentPathRequest.idl"
+
+module cbs_interfaces {
+  module srv {
+    struct StartGoalPoseStamped_Request {
+      sequence<cbs_interfaces::msg::AgentPathRequest> requests;
+    };
+    struct StartGoalPoseStamped_Response {
+      sequence<cbs_interfaces::msg::AgentPath> plans;
+    };
+  };
+};
