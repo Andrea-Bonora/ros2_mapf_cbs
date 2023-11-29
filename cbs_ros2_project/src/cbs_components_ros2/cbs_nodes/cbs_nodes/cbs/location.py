@@ -1,9 +1,11 @@
+COLLISION_DISTANCE = 0.5
+
 class Location(object):
     def __init__(self, ps):
         self.pose_stamped = ps
     def is_conflict(self, other):
-        if abs(self.pose_stamped.pose.position.x - other.pose_stamped.pose.position.x) <= 0.5 and \
-                    abs(self.pose_stamped.pose.position.y - other.pose_stamped.pose.position.y) <= 0.5:
+        if abs(self.pose_stamped.pose.position.x - other.pose_stamped.pose.position.x) <= COLLISION_DISTANCE and \
+                    abs(self.pose_stamped.pose.position.y - other.pose_stamped.pose.position.y) <= COLLISION_DISTANCE:
                 return True
         return False
     def __eq__(self, other):

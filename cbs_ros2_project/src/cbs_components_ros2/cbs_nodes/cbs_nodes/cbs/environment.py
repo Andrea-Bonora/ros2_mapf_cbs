@@ -9,6 +9,8 @@ from cbs_nodes.cbs.edge_constraint import EdgeConstraint
 from math import fabs, atan
 import numpy as np
 
+COLLISION_DISTANCE = 0.5
+
 class Environment(object):
     def __init__(self, agents, nx, ny, origin, resolution):
         
@@ -89,8 +91,8 @@ class Environment(object):
                 loc1_ref = conf.location_1b
                 loc2_ref = conf.location_2b            
             else:
-                if abs(loc1_ref.x - conf.location_1b.x) < 0.5 and abs(loc1_ref.y - conf.location_1b.y) < 0.5 and \
-                        abs(loc2_ref.x - conf.location_2b.x) < 0.5 and abs(loc2_ref.y - conf.location_2b.y) < 0.5:
+                if abs(loc1_ref.x - conf.location_1b.x) < COLLISION_DISTANCE and abs(loc1_ref.y - conf.location_1b.y) < COLLISION_DISTANCE and \
+                        abs(loc2_ref.x - conf.location_2b.x) < COLLISION_DISTANCE and abs(loc2_ref.y - conf.location_2b.y) < COLLISION_DISTANCE:
                     pass
                 else:
                     ref_conf = conf

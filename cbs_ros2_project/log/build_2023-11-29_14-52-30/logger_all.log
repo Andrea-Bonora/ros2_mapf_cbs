@@ -1,0 +1,561 @@
+[0.691s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.691s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f6db5125fc0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f6db55cd450>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f6db55cd450>>)
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.746s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.746s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.746s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'ignore'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'ignore_ament_install'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extensions ['colcon_pkg']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'colcon_pkg'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extensions ['colcon_meta']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'colcon_meta'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extensions ['ros']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'ros'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extensions ['cmake', 'python']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'cmake'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'python'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extensions ['python_setup_py']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2) by extension 'python_setup_py'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extension 'ignore'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extension 'ignore_ament_install'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extensions ['colcon_pkg']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extension 'colcon_pkg'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extensions ['colcon_meta']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extension 'colcon_meta'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extensions ['ros']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_bringup) by extension 'ros'
+[0.757s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_components_ros2/cbs_bringup' with type 'ros.ament_cmake' and name 'cbs_bringup'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extension 'ignore'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extension 'ignore_ament_install'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extensions ['colcon_pkg']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extension 'colcon_pkg'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extensions ['colcon_meta']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extension 'colcon_meta'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extensions ['ros']
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/cbs_nodes) by extension 'ros'
+[0.758s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_components_ros2/cbs_nodes' with type 'ros.ament_python' and name 'cbs_nodes'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extensions ['ignore', 'ignore_ament_install']
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extension 'ignore'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extension 'ignore_ament_install'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extensions ['colcon_pkg']
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extension 'colcon_pkg'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extensions ['colcon_meta']
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extension 'colcon_meta'
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extensions ['ros']
+[0.758s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_components_ros2/turtlebot3_multi_robot) by extension 'ros'
+[0.759s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_components_ros2/turtlebot3_multi_robot' with type 'ros.ament_cmake' and name 'turtlebot3_multi_robot'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extensions ['ignore', 'ignore_ament_install']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'ignore'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'ignore_ament_install'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extensions ['colcon_pkg']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'colcon_pkg'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extensions ['colcon_meta']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'colcon_meta'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extensions ['ros']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'ros'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extensions ['cmake', 'python']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'cmake'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'python'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extensions ['python_setup_py']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2) by extension 'python_setup_py'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extension 'ignore'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extension 'ignore_ament_install'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extensions ['colcon_pkg']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extension 'colcon_pkg'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extensions ['colcon_meta']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extension 'colcon_meta'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extensions ['ros']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_interfaces) by extension 'ros'
+[0.760s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_nav2/cbs_interfaces' with type 'ros.ament_cmake' and name 'cbs_interfaces'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extensions ['ignore', 'ignore_ament_install']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extension 'ignore'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extension 'ignore_ament_install'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extensions ['colcon_pkg']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extension 'colcon_pkg'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extensions ['colcon_meta']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extension 'colcon_meta'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extensions ['ros']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_core) by extension 'ros'
+[0.761s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_nav2/cbs_nav2_core' with type 'ros.ament_cmake' and name 'cbs_nav2_core'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extension 'ignore'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extension 'ignore_ament_install'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extensions ['colcon_pkg']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extension 'colcon_pkg'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extensions ['colcon_meta']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extension 'colcon_meta'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extensions ['ros']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_planner) by extension 'ros'
+[0.763s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_nav2/cbs_nav2_planner' with type 'ros.ament_cmake' and name 'cbs_nav2_planner'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extensions ['ignore', 'ignore_ament_install']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extension 'ignore'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extension 'ignore_ament_install'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extensions ['colcon_pkg']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extension 'colcon_pkg'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extensions ['colcon_meta']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extension 'colcon_meta'
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extensions ['ros']
+[0.763s] Level 1:colcon.colcon_core.package_identification:_identify(src/cbs_nav2/cbs_nav2_smac_planner) by extension 'ros'
+[0.764s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cbs_nav2/cbs_nav2_smac_planner' with type 'ros.ament_cmake' and name 'cbs_nav2_smac_planner'
+[0.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.764s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.834s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.834s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.856s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install
+[0.874s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 371 installed packages in /opt/ros/humble
+[0.875s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'cmake_args' from command line to 'None'
+[0.944s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'cmake_target' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'cbs_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.945s] DEBUG:colcon.colcon_core.verb:Building package 'cbs_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/cbs_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.954s] Level 5:colcon.colcon_core.verb:set package 'cbs_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.954s] DEBUG:colcon.colcon_core.verb:Building package 'cbs_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.963s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'cmake_args' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'cmake_target' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'cmake_clean_first' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'cmake_force_configure' from command line to 'False'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'ament_cmake_args' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.964s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_multi_robot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.964s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_multi_robot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/turtlebot3_multi_robot', 'symlink_install': True, 'test_result_base': None}
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'cmake_args' from command line to 'None'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'cmake_target' from command line to 'None'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'cmake_clean_cache' from command line to 'False'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'cmake_clean_first' from command line to 'False'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'cmake_force_configure' from command line to 'False'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'ament_cmake_args' from command line to 'None'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'catkin_cmake_args' from command line to 'None'
+[0.973s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_core' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.973s] DEBUG:colcon.colcon_core.verb:Building package 'cbs_nav2_core' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_core', 'symlink_install': True, 'test_result_base': None}
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'cmake_args' from command line to 'None'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'cmake_target' from command line to 'None'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'cmake_clean_cache' from command line to 'False'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'cmake_clean_first' from command line to 'False'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'cmake_force_configure' from command line to 'False'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'ament_cmake_args' from command line to 'None'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'catkin_cmake_args' from command line to 'None'
+[0.982s] Level 5:colcon.colcon_core.verb:set package 'cbs_nodes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.982s] DEBUG:colcon.colcon_core.verb:Building package 'cbs_nodes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/cbs_nodes', 'symlink_install': True, 'test_result_base': None}
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'cmake_args' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'cmake_target' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'cmake_clean_first' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'cmake_force_configure' from command line to 'False'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'ament_cmake_args' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[0.992s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_smac_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.992s] DEBUG:colcon.colcon_core.verb:Building package 'cbs_nav2_smac_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_smac_planner', 'symlink_install': True, 'test_result_base': None}
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'cmake_args' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'cmake_target' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'cmake_clean_cache' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'cmake_clean_first' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'cmake_force_configure' from command line to 'False'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'ament_cmake_args' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'catkin_cmake_args' from command line to 'None'
+[1.001s] Level 5:colcon.colcon_core.verb:set package 'cbs_nav2_planner' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.001s] DEBUG:colcon.colcon_core.verb:Building package 'cbs_nav2_planner' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner', 'merge_install': False, 'path': '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_planner', 'symlink_install': True, 'test_result_base': None}
+[1.010s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.020s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.020s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces' with build type 'ament_cmake'
+[1.021s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_interfaces'
+[1.042s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.042s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.042s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.073s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/cbs_bringup' with build type 'ament_cmake'
+[1.073s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/cbs_bringup'
+[1.083s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.083s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.113s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/turtlebot3_multi_robot' with build type 'ament_cmake'
+[1.114s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/turtlebot3_multi_robot'
+[1.123s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.123s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.158s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces -- -j8 -l8
+[1.160s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup -- -j8 -l8
+[1.163s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot -- -j8 -l8
+[1.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup -- -j8 -l8
+[1.369s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot -- -j8 -l8
+[1.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup
+[1.393s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot
+[1.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_bringup)
+[1.408s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_bringup
+[1.423s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup' for CMake module files
+[1.424s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup' for CMake config files
+[1.424s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_bringup', 'cmake_prefix_path')
+[1.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/hook/cmake_prefix_path.ps1'
+[1.434s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/hook/cmake_prefix_path.dsv'
+[1.434s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/hook/cmake_prefix_path.sh'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/bin'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/lib/pkgconfig/cbs_bringup.pc'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/lib/python3.10/site-packages'
+[1.435s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/bin'
+[1.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.ps1'
+[1.446s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.dsv'
+[1.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.sh'
+[1.447s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.bash'
+[1.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.zsh'
+[1.449s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/colcon-core/packages/cbs_bringup)
+[1.450s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_multi_robot)
+[1.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/turtlebot3_multi_robot
+[1.462s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot' for CMake module files
+[1.463s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot' for CMake config files
+[1.463s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_multi_robot', 'cmake_prefix_path')
+[1.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/hook/cmake_prefix_path.ps1'
+[1.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/hook/cmake_prefix_path.dsv'
+[1.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/hook/cmake_prefix_path.sh'
+[1.475s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/bin'
+[1.475s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/lib/pkgconfig/turtlebot3_multi_robot.pc'
+[1.475s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/lib/python3.10/site-packages'
+[1.475s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/bin'
+[1.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.ps1'
+[1.485s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.dsv'
+[1.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.sh'
+[1.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.bash'
+[1.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.zsh'
+[1.486s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/colcon-core/packages/turtlebot3_multi_robot)
+[1.498s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_bringup)
+[1.508s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup' for CMake module files
+[1.509s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup' for CMake config files
+[1.509s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_bringup', 'cmake_prefix_path')
+[1.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/hook/cmake_prefix_path.ps1'
+[1.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/hook/cmake_prefix_path.dsv'
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/hook/cmake_prefix_path.sh'
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/bin'
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/lib/pkgconfig/cbs_bringup.pc'
+[1.520s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/lib/python3.10/site-packages'
+[1.521s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/bin'
+[1.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.ps1'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.dsv'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.sh'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.bash'
+[1.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/cbs_bringup/package.zsh'
+[1.533s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup/share/colcon-core/packages/cbs_bringup)
+[1.544s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_multi_robot)
+[1.556s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot' for CMake module files
+[1.557s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot' for CMake config files
+[1.557s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_multi_robot', 'cmake_prefix_path')
+[1.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/hook/cmake_prefix_path.ps1'
+[1.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/hook/cmake_prefix_path.dsv'
+[1.568s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/hook/cmake_prefix_path.sh'
+[1.568s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/bin'
+[1.568s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/lib/pkgconfig/turtlebot3_multi_robot.pc'
+[1.568s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/lib/python3.10/site-packages'
+[1.568s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/bin'
+[1.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.ps1'
+[1.579s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.dsv'
+[1.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.sh'
+[1.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.bash'
+[1.579s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/turtlebot3_multi_robot/package.zsh'
+[1.580s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot/share/colcon-core/packages/turtlebot3_multi_robot)
+[6.240s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces -- -j8 -l8
+[6.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces
+[6.633s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_interfaces)
+[6.634s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces
+[6.644s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces' for CMake module files
+[6.644s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces' for CMake config files
+[6.644s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_interfaces', 'cmake_prefix_path')
+[6.654s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/cmake_prefix_path.ps1'
+[6.654s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/cmake_prefix_path.dsv'
+[6.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/cmake_prefix_path.sh'
+[6.655s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib'
+[6.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_interfaces', 'ld_library_path_lib')
+[6.666s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/ld_library_path_lib.ps1'
+[6.666s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/ld_library_path_lib.dsv'
+[6.666s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/ld_library_path_lib.sh'
+[6.666s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/bin'
+[6.667s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/pkgconfig/cbs_interfaces.pc'
+[6.667s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/python3.10/site-packages'
+[6.667s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/bin'
+[6.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.ps1'
+[6.677s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.dsv'
+[6.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.sh'
+[6.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.bash'
+[6.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.zsh'
+[6.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/colcon-core/packages/cbs_interfaces)
+[6.997s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_interfaces)
+[7.006s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces' for CMake module files
+[7.007s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces' for CMake config files
+[7.007s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_interfaces', 'cmake_prefix_path')
+[7.016s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/cmake_prefix_path.ps1'
+[7.017s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/cmake_prefix_path.dsv'
+[7.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/cmake_prefix_path.sh'
+[7.017s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib'
+[7.017s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_interfaces', 'ld_library_path_lib')
+[7.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/ld_library_path_lib.ps1'
+[7.027s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/ld_library_path_lib.dsv'
+[7.027s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/hook/ld_library_path_lib.sh'
+[7.027s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/bin'
+[7.027s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/pkgconfig/cbs_interfaces.pc'
+[7.027s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/python3.10/site-packages'
+[7.027s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/bin'
+[7.037s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.ps1'
+[7.038s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.dsv'
+[7.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.sh'
+[7.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.bash'
+[7.038s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.zsh'
+[7.039s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/colcon-core/packages/cbs_interfaces)
+[7.039s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_core' with build type 'ament_cmake'
+[7.039s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_core'
+[7.050s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.050s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.091s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/cbs_nodes' with build type 'ament_python'
+[7.091s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nodes', 'ament_prefix_path')
+[7.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/hook/ament_prefix_path.ps1'
+[7.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/hook/ament_prefix_path.dsv'
+[7.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/hook/ament_prefix_path.sh'
+[7.113s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.113s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.149s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core -- -j8 -l8
+[7.339s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_components_ros2/cbs_nodes'
+[7.349s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.349s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/build --no-deps install_data
+[8.047s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nodes', 'pythonpath_develop')
+[8.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/build --no-deps install_data
+[8.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/share/cbs_nodes/hook/pythonpath_develop.ps1'
+[8.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/share/cbs_nodes/hook/pythonpath_develop.dsv'
+[8.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/share/cbs_nodes/hook/pythonpath_develop.sh'
+[8.070s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes' for CMake module files
+[8.071s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes' for CMake config files
+[8.071s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib'
+[8.071s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/bin'
+[8.071s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/pkgconfig/cbs_nodes.pc'
+[8.071s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages'
+[8.071s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nodes', 'pythonpath')
+[8.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/hook/pythonpath.ps1'
+[8.082s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/hook/pythonpath.dsv'
+[8.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/hook/pythonpath.sh'
+[8.083s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/bin'
+[8.083s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nodes)
+[8.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/package.ps1'
+[8.093s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/package.dsv'
+[8.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/package.sh'
+[8.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/package.bash'
+[8.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes/package.zsh'
+[8.094s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/colcon-core/packages/cbs_nodes)
+[9.002s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core -- -j8 -l8
+[9.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core
+[9.034s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nav2_core)
+[9.035s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_core
+[9.045s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core' for CMake module files
+[9.045s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core' for CMake config files
+[9.045s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_core', 'cmake_prefix_path')
+[9.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/hook/cmake_prefix_path.ps1'
+[9.055s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/hook/cmake_prefix_path.dsv'
+[9.055s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/hook/cmake_prefix_path.sh'
+[9.056s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/bin'
+[9.056s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/lib/pkgconfig/cbs_nav2_core.pc'
+[9.056s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/lib/python3.10/site-packages'
+[9.056s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/bin'
+[9.066s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.ps1'
+[9.066s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.dsv'
+[9.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.sh'
+[9.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.bash'
+[9.067s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.zsh'
+[9.067s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/colcon-core/packages/cbs_nav2_core)
+[9.093s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nav2_core)
+[9.103s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core' for CMake module files
+[9.103s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core' for CMake config files
+[9.103s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_core', 'cmake_prefix_path')
+[9.112s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/hook/cmake_prefix_path.ps1'
+[9.113s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/hook/cmake_prefix_path.dsv'
+[9.113s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/hook/cmake_prefix_path.sh'
+[9.113s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/bin'
+[9.113s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/lib/pkgconfig/cbs_nav2_core.pc'
+[9.114s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/lib/python3.10/site-packages'
+[9.114s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/bin'
+[9.123s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.ps1'
+[9.123s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.dsv'
+[9.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.sh'
+[9.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.bash'
+[9.124s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.zsh'
+[9.124s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/colcon-core/packages/cbs_nav2_core)
+[9.125s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_smac_planner' with build type 'ament_cmake'
+[9.125s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_smac_planner'
+[9.134s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.134s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.176s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner -- -j8 -l8
+[35.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner -- -j8 -l8
+[35.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner
+[35.438s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nav2_smac_planner)
+[35.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner
+[35.544s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner' for CMake module files
+[35.546s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner' for CMake config files
+[35.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_smac_planner', 'cmake_prefix_path')
+[35.560s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/cmake_prefix_path.ps1'
+[35.575s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/cmake_prefix_path.dsv'
+[35.580s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/cmake_prefix_path.sh'
+[35.585s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib'
+[35.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_smac_planner', 'ld_library_path_lib')
+[35.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/ld_library_path_lib.ps1'
+[35.597s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/ld_library_path_lib.dsv'
+[35.597s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/ld_library_path_lib.sh'
+[35.597s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/bin'
+[35.598s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib/pkgconfig/cbs_nav2_smac_planner.pc'
+[35.603s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib/python3.10/site-packages'
+[35.603s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/bin'
+[35.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.ps1'
+[35.616s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.dsv'
+[35.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.sh'
+[35.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.bash'
+[35.619s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.zsh'
+[35.620s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/colcon-core/packages/cbs_nav2_smac_planner)
+[35.668s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nav2_smac_planner)
+[35.678s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner' for CMake module files
+[35.678s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner' for CMake config files
+[35.679s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_smac_planner', 'cmake_prefix_path')
+[35.688s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/cmake_prefix_path.ps1'
+[35.689s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/cmake_prefix_path.dsv'
+[35.689s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/cmake_prefix_path.sh'
+[35.689s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib'
+[35.689s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_smac_planner', 'ld_library_path_lib')
+[35.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/ld_library_path_lib.ps1'
+[35.699s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/ld_library_path_lib.dsv'
+[35.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/hook/ld_library_path_lib.sh'
+[35.699s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/bin'
+[35.699s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib/pkgconfig/cbs_nav2_smac_planner.pc'
+[35.699s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib/python3.10/site-packages'
+[35.700s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/bin'
+[35.709s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.ps1'
+[35.709s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.dsv'
+[35.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.sh'
+[35.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.bash'
+[35.710s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/cbs_nav2_smac_planner/package.zsh'
+[35.711s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/share/colcon-core/packages/cbs_nav2_smac_planner)
+[35.716s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_planner' with build type 'ament_cmake'
+[35.717s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/src/cbs_nav2/cbs_nav2_planner'
+[35.730s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[35.730s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[35.791s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner -- -j8 -l8
+[76.019s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner -- -j8 -l8
+[76.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner
+[76.073s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nav2_planner)
+[76.073s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_planner
+[76.084s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner' for CMake module files
+[76.084s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner' for CMake config files
+[76.085s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_planner', 'cmake_prefix_path')
+[76.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/cmake_prefix_path.ps1'
+[76.094s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/cmake_prefix_path.dsv'
+[76.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/cmake_prefix_path.sh'
+[76.095s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib'
+[76.095s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_planner', 'ld_library_path_lib')
+[76.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/ld_library_path_lib.ps1'
+[76.105s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/ld_library_path_lib.dsv'
+[76.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/ld_library_path_lib.sh'
+[76.105s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/bin'
+[76.105s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib/pkgconfig/cbs_nav2_planner.pc'
+[76.106s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib/python3.10/site-packages'
+[76.106s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/bin'
+[76.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.ps1'
+[76.115s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.dsv'
+[76.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.sh'
+[76.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.bash'
+[76.116s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.zsh'
+[76.116s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/colcon-core/packages/cbs_nav2_planner)
+[76.147s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cbs_nav2_planner)
+[76.158s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner' for CMake module files
+[76.158s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner' for CMake config files
+[76.158s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_planner', 'cmake_prefix_path')
+[76.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/cmake_prefix_path.ps1'
+[76.168s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/cmake_prefix_path.dsv'
+[76.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/cmake_prefix_path.sh'
+[76.169s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib'
+[76.169s] Level 1:colcon.colcon_core.shell:create_environment_hook('cbs_nav2_planner', 'ld_library_path_lib')
+[76.178s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/ld_library_path_lib.ps1'
+[76.179s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/ld_library_path_lib.dsv'
+[76.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/hook/ld_library_path_lib.sh'
+[76.179s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/bin'
+[76.179s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib/pkgconfig/cbs_nav2_planner.pc'
+[76.179s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib/python3.10/site-packages'
+[76.180s] Level 1:colcon.colcon_core.environment:checking '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/bin'
+[76.189s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.ps1'
+[76.189s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.dsv'
+[76.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.sh'
+[76.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.bash'
+[76.190s] INFO:colcon.colcon_core.shell:Creating package script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/cbs_nav2_planner/package.zsh'
+[76.190s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/share/colcon-core/packages/cbs_nav2_planner)
+[76.192s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[76.193s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[76.194s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[76.195s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[76.250s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[76.250s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[76.250s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[76.272s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[76.286s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/local_setup.ps1'
+[76.289s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/_local_setup_util_ps1.py'
+[76.290s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/setup.ps1'
+[76.302s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/local_setup.sh'
+[76.302s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/_local_setup_util_sh.py'
+[76.303s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/setup.sh'
+[76.318s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/local_setup.bash'
+[76.318s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/setup.bash'
+[76.333s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/local_setup.zsh'
+[76.333s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/setup.zsh'

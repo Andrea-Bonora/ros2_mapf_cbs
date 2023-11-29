@@ -21,7 +21,9 @@ from cbs_nodes.cbs.location import Location
 from cbs_nodes.cbs.discrete_location import DiscreteLocation
 from copy import deepcopy
 from cbs_interfaces.msg import AgentPathRequest
+from nav2_msgs.action import SmoothPath
 import math
+from rclpy.action import ActionClient
 
 
 class CollisionAvoiderNode(Node):
@@ -111,7 +113,7 @@ class CollisionAvoiderNode(Node):
                 return cbs.generate_plan(P.solution)
                 
             constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
-            
+
             for agent in constraint_dict.keys():
                 if conflict_dict.time_1 < len(P.solution[agent]):
                     new_node = deepcopy(P)
@@ -127,6 +129,13 @@ class CollisionAvoiderNode(Node):
                         are_equals = self.are_equals(P.solution[agent], new_node.solution[agent])
                         if are_equals:
                             break
+                        
+                        #conflict_dict = cbs.env.get_first_c_conflict(new_node.solution)
+
+                        #if not conflict_dict:
+                        #    self.get_logger().info("solution found, no conflicts!")
+                        #    return cbs.generate_plan(new_node.solution)
+                        
                         if new_node != {} and new_node not in cbs.closed_set:
                             cbs.open_set |= {new_node}
 
@@ -256,7 +265,7 @@ class CollisionAvoiderNode(Node):
         await future
         service_response = future.result()
         return service_response.plans # Piani dei vari agenti
-
+          
     def are_equals(self, p1, p2):
         if p2 == {}:
             return False
@@ -274,8 +283,8 @@ class CollisionAvoiderNode(Node):
             self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
         self.get_logger().info(" --- ")
         for m in p2:
-            tmp_x = int((m.location.pose_stamped.pose.position.x + 10 ) / 0.05)
-            tmp_y = int((m.location.pose_stamped.pose.position.y + 10 ) / 0.05)
+            tmp_x = int((m.location.pose_stamped.pose.position.x - self.origin['x'] ) / self.map_resolution)
+            tmp_y = int((m.location.pose_stamped.pose.position.y - self.origin['y'] ) / self.map_resolution)
             self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
         return True
 

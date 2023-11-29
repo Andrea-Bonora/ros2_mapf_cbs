@@ -1,0 +1,19 @@
+[0.778s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/build --no-deps install_data
+[0.973s] running develop
+[1.087s] running egg_info
+[1.087s] writing cbs_nodes.egg-info/PKG-INFO
+[1.088s] writing dependency_links to cbs_nodes.egg-info/dependency_links.txt
+[1.088s] writing entry points to cbs_nodes.egg-info/entry_points.txt
+[1.088s] writing requirements to cbs_nodes.egg-info/requires.txt
+[1.088s] writing top-level names to cbs_nodes.egg-info/top_level.txt
+[1.089s] reading manifest file 'cbs_nodes.egg-info/SOURCES.txt'
+[1.090s] writing manifest file 'cbs_nodes.egg-info/SOURCES.txt'
+[1.091s] running build_ext
+[1.091s] Creating /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages/cbs-nodes.egg-link (link to .)
+[1.091s] Installing collision_avoider script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.091s] Installing fake_asker script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.092s] Installing multi_agent_plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.092s] 
+[1.092s] Installed /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes
+[1.092s] running install_data
+[1.117s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes' returned '0': CMAKE_PREFIX_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/turtlebot3_multi_robot:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_bringup LD_LIBRARY_PATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_planner/lib:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_smac_planner/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/andrea/ws_online/build/ros2_bdi_on_litter_world PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/build --no-deps install_data

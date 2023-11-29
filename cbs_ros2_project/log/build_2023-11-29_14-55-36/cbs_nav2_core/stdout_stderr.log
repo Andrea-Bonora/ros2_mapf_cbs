@@ -1,0 +1,20 @@
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/include//cbs_nav2_core/multi_agent_global_planner.hpp
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/ament_index/resource_index/package_run_dependencies/cbs_nav2_core
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/ament_index/resource_index/parent_prefix_path/cbs_nav2_core
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/path.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/environment/path.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.bash
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.sh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.zsh
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/local_setup.dsv
+-- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.dsv
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/ament_index/resource_index/packages/cbs_nav2_core
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/cbs_nav2_coreConfig.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/cmake/cbs_nav2_coreConfig-version.cmake
+-- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nav2_core/share/cbs_nav2_core/package.xml

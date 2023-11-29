@@ -1,0 +1,272 @@
+[0.141s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces -- -j8 -l8
+[0.207s] [  0%] Built target cbs_interfaces__cpp
+[0.211s] [  0%] Built target ament_cmake_python_symlink_cbs_interfaces
+[0.215s] [ 12%] Built target cbs_interfaces__rosidl_generator_c
+[0.246s] [ 24%] Built target cbs_interfaces__rosidl_typesupport_cpp
+[0.251s] [ 35%] Built target cbs_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.253s] [ 47%] Built target cbs_interfaces__rosidl_typesupport_introspection_cpp
+[0.254s] [ 59%] Built target cbs_interfaces__rosidl_typesupport_introspection_c
+[0.256s] [ 70%] Built target cbs_interfaces__rosidl_typesupport_c
+[0.258s] [ 82%] Built target cbs_interfaces__rosidl_typesupport_fastrtps_c
+[0.275s] [ 82%] Built target cbs_interfaces
+[0.298s] [ 83%] Built target cbs_interfaces__py
+[0.323s] [ 94%] Built target cbs_interfaces__rosidl_generator_py
+[0.347s] [ 96%] Built target cbs_interfaces__rosidl_typesupport_c__pyext
+[0.347s] [ 98%] Built target cbs_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.348s] [100%] Built target cbs_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.462s] running egg_info
+[0.463s] writing cbs_interfaces.egg-info/PKG-INFO
+[0.463s] writing dependency_links to cbs_interfaces.egg-info/dependency_links.txt
+[0.463s] writing top-level names to cbs_interfaces.egg-info/top_level.txt
+[0.466s] reading manifest file 'cbs_interfaces.egg-info/SOURCES.txt'
+[0.467s] writing manifest file 'cbs_interfaces.egg-info/SOURCES.txt'
+[0.487s] [100%] Built target ament_cmake_python_build_cbs_interfaces_egg
+[0.496s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --build /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces -- -j8 -l8
+[0.673s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces
+[0.680s] -- Install configuration: ""
+[0.680s] -- Execute custom install script
+[0.680s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/ament_index/resource_index/rosidl_interfaces/cbs_interfaces
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/compute_path_to_pose_cbs.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__functions.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__struct.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__type_support.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/agent_path.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/agent_path_request.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/coordinates3_d.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__functions.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__struct.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__type_support.h
+[0.681s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__functions.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__struct.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__type_support.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__functions.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__struct.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__type_support.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__functions.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__struct.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__type_support.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__functions.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__struct.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__type_support.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__functions.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__struct.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__type_support.h
+[0.682s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/edge_constraint.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/start_goal.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/vertex_constraint.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/computed_plans.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__functions.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__struct.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__type_support.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__functions.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__struct.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__type_support.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__functions.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__struct.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__type_support.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/start_goal_pose_stamped.h
+[0.683s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/start_goal_positions.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/library_path.sh
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/library_path.dsv
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__rosidl_typesupport_fastrtps_c.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__rosidl_typesupport_fastrtps_c.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__rosidl_typesupport_fastrtps_c.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__rosidl_typesupport_fastrtps_c.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__rosidl_typesupport_fastrtps_c.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__rosidl_typesupport_fastrtps_c.h
+[0.684s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__rosidl_typesupport_fastrtps_c.h
+[0.685s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.685s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__rosidl_typesupport_fastrtps_c.h
+[0.685s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_fastrtps_c.h
+[0.685s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_fastrtps_c.h
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/compute_path_to_pose_cbs.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__builder.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__struct.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__traits.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/agent_path.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/agent_path_request.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/coordinates3_d.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__builder.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__struct.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__traits.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__builder.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__struct.hpp
+[0.686s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__traits.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__builder.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__struct.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__traits.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__builder.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__struct.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__traits.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__builder.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__struct.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__traits.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__builder.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__struct.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__traits.hpp
+[0.687s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/edge_constraint.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/start_goal.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/vertex_constraint.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/computed_plans.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__builder.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__struct.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__traits.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__builder.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__struct.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__traits.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__builder.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__struct.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__traits.hpp
+[0.688s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/start_goal_pose_stamped.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/start_goal_positions.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__rosidl_typesupport_fastrtps_cpp.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__rosidl_typesupport_fastrtps_cpp.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__rosidl_typesupport_fastrtps_cpp.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__rosidl_typesupport_fastrtps_cpp.hpp
+[0.689s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__rosidl_typesupport_fastrtps_cpp.hpp
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__rosidl_typesupport_fastrtps_cpp.hpp
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__rosidl_typesupport_fastrtps_cpp.hpp
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_fastrtps_cpp.hpp
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__rosidl_typesupport_introspection_c.h
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__rosidl_typesupport_introspection_c.h
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__rosidl_typesupport_introspection_c.h
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__rosidl_typesupport_introspection_c.h
+[0.690s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__rosidl_typesupport_introspection_c.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__rosidl_typesupport_introspection_c.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__rosidl_typesupport_introspection_c.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__rosidl_typesupport_introspection_c.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_introspection_c.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_introspection_c.h
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/action/detail/compute_path_to_pose_cbs__rosidl_typesupport_introspection_cpp.hpp
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path__rosidl_typesupport_introspection_cpp.hpp
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/agent_path_request__rosidl_typesupport_introspection_cpp.hpp
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/coordinates3_d__rosidl_typesupport_introspection_cpp.hpp
+[0.691s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/edge_constraint__rosidl_typesupport_introspection_cpp.hpp
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/start_goal__rosidl_typesupport_introspection_cpp.hpp
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/msg/detail/vertex_constraint__rosidl_typesupport_introspection_cpp.hpp
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/computed_plans__rosidl_typesupport_introspection_cpp.hpp
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_pose_stamped__rosidl_typesupport_introspection_cpp.hpp
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/include/cbs_interfaces/cbs_interfaces/srv/detail/start_goal_positions__rosidl_typesupport_introspection_cpp.hpp
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/pythonpath.sh
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/pythonpath.dsv
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.692s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/__init__.py
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/_cbs_interfaces_s.ep.rosidl_typesupport_c.c
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/_cbs_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/_cbs_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/action/__init__.py
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/action/_compute_path_to_pose_cbs.py
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/action/_compute_path_to_pose_cbs_s.c
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/cbs_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/cbs_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.693s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/cbs_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/libcbs_interfaces__rosidl_generator_py.so
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/__init__.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_agent_path.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_agent_path_request.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_agent_path_request_s.c
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_agent_path_s.c
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_coordinates3_d.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_coordinates3_d_s.c
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_edge_constraint.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_edge_constraint_s.c
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_start_goal.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_start_goal_s.c
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_vertex_constraint.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg/_vertex_constraint_s.c
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/__init__.py
+[0.694s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/_computed_plans.py
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/_computed_plans_s.c
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/_start_goal_pose_stamped.py
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/_start_goal_pose_stamped_s.c
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/_start_goal_positions.py
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv/_start_goal_positions_s.c
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/cbs_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/cbs_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/cbs_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPoseStamped.idl
+[0.695s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPositions.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/ComputedPlans.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/AgentPathRequest.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/AgentPath.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/VertexConstraint.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/EdgeConstraint.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/Coordinates3D.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/StartGoal.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/action/ComputePathToPoseCBS.idl
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPoseStamped.srv
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPoseStamped_Request.msg
+[0.696s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPoseStamped_Response.msg
+[0.697s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPositions.srv
+[0.697s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPositions_Request.msg
+[0.697s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/StartGoalPositions_Response.msg
+[0.697s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/ComputedPlans.srv
+[0.697s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/ComputedPlans_Request.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/srv/ComputedPlans_Response.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/AgentPathRequest.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/AgentPath.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/VertexConstraint.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/EdgeConstraint.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/Coordinates3D.msg
+[0.698s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/msg/StartGoal.msg
+[0.699s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/action/ComputePathToPoseCBS.action
+[0.699s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/ament_index/resource_index/package_run_dependencies/cbs_interfaces
+[0.699s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/ament_index/resource_index/parent_prefix_path/cbs_interfaces
+[0.699s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/ament_prefix_path.sh
+[0.699s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/ament_prefix_path.dsv
+[0.699s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/path.sh
+[0.700s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/environment/path.dsv
+[0.700s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/local_setup.bash
+[0.700s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/local_setup.sh
+[0.700s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/local_setup.zsh
+[0.700s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/local_setup.dsv
+[0.700s] -- Symlinking: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.dsv
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/ament_index/resource_index/packages/cbs_interfaces
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfacesConfig.cmake
+[0.708s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfacesConfig-version.cmake
+[0.709s] -- Up-to-date symlink: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/package.xml
+[0.709s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_generator_c.so
+[0.709s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.709s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.709s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_typesupport_introspection_c.so
+[0.709s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_typesupport_c.so
+[0.710s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.710s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_typesupport_cpp.so
+[0.738s] Listing '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces'...
+[0.738s] Listing '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/action'...
+[0.738s] Listing '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/msg'...
+[0.738s] Listing '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/local/lib/python3.10/dist-packages/cbs_interfaces/srv'...
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/lib/libcbs_interfaces__rosidl_generator_py.so
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_generator_cExport.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_generator_cppExport.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_cExport.cmake
+[0.742s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.743s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.743s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.743s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_cppExport.cmake
+[0.743s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/cbs_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.743s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_generator_pyExport.cmake
+[0.743s] -- Up-to-date: /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_interfaces/share/cbs_interfaces/cmake/export_cbs_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.744s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes:/opt/ros/humble /usr/bin/cmake --install /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces

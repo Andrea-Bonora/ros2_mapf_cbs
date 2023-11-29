@@ -66,14 +66,15 @@ bool Node2D::isNodeValid(
   if (collision_checker->inCollision(index, traverse_unknown)) {
     return false;
   }
+  int n_cell = 16;
   //VCs
   for (const auto& obj : vertex_constraints) {
     int cell_value = obj.at("cell");
     int ts_value = obj.at("time_step");
     if( time_step + 1 == ts_value ){
       //Expand the area of the conflict
-      for(int i = -10; i <= 10; i++){
-        for(int j = -10; j <= 10; j++){
+      for(int i = -n_cell; i <= n_cell; i++){
+        for(int j = -n_cell; j <= n_cell; j++){
           if(index == cell_value + j + (x_size*i))
             return false;
         }
@@ -88,8 +89,8 @@ bool Node2D::isNodeValid(
         int ts_value = obj.at("time_step");
         if( time_step == ts_value ){
           //Expand the area of the conflict
-          for(int i = -10; i <= 10; i++){
-            for(int j = -10; j <= 10; j++){
+          for(int i = -n_cell; i <= n_cell; i++){
+            for(int j = -n_cell; j <= n_cell; j++){
               if(index == cell_to_value + j + (x_size*i))
                 return false;
             }
