@@ -101,6 +101,9 @@ class CollisionAvoiderNode(Node):
 
         cbs = CBS(agents, self.nx, self.ny, self.origin, self.map_resolution)
 
+        #create conflicts matrix 
+        #conflicts_matrix = [[0] * len(agents) for _ in range(len(agents))]
+
         #First solution computation, we already have it, so it is simply a conversion in the desired format
         start = cbs.get_starting_node(plans)
         cbs.open_set |= {start}
@@ -121,6 +124,15 @@ class CollisionAvoiderNode(Node):
                 return cbs.generate_plan(P.solution)
                 
             constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
+            #update conflict matrix
+            #id1 = agents.index(constraint_dict.keys()[0])
+            #id2 = agents.index(constraint_dict.keys()[1])
+            #conflicts_matrix[id1][id2] += 1
+            #conflicts_matrix[id2][id1] += 1
+
+            #if n_conflict > threshold => couple agents
+            #if conflicts_matrix[id1][id2] > 5:
+            #    return self.cbs_alg(P.solution, constraint_dict.keys())
 
             for agent in constraint_dict.keys():
                 if conflict_dict.time_1 < len(P.solution[agent]):

@@ -40,7 +40,7 @@ class MultiAgentPlanAskerNode(Node):
         for i in range(len(s_request.requests)):
             r = s_request.requests[i]
             client_cb_group_actions = MutuallyExclusiveCallbackGroup()
-            r.name = ""
+            #r.name = ""
             client = ActionClient(self, ComputePathToPoseCBS, r.name + '/compute_path_to_pose_cbs', callback_group=client_cb_group_actions)
             client.wait_for_server()
 
