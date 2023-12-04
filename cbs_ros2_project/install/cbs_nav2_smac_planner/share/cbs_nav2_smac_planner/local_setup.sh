@@ -1,1 +1,0 @@
-/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nav2_smac_planner/ament_cmake_environment_hooks/local_setup.sh

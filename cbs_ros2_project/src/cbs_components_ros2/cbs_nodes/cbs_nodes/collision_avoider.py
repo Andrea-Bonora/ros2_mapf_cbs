@@ -29,6 +29,8 @@ from rclpy.action import ActionClient
 class CollisionAvoiderNode(Node):
     def __init__(self):
         super().__init__("collision_avoider")
+
+        self.declare_parameter("algorithm", "cbs")
         self.get_logger().info("Collision Avoider has been started!")
 
         client_cb_group = MutuallyExclusiveCallbackGroup()
@@ -40,6 +42,7 @@ class CollisionAvoiderNode(Node):
         while not self.map_client.wait_for_service(1.0):
             self.get_logger().warn("Waiting for Server /map_server/map...")
 
+        self.algorithm = self.get_parameter("algorithm").value
         self.nx = 0
         self.ny = 0
         self.get_map()
@@ -72,9 +75,10 @@ class CollisionAvoiderNode(Node):
         service_response = future.result()
         response.plans = service_response.plans  # Piani dei vari agenti       
         
-        solution = await self.cbs_alg(self.convert_plans(response.plans), agents)
-
-        #solution = await self.icbs_alg(self.convert_plans(response.plans), agents)
+        if self.algorithm == "icbs":
+            solution = await self.icbs_alg(self.convert_plans(response.plans), agents)
+        else:
+            solution = await self.cbs_alg(self.convert_plans(response.plans), agents)
                 
         final_plans = response.plans
         
@@ -110,6 +114,10 @@ class CollisionAvoiderNode(Node):
 
             if not conflict_dict:
                 self.get_logger().info("solution found, no conflicts!")
+                for agent in agents:
+                    vc, ec = self.get_constraints(P.constraint_dict[agent])
+                    new_plan = await self.get_plan(agent, agents[agent]['start'], agents[agent]['goal'], vc, ec, True)
+                    P.solution.update({agent: self.convert_plans(new_plan)[0]['path']})
                 return cbs.generate_plan(P.solution)
                 
             constraint_dict = cbs.env.create_constraints_from_conflict(conflict_dict)
@@ -257,8 +265,8 @@ class CollisionAvoiderNode(Node):
         self.get_logger().info("OUT OF THE WHILE")
         return {}
     
-    async def get_plan(self, agent, start, end, vc = [], ec = []):
-        msg = self.get_request_message(agent, start, end, vc, ec)
+    async def get_plan(self, agent, start, end, vc = [], ec = [], smooth = False):
+        msg = self.get_request_message(agent, start, end, vc, ec, smooth)
         client_request = StartGoalPoseStamped.Request()
         client_request.requests = [msg]
         future = self.client_.call_async(client_request)
@@ -288,13 +296,14 @@ class CollisionAvoiderNode(Node):
             self.get_logger().info(str(m.time) + " (" + str(round(tmp_y*self.nx + tmp_x)) + ")")
         return True
 
-    def get_request_message(self, name, start, goal, vc = [], ec = []):
+    def get_request_message(self, name, start, goal, vc = [], ec = [], smooth = False):
         msg = AgentPathRequest()
         msg.name = name
         msg.start = start
         msg.goal = goal
         msg.vertex_constraints = vc
         msg.edge_constraints = ec
+        msg.smooth_plan = smooth
         return msg
     
     def get_constraints(self, constraints):

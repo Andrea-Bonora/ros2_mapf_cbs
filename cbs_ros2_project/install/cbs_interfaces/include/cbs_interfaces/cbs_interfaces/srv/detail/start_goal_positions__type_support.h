@@ -1,1 +1,0 @@
-/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_interfaces/rosidl_generator_c/cbs_interfaces/srv/detail/start_goal_positions__type_support.h

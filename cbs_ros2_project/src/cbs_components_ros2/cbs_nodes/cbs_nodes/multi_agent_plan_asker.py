@@ -40,7 +40,7 @@ class MultiAgentPlanAskerNode(Node):
         for i in range(len(s_request.requests)):
             r = s_request.requests[i]
             client_cb_group_actions = MutuallyExclusiveCallbackGroup()
-            #r.name = ""
+            r.name = ""
             client = ActionClient(self, ComputePathToPoseCBS, r.name + '/compute_path_to_pose_cbs', callback_group=client_cb_group_actions)
             client.wait_for_server()
 
@@ -51,9 +51,8 @@ class MultiAgentPlanAskerNode(Node):
             request.use_start = False
             request.vertex_constraints = r.vertex_constraints
             request.edge_constraints = r.edge_constraints
-            #self.get_logger().info("Searching plan for " + r.name)
+            request.smooth = r.smooth_plan
             future = client.send_goal_async(request)
-            #future.add_done_callback(partial(self.callback_ask_plan, i=i))
             futures.append(future)
 
         for f in futures:

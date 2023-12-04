@@ -1,2 +1,0 @@
-Coordinates3D start
-Coordinates3D goal

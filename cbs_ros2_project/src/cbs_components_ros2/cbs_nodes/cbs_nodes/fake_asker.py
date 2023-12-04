@@ -107,6 +107,7 @@ class FakeAskerNode(Node):
             self.get_logger().error("Service call failed %r" % (e,))
 
     def callback_result_execute_plan(self, future):
+        self.get_logger().info(str(future.result()))
         self.get_logger().info("Plan executed correctly!")
      
 def main(args=None):

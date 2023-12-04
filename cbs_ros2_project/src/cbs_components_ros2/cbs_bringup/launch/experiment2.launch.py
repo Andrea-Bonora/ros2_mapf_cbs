@@ -14,8 +14,8 @@ def generate_launch_description():
             {"x_start": [0.0]},
             {"y_start": [0.0]},
             {"z_start": [0.0]},
-            {"x_end": [2.0]},
-            {"y_end": [4.2]},
+            {"x_end": [5.2]},
+            {"y_end": [5.0]},
             {"z_end": [0.0]}
         ]
     )
