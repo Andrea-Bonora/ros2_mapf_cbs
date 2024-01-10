@@ -1,5 +1,0 @@
-[console_scripts]
-collision_avoider = cbs_nodes.collision_avoider:main
-fake_asker = cbs_nodes.fake_asker:main
-multi_agent_plan_asker = cbs_nodes.multi_agent_plan_asker:main
-

@@ -1,0 +1,5 @@
+<library path="cbs_nav2_smac_planner">
+  <class name="cbs_nav2_smac_planner/CBSSmacPlanner2D" type="cbs_nav2_smac_planner::CBSSmacPlanner2D" base_class_type="cbs_nav2_core::MultiAgentGlobalPlanner">
+    <description>2D A* SMAC Planner</description>
+  </class>
+</library>

@@ -1,0 +1,27 @@
+[0.862s] Invoking command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/build --no-deps install_data
+[1.106s] running develop
+[1.272s] running egg_info
+[1.272s] creating cbs_nodes.egg-info
+[1.272s] writing cbs_nodes.egg-info/PKG-INFO
+[1.273s] writing dependency_links to cbs_nodes.egg-info/dependency_links.txt
+[1.273s] writing entry points to cbs_nodes.egg-info/entry_points.txt
+[1.273s] writing requirements to cbs_nodes.egg-info/requires.txt
+[1.273s] writing top-level names to cbs_nodes.egg-info/top_level.txt
+[1.273s] writing manifest file 'cbs_nodes.egg-info/SOURCES.txt'
+[1.276s] reading manifest file 'cbs_nodes.egg-info/SOURCES.txt'
+[1.277s] writing manifest file 'cbs_nodes.egg-info/SOURCES.txt'
+[1.278s] running build_ext
+[1.278s] Creating /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages/cbs-nodes.egg-link (link to .)
+[1.279s] Installing collision_avoider script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.279s] Installing fake_asker script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.279s] Installing multi_agent_plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.279s] Installing plan_asker script to /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/cbs_nodes
+[1.279s] 
+[1.279s] Installed /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes
+[1.279s] running install_data
+[1.279s] creating /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/ament_index
+[1.280s] creating /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/ament_index/resource_index
+[1.280s] creating /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/ament_index/resource_index/packages
+[1.280s] copying resource/cbs_nodes -> /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/ament_index/resource_index/packages
+[1.280s] copying package.xml -> /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/share/cbs_nodes
+[1.322s] Invoked command in '/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes' returned '0': PYTHONPATH=/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/prefix_override:/home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/install/cbs_nodes/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/andrea/tesi/ros2_mapf_cbs/cbs_ros2_project/build/cbs_nodes/build --no-deps install_data
