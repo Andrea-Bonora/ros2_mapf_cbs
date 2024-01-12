@@ -19,12 +19,12 @@ This folder contains files regarding the planner used to calculate the routes of
 
 ### cbs_ros2_nodes
 Instead, this folder contains the nodes responsible for executing the CBS algorithm. In particular, two main nodes are distinguished, as described in the paper, one for the low-level part and the other for the high-level part.
-- multi_agent_plan_asker is the node that deals with the low-level part of the algorithm. Its job is to ask the planner for new plans, providing the start and end positions of each agent along with the constraints of each.
-- collision_avoider is the node that executes the high-level part of the algorithm. Once the multi_agent_plan_asker returns the plans of each agent this algorithm will perform CBS to search for plans that are collision-free.
-The other two nodes defined within the folder (baseline_asker and plan_asker) were written as debug nodes to test the correctness and performance of the two nodes described above. Specifically, the baseline_asker node will request plans from the planner without making use of the cbs algorithm, while the plan_asker node will go and ask the collision_avoider for a set of plans for a total of two agents for a set of hand-crafted coordinates.
+- `multi_agent_plan_asker` is the node that deals with the low-level part of the algorithm. Its job is to ask the planner for new plans, providing the start and end positions of each agent along with the constraints of each.
+- `collision_avoider` is the node that executes the high-level part of the algorithm. Once the `multi_agent_plan_asker` returns the plans of each agent this algorithm will perform CBS to search for plans that are collision-free.
+The other two nodes defined within the folder (`baseline_asker` and `plan_asker`) were written as debug nodes to test the correctness and performance of the two nodes described above. Specifically, the `baseline_asker` node will request plans from the planner without making use of the cbs algorithm, while the `plan_asker` node will go and ask the `collision_avoider` for a set of plans for a total of two agents for a set of hand-crafted coordinates.
 
 ## Setup the experiments
-A launch file is not yet available. Therefore, to launch an experiment, it is necessary to launch the multi_agent_plan_asker and the collision_avoider separately. Next, it is necessary to configure a node that sends the coordinates to be reached for each agent to the collision_avoider, which will eventually return a plan for each agent.
+A launch file is not yet available. Therefore, to launch an experiment, it is necessary to launch the `multi_agent_plan_asker` and the collision_avoider separately. Next, it is necessary to configure a node that sends the coordinates to be reached for each agent to the `collision_avoider`, which will eventually return a plan for each agent.
 <pre>
 $ ros2 run cbs_nodes multi_agent_plan_asker
 $ ros2 run cbs_nodes collision_avoider
