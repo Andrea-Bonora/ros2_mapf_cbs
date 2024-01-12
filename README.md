@@ -1,1 +1,8 @@
-# ros2_mapf_cbs
+# Solving MAPF in ROS2: A CBS Approach integrated with Nav2
+This repository contains the work done during my time at RWTH Aachen University for the development of my master's thesis in Artificial Intelligence Systems at the University of Trento.
+
+## Context
+The Agent Planning (AP) problem is a prominent AI challenge focused on the design and development of intelligent agents with the ability to make smart logical choices to satisfy particular goals in a specific environment, which can be either dynamic or static and can have varying degrees of uncertainty. The AP problem is more precisely related to determining a sequence of actions that an agent can perform to reach the desired final state of the system. When several agents coexist in the same environment, this problem becomes particularly complicated. In order to prevent conflicts of interest when devising each agent's plans, all the agents must coordinate and communicate with one another.
+
+## Contributions 
+The main contribution made by this thesis concerns the implementation of one of the most popular planning algorithms, called CBS, into the well-known adaptable and scalable ROS2 framework, in order to address the family of multi-agent path finding problems. Specifically, ROS2 is an open-source robotics middleware framework which is used in this work in combination with the ROS2-based robot navigation framework Nav2. Implementing the CBS algorithm in the ROS2 framweork with the use of Nav2 is vital as it addresses a critical gap in the current navigation framework. In fact, Nav2, while robust, lacks native support for multi-agent path finding. In this regard CBS offers efficient and optimal solutions for multi-agent path finding problems by resolving conflicts and ensuring collision-free paths.
